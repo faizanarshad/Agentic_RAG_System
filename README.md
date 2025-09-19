@@ -1,222 +1,114 @@
 # 🤖 Agentic RAG System
 
-A complete, production-ready Retrieval-Augmented Generation (RAG) system with a modern web interface, built using state-of-the-art technologies.
-
-## ✨ Features
-
-### 🧠 **Core RAG Capabilities**
-- **Document Processing**: PDF text extraction and intelligent chunking
-- **Vector Search**: Pinecone-powered semantic search
-- **AI Responses**: OpenAI GPT-powered contextual answers
-- **LangGraph Orchestration**: Advanced workflow management
-
-### 🎨 **Modern Web Interface**
-- **React + TypeScript**: Modern, type-safe frontend
-- **Real-time Chat**: Interactive conversation interface
-- **Drag & Drop Upload**: Easy PDF document management
-- **System Monitoring**: Real-time health checks and status
-- **Responsive Design**: Works perfectly on all devices
-
-### 🔧 **Backend Architecture**
-- **FastAPI**: High-performance Python web framework
-- **Pinecone**: Vector database for semantic search
-- **OpenAI**: Advanced language models and embeddings
-- **LangGraph**: Sophisticated workflow orchestration
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.9+
-- Node.js 18+
-- OpenAI API key
-- Pinecone API key
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/faizanarshad/Agentic_RAG_System.git
-cd Agentic_RAG_System
-```
-
-### 2. Backend Setup
-```bash
-cd rag_app
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### 3. Environment Configuration
-Create a `.env` file in the `rag_app` directory:
-```env
-# OpenAI Configuration
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_MODEL=gpt-3.5-turbo
-OPENAI_EMBEDDING_MODEL=text-embedding-ada-002
-
-# Pinecone Configuration
-PINECONE_API_KEY=your_pinecone_api_key_here
-PINECONE_ENVIRONMENT=your_pinecone_environment
-PINECONE_INDEX_NAME=rag-documents
-
-# Application Configuration
-CHUNK_SIZE=1000
-CHUNK_OVERLAP=200
-MAX_RETRIEVAL_RESULTS=5
-```
-
-### 4. Frontend Setup
-```bash
-cd rag-frontend
-npm install
-```
-
-### 5. Run the Application
-
-**Start the Backend:**
-```bash
-cd rag_app
-source venv/bin/activate
-python main.py
-```
-
-**Start the Frontend:**
-```bash
-cd rag-frontend
-npm run dev
-```
-
-### 6. Access the Application
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:8000
-- **API Documentation**: http://localhost:8000/docs
-
-## 📱 Usage
-
-### 1. Upload Documents
-- Navigate to the "Upload" tab
-- Drag and drop PDF files or click to select
-- Monitor upload progress and chunk creation
-
-### 2. Chat with Documents
-- Go to the "Chat" tab
-- Ask questions about your uploaded documents
-- Get contextual answers based on document content
-
-### 3. Monitor System
-- Check the "Status" tab for system health
-- Monitor vector database and LLM service status
-- Refresh status in real-time
+A comprehensive Retrieval-Augmented Generation (RAG) system built with FastAPI, React, and modern AI technologies. This system allows you to upload documents, generate embeddings, and ask questions about your content using advanced language models.
 
 ## 🏗️ Architecture
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   React Frontend │    │   FastAPI Backend│    │   External APIs │
-│                 │    │                 │    │                 │
-│ • Chat Interface│◄──►│ • RAG Service   │◄──►│ • OpenAI API    │
-│ • File Upload   │    │ • Vector Search │    │ • Pinecone API  │
-│ • Status Monitor│    │ • LangGraph     │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+Agentic_RAG_System/
+├── backend/                 # FastAPI backend service
+│   ├── api/                # API routes and endpoints
+│   ├── core/               # Core configuration and settings
+│   ├── services/           # Business logic services
+│   ├── utils/              # Utility functions and logging
+│   ├── sample_documents/   # Test PDF documents
+│   └── requirements.txt    # Python dependencies
+├── frontend/               # React frontend application
+│   ├── src/                # Source code
+│   ├── public/             # Static assets
+│   └── package.json        # Node.js dependencies
+├── docs/                   # Documentation
+│   └── TESTING_GUIDE.md    # Comprehensive testing guide
+├── scripts/                # Utility scripts
+│   └── create_test_pdfs.py # PDF generation script
+└── README.md              # This file
 ```
 
-## 🛠️ Technology Stack
+## ✨ Features
 
-### Frontend
-- **React 18** with TypeScript
-- **Vite** for fast development
-- **Lucide React** for icons
-- **Custom CSS** for styling
+- Document ingestion (PDF → chunks → embeddings)
+- RAG pipeline with OpenAI + Pinecone
+- FastAPI endpoints for chat and files
+- React UI with Upload/Chat/Status tabs
+- Delete and Replace (Update) file vectors from UI
+
+## 🚀 Run
 
 ### Backend
-- **FastAPI** for API framework
-- **Python 3.9+** runtime
-- **LangGraph** for workflow orchestration
-- **Pinecone** for vector database
-- **OpenAI** for LLM and embeddings
-
-### Infrastructure
-- **Docker** ready for containerization
-- **Environment-based** configuration
-- **Health monitoring** and logging
-- **Error handling** and validation
-
-## 📁 Project Structure
-
 ```
-Agentic_RAG_System/
-├── rag_app/                 # Backend FastAPI application
-│   ├── api/                # API routes
-│   ├── core/               # Configuration and settings
-│   ├── services/           # Business logic services
-│   ├── utils/              # Utility functions
-│   ├── main.py             # Application entry point
-│   └── requirements.txt    # Python dependencies
-├── rag-frontend/           # React frontend application
-│   ├── src/                # Source code
-│   │   ├── components/     # React components
-│   │   ├── App.tsx         # Main application
-│   │   └── index.css       # Styling
-│   ├── package.json        # Node.js dependencies
-│   └── vite.config.ts      # Vite configuration
-└── README.md               # This file
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+python main.py
 ```
 
-## 🔧 API Endpoints
+Ensure `.env` in `backend/` is configured:
+```
+OPENAI_API_KEY=sk-...
+OPENAI_EMBEDDING_MODEL=text-embedding-ada-002
+OPENAI_MODEL=gpt-3.5-turbo
 
-### Chat
-- `POST /chat/` - Send messages to the RAG system
-
-### File Management
-- `POST /files/add_file` - Upload PDF documents
-- `DELETE /files/delete_file/{file_id}` - Delete documents
-- `PUT /files/update_file/{file_id}` - Update documents
-
-### Health
-- `GET /health` - System health check
-- `GET /files/health` - Component health status
-
-## 🚀 Deployment
-
-### Docker Deployment
-```bash
-# Build and run with Docker Compose
-docker-compose up --build
+PINECONE_API_KEY=pcsk-...
+PINECONE_INDEX_NAME=rag-documents
+# Region must match your Pinecone index host (e.g., ap-southeast-1)
+PINECONE_ENVIRONMENT=ap-southeast-1
 ```
 
-### Manual Deployment
-1. Set up environment variables
-2. Install dependencies
-3. Run backend: `python main.py`
-4. Run frontend: `npm run dev`
-5. Configure reverse proxy (nginx)
+### Frontend
+```
+cd frontend
+npm install
+npm run dev
+```
 
-## 🤝 Contributing
+- Frontend: http://localhost:5173
+- API docs: http://localhost:8000/docs
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+## 🧪 Test
 
-## 📄 License
+- Use Upload tab to add PDFs from `backend/sample_documents/`
+- Ask questions in Chat
+- Manage vectors with Replace/Delete buttons after upload completes
+- Status tab shows Vector DB and LLM health
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🔧 Troubleshooting
 
-## 🙏 Acknowledgments
+### Pinecone SSL / "Max retries exceeded ... SSLError(FileNotFoundError)"
+- Create a fresh venv with modern Python (prefer 3.11+)
+- Install HTTP stack with certs:
+```
+pip install --upgrade pip certifi requests "urllib3<2.2"
+```
+- We set `SSL_CERT_FILE`/`REQUESTS_CA_BUNDLE` to `certifi.where()` in `backend/core/config.py` automatically.
+- Restart backend.
 
-- OpenAI for advanced language models
-- Pinecone for vector database services
-- LangChain for RAG framework
-- FastAPI for the web framework
-- React team for the frontend library
+### Region mismatch
+- If your Pinecone index host looks like `...aped...`, set `PINECONE_ENVIRONMENT=ap-southeast-1` (or the region where your index resides).
+- `backend/services/vectordb_service.py` uses `PINECONE_ENVIRONMENT` for `ServerlessSpec`.
 
-## 📞 Support
+### Missing deps (e.g., `ModuleNotFoundError: langgraph`)
+- Activate venv and run:
+```
+pip install -r requirements.txt
+```
 
-For support and questions:
-- Create an issue on GitHub
-- Check the documentation
-- Review the API docs at `/docs`
+### Health shows Degraded
+- Open http://localhost:8000/files/health and verify:
+  - `vectordb: true` (Pinecone reachable and index OK)
+  - `llm: true` (OpenAI reachable)
+- Fix `.env` keys or region and restart.
 
----
+## 📚 API Endpoints
 
-**Built with ❤️ using modern AI technologies**
+- `POST /chat/` – query with RAG
+- `GET /health` – basic API health
+- `POST /files/add_file` – upload/process PDF
+- `PUT /files/update_file/{file_id}` – replace vectors with a new PDF
+- `DELETE /files/delete_file/{file_id}` – remove vectors by file
+- `GET /files/health` – RAG service health (LLM + Vector DB)
+
+## 📖 Docs
+
+- See `docs/TESTING_GUIDE.md` for detailed testing scenarios and datasets.
