@@ -1,342 +1,723 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { 
+  MessageSquare, 
+  Upload, 
+  Activity, 
+  Send, 
+  Bot, 
+  User, 
+  Loader2, 
+  CheckCircle, 
+  XCircle, 
+  Sun, 
+  Moon,
+  FileText,
+  Trash2,
+  RefreshCw,
+  AlertCircle,
+  Sparkles,
+  Zap,
+  Database,
+  Brain
+} from 'lucide-react';
 import './index.css';
 
-// Backend API base URL
-const API_BASE = 'http://localhost:8000';
-
-async function chatApi(query: string) {
-  const res = await fetch(`${API_BASE}/chat/`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query }),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-async function uploadFileApi(file: File) {
-  const form = new FormData();
-  form.append('file', file);
-  const res = await fetch(`${API_BASE}/files/add_file`, { method: 'POST', body: form });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-async function deleteFileApi(fileId: string) {
-  const res = await fetch(`${API_BASE}/files/delete_file/${encodeURIComponent(fileId)}`, { method: 'DELETE' });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-async function updateFileApi(fileId: string, file: File) {
-  const form = new FormData();
-  form.append('file', file);
-  const res = await fetch(`${API_BASE}/files/update_file/${encodeURIComponent(fileId)}`, { method: 'PUT', body: form });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
-
-async function healthApi() {
-  const [health, filesHealth] = await Promise.all([
-    fetch(`${API_BASE}/health`).then(r => r.json()).catch(() => ({ message: 'unavailable' })),
-    fetch(`${API_BASE}/files/health`).then(r => r.json()).catch(() => ({ vectordb: false, llm: false, overall: false }))
-  ]);
-  return { health, filesHealth };
-}
+// Types
+type Tab = 'chat' | 'upload' | 'status';
 
 interface Message {
   id: string;
-  text: string;
-  sender: 'user' | 'assistant';
-  timestamp: string;
+  type: 'user' | 'assistant';
+  content: string;
+  timestamp: Date;
+  contextCount?: number;
+  isTyping?: boolean;
 }
 
 interface UploadedFile {
   id: string;
+  backendFileId: string | null;
   name: string;
   size: number;
-  status: 'pending' | 'success' | 'error';
-  chunks: number;
-  fileId: string | null;
-  error: string | null;
+  status: 'uploading' | 'success' | 'error';
+  chunks?: number;
+  error?: string;
+  uploadProgress?: number;
 }
 
 interface HealthStatus {
   vectordb: boolean;
   llm: boolean;
   overall: boolean;
+  message: string;
 }
 
+// API functions
+const API_BASE = 'http://localhost:8000';
+
+const fetchBackend = async (endpoint: string, options?: RequestInit) => {
+  const response = await fetch(`${API_BASE}${endpoint}`, options);
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({ detail: response.statusText }));
+    throw new Error(errorData.detail || response.statusText);
+  }
+  return response.json();
+};
+
+// Utility functions
+const formatFileSize = (bytes: number): string => {
+  if (bytes === 0) return "0 Bytes";
+  const k = 1024;
+  const sizes = ["Bytes", "KB", "MB", "GB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+};
+
+const formatDate = (date: Date): string => {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+};
+
+// Sample questions for empty state
+const sampleQuestions = [
+  "What is artificial intelligence?",
+  "Explain machine learning concepts",
+  "How does deep learning work?",
+  "What are neural networks?",
+  "Tell me about RAG systems"
+];
+
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('chat');
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [chatInput, setChatInput] = useState('');
+  // State management
+  const [activeTab, setActiveTab] = useState<Tab>('chat');
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const saved = localStorage.getItem('theme');
+    return (saved as 'light' | 'dark') || 'light';
+  });
+  const [messages, setMessages] = useState<Message[]>(() => {
+    const saved = localStorage.getItem('chatHistory');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return parsed.map((msg: any) => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  });
+  const [input, setInput] = useState('');
+  const [isChatLoading, setIsChatLoading] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [health, setHealth] = useState<HealthStatus | null>(null);
-  const [isChatLoading, setIsChatLoading] = useState(false);
+  const [dragActive, setDragActive] = useState(false);
+  
+  // Refs
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Effects
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   useEffect(() => {
-    fetchHealthStatus();
+    localStorage.setItem('chatHistory', JSON.stringify(messages));
+  }, [messages]);
+
+  useEffect(() => {
+    checkSystemStatus();
+    const interval = setInterval(checkSystemStatus, 30000); // Check every 30 seconds
+    return () => clearInterval(interval);
   }, []);
 
-  const fetchHealthStatus = async () => {
-    try {
-      const { filesHealth } = await healthApi();
-      setHealth(filesHealth);
-    } catch (error) {
-      setHealth({ vectordb: false, llm: false, overall: false });
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  // Utility functions
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
+
+  const clearChatHistory = () => {
+    if (window.confirm('Are you sure you want to clear all chat history?')) {
+      setMessages([]);
+      localStorage.removeItem('chatHistory');
     }
   };
 
-  const handleChatSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (chatInput.trim() === '') return;
+  // API functions
+  const checkSystemStatus = async () => {
+    try {
+      const [healthResponse, filesHealthResponse] = await Promise.all([
+        fetchBackend('/health'),
+        fetchBackend('/files/health')
+      ]);
+      
+      setHealth({
+        overall: filesHealthResponse.overall,
+        vectordb: filesHealthResponse.vectordb,
+        llm: filesHealthResponse.llm,
+        message: healthResponse.message
+      });
+    } catch (error) {
+      console.error('Status check failed:', error);
+      setHealth({ 
+        vectordb: false, 
+        llm: false, 
+        overall: false, 
+        message: `Status check failed: ${error instanceof Error ? error.message : String(error)}` 
+      });
+    }
+  };
 
-    const newUserMessage: Message = {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isChatLoading) return;
+
+    const userMessage: Message = {
       id: Date.now().toString(),
-      text: chatInput,
-      sender: 'user',
-      timestamp: new Date().toLocaleTimeString()
+      type: 'user',
+      content: input.trim(),
+      timestamp: new Date(),
     };
-    setMessages(prev => [...prev, newUserMessage]);
-    const queryToSend = chatInput;
-    setChatInput('');
+
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
     setIsChatLoading(true);
 
+    // Add typing indicator
+    const typingMessage: Message = {
+      id: 'typing',
+      type: 'assistant',
+      content: '',
+      timestamp: new Date(),
+      isTyping: true,
+    };
+    setMessages(prev => [...prev, typingMessage]);
+
     try {
-      const response = await chatApi(queryToSend);
-      const newAssistantMessage: Message = {
-        id: Date.now().toString() + '-ai',
-        text: response.answer,
-        sender: 'assistant',
-        timestamp: new Date().toLocaleTimeString()
-      };
-      setMessages(prev => [...prev, newAssistantMessage]);
+      const data = await fetchBackend('/chat/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query: input.trim() }),
+      });
+      
+      // Remove typing indicator and add real response
+      setMessages(prev => {
+        const filtered = prev.filter(msg => msg.id !== 'typing');
+        const assistantMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          type: 'assistant',
+          content: data.answer,
+          timestamp: new Date(),
+          contextCount: data.context_count,
+        };
+        return [...filtered, assistantMessage];
+      });
     } catch (error) {
-      const errorMessage: Message = {
-        id: Date.now().toString() + '-error',
-        text: 'Error: Could not get a response from the RAG system.',
-        sender: 'assistant',
-        timestamp: new Date().toLocaleTimeString()
-      };
-      setMessages(prev => [...prev, errorMessage]);
+      console.error('Chat error:', error);
+      setMessages(prev => {
+        const filtered = prev.filter(msg => msg.id !== 'typing');
+        const errorMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          type: 'assistant',
+          content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : String(error)}. Please try again.`,
+          timestamp: new Date(),
+        };
+        return [...filtered, errorMessage];
+      });
     } finally {
       setIsChatLoading(false);
     }
   };
 
-  const handleFileUpload = async (files: FileList | null) => {
-    if (!files) return;
+  const handleSampleQuestion = (question: string) => {
+    setInput(question);
+    inputRef.current?.focus();
+  };
+
+  const handleFileUpload = async (files: FileList | null, existingFileId: string | null = null) => {
+    if (!files || files.length === 0) return;
 
     Array.from(files).forEach(async (file) => {
-      const tempId = crypto.randomUUID();
+      const tempId = existingFileId || Math.random().toString(36).substr(2, 9);
       const newFile: UploadedFile = {
         id: tempId,
+        backendFileId: existingFileId,
         name: file.name,
         size: file.size,
-        status: 'pending',
+        status: 'uploading',
         chunks: 0,
-        fileId: null,
-        error: null,
+        error: undefined,
+        uploadProgress: 0,
       };
-      setUploadedFiles(prev => [...prev, newFile]);
+
+      if (!existingFileId) {
+        setUploadedFiles(prev => [...prev, newFile]);
+      } else {
+        setUploadedFiles(prev => prev.map(f => f.id === tempId ? { ...f, ...newFile } : f));
+      }
 
       try {
-        const result = await uploadFileApi(file);
-        setUploadedFiles(prev =>
-          prev.map(f =>
-            f.id === tempId
-              ? { ...f, status: 'success', chunks: result.total_chunks ?? 0, fileId: result.file_id }
-              : f
-          )
-        );
-      } catch (error: any) {
-        setUploadedFiles(prev =>
-          prev.map(f =>
-            f.id === tempId
-              ? { ...f, status: 'error', error: error?.message || 'Upload failed' }
-              : f
-          )
-        );
+        const formData = new FormData();
+        formData.append('file', file);
+
+        let result;
+        if (existingFileId) {
+          result = await fetchBackend(`/files/update_file/${existingFileId}`, {
+            method: 'PUT',
+            body: formData,
+          });
+        } else {
+          result = await fetchBackend('/files/add_file', {
+            method: 'POST',
+            body: formData,
+          });
+        }
+        
+        setUploadedFiles(prev => prev.map(f => 
+          f.id === tempId
+            ? { 
+                ...f, 
+                status: 'success', 
+                chunks: result.total_chunks, 
+                backendFileId: result.file_id,
+                uploadProgress: 100 
+              }
+            : f
+        ));
+      } catch (error) {
+        console.error('File upload error:', error);
+        setUploadedFiles(prev => prev.map(f => 
+          f.id === tempId
+            ? { 
+                ...f, 
+                status: 'error', 
+                error: error instanceof Error ? error.message : 'Upload failed',
+                uploadProgress: 0 
+              }
+            : f
+        ));
       }
     });
   };
 
   const handleDeleteFile = async (fileId: string) => {
+    if (!window.confirm('Are you sure you want to delete this file?')) return;
+    
     try {
-      await deleteFileApi(fileId);
-      setUploadedFiles(prev => prev.filter(f => f.fileId !== fileId));
+      await fetchBackend(`/files/delete_file/${fileId}`, {
+        method: 'DELETE',
+      });
+      setUploadedFiles(prev => prev.filter(f => f.backendFileId !== fileId));
     } catch (error) {
-      alert('Failed to delete file.');
+      console.error('Failed to delete file:', error);
+      alert(`Failed to delete file: ${error instanceof Error ? error.message : String(error)}`);
     }
   };
 
-  const handleReplaceFile = async (fileId: string) => {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = '.pdf';
-    input.onchange = async (e: any) => {
-      const file: File | undefined = e.target.files?.[0];
-      if (!file) return;
-      try {
-        const result = await updateFileApi(fileId, file);
-        setUploadedFiles(prev => prev.map(f => (
-          f.fileId === fileId ? { ...f, status: 'success', chunks: result.total_chunks ?? f.chunks } : f
-        )));
-      } catch (error: any) {
-        setUploadedFiles(prev => prev.map(f => (
-          f.fileId === fileId ? { ...f, status: 'error', error: error?.message || 'Update failed' } : f
-        )));
-      }
-    };
-    input.click();
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setDragActive(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setDragActive(false);
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setDragActive(false);
+    handleFileUpload(e.dataTransfer.files);
+  }, []);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit(e);
+    }
   };
 
   return (
-    <div className="container">
-      <div className="header">Agentic RAG System</div>
-      <div className="tabs">
-        <button
-          className={`tab-button ${activeTab === 'chat' ? 'active' : ''}`}
-          onClick={() => setActiveTab('chat')}
-        >
-          Chat
-        </button>
-        <button
-          className={`tab-button ${activeTab === 'upload' ? 'active' : ''}`}
-          onClick={() => setActiveTab('upload')}
-        >
-          Upload
-        </button>
-        <button
-          className={`tab-button ${activeTab === 'status' ? 'active' : ''}`}
-          onClick={() => setActiveTab('status')}
-        >
-          Status
-        </button>
-      </div>
+    <div className="app">
+      {/* Header */}
+      <header className="header">
+        <div className="header-content">
+          <div className="logo">
+            <Bot className="logo-icon" />
+            <h1 className="logo-text">Agentic RAG System</h1>
+          </div>
+          
+          <div className="header-controls">
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle"
+              title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            >
+              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            </button>
+            
+            <nav className="nav">
+              {[
+                { id: 'chat' as const, label: 'Chat', icon: MessageSquare },
+                { id: 'upload' as const, label: 'Upload', icon: Upload },
+                { id: 'status' as const, label: 'Status', icon: Activity },
+              ].map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`nav-button ${activeTab === tab.id ? 'active' : ''}`}
+                  >
+                    <Icon size={16} />
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
+        </div>
+      </header>
 
-      <div className="tab-content">
+      {/* Main Content */}
+      <main className="main">
         {activeTab === 'chat' && (
           <div className="chat-container">
+            {/* Messages */}
             <div className="messages">
-              {messages.map(msg => (
-                <div key={msg.id} className={`message ${msg.sender}`}>
-                  <div className="message-bubble">
-                    {msg.text}
-                    <div className="message-timestamp">{msg.timestamp}</div>
+              {messages.length === 0 && (
+                <div className="empty-state">
+                  <Sparkles className="empty-icon" />
+                  <h3 className="empty-title">Welcome to your RAG Assistant!</h3>
+                  <p className="empty-subtitle">Ask me anything about your uploaded documents or try one of these:</p>
+                  <div className="empty-suggestions">
+                    {sampleQuestions.map((question, index) => (
+                      <button
+                        key={index}
+                        className="suggestion-chip"
+                        onClick={() => handleSampleQuestion(question)}
+                      >
+                        {question}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`message ${message.type}`}
+                >
+                  <div className={`message-avatar ${message.type}`}>
+                    {message.type === 'user' ? <User size={16} /> : <Bot size={16} />}
+                  </div>
+                  
+                  <div className="message-content">
+                    {message.isTyping ? (
+                      <div className="typing-indicator">
+                        <div className="typing-dot"></div>
+                        <div className="typing-dot"></div>
+                        <div className="typing-dot"></div>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="message-text">{message.content}</div>
+                        {message.contextCount !== undefined && message.contextCount > 0 && (
+                          <div className="message-sources">
+                            <span className="sources-badge">
+                              <Database size={12} />
+                              {message.contextCount} sources
+                            </span>
+                          </div>
+                        )}
+                        <div className="message-meta">
+                          {message.type === 'user' ? <User size={12} /> : <Bot size={12} />}
+                          <span>{formatDate(message.timestamp)}</span>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
-              {isChatLoading && (
-                <div className="message assistant">
-                  <div className="message-bubble">Thinking...</div>
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input */}
+            <div className="input-container">
+              <form onSubmit={handleSubmit} className="input-form">
+                <textarea
+                  ref={inputRef}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask me anything about your documents..."
+                  disabled={isChatLoading}
+                  className="input-field"
+                  rows={1}
+                  style={{
+                    resize: 'none',
+                    overflow: 'hidden',
+                    height: 'auto',
+                    minHeight: '2.75rem',
+                  }}
+                  onInput={(e) => {
+                    const target = e.target as HTMLTextAreaElement;
+                    target.style.height = 'auto';
+                    target.style.height = Math.min(target.scrollHeight, 128) + 'px';
+                  }}
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isChatLoading}
+                  className="send-button"
+                >
+                  {isChatLoading ? <Loader2 size={16} /> : <Send size={16} />}
+                </button>
+              </form>
+              {messages.length > 0 && (
+                <div style={{ textAlign: 'center', marginTop: '0.5rem' }}>
+                  <button
+                    onClick={clearChatHistory}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: 'var(--text-muted)',
+                      fontSize: '0.75rem',
+                      cursor: 'pointer',
+                      textDecoration: 'underline',
+                    }}
+                  >
+                    Clear chat history
+                  </button>
                 </div>
               )}
             </div>
-            <form onSubmit={handleChatSubmit} className="chat-input-form">
-              <input
-                type="text"
-                value={chatInput}
-                onChange={(e) => setChatInput(e.target.value)}
-                placeholder="Ask a question..."
-                className="chat-input"
-                disabled={isChatLoading}
-              />
-              <button type="submit" className="chat-send-button" disabled={isChatLoading}>
-                Send
-              </button>
-            </form>
           </div>
         )}
-
+        
         {activeTab === 'upload' && (
-          <div>
-            <div
-              className="upload-area"
-              onDragOver={(e) => { e.preventDefault(); e.currentTarget.classList.add('drag-active'); }}
-              onDragLeave={(e) => { e.preventDefault(); e.currentTarget.classList.remove('drag-active'); }}
-              onDrop={(e) => { e.preventDefault(); e.currentTarget.classList.remove('drag-active'); handleFileUpload(e.dataTransfer.files); }}
-              onClick={() => document.getElementById('fileInput')?.click()}
-            >
-              <input
-                id="fileInput"
-                type="file"
-                accept=".pdf"
-                multiple
-                onChange={(e) => handleFileUpload(e.target.files)}
-                style={{ display: 'none' }}
-              />
-              <p>Drag & drop PDF files here, or click to select</p>
-            </div>
-            <ul className="file-list">
-              {uploadedFiles.map(file => (
-                <li key={file.id} className="file-item">
-                  <div className="file-item-info">
-                    <span className="file-item-name">{file.name}</span>
-                    <span className="file-item-details">
-                      {(file.size / 1024).toFixed(2)} KB | Chunks: {file.chunks}
-                    </span>
-                  </div>
-                  <span className={`file-item-status ${file.status}`}>
-                    {file.status === 'pending' && 'Uploading...'}
-                    {file.status === 'success' && 'Uploaded'}
-                    {file.status === 'error' && `Error: ${file.error}`}
-                  </span>
-                  {file.status === 'success' && file.fileId && (
-                    <div style={{ display: 'flex', gap: 8 }}>
-                      <button
-                        onClick={() => handleReplaceFile(file.fileId!)}
-                        className="delete-button"
-                        style={{ backgroundColor: '#6c757d' }}
-                      >
-                        Replace
-                      </button>
-                      <button
-                        onClick={() => handleDeleteFile(file.fileId!)}
-                        className="delete-button"
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+          <div className="upload-container">
+            <div className="upload-content">
+              <div className="upload-card">
+                <h2 className="upload-title">
+                  <Upload size={20} />
+                  Upload Documents
+                </h2>
+                <div 
+                  className={`upload-area ${dragActive ? 'drag-active' : ''}`}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  <Upload className="upload-icon" />
+                  <p className="upload-text">
+                    {dragActive ? 'Drop files here' : 'Drop PDF files here'}
+                  </p>
+                  <p className="upload-subtext">or click to select files</p>
+                  <button className="upload-button">
+                    <FileText size={16} />
+                    Select Files
+                  </button>
+                </div>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  multiple
+                  accept=".pdf"
+                  onChange={(e) => handleFileUpload(e.target.files)}
+                  className="file-input"
+                />
+              </div>
 
-        {activeTab === 'status' && health && (
-          <div>
-            <div className="status-grid">
-              <div className="status-card">
-                <span className={`status-icon ${health.vectordb ? 'success' : 'error'}`}>
-                  {health.vectordb ? '✅' : '❌'}
-                </span>
-                <h3>Vector DB</h3>
-                <p>{health.vectordb ? 'Operational' : 'Disconnected'}</p>
-              </div>
-              <div className="status-card">
-                <span className={`status-icon ${health.llm ? 'success' : 'error'}`}>
-                  {health.llm ? '✅' : '❌'}
-                </span>
-                <h3>LLM Service</h3>
-                <p>{health.llm ? 'Operational' : 'Disconnected'}</p>
-              </div>
-              <div className="status-card">
-                <span className={`status-icon ${health.overall ? 'success' : 'error'}`}>
-                  {health.overall ? 'Healthy' : 'Degraded'}
-                </span>
-                <h3>Overall System</h3>
-                <p>{health.overall ? 'All systems go!' : 'Issues detected'}</p>
-              </div>
+              {uploadedFiles.length > 0 && (
+                <div className="upload-card">
+                  <h3 className="upload-title">
+                    <FileText size={20} />
+                    Uploaded Files ({uploadedFiles.length})
+                  </h3>
+                  <div className="file-list">
+                    {uploadedFiles.map((file) => (
+                      <div key={file.id} className="file-item">
+                        <div className="file-info">
+                          <div className="file-icon">📄</div>
+                          <div className="file-details">
+                            <h4>{file.name}</h4>
+                            <div className="file-meta">
+                              <span>{formatFileSize(file.size)}</span>
+                              <span>•</span>
+                              <div className="file-status">
+                                {file.status === 'uploading' && <Loader2 className="status-icon loading" />}
+                                {file.status === 'success' && <CheckCircle className="status-icon success" />}
+                                {file.status === 'error' && <XCircle className="status-icon error" />}
+                                <span>
+                                  {file.status === 'uploading' && 'Uploading...'}
+                                  {file.status === 'success' && `Uploaded (${file.chunks} chunks)`}
+                                  {file.status === 'error' && (file.error || 'Upload failed')}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {file.status === 'success' && file.backendFileId && (
+                          <div className="file-actions">
+                            <input
+                              type="file"
+                              accept=".pdf"
+                              onChange={(e) => handleFileUpload(e.target.files, file.backendFileId!)}
+                              style={{ display: 'none' }}
+                              id={`update-file-${file.backendFileId}`}
+                            />
+                            <button 
+                              onClick={() => document.getElementById(`update-file-${file.backendFileId}`)?.click()}
+                              className="action-button update"
+                            >
+                              <RefreshCw size={14} />
+                              Replace
+                            </button>
+                            <button 
+                              onClick={() => handleDeleteFile(file.backendFileId!)}
+                              className="action-button delete"
+                            >
+                              <Trash2 size={14} />
+                              Delete
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-            <button onClick={fetchHealthStatus} className="refresh-button">
-              Refresh Status
-            </button>
           </div>
         )}
-      </div>
+        
+        {activeTab === 'status' && (
+          <div className="status-container">
+            <div className="status-content">
+              <div className="status-card">
+                <h2 className="status-title">
+                  <Activity size={20} />
+                  System Status
+                </h2>
+                <div className="status-list">
+                  <div className="status-item">
+                    <span className="status-label">
+                      <Zap size={16} style={{ marginRight: '0.5rem' }} />
+                      Overall System
+                    </span>
+                    <div className="status-indicator">
+                      {health?.overall ? (
+                        <CheckCircle className="status-icon success" />
+                      ) : (
+                        <AlertCircle className="status-icon error" />
+                      )}
+                      <span className={`status-badge ${health?.overall ? 'healthy' : 'unhealthy'}`}>
+                        {health?.overall ? (
+                          <>
+                            <CheckCircle size={12} />
+                            Healthy
+                          </>
+                        ) : (
+                          <>
+                            <AlertCircle size={12} />
+                            Unhealthy
+                          </>
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="status-item">
+                    <span className="status-label">
+                      <Database size={16} style={{ marginRight: '0.5rem' }} />
+                      Vector Database
+                    </span>
+                    <div className="status-indicator">
+                      {health?.vectordb ? (
+                        <CheckCircle className="status-icon success" />
+                      ) : (
+                        <XCircle className="status-icon error" />
+                      )}
+                      <span className={`status-badge ${health?.vectordb ? 'healthy' : 'unhealthy'}`}>
+                        {health?.vectordb ? (
+                          <>
+                            <CheckCircle size={12} />
+                            Connected
+                          </>
+                        ) : (
+                          <>
+                            <XCircle size={12} />
+                            Disconnected
+                          </>
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="status-item">
+                    <span className="status-label">
+                      <Brain size={16} style={{ marginRight: '0.5rem' }} />
+                      LLM Service
+                    </span>
+                    <div className="status-indicator">
+                      {health?.llm ? (
+                        <CheckCircle className="status-icon success" />
+                      ) : (
+                        <XCircle className="status-icon error" />
+                      )}
+                      <span className={`status-badge ${health?.llm ? 'healthy' : 'unhealthy'}`}>
+                        {health?.llm ? (
+                          <>
+                            <CheckCircle size={12} />
+                            Operational
+                          </>
+                        ) : (
+                          <>
+                            <XCircle size={12} />
+                            Down
+                          </>
+                        )}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {health?.message && (
+                  <div className="status-message">
+                    <strong>System Message:</strong> {health.message}
+                  </div>
+                )}
+                <button
+                  onClick={checkSystemStatus}
+                  className="refresh-button"
+                >
+                  <RefreshCw size={16} />
+                  Refresh Status
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </main>
     </div>
   );
 };

@@ -60,3 +60,4 @@ tmp/
 # Test files
 test_*.py
 debug_*.py
+frontend/node_modules/
