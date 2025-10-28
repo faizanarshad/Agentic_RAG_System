@@ -82,13 +82,16 @@ const formatDate = (date: Date): string => {
   }).format(date);
 };
 
-// Sample questions for empty state
+// Medical sample questions for empty state
 const sampleQuestions = [
-  "What is artificial intelligence?",
-  "Explain machine learning concepts",
-  "How does deep learning work?",
-  "What are neural networks?",
-  "Tell me about RAG systems"
+  "What are the clinical manifestations of acute myocardial infarction?",
+  "Explain the pharmacokinetics and contraindications of ACE inhibitors",
+  "What are the SIRS criteria and sepsis diagnostic protocols?",
+  "Describe the staging and management of chronic kidney disease",
+  "What are the absolute contraindications for MRI contrast agents?",
+  "Explain the pathophysiology and complications of Type 2 diabetes mellitus",
+  "What are the common adverse effects of chemotherapy regimens?",
+  "Describe the emergency management protocol for anaphylactic shock"
 ];
 
 const App: React.FC = () => {
@@ -361,10 +364,19 @@ const App: React.FC = () => {
       {/* Header */}
       <header className="header">
         <div className="header-content">
-          <div className="logo">
-            <Bot className="logo-icon" />
-            <h1 className="logo-text">Agentic RAG System</h1>
-          </div>
+                  <div className="logo">
+                    <div className="medical-logo">
+                      <div className="medical-cross">
+                        <div className="cross-horizontal"></div>
+                        <div className="cross-vertical"></div>
+                      </div>
+                      <Bot className="logo-icon" />
+                    </div>
+                    <div className="logo-text-container">
+                      <h1 className="logo-text">MediRAG</h1>
+                      <span className="logo-subtitle">Clinical Intelligence System</span>
+                    </div>
+                  </div>
           
           <div className="header-controls">
             <button
@@ -405,10 +417,12 @@ const App: React.FC = () => {
             {/* Messages */}
             <div className="messages">
               {messages.length === 0 && (
-                <div className="empty-state">
-                  <Sparkles className="empty-icon" />
-                  <h3 className="empty-title">Welcome to your RAG Assistant!</h3>
-                  <p className="empty-subtitle">Ask me anything about your uploaded documents or try one of these:</p>
+                        <div className="empty-state">
+                          <div className="medical-stethoscope">
+                            <Sparkles className="empty-icon" />
+                          </div>
+                          <h3 className="empty-title">Clinical Intelligence System</h3>
+                          <p className="empty-subtitle">Query evidence-based medical literature and clinical guidelines. Select from these clinical scenarios:</p>
                   <div className="empty-suggestions">
                     {sampleQuestions.map((question, index) => (
                       <button
@@ -470,7 +484,7 @@ const App: React.FC = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask me anything about your documents..."
+                          placeholder="Ask medical questions (e.g., symptoms, treatments, medications)..."
                   disabled={isChatLoading}
                   className="input-field"
                   rows={1}
@@ -521,7 +535,7 @@ const App: React.FC = () => {
               <div className="upload-card">
                 <h2 className="upload-title">
                   <Upload size={20} />
-                  Upload Documents
+                  Clinical Document Repository
                 </h2>
                 <div 
                   className={`upload-area ${dragActive ? 'drag-active' : ''}`}
@@ -532,9 +546,9 @@ const App: React.FC = () => {
                 >
                   <Upload className="upload-icon" />
                   <p className="upload-text">
-                    {dragActive ? 'Drop files here' : 'Drop PDF files here'}
+                    {dragActive ? 'Drop files here' : 'Drop PDF or CSV files here'}
                   </p>
-                  <p className="upload-subtext">or click to select files</p>
+                  <p className="upload-subtext">or click to select medical files (PDF/CSV)</p>
                   <button className="upload-button">
                     <FileText size={16} />
                     Select Files
@@ -544,7 +558,7 @@ const App: React.FC = () => {
                   ref={fileInputRef}
                   type="file"
                   multiple
-                  accept=".pdf"
+                  accept=".pdf,.csv"
                   onChange={(e) => handleFileUpload(e.target.files)}
                   className="file-input"
                 />

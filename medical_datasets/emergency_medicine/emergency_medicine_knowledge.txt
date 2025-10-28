@@ -1,0 +1,163 @@
+
+# Emergency Medicine Knowledge Base
+
+## Trauma Management
+
+### Primary Survey (ABCDE)
+- **A - Airway**: Assessment and management with C-spine protection
+- **B - Breathing**: Ventilation and oxygenation
+- **C - Circulation**: Hemorrhage control and shock management
+- **D - Disability**: Neurologic assessment (GCS)
+- **E - Exposure**: Complete examination with temperature control
+
+### Advanced Trauma Life Support (ATLS)
+- **Golden Hour**: Critical first hour after trauma
+- **Damage Control**: Rapid control of life-threatening injuries
+- **Massive Transfusion Protocol**: Blood product resuscitation
+- **Trauma Team Activation**: Coordinated multidisciplinary response
+
+### Specific Trauma Types
+- **Traumatic Brain Injury**: GCS assessment, ICP management
+- **Chest Trauma**: Pneumothorax, hemothorax, cardiac tamponade
+- **Abdominal Trauma**: FAST exam, diagnostic peritoneal lavage
+- **Pelvic Fractures**: Hemorrhage control, stability assessment
+
+## Cardiac Emergencies
+
+### Acute Coronary Syndrome
+- **STEMI**: ST-elevation myocardial infarction
+- **NSTEMI**: Non-ST-elevation myocardial infarction
+- **Unstable Angina**: Chest pain at rest or with minimal exertion
+- **Treatment**: Antiplatelet, anticoagulation, reperfusion therapy
+
+### Cardiac Arrest
+- **Ventricular Fibrillation**: Immediate defibrillation
+- **Pulseless Ventricular Tachycardia**: Defibrillation, antiarrhythmics
+- **Asystole**: High-quality CPR, epinephrine, reversible causes
+- **PEA**: Pulseless electrical activity, treat underlying cause
+
+### Arrhythmias
+- **Atrial Fibrillation**: Rate vs rhythm control, anticoagulation
+- **Supraventricular Tachycardia**: Vagal maneuvers, adenosine
+- **Ventricular Tachycardia**: Stable vs unstable, cardioversion
+
+## Respiratory Emergencies
+
+### Acute Respiratory Failure
+- **Type I**: Hypoxemic (pneumonia, ARDS, pulmonary edema)
+- **Type II**: Hypercapnic (COPD, neuromuscular disease)
+- **Treatment**: Oxygen therapy, mechanical ventilation
+
+### Asthma Exacerbation
+- **Assessment**: Peak flow, oxygen saturation, accessory muscles
+- **Treatment**: Beta-2 agonists, corticosteroids, magnesium
+- **Severe**: Continuous nebulizers, BiPAP, intubation
+
+### Pneumothorax
+- **Spontaneous**: Primary (young, tall males) vs secondary (COPD)
+- **Tension**: Life-threatening, immediate decompression
+- **Treatment**: Needle decompression, chest tube placement
+
+### Pulmonary Embolism
+- **Risk Factors**: Virchow's triad (stasis, hypercoagulability, endothelial injury)
+- **Clinical Presentation**: Dyspnea, chest pain, hemoptysis
+- **Diagnosis**: D-dimer, CTPA, V/Q scan
+- **Treatment**: Anticoagulation, thrombolysis, embolectomy
+
+## Neurologic Emergencies
+
+### Stroke
+- **Ischemic**: Thrombotic, embolic, lacunar
+- **Hemorrhagic**: Intracerebral, subarachnoid
+- **Assessment**: NIHSS, FAST exam, time of onset
+- **Treatment**: tPA, mechanical thrombectomy, blood pressure management
+
+### Seizures
+- **Generalized**: Tonic-clonic, absence, myoclonic
+- **Focal**: Simple vs complex partial seizures
+- **Status Epilepticus**: Continuous seizure >5 minutes
+- **Treatment**: Benzodiazepines, antiepileptics, airway protection
+
+### Altered Mental Status
+- **Differential**: AEIOU-TIPS mnemonic
+  - A: Alcohol, Acidosis
+  - E: Epilepsy, Encephalitis, Endocrine
+  - I: Insulin (hypoglycemia), Intoxication
+  - O: Opiates, Oxygen (hypoxia)
+  - U: Uremia
+  - T: Trauma, Temperature
+  - I: Infection
+  - P: Psychiatric, Poisoning
+  - S: Shock, Stroke
+
+## Shock and Resuscitation
+
+### Types of Shock
+- **Hypovolemic**: Blood loss, dehydration
+- **Cardiogenic**: Heart failure, myocardial infarction
+- **Distributive**: Septic, anaphylactic, neurogenic
+- **Obstructive**: Tension pneumothorax, cardiac tamponade, PE
+
+### Fluid Resuscitation
+- **Crystalloids**: Normal saline, lactated Ringer's
+- **Colloids**: Albumin, synthetic colloids
+- **Blood Products**: Packed RBCs, plasma, platelets
+- **Monitoring**: Urine output, lactate, central venous pressure
+
+### Vasopressors
+- **Norepinephrine**: First-line for septic shock
+- **Epinephrine**: Cardiac arrest, anaphylaxis
+- **Dopamine**: Cardiogenic shock with bradycardia
+- **Vasopressin**: Adjunct in refractory shock
+
+## Infectious Disease Emergencies
+
+### Sepsis and Septic Shock
+- **SIRS Criteria**: Temperature, heart rate, respiratory rate, WBC
+- **qSOFA**: Quick sequential organ failure assessment
+- **Treatment**: Early antibiotics, fluid resuscitation, source control
+- **Surviving Sepsis Guidelines**: Evidence-based management
+
+### Meningitis
+- **Bacterial**: S. pneumoniae, N. meningitidis, H. influenzae
+- **Viral**: Enterovirus, HSV, VZV
+- **Clinical**: Fever, headache, neck stiffness, altered mental status
+- **Treatment**: Empiric antibiotics, steroids, supportive care
+
+### Cellulitis and Soft Tissue Infections
+- **Uncomplicated**: Oral antibiotics, outpatient management
+- **Complicated**: IV antibiotics, surgical consultation
+- **Necrotizing Fasciitis**: Surgical emergency, broad-spectrum antibiotics
+
+## Toxicology
+
+### Common Poisonings
+- **Acetaminophen**: N-acetylcysteine antidote
+- **Salicylates**: Alkalinization, hemodialysis
+- **Opioids**: Naloxone reversal
+- **Benzodiazepines**: Flumazenil (limited use)
+- **Tricyclic Antidepressants**: Sodium bicarbonate
+
+### Antidotes
+- **Specific Antidotes**: Naloxone, flumazenil, N-acetylcysteine
+- **Chelating Agents**: EDTA, dimercaprol, deferasirox
+- **Enhanced Elimination**: Activated charcoal, hemodialysis
+
+## Pediatric Emergencies
+
+### Pediatric Assessment Triangle
+- **Appearance**: Mental status, muscle tone, consolability
+- **Work of Breathing**: Respiratory effort, positioning
+- **Circulation**: Skin color, capillary refill
+
+### Common Pediatric Conditions
+- **Febrile Seizures**: Benign, age 6 months to 5 years
+- **Croup**: Barking cough, stridor, viral etiology
+- **Bronchiolitis**: RSV, wheezing in infants
+- **Intussusception**: Abdominal pain, bloody stools
+
+### Pediatric Resuscitation
+- **Weight-based Dosing**: Broselow tape, length-based calculations
+- **Airway Management**: Age-appropriate equipment
+- **Fluid Resuscitation**: 20 mL/kg boluses
+- **Defibrillation**: 2 J/kg initial dose

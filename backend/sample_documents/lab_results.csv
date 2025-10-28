@@ -1,0 +1,22 @@
+test_name,normal_range,units,clinical_significance,sample_type,turnaround_time
+Complete Blood Count,4.5-11.0,cells/mcL,Detects infections and blood disorders,Whole blood,2-4 hours
+Hemoglobin,12.0-15.5,g/dL,Measures oxygen-carrying capacity,Whole blood,2-4 hours
+Glucose (Fasting),70-100,mg/dL,Diabetes screening and monitoring,Serum,1-2 hours
+Cholesterol (Total),Less than 200,mg/dL,Cardiovascular risk assessment,Serum,4-6 hours
+HDL Cholesterol,40-60,mg/dL,Good cholesterol levels,Serum,4-6 hours
+LDL Cholesterol,Less than 100,mg/dL,Bad cholesterol levels,Serum,4-6 hours
+Triglycerides,Less than 150,mg/dL,Fat metabolism assessment,Serum,4-6 hours
+Creatinine,0.6-1.2,mg/dL,Kidney function indicator,Serum,2-4 hours
+Blood Urea Nitrogen,7-20,mg/dL,Kidney and liver function,Serum,2-4 hours
+Alanine Aminotransferase,7-56,U/L,Liver function test,Serum,4-6 hours
+Aspartate Aminotransferase,10-40,U/L,Liver and heart damage marker,Serum,4-6 hours
+Thyroid Stimulating Hormone,0.4-4.0,mIU/L,Thyroid function assessment,Serum,6-8 hours
+Free T4,0.8-1.8,ng/dL,Thyroid hormone levels,Serum,6-8 hours
+Prostate Specific Antigen,0-4.0,ng/mL,Prostate cancer screening,Serum,4-6 hours
+C-Reactive Protein,Less than 3.0,mg/L,Inflammation marker,Serum,4-6 hours
+Hemoglobin A1C,Less than 5.7,%,Long-term glucose control,Whole blood,2-4 hours
+Vitamin D,30-100,ng/mL,Bone health assessment,Serum,24-48 hours
+B12,200-900,pg/mL,Vitamin B12 deficiency screening,Serum,6-8 hours
+Folate,2.7-17.0,ng/mL,Folate deficiency assessment,Serum,6-8 hours
+Iron,60-170,mcg/dL,Iron deficiency evaluation,Serum,4-6 hours
+

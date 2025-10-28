@@ -1,0 +1,200 @@
+
+# Pharmacology Knowledge Base
+
+## Pharmacokinetics and Pharmacodynamics
+
+### Pharmacokinetics (ADME)
+- **Absorption**: Drug uptake from administration site
+  - Bioavailability: Fraction reaching systemic circulation
+  - First-pass metabolism: Hepatic metabolism before systemic circulation
+  - Routes: Oral, IV, IM, SC, topical, inhalation
+
+- **Distribution**: Drug movement throughout body
+  - Volume of distribution (Vd): Apparent volume drug distributes into
+  - Protein binding: Albumin, alpha-1-acid glycoprotein
+  - Blood-brain barrier: Lipophilic drugs cross more easily
+
+- **Metabolism**: Drug biotransformation
+  - Phase I: Oxidation, reduction, hydrolysis (CYP450 enzymes)
+  - Phase II: Conjugation reactions (glucuronidation, sulfation)
+  - Hepatic clearance: Liver's ability to eliminate drug
+
+- **Excretion**: Drug elimination from body
+  - Renal clearance: Glomerular filtration, tubular secretion/reabsorption
+  - Half-life: Time for drug concentration to decrease by 50%
+  - Steady state: Achieved after 5 half-lives
+
+### Pharmacodynamics
+- **Receptor Theory**: Drug-receptor interactions
+- **Dose-Response Relationships**: ED50, therapeutic window
+- **Agonists**: Activate receptors (full, partial)
+- **Antagonists**: Block receptors (competitive, non-competitive)
+- **Tolerance**: Decreased response with repeated exposure
+- **Dependence**: Physical/psychological need for drug
+
+## Cardiovascular Pharmacology
+
+### Antihypertensive Agents
+- **ACE Inhibitors**: Lisinopril, enalapril
+  - Mechanism: Block angiotensin-converting enzyme
+  - Side effects: Dry cough, hyperkalemia, angioedema
+  - Contraindications: Pregnancy, bilateral renal artery stenosis
+
+- **ARBs**: Losartan, valsartan
+  - Mechanism: Block angiotensin II receptors
+  - Advantages: No cough, similar efficacy to ACE inhibitors
+
+- **Calcium Channel Blockers**: Amlodipine, diltiazem, verapamil
+  - Dihydropyridines: Peripheral vasodilation
+  - Non-dihydropyridines: Cardiac effects, AV node blockade
+
+- **Beta-blockers**: Metoprolol, atenolol, propranolol
+  - Selective (β1): Cardioselective
+  - Non-selective (β1/β2): Bronchospasm risk
+  - Contraindications: Asthma, severe heart failure
+
+### Anticoagulants and Antiplatelets
+- **Warfarin**: Vitamin K antagonist
+  - Monitoring: INR (International Normalized Ratio)
+  - Reversal: Vitamin K, fresh frozen plasma, prothrombin complex concentrate
+  - Drug interactions: CYP2C9, VKORC1 polymorphisms
+
+- **Heparin**: Activates antithrombin III
+  - Unfractionated: IV, monitored by aPTT
+  - Low molecular weight: SC, predictable dosing
+  - Reversal: Protamine sulfate
+
+- **DOACs**: Direct oral anticoagulants
+  - Dabigatran: Direct thrombin inhibitor
+  - Rivaroxaban, apixaban: Factor Xa inhibitors
+  - Advantages: Fixed dosing, fewer interactions
+
+- **Antiplatelets**: Aspirin, clopidogrel, ticagrelor
+  - Aspirin: Irreversible COX-1 inhibition
+  - P2Y12 inhibitors: ADP receptor blockade
+  - Dual antiplatelet therapy: Post-PCI, ACS
+
+## Central Nervous System Pharmacology
+
+### Antidepressants
+- **SSRIs**: Sertraline, fluoxetine, escitalopram
+  - Mechanism: Selective serotonin reuptake inhibition
+  - Side effects: GI upset, sexual dysfunction, serotonin syndrome
+  - Discontinuation: Gradual taper to avoid withdrawal
+
+- **SNRIs**: Venlafaxine, duloxetine
+  - Mechanism: Serotonin and norepinephrine reuptake inhibition
+  - Indications: Depression, anxiety, neuropathic pain
+
+- **Tricyclics**: Amitriptyline, nortriptyline
+  - Mechanism: Multiple neurotransmitter reuptake inhibition
+  - Side effects: Anticholinergic, sedation, cardiac toxicity
+  - Overdose: QRS widening, sodium bicarbonate treatment
+
+### Antiepileptics
+- **Phenytoin**: Sodium channel blocker
+  - Monitoring: Serum levels, CBC, liver function
+  - Side effects: Gingival hyperplasia, hirsutism, ataxia
+  - Zero-order kinetics: Small dose changes cause large level changes
+
+- **Carbamazepine**: Sodium channel blocker
+  - Indications: Focal seizures, trigeminal neuralgia
+  - Side effects: Diplopia, ataxia, hyponatremia
+  - Drug interactions: CYP3A4 inducer
+
+- **Valproic Acid**: Multiple mechanisms
+  - Broad spectrum: Generalized and focal seizures
+  - Side effects: Weight gain, hair loss, teratogenicity
+  - Monitoring: Liver function, platelet count
+
+### Opioid Analgesics
+- **Morphine**: Gold standard opioid
+  - Metabolism: Glucuronidation, active metabolites
+  - Side effects: Respiratory depression, constipation, tolerance
+
+- **Fentanyl**: Synthetic opioid, high potency
+  - Routes: IV, transdermal, sublingual
+  - Rapid onset, short duration
+
+- **Oxycodone**: Semi-synthetic, oral bioavailability
+- **Tramadol**: Weak opioid, serotonin/norepinephrine reuptake inhibition
+
+## Antimicrobial Pharmacology
+
+### Beta-lactam Antibiotics
+- **Penicillins**: Penicillin G, amoxicillin, piperacillin
+  - Mechanism: Cell wall synthesis inhibition
+  - Resistance: Beta-lactamase production
+  - Allergies: Cross-reactivity with cephalosporins (low)
+
+- **Cephalosporins**: Cephalexin, ceftriaxone, ceftaroline
+  - Generations: 1st (gram-positive) to 5th (MRSA)
+  - Side effects: GI upset, C. difficile colitis
+
+- **Carbapenems**: Imipenem, meropenem, ertapenem
+  - Broad spectrum: Gram-positive, gram-negative, anaerobes
+  - Reserved for severe infections, carbapenem resistance
+
+### Fluoroquinolones
+- **Ciprofloxacin, Levofloxacin**: DNA gyrase inhibition
+- **Spectrum**: Gram-negative, atypical organisms
+- **Side effects**: Tendon rupture, QT prolongation, C. difficile
+- **Resistance**: Increasing, especially in gram-negatives
+
+### Macrolides
+- **Azithromycin, Clarithromycin**: Protein synthesis inhibition
+- **Spectrum**: Gram-positive, atypicals (Mycoplasma, Chlamydia)
+- **Side effects**: GI upset, QT prolongation
+- **Drug interactions**: CYP3A4 inhibition (clarithromycin)
+
+## Endocrine Pharmacology
+
+### Diabetes Medications
+- **Insulin**: Rapid, short, intermediate, long-acting
+  - Types: Regular, NPH, glargine, detemir, degludec
+  - Routes: SC, IV (regular insulin only)
+  - Side effects: Hypoglycemia, weight gain, lipodystrophy
+
+- **Metformin**: Biguanide, first-line type 2 diabetes
+  - Mechanism: Decreased hepatic glucose production
+  - Side effects: GI upset, lactic acidosis (rare)
+  - Contraindications: Renal impairment, contrast exposure
+
+- **Sulfonylureas**: Glyburide, glipizide
+  - Mechanism: Insulin secretion stimulation
+  - Side effects: Hypoglycemia, weight gain
+
+- **SGLT2 Inhibitors**: Empagliflozin, canagliflozin
+  - Mechanism: Glucose reabsorption inhibition
+  - Benefits: Weight loss, cardiovascular protection
+  - Side effects: UTIs, DKA, amputation risk
+
+### Thyroid Medications
+- **Levothyroxine**: Synthetic T4, hypothyroidism treatment
+  - Dosing: Weight-based, TSH monitoring
+  - Interactions: Iron, calcium, coffee affect absorption
+
+- **Methimazole**: Antithyroid, hyperthyroidism treatment
+  - Mechanism: Thyroid hormone synthesis inhibition
+  - Side effects: Agranulocytosis, hepatotoxicity
+
+## Drug Interactions and Safety
+
+### Cytochrome P450 System
+- **Major Enzymes**: CYP3A4, CYP2D6, CYP2C9, CYP2C19
+- **Inducers**: Phenytoin, carbamazepine, rifampin
+- **Inhibitors**: Ketoconazole, erythromycin, grapefruit juice
+- **Clinical Significance**: Altered drug levels, efficacy, toxicity
+
+### Adverse Drug Reactions
+- **Type A**: Dose-dependent, predictable (80% of ADRs)
+- **Type B**: Dose-independent, unpredictable (allergic reactions)
+- **Monitoring**: Therapeutic drug monitoring, laboratory values
+- **Reporting**: FDA MedWatch, pharmacovigilance
+
+### Special Populations
+- **Pediatric**: Weight-based dosing, developmental considerations
+- **Geriatric**: Polypharmacy, altered pharmacokinetics
+- **Pregnancy**: FDA categories, teratogenicity risk
+- **Renal Impairment**: Dose adjustments, nephrotoxicity
+- **Hepatic Impairment**: Metabolism alterations, hepatotoxicity

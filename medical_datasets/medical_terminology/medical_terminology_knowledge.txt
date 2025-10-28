@@ -1,0 +1,206 @@
+
+# Medical Terminology Knowledge Base
+
+## Anatomical Terms and Body Systems
+
+### Anatomical Position and Directional Terms
+- **Anatomical Position**: Standing upright, arms at sides, palms forward
+- **Superior/Cranial**: Toward the head
+- **Inferior/Caudal**: Toward the feet
+- **Anterior/Ventral**: Toward the front
+- **Posterior/Dorsal**: Toward the back
+- **Medial**: Toward the midline
+- **Lateral**: Away from the midline
+- **Proximal**: Closer to point of attachment
+- **Distal**: Farther from point of attachment
+
+### Body Planes and Sections
+- **Sagittal Plane**: Divides body into left and right
+- **Coronal/Frontal Plane**: Divides body into anterior and posterior
+- **Transverse/Axial Plane**: Divides body into superior and inferior
+- **Oblique Plane**: Diagonal cut through body
+
+### Body Cavities
+- **Dorsal Cavity**: Cranial and spinal cavities
+- **Ventral Cavity**: Thoracic, abdominal, and pelvic cavities
+- **Thoracic Cavity**: Heart, lungs, major vessels
+- **Abdominal Cavity**: Stomach, liver, intestines
+- **Pelvic Cavity**: Reproductive organs, bladder, rectum
+
+## Medical Word Formation
+
+### Root Words (Common Examples)
+- **Cardio**: Heart (cardiology, cardiomyopathy)
+- **Pulmo/Pneumo**: Lung (pulmonology, pneumonia)
+- **Gastro**: Stomach (gastroenterology, gastritis)
+- **Nephro**: Kidney (nephrology, nephritis)
+- **Neuro**: Nerve (neurology, neuropathy)
+- **Hemo/Hemato**: Blood (hematology, hemoglobin)
+- **Osteo**: Bone (osteoporosis, osteomyelitis)
+- **Dermato**: Skin (dermatology, dermatitis)
+
+### Prefixes
+- **A-/An-**: Without, absence of (anemia, apnea)
+- **Brady-**: Slow (bradycardia, bradypnea)
+- **Tachy-**: Fast (tachycardia, tachypnea)
+- **Hyper-**: Above, excessive (hypertension, hyperglycemia)
+- **Hypo-**: Below, deficient (hypotension, hypoglycemia)
+- **Dys-**: Difficult, abnormal (dyspnea, dysphagia)
+- **Pre-**: Before (preoperative, prenatal)
+- **Post-**: After (postoperative, postpartum)
+
+### Suffixes
+- **-itis**: Inflammation (arthritis, appendicitis)
+- **-osis**: Condition, disease (cirrhosis, osteoporosis)
+- **-oma**: Tumor, mass (carcinoma, hematoma)
+- **-pathy**: Disease (neuropathy, cardiomyopathy)
+- **-ectomy**: Surgical removal (appendectomy, cholecystectomy)
+- **-ostomy**: Surgical opening (colostomy, tracheostomy)
+- **-scopy**: Visual examination (endoscopy, colonoscopy)
+- **-graphy**: Recording, imaging (radiography, echocardiography)
+
+## Cardiovascular System Terminology
+
+### Heart and Circulation
+- **Myocardium**: Heart muscle
+- **Pericardium**: Membrane surrounding heart
+- **Endocardium**: Inner lining of heart
+- **Systole**: Contraction phase
+- **Diastole**: Relaxation phase
+- **Arrhythmia**: Irregular heart rhythm
+- **Ischemia**: Reduced blood flow
+- **Infarction**: Tissue death due to lack of blood supply
+
+### Blood Vessels
+- **Arteries**: Carry blood away from heart
+- **Veins**: Carry blood toward heart
+- **Capillaries**: Smallest blood vessels
+- **Atherosclerosis**: Hardening of arteries
+- **Thrombosis**: Blood clot formation
+- **Embolism**: Blockage by traveling clot
+- **Aneurysm**: Abnormal dilation of blood vessel
+
+## Respiratory System Terminology
+
+### Breathing and Gas Exchange
+- **Inspiration**: Breathing in
+- **Expiration**: Breathing out
+- **Ventilation**: Movement of air in and out of lungs
+- **Perfusion**: Blood flow through lungs
+- **Diffusion**: Gas exchange across alveolar membrane
+- **Hypoxia**: Low oxygen levels
+- **Hypercapnia**: High carbon dioxide levels
+
+### Respiratory Conditions
+- **Pneumonia**: Lung infection
+- **Pneumothorax**: Collapsed lung
+- **Pleural Effusion**: Fluid in pleural space
+- **Atelectasis**: Lung collapse
+- **Bronchospasm**: Airway constriction
+- **Dyspnea**: Difficulty breathing
+- **Orthopnea**: Difficulty breathing when lying flat
+
+## Gastrointestinal System Terminology
+
+### Digestive Process
+- **Ingestion**: Taking in food
+- **Digestion**: Breaking down food
+- **Absorption**: Uptake of nutrients
+- **Elimination**: Waste removal
+- **Peristalsis**: Wave-like muscle contractions
+- **Gastric**: Related to stomach
+- **Hepatic**: Related to liver
+- **Biliary**: Related to bile/gallbladder
+
+### GI Conditions
+- **Gastritis**: Stomach inflammation
+- **Peptic Ulcer**: Stomach or duodenal ulcer
+- **Cholecystitis**: Gallbladder inflammation
+- **Pancreatitis**: Pancreas inflammation
+- **Cirrhosis**: Liver scarring
+- **Jaundice**: Yellow discoloration from bilirubin
+- **Ascites**: Fluid accumulation in abdomen
+
+## Nervous System Terminology
+
+### Neuroanatomy
+- **Central Nervous System (CNS)**: Brain and spinal cord
+- **Peripheral Nervous System (PNS)**: Nerves outside CNS
+- **Autonomic Nervous System**: Controls involuntary functions
+- **Sympathetic**: "Fight or flight" response
+- **Parasympathetic**: "Rest and digest" response
+- **Neuron**: Nerve cell
+- **Synapse**: Connection between neurons
+
+### Neurological Conditions
+- **Stroke**: Brain attack, cerebrovascular accident
+- **Seizure**: Abnormal electrical activity in brain
+- **Epilepsy**: Recurrent seizures
+- **Dementia**: Progressive cognitive decline
+- **Neuropathy**: Nerve damage
+- **Paralysis**: Loss of muscle function
+- **Paresthesia**: Abnormal sensation (tingling, numbness)
+
+## Musculoskeletal System Terminology
+
+### Bones and Joints
+- **Osteoblast**: Bone-building cell
+- **Osteoclast**: Bone-resorbing cell
+- **Periosteum**: Membrane covering bone
+- **Synovial**: Joint fluid and membrane
+- **Cartilage**: Smooth tissue covering joints
+- **Ligament**: Connects bone to bone
+- **Tendon**: Connects muscle to bone
+
+### Musculoskeletal Conditions
+- **Fracture**: Broken bone
+- **Dislocation**: Joint displacement
+- **Sprain**: Ligament injury
+- **Strain**: Muscle or tendon injury
+- **Arthritis**: Joint inflammation
+- **Osteoporosis**: Bone density loss
+- **Myalgia**: Muscle pain
+- **Arthralgia**: Joint pain
+
+## Laboratory and Diagnostic Terms
+
+### Laboratory Values
+- **CBC**: Complete blood count
+- **BMP**: Basic metabolic panel
+- **CMP**: Comprehensive metabolic panel
+- **LFTs**: Liver function tests
+- **ABG**: Arterial blood gas
+- **Urinalysis**: Urine examination
+- **Culture**: Growing organisms for identification
+- **Sensitivity**: Antibiotic susceptibility testing
+
+### Diagnostic Imaging
+- **Radiography**: X-ray imaging
+- **CT**: Computed tomography
+- **MRI**: Magnetic resonance imaging
+- **Ultrasound**: Sound wave imaging
+- **Nuclear Medicine**: Radioactive tracer imaging
+- **Contrast**: Enhancement agent for imaging
+- **Fluoroscopy**: Real-time X-ray imaging
+
+## Pharmacological Terms
+
+### Drug Classifications
+- **Analgesic**: Pain reliever
+- **Antibiotic**: Infection fighter
+- **Anticoagulant**: Blood thinner
+- **Antihypertensive**: Blood pressure lowering
+- **Bronchodilator**: Airway opener
+- **Diuretic**: Increases urine production
+- **Sedative**: Calming agent
+- **Stimulant**: Increases activity
+
+### Drug Actions
+- **Agonist**: Activates receptor
+- **Antagonist**: Blocks receptor
+- **Bioavailability**: Amount reaching circulation
+- **Half-life**: Time for drug level to decrease by half
+- **Metabolism**: Drug breakdown
+- **Excretion**: Drug elimination
+- **Tolerance**: Decreased response over time
+- **Dependence**: Physical need for drug

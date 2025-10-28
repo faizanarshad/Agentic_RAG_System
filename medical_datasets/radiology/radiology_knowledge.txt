@@ -1,0 +1,139 @@
+
+# Radiology Knowledge Base
+
+## Imaging Modalities
+
+### X-ray (Radiography)
+- **Principles**: Electromagnetic radiation absorption by tissues
+- **Applications**: Chest, bone, abdominal imaging
+- **Advantages**: Quick, inexpensive, widely available
+- **Limitations**: Limited soft tissue contrast, radiation exposure
+
+### Computed Tomography (CT)
+- **Principles**: Cross-sectional imaging using X-rays
+- **Contrast**: Iodinated contrast for vascular and organ enhancement
+- **Applications**: Trauma, oncology, vascular imaging
+- **Radiation Dose**: Higher than conventional X-ray
+
+### Magnetic Resonance Imaging (MRI)
+- **Principles**: Magnetic field and radiofrequency pulses
+- **Sequences**: T1-weighted, T2-weighted, FLAIR, DWI
+- **Contrast**: Gadolinium-based contrast agents
+- **Contraindications**: Metallic implants, claustrophobia
+
+### Ultrasound
+- **Principles**: High-frequency sound waves
+- **Applications**: Obstetrics, cardiology, abdominal imaging
+- **Advantages**: No radiation, real-time imaging, portable
+- **Doppler**: Blood flow assessment
+
+## Chest Imaging
+
+### Chest X-ray Interpretation
+- **Systematic Approach**: ABCDEFGHI method
+  - A: Airways (trachea, bronchi)
+  - B: Bones (ribs, spine, clavicles)
+  - C: Cardiac silhouette
+  - D: Diaphragm
+  - E: Effusions
+  - F: Fields (lung fields)
+  - G: Gastric bubble
+  - H: Hilum
+  - I: Iatrogenic (lines, tubes)
+
+### Common Chest Pathology
+- **Pneumonia**: Consolidation, air bronchograms
+- **Pneumothorax**: Pleural line, absent lung markings
+- **Pulmonary Edema**: Bilateral infiltrates, cardiomegaly
+- **Lung Cancer**: Mass, nodules, lymphadenopathy
+
+### CT Chest
+- **Indications**: Lung nodule evaluation, staging, pulmonary embolism
+- **HRCT**: High-resolution CT for interstitial lung disease
+- **CTPA**: CT pulmonary angiogram for PE diagnosis
+
+## Abdominal Imaging
+
+### CT Abdomen/Pelvis
+- **Phases**: Non-contrast, arterial, portal venous, delayed
+- **Indications**: Abdominal pain, trauma, oncology staging
+- **Oral Contrast**: Bowel opacification
+- **IV Contrast**: Vascular and organ enhancement
+
+### Abdominal Ultrasound
+- **Applications**: Gallbladder, liver, kidneys, pelvis
+- **FAST Exam**: Focused Assessment with Sonography in Trauma
+- **Doppler**: Portal vein, renal arteries assessment
+
+### MRI Abdomen
+- **MRCP**: Magnetic Resonance Cholangiopancreatography
+- **Liver MRI**: Hepatocellular carcinoma screening
+- **Pelvic MRI**: Gynecologic and prostate imaging
+
+## Neuroimaging
+
+### CT Head
+- **Indications**: Trauma, stroke, headache
+- **Non-contrast**: Hemorrhage, mass effect
+- **Contrast**: Tumor, infection evaluation
+- **Window Settings**: Brain, bone, subdural windows
+
+### MRI Brain
+- **Sequences**: T1, T2, FLAIR, DWI, T2*
+- **Stroke Protocol**: DWI, ADC, FLAIR, T2*
+- **Contrast**: Gadolinium for tumor, infection
+- **Functional MRI**: Blood flow and activation studies
+
+### Stroke Imaging
+- **Acute Stroke**: CT to rule out hemorrhage
+- **Ischemic Stroke**: DWI hyperintensity, ADC hypointensity
+- **Hemorrhagic Stroke**: CT hyperdensity, MRI susceptibility
+
+## Musculoskeletal Imaging
+
+### X-ray Interpretation
+- **Fracture Description**: Location, pattern, displacement, angulation
+- **Joint Assessment**: Alignment, joint space, degenerative changes
+- **Bone Density**: Osteoporosis, osteopenia
+
+### MRI Musculoskeletal
+- **Sequences**: T1, T2, STIR, PD
+- **Applications**: Ligament tears, meniscal injuries, tumors
+- **Contrast**: Gadolinium for infection, tumor
+
+### Bone Scan
+- **Technetium-99m**: Bone metabolism assessment
+- **Applications**: Metastases, infection, fractures
+- **Three-phase**: Blood flow, blood pool, delayed images
+
+## Interventional Radiology
+
+### Vascular Interventions
+- **Angioplasty**: Balloon dilation of stenotic vessels
+- **Stenting**: Metallic scaffold placement
+- **Embolization**: Vessel occlusion for bleeding, tumors
+- **Thrombolysis**: Clot dissolution therapy
+
+### Non-vascular Interventions
+- **Biopsy**: Image-guided tissue sampling
+- **Drainage**: Abscess, fluid collection drainage
+- **Ablation**: Tumor destruction using heat, cold, or chemicals
+
+## Radiation Safety
+
+### ALARA Principle
+- **As Low As Reasonably Achievable**
+- **Time**: Minimize exposure duration
+- **Distance**: Maximize distance from source
+- **Shielding**: Lead aprons, thyroid shields
+
+### Radiation Doses
+- **Chest X-ray**: 0.02 mSv
+- **CT Chest**: 7 mSv
+- **CT Abdomen**: 10 mSv
+- **Annual Background**: 2-3 mSv
+
+### Pregnancy Considerations
+- **First Trimester**: Most sensitive period
+- **Shielding**: Abdominal/pelvic protection
+- **Alternative Modalities**: Ultrasound, MRI when possible

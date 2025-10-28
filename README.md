@@ -11,7 +11,7 @@ Agentic_RAG_System/
 │   ├── core/               # Core configuration and settings
 │   ├── services/           # Business logic services
 │   ├── utils/              # Utility functions and logging
-│   ├── sample_documents/   # Test PDF documents
+│   ├── sample_documents/   # Test PDF and CSV documents
 │   └── requirements.txt    # Python dependencies
 ├── frontend/               # React frontend application
 │   ├── src/                # Source code
@@ -26,11 +26,13 @@ Agentic_RAG_System/
 
 ## ✨ Features
 
-- Document ingestion (PDF → chunks → embeddings)
-- RAG pipeline with OpenAI + Pinecone
-- FastAPI endpoints for chat and files
-- React UI with Upload/Chat/Status tabs
-- Delete and Replace (Update) file vectors from UI
+- **Document Ingestion**: PDF and CSV files → chunks → embeddings
+- **Medical CSV Support**: Automatic medical content detection and HIPAA-compliant PHI removal
+- **RAG Pipeline**: OpenAI + Pinecone for intelligent document retrieval
+- **FastAPI Endpoints**: RESTful APIs for chat and file management
+- **React UI**: Modern interface with Upload/Chat/Status tabs
+- **File Management**: Upload, delete, and replace file vectors from UI
+- **Medical Specialization**: Optimized for medical datasets and clinical documentation
 
 ## 🚀 Run
 
@@ -68,7 +70,7 @@ npm run dev
 
 ## 🧪 Test
 
-- Use Upload tab to add PDFs from `backend/sample_documents/`
+- Use Upload tab to add PDFs or CSV files from `backend/sample_documents/`
 - Ask questions in Chat
 - Manage vectors with Replace/Delete buttons after upload completes
 - Status tab shows Vector DB and LLM health
@@ -104,7 +106,8 @@ pip install -r requirements.txt
 
 - `POST /chat/` – query with RAG
 - `GET /health` – basic API health
-- `POST /files/add_file` – upload/process PDF
+- `POST /files/add_file` – upload/process PDF or CSV files
+- `POST /files/csv_info` – analyze CSV file before upload (medical content detection)
 - `PUT /files/update_file/{file_id}` – replace vectors with a new PDF
 - `DELETE /files/delete_file/{file_id}` – remove vectors by file
 - `GET /files/health` – RAG service health (LLM + Vector DB)

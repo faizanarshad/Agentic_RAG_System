@@ -1,0 +1,216 @@
+
+# Diagnostic Procedures Knowledge Base
+
+## Laboratory Diagnostics
+
+### Complete Blood Count (CBC)
+- **White Blood Cell Count (WBC)**: 4,500-11,000/μL
+  - Neutrophils: 50-70% (bacterial infections)
+  - Lymphocytes: 20-40% (viral infections, malignancy)
+  - Monocytes: 2-8% (chronic inflammation)
+  - Eosinophils: 1-4% (allergies, parasites)
+  - Basophils: 0.5-1% (allergic reactions)
+
+- **Red Blood Cell Count (RBC)**: 
+  - Men: 4.7-6.1 million/μL
+  - Women: 4.2-5.4 million/μL
+
+- **Hemoglobin (Hgb)**:
+  - Men: 14-18 g/dL
+  - Women: 12-16 g/dL
+
+- **Hematocrit (Hct)**:
+  - Men: 42-52%
+  - Women: 37-47%
+
+- **Platelet Count**: 150,000-450,000/μL
+
+### Basic Metabolic Panel (BMP)
+- **Sodium (Na+)**: 136-145 mEq/L
+- **Potassium (K+)**: 3.5-5.0 mEq/L
+- **Chloride (Cl-)**: 98-107 mEq/L
+- **CO2**: 22-28 mEq/L
+- **Blood Urea Nitrogen (BUN)**: 7-20 mg/dL
+- **Creatinine**: 0.6-1.2 mg/dL
+- **Glucose**: 70-100 mg/dL (fasting)
+- **Anion Gap**: 8-16 mEq/L
+
+### Liver Function Tests (LFTs)
+- **Alanine Aminotransferase (ALT)**: 7-56 U/L
+- **Aspartate Aminotransferase (AST)**: 10-40 U/L
+- **Alkaline Phosphatase (ALP)**: 44-147 U/L
+- **Total Bilirubin**: 0.3-1.2 mg/dL
+- **Direct Bilirubin**: 0.0-0.3 mg/dL
+- **Albumin**: 3.5-5.0 g/dL
+- **Prothrombin Time (PT)**: 11-13 seconds
+- **International Normalized Ratio (INR)**: 0.8-1.1
+
+### Cardiac Biomarkers
+- **Troponin I**: <0.04 ng/mL
+- **Troponin T**: <0.01 ng/mL
+- **CK-MB**: 0-6.3 ng/mL
+- **B-type Natriuretic Peptide (BNP)**: <100 pg/mL
+- **NT-proBNP**: <125 pg/mL (age <75), <450 pg/mL (age ≥75)
+
+### Lipid Panel
+- **Total Cholesterol**: <200 mg/dL (desirable)
+- **LDL Cholesterol**: <100 mg/dL (optimal)
+- **HDL Cholesterol**: >40 mg/dL (men), >50 mg/dL (women)
+- **Triglycerides**: <150 mg/dL
+
+### Thyroid Function Tests
+- **TSH**: 0.4-4.0 mIU/L
+- **Free T4**: 0.8-1.8 ng/dL
+- **Free T3**: 2.3-4.2 pg/mL
+- **Anti-TPO**: <35 IU/mL
+- **Thyroglobulin**: <55 ng/mL
+
+## Arterial Blood Gas (ABG) Analysis
+
+### Normal Values
+- **pH**: 7.35-7.45
+- **PaCO2**: 35-45 mmHg
+- **PaO2**: 80-100 mmHg
+- **HCO3-**: 22-26 mEq/L
+- **Base Excess**: -2 to +2 mEq/L
+- **SaO2**: >95%
+
+### Acid-Base Disorders
+- **Respiratory Acidosis**: pH <7.35, PaCO2 >45 mmHg
+- **Respiratory Alkalosis**: pH >7.45, PaCO2 <35 mmHg
+- **Metabolic Acidosis**: pH <7.35, HCO3- <22 mEq/L
+- **Metabolic Alkalosis**: pH >7.45, HCO3- >26 mEq/L
+
+### Compensation
+- **Respiratory Compensation**: Change in PaCO2 to offset metabolic disorder
+- **Metabolic Compensation**: Change in HCO3- to offset respiratory disorder
+- **Winter's Formula**: Expected PaCO2 = 1.5 × [HCO3-] + 8 ± 2
+
+## Urinalysis
+
+### Physical Examination
+- **Color**: Yellow (normal), amber (concentrated), red (blood)
+- **Clarity**: Clear (normal), cloudy (infection, crystals)
+- **Specific Gravity**: 1.003-1.030
+- **Odor**: Mild (normal), fruity (ketones), foul (infection)
+
+### Chemical Examination
+- **pH**: 4.6-8.0
+- **Protein**: Negative to trace
+- **Glucose**: Negative
+- **Ketones**: Negative
+- **Blood**: Negative
+- **Bilirubin**: Negative
+- **Urobilinogen**: 0.2-1.0 mg/dL
+- **Nitrites**: Negative
+- **Leukocyte Esterase**: Negative
+
+### Microscopic Examination
+- **RBCs**: 0-2/hpf
+- **WBCs**: 0-5/hpf
+- **Epithelial Cells**: Few
+- **Bacteria**: None to few
+- **Casts**: Occasional hyaline
+- **Crystals**: Few, type depends on pH
+
+## Cerebrospinal Fluid (CSF) Analysis
+
+### Normal Values
+- **Opening Pressure**: 70-180 mmH2O
+- **Appearance**: Clear, colorless
+- **Cell Count**: <5 WBCs/μL, 0 RBCs/μL
+- **Protein**: 15-45 mg/dL
+- **Glucose**: 50-80 mg/dL (60-70% of serum glucose)
+- **Gram Stain**: Negative
+
+### Pathological Findings
+- **Bacterial Meningitis**: High WBCs (neutrophils), high protein, low glucose
+- **Viral Meningitis**: Moderate WBCs (lymphocytes), normal/high protein, normal glucose
+- **Fungal Meningitis**: High WBCs (lymphocytes), high protein, low glucose
+- **Subarachnoid Hemorrhage**: RBCs, xanthochromia
+
+## Electrocardiography (ECG)
+
+### Normal Values
+- **Heart Rate**: 60-100 bpm
+- **PR Interval**: 120-200 ms
+- **QRS Duration**: <120 ms
+- **QT Interval**: <440 ms (men), <460 ms (women)
+- **QTc**: <450 ms (men), <470 ms (women)
+
+### Lead Placement
+- **Limb Leads**: I, II, III, aVR, aVL, aVF
+- **Precordial Leads**: V1-V6
+- **Lead II**: Most commonly used for rhythm strips
+
+### Common Abnormalities
+- **Atrial Fibrillation**: Irregularly irregular rhythm, no P waves
+- **Atrial Flutter**: Sawtooth pattern, regular rhythm
+- **Ventricular Tachycardia**: Wide QRS, rate >100 bpm
+- **Heart Blocks**: Prolonged PR (1st degree), dropped beats (2nd degree), AV dissociation (3rd degree)
+
+### STEMI Patterns
+- **Anterior**: V1-V6 (LAD territory)
+- **Inferior**: II, III, aVF (RCA territory)
+- **Lateral**: I, aVL, V5-V6 (LCX territory)
+- **Posterior**: Tall R waves in V1-V2
+
+## Pulmonary Function Tests (PFTs)
+
+### Spirometry Values
+- **FVC**: Forced vital capacity (normal >80% predicted)
+- **FEV1**: Forced expiratory volume in 1 second (normal >80% predicted)
+- **FEV1/FVC**: Ratio (normal >70%)
+- **PEFR**: Peak expiratory flow rate
+
+### Patterns
+- **Obstructive**: FEV1/FVC <70%, reduced FEV1
+  - Examples: Asthma, COPD, bronchiectasis
+- **Restrictive**: FEV1/FVC >70%, reduced FVC
+  - Examples: Pulmonary fibrosis, chest wall deformity
+- **Mixed**: Features of both patterns
+
+### Additional Tests
+- **DLCO**: Diffusion capacity (normal >75% predicted)
+- **Lung Volumes**: TLC, RV, FRC
+- **Bronchodilator Response**: >12% and 200 mL improvement in FEV1
+
+## Echocardiography
+
+### Standard Views
+- **Parasternal Long Axis**: LV, LA, aortic root, mitral valve
+- **Parasternal Short Axis**: LV cross-section, papillary muscles
+- **Apical Four Chamber**: All four chambers, mitral and tricuspid valves
+- **Apical Two Chamber**: LV, LA, mitral valve
+- **Subcostal**: Four chambers, IVC
+
+### Measurements
+- **Left Ventricular Ejection Fraction (LVEF)**: >55% (normal)
+- **Left Atrial Size**: <4.0 cm (normal)
+- **Aortic Root**: <3.7 cm (normal)
+- **Wall Thickness**: <1.1 cm (normal)
+
+### Doppler Studies
+- **Color Doppler**: Blood flow direction and velocity
+- **Pulse Wave Doppler**: Specific location flow assessment
+- **Continuous Wave Doppler**: High velocity flow measurement
+- **Tissue Doppler**: Myocardial motion assessment
+
+## Stress Testing
+
+### Exercise Stress Test
+- **Indications**: Chest pain evaluation, functional capacity
+- **Protocols**: Bruce protocol (most common), modified Bruce
+- **Endpoints**: Target heart rate, symptoms, ECG changes
+- **Positive Test**: ST depression >1 mm, chest pain, hypotension
+
+### Pharmacologic Stress
+- **Dobutamine**: Increases heart rate and contractility
+- **Adenosine/Regadenoson**: Coronary vasodilation
+- **Dipyridamole**: Coronary steal phenomenon
+- **Indications**: Unable to exercise adequately
+
+### Nuclear Stress Testing
+- **Tracers**: Technetium-99m, thallium-201
+- **SPECT**: Single photon emission computed tomography
+- **Perfusion Defects**: Fixed (scar) vs reversible (ischemia)

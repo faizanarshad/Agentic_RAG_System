@@ -1,0 +1,154 @@
+
+# Oncology Knowledge Base
+
+## Cancer Biology and Pathophysiology
+
+### Cell Cycle and Cancer
+- **Cell Cycle Phases**: G1, S, G2, M phases
+- **Checkpoints**: DNA damage checkpoints, spindle checkpoints
+- **Oncogenes**: Genes promoting cell growth (RAS, MYC, HER2)
+- **Tumor Suppressors**: Genes preventing cancer (p53, RB, BRCA1/2)
+
+### Hallmarks of Cancer
+1. **Self-sufficiency in Growth Signals**
+2. **Insensitivity to Anti-growth Signals**
+3. **Evading Apoptosis**
+4. **Limitless Replicative Potential**
+5. **Sustained Angiogenesis**
+6. **Tissue Invasion and Metastasis**
+7. **Reprogramming Energy Metabolism**
+8. **Evading Immune Destruction**
+
+### Metastasis Process
+- **Local Invasion**: Basement membrane breakdown
+- **Intravasation**: Entry into blood/lymphatic vessels
+- **Circulation**: Survival in bloodstream
+- **Extravasation**: Exit from vessels
+- **Colonization**: Growth at distant sites
+
+## Common Cancer Types
+
+### Lung Cancer
+- **Types**: Non-small cell (NSCLC) 85%, Small cell (SCLC) 15%
+- **NSCLC Subtypes**: Adenocarcinoma, squamous cell, large cell
+- **Risk Factors**: Smoking, radon, asbestos, family history
+- **Staging**: TNM staging system
+- **Treatment**: Surgery, chemotherapy, radiation, targeted therapy, immunotherapy
+
+### Breast Cancer
+- **Types**: Invasive ductal carcinoma (IDC), invasive lobular carcinoma (ILC)
+- **Molecular Subtypes**: Luminal A/B, HER2+, Triple-negative
+- **Biomarkers**: ER, PR, HER2, Ki-67
+- **Staging**: TNM system, stage 0-IV
+- **Treatment**: Surgery, chemotherapy, hormone therapy, targeted therapy
+
+### Colorectal Cancer
+- **Adenomatous Polyp Sequence**: Normal → Adenoma → Carcinoma
+- **Molecular Pathways**: Chromosomal instability, microsatellite instability
+- **Screening**: Colonoscopy, FIT, Cologuard
+- **Staging**: TNM system, Duke's classification
+- **Treatment**: Surgery, chemotherapy, targeted therapy
+
+### Prostate Cancer
+- **Gleason Score**: Histologic grading system (6-10)
+- **PSA**: Prostate-specific antigen screening
+- **Risk Stratification**: Low, intermediate, high risk
+- **Treatment**: Active surveillance, surgery, radiation, hormone therapy
+
+## Cancer Staging and Grading
+
+### TNM Staging System
+- **T (Tumor)**: Primary tumor size and extent
+- **N (Nodes)**: Regional lymph node involvement
+- **M (Metastasis)**: Distant metastasis presence
+- **Stage Grouping**: Stage I-IV based on TNM
+
+### Histologic Grading
+- **Grade 1**: Well-differentiated, low grade
+- **Grade 2**: Moderately differentiated, intermediate grade
+- **Grade 3**: Poorly differentiated, high grade
+- **Grade 4**: Undifferentiated, high grade
+
+### Performance Status
+- **ECOG Scale**: 0-5 scale of functional status
+- **Karnofsky Scale**: 0-100% functional assessment
+- **Clinical Significance**: Treatment selection, prognosis
+
+## Cancer Treatment Modalities
+
+### Surgery
+- **Curative**: Complete tumor removal
+- **Palliative**: Symptom relief, debulking
+- **Reconstructive**: Functional/cosmetic restoration
+- **Minimally Invasive**: Laparoscopic, robotic surgery
+
+### Chemotherapy
+- **Mechanisms**: DNA damage, mitotic inhibition, antimetabolites
+- **Administration**: Oral, intravenous, intrathecal
+- **Cycles**: Treatment periods with rest intervals
+- **Combination Therapy**: Multiple agents for synergy
+
+### Radiation Therapy
+- **External Beam**: Linear accelerator delivery
+- **Brachytherapy**: Internal radioactive source placement
+- **Stereotactic**: High-precision, high-dose treatment
+- **Fractionation**: Divided doses over time
+
+### Targeted Therapy
+- **Monoclonal Antibodies**: Trastuzumab (HER2), Rituximab (CD20)
+- **Tyrosine Kinase Inhibitors**: Imatinib (BCR-ABL), Erlotinib (EGFR)
+- **Angiogenesis Inhibitors**: Bevacizumab (VEGF)
+
+### Immunotherapy
+- **Checkpoint Inhibitors**: PD-1, PD-L1, CTLA-4 inhibitors
+- **CAR-T Therapy**: Chimeric antigen receptor T-cells
+- **Cancer Vaccines**: Preventive and therapeutic vaccines
+- **Adoptive Cell Transfer**: Tumor-infiltrating lymphocytes
+
+## Supportive Care and Side Effects
+
+### Chemotherapy Side Effects
+- **Hematologic**: Neutropenia, anemia, thrombocytopenia
+- **Gastrointestinal**: Nausea, vomiting, diarrhea, mucositis
+- **Neurologic**: Peripheral neuropathy, cognitive changes
+- **Dermatologic**: Alopecia, rash, hand-foot syndrome
+
+### Radiation Side Effects
+- **Acute**: Skin reaction, fatigue, organ-specific effects
+- **Late**: Fibrosis, secondary malignancies, organ dysfunction
+- **Site-specific**: Pneumonitis (lung), cystitis (bladder)
+
+### Supportive Medications
+- **Antiemetics**: 5-HT3 antagonists, NK1 antagonists, steroids
+- **Growth Factors**: G-CSF, erythropoietin
+- **Bisphosphonates**: Bone metastases, hypercalcemia
+- **Pain Management**: Opioids, adjuvant analgesics
+
+## Cancer Screening and Prevention
+
+### Screening Guidelines
+- **Breast Cancer**: Mammography starting age 40-50
+- **Cervical Cancer**: Pap smear, HPV testing
+- **Colorectal Cancer**: Colonoscopy starting age 45-50
+- **Lung Cancer**: Low-dose CT for high-risk patients
+- **Prostate Cancer**: PSA discussion starting age 50
+
+### Primary Prevention
+- **Lifestyle Factors**: Diet, exercise, weight management
+- **Tobacco Cessation**: Single most important prevention
+- **Vaccination**: HPV, Hepatitis B vaccines
+- **Chemoprevention**: Tamoxifen, aspirin in selected patients
+
+## Palliative and End-of-Life Care
+
+### Palliative Care Principles
+- **Symptom Management**: Pain, dyspnea, nausea
+- **Psychosocial Support**: Patient and family counseling
+- **Spiritual Care**: Chaplaincy, cultural considerations
+- **Goals of Care**: Quality of life, comfort measures
+
+### End-of-Life Discussions
+- **Advance Directives**: Living wills, healthcare proxy
+- **Code Status**: DNR, DNI discussions
+- **Hospice Care**: Comfort-focused care
+- **Bereavement Support**: Family grief counseling

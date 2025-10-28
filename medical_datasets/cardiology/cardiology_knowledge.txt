@@ -1,0 +1,92 @@
+
+# Cardiology Knowledge Base
+
+## Cardiovascular Anatomy and Physiology
+
+### Heart Structure
+The human heart is a four-chambered muscular organ consisting of:
+- **Right Atrium**: Receives deoxygenated blood from systemic circulation
+- **Right Ventricle**: Pumps blood to pulmonary circulation
+- **Left Atrium**: Receives oxygenated blood from pulmonary circulation
+- **Left Ventricle**: Pumps blood to systemic circulation
+
+### Cardiac Cycle
+The cardiac cycle consists of two main phases:
+1. **Systole**: Ventricular contraction and blood ejection
+2. **Diastole**: Ventricular relaxation and filling
+
+### Electrocardiography (ECG)
+Standard 12-lead ECG interpretation:
+- **P Wave**: Atrial depolarization
+- **QRS Complex**: Ventricular depolarization
+- **T Wave**: Ventricular repolarization
+- **Normal Intervals**: PR (120-200ms), QRS (<120ms), QT (varies with heart rate)
+
+## Common Cardiovascular Conditions
+
+### Coronary Artery Disease (CAD)
+- **Pathophysiology**: Atherosclerotic plaque formation in coronary arteries
+- **Risk Factors**: Hypertension, diabetes, smoking, hyperlipidemia, family history
+- **Symptoms**: Chest pain, shortness of breath, fatigue
+- **Diagnosis**: Stress testing, coronary angiography, CT angiography
+- **Treatment**: Lifestyle modifications, medications (statins, ACE inhibitors), revascularization
+
+### Heart Failure
+- **Types**: Heart failure with reduced ejection fraction (HFrEF), Heart failure with preserved ejection fraction (HFpEF)
+- **Symptoms**: Dyspnea, fatigue, edema, orthopnea
+- **Diagnosis**: Echocardiography, BNP/NT-proBNP, chest X-ray
+- **Treatment**: ACE inhibitors, beta-blockers, diuretics, device therapy
+
+### Arrhythmias
+- **Atrial Fibrillation**: Irregular atrial rhythm, stroke risk
+- **Ventricular Tachycardia**: Life-threatening arrhythmia
+- **Bradyarrhythmias**: Slow heart rhythms, may require pacing
+
+## Diagnostic Procedures
+
+### Echocardiography
+- **Transthoracic Echo (TTE)**: Non-invasive cardiac imaging
+- **Transesophageal Echo (TEE)**: More detailed imaging via esophageal probe
+- **Parameters**: Ejection fraction, wall motion, valve function
+
+### Cardiac Catheterization
+- **Indications**: Coronary artery assessment, hemodynamic evaluation
+- **Complications**: Bleeding, contrast nephropathy, arrhythmias
+- **Post-procedure Care**: Vascular access site monitoring, hydration
+
+## Treatment Protocols
+
+### Acute Coronary Syndrome (ACS)
+1. **Initial Assessment**: ECG, cardiac biomarkers, chest X-ray
+2. **Risk Stratification**: TIMI score, GRACE score
+3. **Treatment**: Antiplatelet therapy, anticoagulation, revascularization
+4. **Secondary Prevention**: Statin therapy, beta-blockers, lifestyle counseling
+
+### Hypertension Management
+- **Target BP**: <130/80 mmHg for most patients
+- **First-line Medications**: ACE inhibitors, ARBs, thiazide diuretics, calcium channel blockers
+- **Lifestyle Modifications**: Diet, exercise, weight loss, sodium restriction
+
+## Emergency Cardiac Care
+
+### Cardiopulmonary Resuscitation (CPR)
+- **Compression Rate**: 100-120 per minute
+- **Compression Depth**: At least 2 inches (5 cm)
+- **Ventilation**: 30:2 compression to ventilation ratio
+
+### Advanced Cardiac Life Support (ACLS)
+- **Ventricular Fibrillation/Pulseless VT**: Immediate defibrillation
+- **Asystole/PEA**: High-quality CPR, epinephrine, identify reversible causes
+- **Post-cardiac Arrest Care**: Targeted temperature management, hemodynamic support
+
+## Preventive Cardiology
+
+### Risk Assessment
+- **Framingham Risk Score**: 10-year cardiovascular risk prediction
+- **ACC/AHA Risk Calculator**: Updated risk assessment tool
+- **Coronary Artery Calcium Score**: Non-invasive atherosclerosis assessment
+
+### Primary Prevention
+- **Lifestyle Interventions**: Mediterranean diet, regular exercise, smoking cessation
+- **Pharmacological**: Statin therapy for high-risk patients
+- **Screening**: Blood pressure, lipid profile, diabetes screening

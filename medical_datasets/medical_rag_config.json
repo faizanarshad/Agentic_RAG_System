@@ -1,0 +1,74 @@
+{
+  "system_type": "medical_rag",
+  "specialties": [
+    "cardiology",
+    "radiology",
+    "oncology",
+    "emergency_medicine",
+    "pharmacology",
+    "clinical_guidelines",
+    "medical_terminology",
+    "diagnostic_procedures"
+  ],
+  "compliance": {
+    "hipaa_compliant": true,
+    "phi_handling": "anonymized",
+    "audit_logging": true
+  },
+  "medical_features": {
+    "medical_terminology": true,
+    "drug_interaction_checking": true,
+    "clinical_decision_support": true,
+    "evidence_based_responses": true
+  },
+  "data_sources": [
+    {
+      "name": "Cardiology Knowledge Base",
+      "specialty": "cardiology",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Radiology Knowledge Base",
+      "specialty": "radiology",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Oncology Knowledge Base",
+      "specialty": "oncology",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Emergency_Medicine Knowledge Base",
+      "specialty": "emergency_medicine",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Pharmacology Knowledge Base",
+      "specialty": "pharmacology",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Clinical_Guidelines Knowledge Base",
+      "specialty": "clinical_guidelines",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Medical_Terminology Knowledge Base",
+      "specialty": "medical_terminology",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    },
+    {
+      "name": "Diagnostic_Procedures Knowledge Base",
+      "specialty": "diagnostic_procedures",
+      "license": "Educational Use",
+      "hipaa_compliant": true
+    }
+  ]
+}

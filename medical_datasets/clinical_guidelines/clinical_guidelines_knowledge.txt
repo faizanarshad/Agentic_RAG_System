@@ -1,0 +1,183 @@
+
+# Clinical Guidelines Knowledge Base
+
+## Evidence-Based Medicine Principles
+
+### Hierarchy of Evidence
+1. **Systematic Reviews and Meta-analyses**: Highest level of evidence
+2. **Randomized Controlled Trials (RCTs)**: Gold standard for interventions
+3. **Cohort Studies**: Observational, prospective or retrospective
+4. **Case-Control Studies**: Retrospective, good for rare diseases
+5. **Case Series and Reports**: Descriptive, lowest level of evidence
+
+### Critical Appraisal
+- **Study Design**: Appropriate for research question
+- **Sample Size**: Adequate power to detect differences
+- **Randomization**: Proper allocation concealment
+- **Blinding**: Participants, investigators, outcome assessors
+- **Follow-up**: Complete, adequate duration
+- **Statistical Analysis**: Appropriate methods, intention-to-treat
+
+### Guidelines Development
+- **Systematic Literature Review**: Comprehensive evidence search
+- **Expert Panel**: Multidisciplinary, conflict of interest disclosure
+- **Grading Systems**: GRADE, Oxford Centre for Evidence-based Medicine
+- **Recommendations**: Strong vs weak, based on evidence quality
+- **Implementation**: Dissemination, quality improvement initiatives
+
+## Preventive Care Guidelines
+
+### Cancer Screening
+- **Breast Cancer**: 
+  - Mammography: Age 40-50 start, annual or biennial
+  - Clinical breast exam: Annual starting age 20
+  - Self-exam: Optional, awareness encouraged
+
+- **Cervical Cancer**:
+  - Pap smear: Age 21-65, every 3 years
+  - HPV testing: Age 30-65, every 5 years (with Pap)
+  - Post-hysterectomy: Discontinue if no cervix, no high-grade lesions
+
+- **Colorectal Cancer**:
+  - Colonoscopy: Age 45-75, every 10 years
+  - FIT: Annual fecal immunochemical test
+  - Flexible sigmoidoscopy: Every 5 years with FIT every 3 years
+
+- **Lung Cancer**:
+  - Low-dose CT: Age 50-80, 20+ pack-year history, current or quit <15 years
+  - Annual screening until 15 years since quitting
+
+### Cardiovascular Prevention
+- **Blood Pressure Screening**: All adults ≥18 years, annually
+- **Lipid Screening**: 
+  - Men: Age 35+ every 5 years
+  - Women: Age 45+ every 5 years
+  - Earlier if risk factors present
+
+- **Diabetes Screening**:
+  - Age 35-70 with overweight/obesity
+  - Every 3 years if normal
+  - Annual if prediabetes
+
+### Immunizations
+- **Adult Schedule**: Annual influenza, Td/Tdap every 10 years
+- **Pneumococcal**: PCV13 and PPSV23 for adults ≥65
+- **Shingles**: Zoster vaccine for adults ≥50
+- **HPV**: Ages 9-26, catch-up to age 45 in some cases
+
+## Chronic Disease Management
+
+### Diabetes Management
+- **Glycemic Targets**:
+  - HbA1c <7% for most adults
+  - <6.5% if achieved without hypoglycemia
+  - <8% for limited life expectancy, comorbidities
+
+- **Blood Pressure**: <130/80 mmHg for most patients
+- **Lipids**: Statin therapy for ASCVD risk reduction
+- **Aspirin**: Primary prevention if ASCVD risk >10%, bleeding risk low
+
+### Hypertension Management
+- **Classification**:
+  - Normal: <120/80 mmHg
+  - Elevated: 120-129/<80 mmHg
+  - Stage 1: 130-139/80-89 mmHg
+  - Stage 2: ≥140/90 mmHg
+
+- **Treatment Thresholds**:
+  - Stage 1: If ASCVD risk ≥10% or existing CVD
+  - Stage 2: All patients
+  - Lifestyle modifications for all
+
+- **First-line Medications**: ACE inhibitors, ARBs, thiazide diuretics, CCBs
+
+### Hyperlipidemia Management
+- **Risk Assessment**: ASCVD Risk Calculator (10-year risk)
+- **Statin Indications**:
+  - ASCVD: High-intensity statin
+  - LDL ≥190 mg/dL: High-intensity statin
+  - Diabetes (40-75 years): Moderate-intensity statin
+  - Primary prevention (≥7.5% risk): Moderate-intensity statin
+
+- **LDL Targets**:
+  - Very high risk: <70 mg/dL
+  - High risk: <100 mg/dL
+  - Moderate risk: <130 mg/dL
+
+## Acute Care Guidelines
+
+### Sepsis Management
+- **Recognition**: qSOFA score, SIRS criteria
+- **Hour-1 Bundle**:
+  - Measure lactate level
+  - Obtain blood cultures before antibiotics
+  - Administer broad-spectrum antibiotics
+  - Begin rapid administration of crystalloid for hypotension/lactate ≥4
+  - Apply vasopressors if hypotensive during/after fluid resuscitation
+
+### Pneumonia Management
+- **Community-Acquired Pneumonia (CAP)**:
+  - Outpatient: Macrolide or doxycycline
+  - Inpatient: Beta-lactam plus macrolide or respiratory fluoroquinolone
+  - ICU: Beta-lactam plus macrolide or fluoroquinolone
+
+- **Healthcare-Associated Pneumonia**: Broad-spectrum antibiotics
+- **Duration**: 5-7 days for most cases, longer if complications
+
+### Acute Coronary Syndrome
+- **STEMI Management**:
+  - Primary PCI within 90 minutes (door-to-balloon)
+  - Fibrinolysis if PCI not available within 120 minutes
+  - Dual antiplatelet therapy, anticoagulation
+
+- **NSTEMI/Unstable Angina**:
+  - Risk stratification: TIMI, GRACE scores
+  - Early invasive strategy for high-risk patients
+  - Medical management: Antiplatelet, anticoagulation, beta-blockers
+
+## Quality Improvement and Patient Safety
+
+### Medication Safety
+- **High-Alert Medications**: Insulin, anticoagulants, opioids
+- **Medication Reconciliation**: Admission, transfer, discharge
+- **Allergy Documentation**: Clear, specific reactions
+- **Dosing Verification**: Weight-based, renal/hepatic adjustment
+
+### Infection Prevention
+- **Hand Hygiene**: Before/after patient contact, after body fluid exposure
+- **Standard Precautions**: All patients, all body fluids
+- **Isolation Precautions**: Contact, droplet, airborne
+- **Antimicrobial Stewardship**: Appropriate selection, dosing, duration
+
+### Fall Prevention
+- **Risk Assessment**: Morse Fall Scale, Hendrich II Fall Risk Model
+- **Interventions**: Bed alarms, non-slip socks, toileting schedules
+- **Environmental**: Clear pathways, adequate lighting
+- **Medication Review**: Sedatives, antihypertensives, diuretics
+
+### Pressure Ulcer Prevention
+- **Risk Assessment**: Braden Scale
+- **Repositioning**: Every 2 hours for bed-bound patients
+- **Support Surfaces**: Pressure-redistributing mattresses
+- **Skin Care**: Keep clean and dry, moisturize
+- **Nutrition**: Adequate protein, hydration
+
+## Clinical Decision Support
+
+### Diagnostic Algorithms
+- **Chest Pain**: History, ECG, troponins, risk stratification
+- **Dyspnea**: BNP/NT-proBNP, chest X-ray, echocardiogram
+- **Abdominal Pain**: History, physical exam, laboratory, imaging
+- **Headache**: Red flags, neuroimaging indications
+
+### Treatment Protocols
+- **Antibiotic Selection**: Culture results, local resistance patterns
+- **Pain Management**: WHO analgesic ladder, multimodal approach
+- **Fluid Management**: Maintenance, replacement, resuscitation
+- **Blood Transfusion**: Indications, compatibility, monitoring
+
+### Discharge Planning
+- **Medication Reconciliation**: Home medications, new prescriptions
+- **Follow-up Appointments**: Primary care, specialists
+- **Patient Education**: Diagnosis, medications, warning signs
+- **Care Transitions**: Communication with outpatient providers

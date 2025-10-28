@@ -1,0 +1,17 @@
+condition,symptoms,treatment,medication,severity,age_group,notes
+Hypertension,"High blood pressure, headaches, dizziness","Lifestyle changes, medication","ACE inhibitors, diuretics",Moderate,Adult,"Monitor blood pressure regularly"
+Type 2 Diabetes,"Increased thirst, frequent urination, fatigue","Diet control, exercise, medication","Metformin, insulin",High,Adult,"Regular blood glucose monitoring required"
+Asthma,"Shortness of breath, wheezing, chest tightness","Bronchodilators, corticosteroids","Albuterol, prednisone",Moderate,All ages,"Avoid triggers, carry rescue inhaler"
+Pneumonia,"Fever, cough, chest pain, difficulty breathing","Antibiotics, rest, fluids","Amoxicillin, azithromycin",High,All ages,"Hospitalization may be required for severe cases"
+Migraine,"Severe headache, nausea, light sensitivity","Pain relief, rest, preventive medication","Sumatriptan, propranolol",Moderate,Adult,"Identify and avoid triggers"
+Osteoarthritis,"Joint pain, stiffness, reduced mobility","Physical therapy, pain management","NSAIDs, acetaminophen",Moderate,Elderly,"Weight management important"
+Depression,"Persistent sadness, loss of interest, fatigue","Therapy, medication, lifestyle changes","SSRIs, SNRIs",Variable,Adult,"Combination therapy often most effective"
+Atrial Fibrillation,"Irregular heartbeat, palpitations, fatigue","Rate control, anticoagulation","Warfarin, metoprolol",High,Elderly,"Stroke prevention is priority"
+COPD,"Chronic cough, shortness of breath, wheezing","Bronchodilators, oxygen therapy","Tiotropium, albuterol",High,Adult,"Smoking cessation essential"
+Gastroesophageal Reflux,"Heartburn, regurgitation, chest pain","Lifestyle changes, acid suppression","Omeprazole, ranitidine",Mild,Adult,"Avoid trigger foods"
+Chronic Kidney Disease,"Fatigue, swelling, decreased urination","Blood pressure control, diet modification","ACE inhibitors, diuretics",High,Adult,"Regular monitoring of kidney function"
+Rheumatoid Arthritis,"Joint pain, swelling, morning stiffness","DMARDs, biologics, corticosteroids","Methotrexate, adalimumab",High,Adult,"Early aggressive treatment important"
+Hypothyroidism,"Fatigue, weight gain, cold intolerance","Thyroid hormone replacement","Levothyroxine",Moderate,Adult,"Regular TSH monitoring"
+Anxiety Disorder,"Excessive worry, restlessness, panic attacks","Therapy, medication, relaxation techniques","Benzodiazepines, SSRIs",Variable,Adult,"Cognitive behavioral therapy effective"
+Coronary Artery Disease,"Chest pain, shortness of breath, fatigue","Lifestyle changes, medications, procedures","Statins, beta-blockers",High,Adult,"Cardiac rehabilitation recommended"
+
