@@ -350,7 +350,7 @@ async def get_csv_info(file: UploadFile = File(...)) -> Dict[str, Any]:
         file: CSV file to analyze
         
     Returns:
-        CSV file information including medical content detection
+        CSV file information including medical content detection and processing time estimate
     """
     try:
         if not file.filename.lower().endswith('.csv'):
@@ -369,9 +369,30 @@ async def get_csv_info(file: UploadFile = File(...)) -> Dict[str, Any]:
             csv_processor = get_csv_processor()
             csv_info = csv_processor.get_csv_info(temp_file_path)
             
+            # Calculate estimated processing time (1.5 seconds per document average)
+            estimated_docs = csv_info.get('estimated_documents', 0)
+            estimated_time_seconds = estimated_docs * 1.5
+            estimated_time_minutes = estimated_time_seconds / 60
+            
+            # Determine if file is too large
+            is_large = estimated_docs > 100
+            is_very_large = estimated_docs > 500
+            
+            warning = None
+            if is_very_large:
+                warning = f"⚠️ Very large file! Will create ~{estimated_docs} documents. Processing may take {estimated_time_minutes:.1f} minutes. Consider splitting the file."
+            elif is_large:
+                warning = f"⚠️ Large file! Will create ~{estimated_docs} documents. Processing may take {estimated_time_minutes:.1f} minutes."
+            
             return {
                 "filename": file.filename,
                 "csv_info": csv_info,
+                "estimated_documents": estimated_docs,
+                "estimated_time_seconds": int(estimated_time_seconds),
+                "estimated_time_minutes": round(estimated_time_minutes, 1),
+                "is_large": is_large,
+                "is_very_large": is_very_large,
+                "warning": warning,
                 "supported": True
             }
             

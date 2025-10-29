@@ -256,11 +256,44 @@ const App: React.FC = () => {
     inputRef.current?.focus();
   };
 
+  const previewCSV = async (file: File): Promise<boolean> => {
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      
+      const info = await fetchBackend('/files/csv_info', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (info.warning) {
+        const message = `${info.warning}\n\nFile: ${file.name}\nEstimated Documents: ${info.estimated_documents}\nEstimated Time: ${info.estimated_time_minutes} minutes\n\nDo you want to continue?`;
+        return window.confirm(message);
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('CSV preview error:', error);
+      // If preview fails, ask user if they want to proceed anyway
+      return window.confirm(`Unable to preview CSV file. Upload anyway?`);
+    }
+  };
+
   const handleFileUpload = async (files: FileList | null, existingFileId: string | null = null) => {
     if (!files || files.length === 0) return;
 
     Array.from(files).forEach(async (file) => {
       const tempId = existingFileId || Math.random().toString(36).substr(2, 9);
+      const isCSV = file.name.toLowerCase().endsWith('.csv');
+      
+      // Preview CSV files before uploading
+      if (isCSV && !existingFileId) {
+        const shouldProceed = await previewCSV(file);
+        if (!shouldProceed) {
+          return; // User cancelled
+        }
+      }
+      
       const newFile: UploadedFile = {
         id: tempId,
         backendFileId: existingFileId,
@@ -282,6 +315,18 @@ const App: React.FC = () => {
         const formData = new FormData();
         formData.append('file', file);
 
+        // Show progress animation for CSV files (they take longer)
+        let progressInterval: ReturnType<typeof setInterval> | null = null;
+        if (isCSV) {
+          let progress = 0;
+          progressInterval = setInterval(() => {
+            progress = Math.min(progress + 1, 95); // Cap at 95% until complete
+            setUploadedFiles(prev => prev.map(f => 
+              f.id === tempId ? { ...f, uploadProgress: progress } : f
+            ));
+          }, 500); // Update every 500ms
+        }
+
         let result;
         if (existingFileId) {
           result = await fetchBackend(`/files/update_file/${existingFileId}`, {
@@ -289,10 +334,30 @@ const App: React.FC = () => {
             body: formData,
           });
         } else {
-          result = await fetchBackend('/files/add_file', {
-            method: 'POST',
-            body: formData,
-          });
+          // Dynamic timeout based on file type
+          // CSV: minimum 2 minutes, add 1 minute per MB
+          // PDF: 1 minute base
+          let timeoutMs = 60000; // 1 minute default
+          if (isCSV) {
+            const fileSizeMB = file.size / (1024 * 1024);
+            // 2 minutes base + 1 minute per MB (capped at 30 minutes)
+            timeoutMs = Math.min(120000 + (fileSizeMB * 60000), 1800000);
+            console.log(`Setting CSV timeout to ${timeoutMs/1000} seconds for ${fileSizeMB.toFixed(2)} MB file`);
+          }
+          
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+          
+          try {
+            result = await fetchBackend('/files/add_file', {
+              method: 'POST',
+              body: formData,
+              signal: controller.signal,
+            });
+          } finally {
+            clearTimeout(timeoutId);
+            if (progressInterval) clearInterval(progressInterval);
+          }
         }
         
         setUploadedFiles(prev => prev.map(f => 
@@ -313,7 +378,11 @@ const App: React.FC = () => {
             ? { 
                 ...f, 
                 status: 'error', 
-                error: error instanceof Error ? error.message : 'Upload failed',
+                error: error instanceof Error ? 
+                  (error.name === 'AbortError' ? 
+                    'Upload timeout - file processing took too long' : 
+                    error.message) : 
+                  'Upload failed',
                 uploadProgress: 0 
               }
             : f
@@ -553,6 +622,20 @@ const App: React.FC = () => {
                     <FileText size={16} />
                     Select Files
                   </button>
+                  <div style={{ 
+                    marginTop: '1rem', 
+                    padding: '0.75rem', 
+                    background: 'var(--info-bg, #e3f2fd)', 
+                    borderRadius: '0.5rem',
+                    fontSize: '0.875rem',
+                    color: 'var(--info-text, #1976d2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem'
+                  }}>
+                    <AlertCircle size={16} />
+                    <span>CSV files may take 30-60 seconds to process as they're converted into medical documents</span>
+                  </div>
                 </div>
                 <input
                   ref={fileInputRef}
@@ -585,8 +668,12 @@ const App: React.FC = () => {
                                 {file.status === 'success' && <CheckCircle className="status-icon success" />}
                                 {file.status === 'error' && <XCircle className="status-icon error" />}
                                 <span>
-                                  {file.status === 'uploading' && 'Uploading...'}
-                                  {file.status === 'success' && `Uploaded (${file.chunks} chunks)`}
+                                  {file.status === 'uploading' && (
+                                    file.name.toLowerCase().endsWith('.csv') 
+                                      ? `Processing CSV data... ${file.uploadProgress || 0}%` 
+                                      : 'Uploading...'
+                                  )}
+                                  {file.status === 'success' && `Uploaded (${file.chunks} documents)`}
                                   {file.status === 'error' && (file.error || 'Upload failed')}
                                 </span>
                               </div>

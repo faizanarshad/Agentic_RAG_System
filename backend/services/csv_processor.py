@@ -15,6 +15,10 @@ import re
 from core.config import settings
 from utils.logger import logger
 
+# Token limit for OpenAI embeddings (text-embedding-ada-002)
+MAX_EMBEDDING_TOKENS = 8000  # Safe limit (actual is 8191)
+CHARS_PER_TOKEN = 4  # Rough estimate: 1 token ~= 4 characters
+
 class CSVProcessor:
     """Process CSV files for medical RAG system"""
     
@@ -25,6 +29,21 @@ class CSVProcessor:
             'condition', 'disease', 'patient_info', 'clinical_notes',
             'medical_history', 'lab_results', 'imaging_results'
         ]
+        self.max_chars = MAX_EMBEDDING_TOKENS * CHARS_PER_TOKEN
+    
+    def truncate_text(self, text: str, max_chars: int = None) -> str:
+        """Truncate text to fit within token limits"""
+        if max_chars is None:
+            max_chars = self.max_chars
+        
+        if len(text) <= max_chars:
+            return text
+        
+        # Truncate and add indicator
+        truncated = text[:max_chars - 100]  # Leave room for truncation message
+        truncated += "\n\n[Text truncated due to length limit]"
+        logger.warning(f"Truncated text from {len(text)} to {len(truncated)} characters")
+        return truncated
     
     def validate_csv_file(self, file_path: str) -> bool:
         """Validate CSV file format and readability"""
@@ -192,6 +211,9 @@ class CSVProcessor:
                 doc_text = self._format_medical_row(row, medical_info)
                 
                 if doc_text.strip():
+                    # Truncate text to fit within token limits
+                    doc_text = self.truncate_text(doc_text)
+                    
                     doc = {
                         'id': f"{file_id}_row_{idx}",
                         'text': doc_text,
@@ -229,6 +251,9 @@ class CSVProcessor:
                         doc_text += row_text
                 
                 if doc_text.strip():
+                    # Truncate text to fit within token limits
+                    doc_text = self.truncate_text(doc_text)
+                    
                     doc = {
                         'id': f"{file_id}_batch_{batch_idx}",
                         'text': doc_text,
@@ -296,6 +321,9 @@ class CSVProcessor:
                     doc_text = f"Data Column - {col.replace('_', ' ').title()}:\n\n"
                     doc_text += "\n".join([f"• {entry}" for entry in col_data.tolist()])
                 
+                # Truncate text to fit within token limits
+                doc_text = self.truncate_text(doc_text)
+                
                 doc = {
                     'id': f"{file_id}_column_{col}",
                     'text': doc_text,
@@ -340,6 +368,9 @@ class CSVProcessor:
                 for col, value in row.items():
                     if pd.notna(value):
                         summary_text += f"  {col}: {str(value)[:100]}{'...' if len(str(value)) > 100 else ''}\n"
+        
+        # Truncate summary if needed
+        summary_text = self.truncate_text(summary_text)
         
         return {
             'id': f"{file_id}_summary",

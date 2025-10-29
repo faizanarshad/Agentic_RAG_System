@@ -32,6 +32,14 @@ class EmbeddingsService:
         try:
             logger.debug(f"Generating embedding for text of length: {len(text)}")
             
+            # Check text length (rough estimate: 1 token ≈ 4 characters)
+            estimated_tokens = len(text) / 4
+            if estimated_tokens > 8000:
+                logger.warning(f"Text may exceed token limit: ~{estimated_tokens:.0f} tokens")
+                # Truncate if too long
+                max_chars = 8000 * 4
+                text = text[:max_chars] + "\n\n[Text truncated to fit token limit]"
+            
             response = self.client.embeddings.create(
                 model=self.model,
                 input=text
@@ -42,8 +50,17 @@ class EmbeddingsService:
             return embedding
             
         except Exception as e:
-            logger.error(f"Error generating embedding: {str(e)}")
-            raise Exception(f"Failed to generate embedding: {str(e)}")
+            error_msg = str(e)
+            
+            # Handle specific OpenAI errors
+            if "maximum context length" in error_msg.lower() or "token" in error_msg.lower():
+                logger.error(f"Token limit exceeded for text of length {len(text)}")
+                # Return a placeholder embedding of zeros to avoid crashing
+                logger.warning("Skipping this document due to token limit")
+                raise Exception("Text exceeds token limit - please split into smaller chunks")
+            else:
+                logger.error(f"Error generating embedding: {error_msg}")
+                raise Exception(f"Failed to generate embedding: {error_msg}")
     
     def generate_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
         """
