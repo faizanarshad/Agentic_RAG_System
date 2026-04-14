@@ -250,4 +250,3 @@ for i, chunk_start in enumerate(range(0, len(df), chunk_size)):
 ✅ **RECOMMENDED**: Split files >1000 rows for best experience
 
 Your CSV uploads should now work reliably for small to medium files, with clear warnings for large files! 🎉
-
