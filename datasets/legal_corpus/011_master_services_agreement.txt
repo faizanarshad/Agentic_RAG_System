@@ -1,0 +1,187 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement ("Agreement") is made and entered into as of February 15, 2025 ("Effective Date"), by and between:
+
+Titanium Nexus Solutions, Inc., a Delaware corporation with principal offices located at 745 Industrial Parkway, Suite 400, Rochester, NY 14623 ("Client"),
+
+and
+
+Lumenix Technologies LLC, a New York limited liability company with principal offices at 210 Madison Avenue, 11th Floor, New York, NY 10016 ("Service Provider").
+
+Each a "Party" and collectively the "Parties."
+
+RECITALS
+
+WHEREAS, Client desires to engage Service Provider to provide certain professional services as defined herein, and Service Provider agrees to provide such services under the terms and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, and other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 "Services" means the professional services described in one or more Statements of Work issued pursuant to this Agreement.
+
+1.2 "Statement of Work" or "SOW" means a document mutually agreed upon and executed by the Parties specifying the scope, deliverables, schedule, and fees for Services to be performed under this Agreement.
+
+1.3 "Confidential Information" means non-public information disclosed by one Party to the other Party, whether oral, written, or electronic, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure.
+
+1.4 "Deliverables" means the tangible work product to be delivered to Client as specified in a SOW.
+
+2. SCOPE OF SERVICES
+
+2.1 Service Provider agrees to perform the Services set forth in each SOW in a professional and workmanlike manner consistent with industry standards.
+
+2.2 Service Provider shall provide all personnel, equipment, tools, and materials necessary to perform the Services.
+
+2.3 Each SOW shall specify the timeline for performance, including milestones and deadlines. Service Provider shall meet all agreed deadlines unless delayed due to causes beyond its reasonable control.
+
+3. TERM AND TERMINATION
+
+3.1 This Agreement shall commence on the Effective Date and shall continue for a period of two (2) years, unless terminated earlier in accordance with this Section 3.
+
+3.2 Either Party may terminate this Agreement, or any SOW, upon thirty (30) days' prior written notice to the other Party.
+
+3.3 Either Party may terminate this Agreement immediately upon written notice if the other Party materially breaches any provision of this Agreement and fails to cure such breach within fifteen (15) days of receipt of written notice.
+
+3.4 Upon termination, Client shall pay Service Provider for all Services performed and Deliverables completed through the date of termination.
+
+4. FEES AND PAYMENT
+
+4.1 Client shall pay Service Provider the fees set forth in each SOW. Unless otherwise specified, fees are stated in United States Dollars (USD).
+
+4.2 Service Provider shall invoice Client monthly in arrears. Payment is due net thirty (30) days from the date of the invoice.
+
+4.3 Late payments shall bear interest at the rate of 1.5% per month or the maximum rate permitted by law, whichever is less.
+
+4.4 Client shall reimburse Service Provider for reasonable, pre-approved out-of-pocket expenses incurred in connection with the Services.
+
+5. INTELLECTUAL PROPERTY
+
+5.1 Except as otherwise provided in a SOW, all intellectual property rights in the Deliverables shall be the exclusive property of Client upon full payment of the applicable fees.
+
+5.2 Service Provider retains all rights in any pre-existing intellectual property and tools it uses or develops outside the scope of the Deliverables.
+
+6. CONFIDENTIALITY
+
+6.1 Each Party agrees to keep Confidential Information of the other Party confidential and to use such information only for purposes of performing under this Agreement.
+
+6.2 Obligations under this Section 6 shall survive termination or expiration of this Agreement for a period of five (5) years.
+
+7. WARRANTIES AND DISCLAIMERS
+
+7.1 Service Provider represents and warrants that the Services will be performed in a professional and workmanlike manner consistent with generally accepted industry standards.
+
+7.2 EXCEPT AS EXPRESSLY PROVIDED IN THIS AGREEMENT, SERVICE PROVIDER MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+8. INDEMNIFICATION
+
+8.1 Service Provider shall indemnify, defend, and hold harmless Client and its officers, directors, employees, agents, and affiliates from and against any and all losses, damages, liabilities, claims, demands, suits, costs, and expenses (including reasonable attorneys’ fees) arising out of or resulting from:
+
+(a) Service Provider’s gross negligence or willful misconduct;
+
+(b) Any claim that the Deliverables infringe or misappropriate any intellectual property right of a third party; or
+
+(c) Any breach by Service Provider of any representation, warranty, or obligation under this Agreement.
+
+8.2 Client shall have no obligation to indemnify Service Provider or any third party.
+
+9. LIMITATION OF LIABILITY
+
+9.1 EXCEPT FOR LIABILITY ARISING FROM SECTION 8 (INDEMNIFICATION) OR FOR DAMAGES RESULTING FROM A PARTY’S GROSS NEGLIGENCE OR WILLFUL MISCONDUCT, NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, ARISING FROM OR RELATING TO THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+9.2 SERVICE PROVIDER’S AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE TOTAL AMOUNTS PAID BY CLIENT TO SERVICE PROVIDER UNDER THE APPLICABLE SOW IN THE SIX (6) MONTHS PRECEDING THE CLAIM.
+
+10. DISPUTE RESOLUTION
+
+10.1 The Parties agree to negotiate in good faith to resolve any dispute arising under this Agreement.
+
+10.2 If the Parties cannot resolve a dispute within forty-five (45) days of written notice, either Party may initiate litigation exclusively in the state or federal courts located in New York County, New York.
+
+10.3 This Agreement shall be governed by and construed in accordance with the laws of the State of New York without regard to its conflict of laws principles.
+
+11. MISCELLANEOUS
+
+11.1 Independent Contractors. The Parties are independent contractors. Nothing in this Agreement shall be deemed to create an agency, partnership, or joint venture.
+
+11.2 Assignment. Neither Party may assign or transfer its rights or obligations without the prior written consent of the other Party, except that Client may assign this Agreement without consent to any successor entity in connection with a merger or acquisition.
+
+11.3 Notices. All notices shall be in writing and delivered via certified mail, overnight courier, or email with confirmation to the addresses set forth above or such other addresses as either Party may designate by notice.
+
+11.4 Force Majeure. Neither Party shall be liable for delays or failures due to causes beyond its reasonable control, including acts of God, war, terrorism, labor disputes, governmental actions, or natural disasters.
+
+11.5 Entire Agreement. This Agreement, together with any SOWs, constitutes the entire agreement between the Parties and supersedes all prior proposals, negotiations, or representations.
+
+11.6 Amendments. Any amendments must be in writing and signed by authorized representatives of both Parties.
+
+IN WITNESS WHEREOF, the Parties hereto have executed this Master Services Agreement as of the date first written above.
+
+TITANIUM NEXUS SOLUTIONS, INC.          LUMENIX TECHNOLOGIES LLC
+
+By: ________________________________      By: ________________________________
+
+Name: Daniel R. Vickers                     Name: Marissa L. Chen
+
+Title: Chief Operating Officer              Title: Managing Member
+
+Date: February 15, 2025                     Date: February 15, 2025
+
+---
+
+EXHIBIT A
+
+Sample Statement of Work
+
+SOW No.: 2025-001
+
+Date: March 1, 2025
+
+Parties: Titanium Nexus Solutions, Inc. and Lumenix Technologies LLC
+
+1. Description of Services:
+
+Lumenix Technologies shall develop and deliver a custom data analytics platform tailored for Titanium Nexus’s supply chain operations.
+
+2. Deliverables and Milestones:
+
+- Project kickoff: March 10, 2025
+
+- Prototype delivery: May 15, 2025
+
+- Beta testing completion: July 31, 2025
+
+- Final delivery: September 30, 2025
+
+3. Fees and Payment:
+
+Total Fixed Fee: $450,000 payable in installments as follows:
+
+- 20% ($90,000) upon project kickoff
+
+- 30% ($135,000) upon prototype delivery
+
+- 25% ($112,500) upon beta testing completion
+
+- 25% ($112,500) upon final delivery and acceptance
+
+4. Additional Terms:
+
+- Client will provide necessary access to existing data systems by March 5, 2025.
+
+- Lumenix shall provide weekly status reports every Friday.
+
+Accepted and agreed:
+
+Titanium Nexus Solutions, Inc.                  Lumenix Technologies LLC
+
+By: __________________________________          By: _________________________________
+
+Name: Daniel R. Vickers                          Name: Marissa L. Chen
+
+Title: COO                                      Title: Managing Member
+
+Date: March 1, 2025                             Date: March 1, 2025
+
+---
+
+Case Reference: Should any dispute arise, it shall be subject to the exclusive jurisdiction of the courts in New York County, with case numbering per standard assignment (e.g., Index No. 2025-CV-10789).

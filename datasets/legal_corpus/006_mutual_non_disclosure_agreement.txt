@@ -1,0 +1,91 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is entered into as of March 15, 2025 (“Effective Date”), by and between Summit Innovations, Inc., a Delaware corporation with offices at 4250 Skyline Drive, Dallas, Texas 75201 (“Summit”), and Apex Technology Solutions, LLC, a Texas limited liability company with principal place of business at 3017 Lone Star Parkway, Austin, Texas 78759 (“Apex”). Summit and Apex may hereinafter be referred to individually as a “Party” and collectively as the “Parties.”
+
+WHEREAS, the Parties wish to explore a potential business relationship involving the development and marketing of advanced renewable energy technologies (the “Purpose”); and
+
+WHEREAS, in connection with such Purpose, each Party may disclose or provide access to certain confidential and proprietary information to the other Party;
+
+NOW, THEREFORE, in consideration of the mutual promises and covenants herein, and other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+1.1. “Confidential Information” means all information, in any form or medium, disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”) either directly or indirectly, whether oral, written, graphic, machine-readable, or otherwise, including but not limited to technical data, trade secrets, inventions, designs, drawings, specifications, software, know-how, business plans, financial information, marketing strategies, customer lists, and product plans.
+
+1.2. Confidential Information shall not include information that:
+(a) is or becomes generally known to the public through no act or omission of the Receiving Party;
+(b) is rightfully received from a third party without breach of any obligation of confidentiality;
+(c) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information, as evidenced by written records; or
+(d) is approved for release in writing by the Disclosing Party.
+
+2. OBLIGATIONS OF THE RECEIVING PARTY
+2.1. The Receiving Party shall:
+(a) maintain the Disclosing Party’s Confidential Information in strict confidence using at least the same degree of care as it uses to protect its own Confidential Information, but in no event less than reasonable care;
+(b) use the Confidential Information solely to evaluate or pursue the Purpose;
+(c) limit access to the Confidential Information to its employees, contractors, or agents who have a strict need to know for the Purpose and who are bound by confidentiality obligations at least as protective as those herein;
+(d) not disclose the Confidential Information to any third party without the prior written consent of the Disclosing Party; and
+(e) promptly notify the Disclosing Party upon discovery of any unauthorized use or disclosure of the Confidential Information.
+
+3. EXCLUSIONS AND LIMITATIONS
+3.1. The Receiving Party shall have no obligation under this Agreement with respect to any Confidential Information disclosed after the expiration or termination of this Agreement except to the extent such Confidential Information qualifies as a “Trade Secret” under Texas law, in which case the obligations shall continue for so long as such Confidential Information remains a Trade Secret.
+
+3.2. This Agreement does not constitute any license or grant by either Party under any patent, copyright, trademark, or other intellectual property right.
+
+4. TERM AND TERMINATION
+4.1. This Agreement shall commence on the Effective Date and continue for a period of two (2) years unless terminated earlier by either Party upon thirty (30) days’ prior written notice.
+
+4.2. Notwithstanding termination or expiration, the Receiving Party’s duty to hold Confidential Information in confidence shall survive for a period of five (5) years from the date of disclosure, except as provided in Section 3.1.
+
+5. UNCAP LIABILITY OF SUMMIT INDEMNITY
+5.1. Summit Innovations, Inc. expressly agrees that it shall bear unlimited liability for any and all losses, damages, and liabilities arising directly or indirectly from any breach of this Agreement by Summit, including but not limited to unauthorized disclosure, misuse, or negligent handling of Apex’s Confidential Information.
+
+5.2. Summit shall indemnify, defend, and hold harmless Apex Technology Solutions, LLC and its officers, directors, employees, and agents from and against any and all claims, damages, losses, costs, liabilities, and expenses (including reasonable attorneys’ fees) arising out of or related to any breach of this Agreement by Summit.
+
+5.3. The Parties acknowledge and agree that this uncapped liability provision is a material inducement for Apex to enter into this Agreement and that Summit has had the opportunity to negotiate this provision and consult counsel.
+
+6. RETURN OR DESTRUCTION OF MATERIALS
+6.1. Upon written request of the Disclosing Party or upon termination of this Agreement, the Receiving Party shall, within fifteen (15) calendar days:
+(a) return all tangible materials embodying Confidential Information, including all copies, summaries, and extracts; or
+(b) at the Disclosing Party’s option, certify in writing that all such materials have been irreversibly destroyed.
+
+6.2. Notwithstanding the foregoing, the Receiving Party may retain one (1) archival copy of Confidential Information solely for compliance with its internal document retention policies, provided that such copy remains subject to the confidentiality obligations herein.
+
+7. NO WARRANTY
+7.1. All Confidential Information is provided “AS IS.” Neither Party makes any warranty, express or implied, as to the accuracy or completeness of the Confidential Information.
+
+8. GOVERNING LAW AND JURISDICTION
+8.1. This Agreement shall be governed by and construed in accordance with the laws of the State of Texas without regard to its conflict of laws principles.
+
+8.2. The Parties hereby submit to the exclusive jurisdiction of the state and federal courts located in Travis County, Texas, for any dispute arising out of or relating to this Agreement.
+
+8.3. Any litigation between the Parties relating to this Agreement shall bear the case number 2027-CV-04982 in the 345th District Court of Travis County, Texas.
+
+9. MISCELLANEOUS
+9.1. Entire Agreement. This Agreement constitutes the entire agreement between the Parties with respect to the subject matter hereof and supersedes all prior or contemporaneous understandings, agreements, or communications.
+
+9.2. Amendments. No amendment or modification shall be effective unless in writing and signed by authorized representatives of both Parties.
+
+9.3. Severability. If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+9.4. Waiver. No waiver of any breach shall constitute waiver of any other breach or default.
+
+9.5. Assignment. Neither Party may assign its rights or obligations under this Agreement without the prior written consent of the other Party.
+
+9.6. Counterparts. This Agreement may be executed in counterparts, each of which shall be deemed an original, but all of which together constitute one and the same agreement.
+
+IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure Agreement as of the Effective Date.
+
+SUMMIT INNOVATIONS, INC.  
+By: ______________________________  
+Name: Helena Montrose  
+Title: Chief Legal Officer  
+Date: March 15, 2025
+
+APEX TECHNOLOGY SOLUTIONS, LLC  
+By: ______________________________  
+Name: Marcus E. Langford  
+Title: Managing Member  
+Date: March 15, 2025
+
+[End of Agreement]

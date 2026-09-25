@@ -61,3 +61,6 @@ tmp/
 test_*.py
 debug_*.py
 frontend/node_modules/
+
+# Uploaded legal documents and analyses (may contain confidential data)
+backend/data/

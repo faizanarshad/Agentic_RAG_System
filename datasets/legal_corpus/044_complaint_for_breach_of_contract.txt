@@ -1,0 +1,129 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE SUPERIOR COURT OF THE STATE OF WASHINGTON  
+FOR KING COUNTY  
+
+Case No. 25-2-12345-7 SEA  
+
+JARVIS TECHNOLOGIES, LLC,  
+Plaintiff,  
+
+v.  
+
+NORTH STAR DATA SERVICES, INC.,  
+Defendant.  
+
+COMPLAINT FOR BREACH OF CONTRACT  
+
+Plaintiff JARVIS TECHNOLOGIES, LLC (“Plaintiff” or “Jarvis”), by and through its undersigned counsel, files this Complaint against Defendant NORTH STAR DATA SERVICES, INC. (“Defendant” or “North Star”) and alleges as follows:  
+
+PARTIES, JURISDICTION, AND VENUE  
+
+1. Plaintiff Jarvis Technologies, LLC is a Washington limited liability company with its principal place of business located at 2158 Fifth Avenue, Seattle, Washington 98121.  
+
+2. Defendant North Star Data Services, Inc. is a Delaware corporation registered to do business in the State of Washington, with its principal place of business at 4120 148th Avenue NE, Bellevue, Washington 98007.  
+
+3. This Court has jurisdiction over the parties and the subject matter pursuant to RCW 2.08.010 and RCW 4.28.185, as the transaction and events giving rise to this action occurred within King County, Washington.  
+
+4. Venue is proper in King County Superior Court pursuant to RCW 4.12.025 as the Defendant’s principal place of business is located in King County and the contract at issue was to be performed in this jurisdiction.  
+
+FACTUAL ALLEGATIONS  
+
+5. On or about March 15, 2025, Plaintiff and Defendant entered into a written contract titled “Data Management and Cloud Storage Services Agreement” (“the Agreement”). A true and correct copy of the Agreement is attached hereto as Exhibit 1 and incorporated herein by reference.  
+
+6. The Agreement obligated Defendant to provide cloud data hosting and management services to Plaintiff for Plaintiff’s proprietary customer data with the following key terms:  
+
+   a. Defendant to host and manage no fewer than 50 terabytes of Plaintiff’s data on Defendant’s secure cloud servers.  
+
+   b. Defendant to ensure 99.99% uptime availability of data services during the term of the Agreement.  
+
+   c. Defendant to implement and maintain industry-standard encryption and cybersecurity protocols consistent with ISO 27001.  
+
+   d. Defendant to provide monthly data backup and verification reports to Plaintiff no later than the fifth (5th) business day of each month.  
+
+   e. Initial term of the Agreement was for thirty-six (36) months commencing April 1, 2025, with an option to renew.  
+
+7. The total contract price was $2,400,000, payable in monthly installments of $66,666.67.  
+
+8. Plaintiff duly performed all of its contractual obligations, including timely payment of all monthly fees through April 2027.  
+
+9. Beginning in February 2027, Defendant repeatedly failed to provide monthly backup and verification reports on time, including reports for February and March 2027, which were not delivered until April 15 and April 22, 2027, respectively.  
+
+10. On April 30, 2027, Plaintiff discovered a significant data integrity issue where approximately 7 terabytes of client data were corrupted and unrecoverable due to Defendant’s failure to properly backup data during March 2027.  
+
+11. Plaintiff promptly notified Defendant of the issue by written notice dated May 3, 2027, demanding immediate remedy pursuant to Section 8.4 of the Agreement. A true and correct copy of this notice is attached as Exhibit 2.  
+
+12. Defendant acknowledged the data corruption on May 10, 2027, but failed to take adequate remedial actions or restore the corrupted data as required under the Agreement.  
+
+13. Defendant’s failure to timely and adequately perform its obligations constitutes a material breach of the Agreement.  
+
+14. As a direct and proximate result of Defendant’s breach, Plaintiff has suffered damages including, but not limited to:  
+
+   a. Loss of revenue from Plaintiff’s clients due to data unavailability;  
+
+   b. Costs incurred in engaging third-party data recovery and cybersecurity consultants totaling $150,000;  
+
+   c. Loss of business reputation and client goodwill;  
+
+   d. Other consequential damages to be proven at trial.  
+
+CAUSE OF ACTION  
+
+Breach of Contract  
+
+15. Plaintiff realleges and incorporates by reference paragraphs 1 through 14 above as if fully set forth herein.  
+
+16. The Agreement between Plaintiff and Defendant constituted a valid and enforceable contract.  
+
+17. Plaintiff performed all conditions, covenants, and promises required on its part to be performed under the Agreement except those excused or waived by Defendant’s conduct.  
+
+18. Defendant materially breached the Agreement by failing to provide timely backup reports, failing to maintain data integrity, and failing to restore corrupted data as required.  
+
+19. Defendant’s breach has caused Plaintiff to suffer damages in an amount exceeding $500,000, the exact amount to be proven at trial.  
+
+PRAYER FOR RELIEF  
+
+WHEREFORE, Plaintiff respectfully requests the following relief from this Court:  
+
+A. Award Plaintiff compensatory damages in an amount to be proven at trial, but in no event less than $500,000;  
+
+B. Award Plaintiff costs and reasonable attorneys’ fees incurred in bringing this action pursuant to RCW 4.84.330 and the Agreement;  
+
+C. Award pre-judgment and post-judgment interest as allowed by law;  
+
+D. Award any other relief the Court deems just and equitable.  
+
+DEMAND FOR JURY TRIAL  
+
+Plaintiff demands a jury trial on all issues so triable pursuant to Rule 38 of the Superior Court Civil Rules.  
+
+NOTICE OF RESPONSE DEADLINE  
+
+Pursuant to Superior Court Civil Rule 12(a)(1), Defendant must serve its answer or other responsive pleading to this Complaint within sixty (60) days of service of this Complaint.  
+
+DATED this 15th day of June, 2027.  
+
+Respectfully submitted,  
+
+LAW OFFICE OF MARTIN K. HAWTHORNE  
+
+By: /s/ Martin K. Hawthorne  
+Martin K. Hawthorne, WSBA #41523  
+Attorney for Plaintiff  
+215 First Avenue South, Suite 400  
+Seattle, WA 98104  
+Phone: (206) 555-0123  
+Email: mkhawthorne@lomh-law.com  
+
+CERTIFICATE OF SERVICE  
+
+I hereby certify that on June 15, 2027, I caused a true and correct copy of the foregoing Complaint for Breach of Contract to be served on counsel for Defendant North Star Data Services, Inc., via electronic mail and first-class mail at the following address:  
+
+Rebecca L. Simmons, WSBA #39214  
+Simmons & Gray LLP  
+1201 Third Avenue, Suite 3200  
+Seattle, WA 98101  
+Email: rsimmons@simmonsgray.com  
+
+/s/ Martin K. Hawthorne  
+Martin K. Hawthorne

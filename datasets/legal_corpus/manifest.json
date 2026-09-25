@@ -1,0 +1,902 @@
+[
+  {
+    "index": 1,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of Illinois",
+    "trait": "no termination for convenience",
+    "format": "txt",
+    "filename": "001_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 2,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "uncapped liability for one party",
+    "format": "txt",
+    "filename": "002_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 3,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "missing data protection clause",
+    "format": "pdf",
+    "filename": "003_mutual_non_disclosure_agreement.pdf"
+  },
+  {
+    "index": 4,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "broad non-compete lasting 3 years",
+    "format": "txt",
+    "filename": "004_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 5,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of Delaware",
+    "trait": "missing data protection clause",
+    "format": "txt",
+    "filename": "005_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 6,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of Texas",
+    "trait": "uncapped liability for one party",
+    "format": "txt",
+    "filename": "006_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 7,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "IP assignment of all work product including pre-existing IP",
+    "format": "pdf",
+    "filename": "007_mutual_non_disclosure_agreement.pdf"
+  },
+  {
+    "index": 8,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "automatic renewal with a 90-day notice window",
+    "format": "txt",
+    "filename": "008_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 9,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "State of Texas",
+    "trait": "automatic renewal with a 90-day notice window",
+    "format": "txt",
+    "filename": "009_master_services_agreement.txt"
+  },
+  {
+    "index": 10,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "uncapped liability for one party",
+    "format": "txt",
+    "filename": "010_master_services_agreement.txt"
+  },
+  {
+    "index": 11,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "one-sided indemnification",
+    "format": "txt",
+    "filename": "011_master_services_agreement.txt"
+  },
+  {
+    "index": 12,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "State of Delaware",
+    "trait": "late payment penalty of 2% per month",
+    "format": "txt",
+    "filename": "012_master_services_agreement.txt"
+  },
+  {
+    "index": 13,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "uncapped liability for one party",
+    "format": "txt",
+    "filename": "013_master_services_agreement.txt"
+  },
+  {
+    "index": 14,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "State of Texas",
+    "trait": "uncapped liability for one party",
+    "format": "txt",
+    "filename": "014_master_services_agreement.txt"
+  },
+  {
+    "index": 15,
+    "doc_type": "contract",
+    "subtype": "Master Services Agreement",
+    "jurisdiction": "State of California",
+    "trait": "vague payment milestones",
+    "format": "scanned_pdf",
+    "filename": "015_master_services_agreement.pdf"
+  },
+  {
+    "index": 16,
+    "doc_type": "contract",
+    "subtype": "SaaS Subscription Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "no termination for convenience",
+    "format": "txt",
+    "filename": "016_saas_subscription_agreement.txt"
+  },
+  {
+    "index": 17,
+    "doc_type": "contract",
+    "subtype": "SaaS Subscription Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "late payment penalty of 2% per month",
+    "format": "pdf",
+    "filename": "017_saas_subscription_agreement.pdf"
+  },
+  {
+    "index": 18,
+    "doc_type": "contract",
+    "subtype": "SaaS Subscription Agreement",
+    "jurisdiction": "England and Wales",
+    "trait": "missing data protection clause",
+    "format": "txt",
+    "filename": "018_saas_subscription_agreement.txt"
+  },
+  {
+    "index": 19,
+    "doc_type": "contract",
+    "subtype": "SaaS Subscription Agreement",
+    "jurisdiction": "State of California",
+    "trait": "automatic renewal with a 90-day notice window",
+    "format": "pdf",
+    "filename": "019_saas_subscription_agreement.pdf"
+  },
+  {
+    "index": 20,
+    "doc_type": "contract",
+    "subtype": "SaaS Subscription Agreement",
+    "jurisdiction": "State of Texas",
+    "trait": "broad non-compete lasting 3 years",
+    "format": "txt",
+    "filename": "020_saas_subscription_agreement.txt"
+  },
+  {
+    "index": 21,
+    "doc_type": "contract",
+    "subtype": "SaaS Subscription Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "missing data protection clause",
+    "format": "txt",
+    "filename": "021_saas_subscription_agreement.txt"
+  },
+  {
+    "index": 22,
+    "doc_type": "contract",
+    "subtype": "Commercial Lease Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "late payment penalty of 2% per month",
+    "format": "txt",
+    "filename": "022_commercial_lease_agreement.txt"
+  },
+  {
+    "index": 23,
+    "doc_type": "contract",
+    "subtype": "Commercial Lease Agreement",
+    "jurisdiction": "State of Delaware",
+    "trait": "late payment penalty of 2% per month",
+    "format": "txt",
+    "filename": "023_commercial_lease_agreement.txt"
+  },
+  {
+    "index": 24,
+    "doc_type": "contract",
+    "subtype": "Commercial Lease Agreement",
+    "jurisdiction": "State of Texas",
+    "trait": "balanced, well-drafted terms with a mutual liability cap",
+    "format": "txt",
+    "filename": "024_commercial_lease_agreement.txt"
+  },
+  {
+    "index": 25,
+    "doc_type": "contract",
+    "subtype": "Commercial Lease Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "broad non-compete lasting 3 years",
+    "format": "txt",
+    "filename": "025_commercial_lease_agreement.txt"
+  },
+  {
+    "index": 26,
+    "doc_type": "contract",
+    "subtype": "Commercial Lease Agreement",
+    "jurisdiction": "State of Washington",
+    "trait": "late payment penalty of 2% per month",
+    "format": "txt",
+    "filename": "026_commercial_lease_agreement.txt"
+  },
+  {
+    "index": 27,
+    "doc_type": "contract",
+    "subtype": "Employment Agreement",
+    "jurisdiction": "State of Washington",
+    "trait": "broad non-compete lasting 3 years",
+    "format": "txt",
+    "filename": "027_employment_agreement.txt"
+  },
+  {
+    "index": 28,
+    "doc_type": "contract",
+    "subtype": "Employment Agreement",
+    "jurisdiction": "England and Wales",
+    "trait": "one-sided indemnification",
+    "format": "txt",
+    "filename": "028_employment_agreement.txt"
+  },
+  {
+    "index": 29,
+    "doc_type": "contract",
+    "subtype": "Employment Agreement",
+    "jurisdiction": "State of California",
+    "trait": "one-sided indemnification",
+    "format": "txt",
+    "filename": "029_employment_agreement.txt"
+  },
+  {
+    "index": 30,
+    "doc_type": "contract",
+    "subtype": "Employment Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "late payment penalty of 2% per month",
+    "format": "txt",
+    "filename": "030_employment_agreement.txt"
+  },
+  {
+    "index": 31,
+    "doc_type": "contract",
+    "subtype": "Employment Agreement",
+    "jurisdiction": "England and Wales",
+    "trait": "missing data protection clause",
+    "format": "txt",
+    "filename": "031_employment_agreement.txt"
+  },
+  {
+    "index": 32,
+    "doc_type": "contract",
+    "subtype": "Software License Agreement",
+    "jurisdiction": "State of Washington",
+    "trait": "broad non-compete lasting 3 years",
+    "format": "txt",
+    "filename": "032_software_license_agreement.txt"
+  },
+  {
+    "index": 33,
+    "doc_type": "contract",
+    "subtype": "Software License Agreement",
+    "jurisdiction": "State of Washington",
+    "trait": "vague payment milestones",
+    "format": "scanned_pdf",
+    "filename": "033_software_license_agreement.pdf"
+  },
+  {
+    "index": 34,
+    "doc_type": "contract",
+    "subtype": "Software License Agreement",
+    "jurisdiction": "State of New York",
+    "trait": "automatic renewal with a 90-day notice window",
+    "format": "txt",
+    "filename": "034_software_license_agreement.txt"
+  },
+  {
+    "index": 35,
+    "doc_type": "contract",
+    "subtype": "Software License Agreement",
+    "jurisdiction": "Province of Ontario",
+    "trait": "no termination for convenience",
+    "format": "pdf",
+    "filename": "035_software_license_agreement.pdf"
+  },
+  {
+    "index": 36,
+    "doc_type": "contract",
+    "subtype": "Supply Agreement",
+    "jurisdiction": "State of Illinois",
+    "trait": "no termination for convenience",
+    "format": "txt",
+    "filename": "036_supply_agreement.txt"
+  },
+  {
+    "index": 37,
+    "doc_type": "contract",
+    "subtype": "Supply Agreement",
+    "jurisdiction": "State of Washington",
+    "trait": "IP assignment of all work product including pre-existing IP",
+    "format": "txt",
+    "filename": "037_supply_agreement.txt"
+  },
+  {
+    "index": 38,
+    "doc_type": "contract",
+    "subtype": "Supply Agreement",
+    "jurisdiction": "State of Delaware",
+    "trait": "automatic renewal with a 90-day notice window",
+    "format": "scanned_pdf",
+    "filename": "038_supply_agreement.pdf"
+  },
+  {
+    "index": 39,
+    "doc_type": "contract",
+    "subtype": "Supply Agreement",
+    "jurisdiction": "State of Illinois",
+    "trait": "broad non-compete lasting 3 years",
+    "format": "txt",
+    "filename": "039_supply_agreement.txt"
+  },
+  {
+    "index": 40,
+    "doc_type": "contract",
+    "subtype": "Supply Agreement",
+    "jurisdiction": "State of Illinois",
+    "trait": "late payment penalty of 2% per month",
+    "format": "txt",
+    "filename": "040_supply_agreement.txt"
+  },
+  {
+    "index": 41,
+    "doc_type": "court_filing",
+    "subtype": "Complaint for Breach of Contract",
+    "jurisdiction": "State of Washington",
+    "trait": "damages of over $5 million",
+    "format": "txt",
+    "filename": "041_complaint_for_breach_of_contract.txt"
+  },
+  {
+    "index": 42,
+    "doc_type": "court_filing",
+    "subtype": "Complaint for Breach of Contract",
+    "jurisdiction": "State of Washington",
+    "trait": "a response deadline in the next 60 days",
+    "format": "txt",
+    "filename": "042_complaint_for_breach_of_contract.txt"
+  },
+  {
+    "index": 43,
+    "doc_type": "court_filing",
+    "subtype": "Complaint for Breach of Contract",
+    "jurisdiction": "State of New York",
+    "trait": "a statute of limitations defense",
+    "format": "txt",
+    "filename": "043_complaint_for_breach_of_contract.txt"
+  },
+  {
+    "index": 44,
+    "doc_type": "court_filing",
+    "subtype": "Complaint for Breach of Contract",
+    "jurisdiction": "State of Washington",
+    "trait": "a response deadline in the next 60 days",
+    "format": "txt",
+    "filename": "044_complaint_for_breach_of_contract.txt"
+  },
+  {
+    "index": 45,
+    "doc_type": "court_filing",
+    "subtype": "Complaint for Breach of Contract",
+    "jurisdiction": "State of Delaware",
+    "trait": "a statute of limitations defense",
+    "format": "txt",
+    "filename": "045_complaint_for_breach_of_contract.txt"
+  },
+  {
+    "index": 46,
+    "doc_type": "court_filing",
+    "subtype": "Complaint for Breach of Contract",
+    "jurisdiction": "State of Washington",
+    "trait": "a statute of limitations defense",
+    "format": "txt",
+    "filename": "046_complaint_for_breach_of_contract.txt"
+  },
+  {
+    "index": 47,
+    "doc_type": "court_filing",
+    "subtype": "Motion to Dismiss",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a statute of limitations defense",
+    "format": "txt",
+    "filename": "047_motion_to_dismiss.txt"
+  },
+  {
+    "index": 48,
+    "doc_type": "court_filing",
+    "subtype": "Motion to Dismiss",
+    "jurisdiction": "State of Delaware",
+    "trait": "a request for injunctive relief",
+    "format": "pdf",
+    "filename": "048_motion_to_dismiss.pdf"
+  },
+  {
+    "index": 49,
+    "doc_type": "court_filing",
+    "subtype": "Motion to Dismiss",
+    "jurisdiction": "State of Illinois",
+    "trait": "claims for fraud and breach of fiduciary duty",
+    "format": "txt",
+    "filename": "049_motion_to_dismiss.txt"
+  },
+  {
+    "index": 50,
+    "doc_type": "court_filing",
+    "subtype": "Motion to Dismiss",
+    "jurisdiction": "State of New York",
+    "trait": "a request for injunctive relief",
+    "format": "pdf",
+    "filename": "050_motion_to_dismiss.pdf"
+  },
+  {
+    "index": 51,
+    "doc_type": "court_filing",
+    "subtype": "Motion to Dismiss",
+    "jurisdiction": "State of Delaware",
+    "trait": "claims for fraud and breach of fiduciary duty",
+    "format": "scanned_pdf",
+    "filename": "051_motion_to_dismiss.pdf"
+  },
+  {
+    "index": 52,
+    "doc_type": "court_filing",
+    "subtype": "Motion for Summary Judgment",
+    "jurisdiction": "England and Wales",
+    "trait": "claims for fraud and breach of fiduciary duty",
+    "format": "txt",
+    "filename": "052_motion_for_summary_judgment.txt"
+  },
+  {
+    "index": 53,
+    "doc_type": "court_filing",
+    "subtype": "Motion for Summary Judgment",
+    "jurisdiction": "State of Texas",
+    "trait": "a request for injunctive relief",
+    "format": "txt",
+    "filename": "053_motion_for_summary_judgment.txt"
+  },
+  {
+    "index": 54,
+    "doc_type": "court_filing",
+    "subtype": "Motion for Summary Judgment",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a request for injunctive relief",
+    "format": "txt",
+    "filename": "054_motion_for_summary_judgment.txt"
+  },
+  {
+    "index": 55,
+    "doc_type": "court_filing",
+    "subtype": "Motion for Summary Judgment",
+    "jurisdiction": "State of New York",
+    "trait": "claims for fraud and breach of fiduciary duty",
+    "format": "txt",
+    "filename": "055_motion_for_summary_judgment.txt"
+  },
+  {
+    "index": 56,
+    "doc_type": "court_filing",
+    "subtype": "Answer and Affirmative Defenses",
+    "jurisdiction": "State of Washington",
+    "trait": "a request for injunctive relief",
+    "format": "pdf",
+    "filename": "056_answer_and_affirmative_defenses.pdf"
+  },
+  {
+    "index": 57,
+    "doc_type": "court_filing",
+    "subtype": "Answer and Affirmative Defenses",
+    "jurisdiction": "England and Wales",
+    "trait": "claims for fraud and breach of fiduciary duty",
+    "format": "txt",
+    "filename": "057_answer_and_affirmative_defenses.txt"
+  },
+  {
+    "index": 58,
+    "doc_type": "court_filing",
+    "subtype": "Answer and Affirmative Defenses",
+    "jurisdiction": "Province of Ontario",
+    "trait": "damages of over $5 million",
+    "format": "txt",
+    "filename": "058_answer_and_affirmative_defenses.txt"
+  },
+  {
+    "index": 59,
+    "doc_type": "court_filing",
+    "subtype": "Answer and Affirmative Defenses",
+    "jurisdiction": "England and Wales",
+    "trait": "a request for injunctive relief",
+    "format": "txt",
+    "filename": "059_answer_and_affirmative_defenses.txt"
+  },
+  {
+    "index": 60,
+    "doc_type": "court_filing",
+    "subtype": "Answer and Affirmative Defenses",
+    "jurisdiction": "State of Illinois",
+    "trait": "a request for injunctive relief",
+    "format": "txt",
+    "filename": "060_answer_and_affirmative_defenses.txt"
+  },
+  {
+    "index": 61,
+    "doc_type": "case_file",
+    "subtype": "Court Opinion and Order",
+    "jurisdiction": "State of Texas",
+    "trait": "a pending appeal",
+    "format": "txt",
+    "filename": "061_court_opinion_and_order.txt"
+  },
+  {
+    "index": 62,
+    "doc_type": "case_file",
+    "subtype": "Court Opinion and Order",
+    "jurisdiction": "State of New York",
+    "trait": "a pending appeal",
+    "format": "txt",
+    "filename": "062_court_opinion_and_order.txt"
+  },
+  {
+    "index": 63,
+    "doc_type": "case_file",
+    "subtype": "Court Opinion and Order",
+    "jurisdiction": "State of California",
+    "trait": "a pending appeal",
+    "format": "txt",
+    "filename": "063_court_opinion_and_order.txt"
+  },
+  {
+    "index": 64,
+    "doc_type": "case_file",
+    "subtype": "Court Opinion and Order",
+    "jurisdiction": "State of Texas",
+    "trait": "a judgment against the defendant with damages awarded",
+    "format": "txt",
+    "filename": "064_court_opinion_and_order.txt"
+  },
+  {
+    "index": 65,
+    "doc_type": "case_file",
+    "subtype": "Court Opinion and Order",
+    "jurisdiction": "State of Washington",
+    "trait": "a pending appeal",
+    "format": "txt",
+    "filename": "065_court_opinion_and_order.txt"
+  },
+  {
+    "index": 66,
+    "doc_type": "case_file",
+    "subtype": "Court Opinion and Order",
+    "jurisdiction": "England and Wales",
+    "trait": "a confidential settlement with a non-disparagement clause",
+    "format": "txt",
+    "filename": "066_court_opinion_and_order.txt"
+  },
+  {
+    "index": 67,
+    "doc_type": "case_file",
+    "subtype": "Litigation Matter Summary",
+    "jurisdiction": "State of Delaware",
+    "trait": "a pending appeal",
+    "format": "txt",
+    "filename": "067_litigation_matter_summary.txt"
+  },
+  {
+    "index": 68,
+    "doc_type": "case_file",
+    "subtype": "Litigation Matter Summary",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a confidential settlement with a non-disparagement clause",
+    "format": "txt",
+    "filename": "068_litigation_matter_summary.txt"
+  },
+  {
+    "index": 69,
+    "doc_type": "case_file",
+    "subtype": "Litigation Matter Summary",
+    "jurisdiction": "State of Illinois",
+    "trait": "a pending appeal",
+    "format": "txt",
+    "filename": "069_litigation_matter_summary.txt"
+  },
+  {
+    "index": 70,
+    "doc_type": "case_file",
+    "subtype": "Litigation Matter Summary",
+    "jurisdiction": "State of Delaware",
+    "trait": "a dismissal without prejudice",
+    "format": "txt",
+    "filename": "070_litigation_matter_summary.txt"
+  },
+  {
+    "index": 71,
+    "doc_type": "case_file",
+    "subtype": "Litigation Matter Summary",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a dismissal without prejudice",
+    "format": "txt",
+    "filename": "071_litigation_matter_summary.txt"
+  },
+  {
+    "index": 72,
+    "doc_type": "case_file",
+    "subtype": "Settlement Agreement and Release",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a dismissal without prejudice",
+    "format": "txt",
+    "filename": "072_settlement_agreement_and_release.txt"
+  },
+  {
+    "index": 73,
+    "doc_type": "case_file",
+    "subtype": "Settlement Agreement and Release",
+    "jurisdiction": "State of New York",
+    "trait": "a dismissal without prejudice",
+    "format": "txt",
+    "filename": "073_settlement_agreement_and_release.txt"
+  },
+  {
+    "index": 74,
+    "doc_type": "case_file",
+    "subtype": "Settlement Agreement and Release",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a judgment against the defendant with damages awarded",
+    "format": "txt",
+    "filename": "074_settlement_agreement_and_release.txt"
+  },
+  {
+    "index": 75,
+    "doc_type": "case_file",
+    "subtype": "Settlement Agreement and Release",
+    "jurisdiction": "State of Texas",
+    "trait": "a judgment against the defendant with damages awarded",
+    "format": "txt",
+    "filename": "075_settlement_agreement_and_release.txt"
+  },
+  {
+    "index": 76,
+    "doc_type": "compliance_record",
+    "subtype": "GDPR Data Protection Audit Report",
+    "jurisdiction": "State of Texas",
+    "trait": "a potential regulatory fine",
+    "format": "txt",
+    "filename": "076_gdpr_data_protection_audit_report.txt"
+  },
+  {
+    "index": 77,
+    "doc_type": "compliance_record",
+    "subtype": "GDPR Data Protection Audit Report",
+    "jurisdiction": "State of California",
+    "trait": "three critical findings with remediation deadlines",
+    "format": "txt",
+    "filename": "077_gdpr_data_protection_audit_report.txt"
+  },
+  {
+    "index": 78,
+    "doc_type": "compliance_record",
+    "subtype": "GDPR Data Protection Audit Report",
+    "jurisdiction": "State of Illinois",
+    "trait": "a vendor-risk gap",
+    "format": "pdf",
+    "filename": "078_gdpr_data_protection_audit_report.pdf"
+  },
+  {
+    "index": 79,
+    "doc_type": "compliance_record",
+    "subtype": "GDPR Data Protection Audit Report",
+    "jurisdiction": "State of Delaware",
+    "trait": "three critical findings with remediation deadlines",
+    "format": "txt",
+    "filename": "079_gdpr_data_protection_audit_report.txt"
+  },
+  {
+    "index": 80,
+    "doc_type": "compliance_record",
+    "subtype": "GDPR Data Protection Audit Report",
+    "jurisdiction": "State of Delaware",
+    "trait": "a vendor-risk gap",
+    "format": "pdf",
+    "filename": "080_gdpr_data_protection_audit_report.pdf"
+  },
+  {
+    "index": 81,
+    "doc_type": "compliance_record",
+    "subtype": "HIPAA Security Risk Assessment",
+    "jurisdiction": "State of California",
+    "trait": "a vendor-risk gap",
+    "format": "txt",
+    "filename": "081_hipaa_security_risk_assessment.txt"
+  },
+  {
+    "index": 82,
+    "doc_type": "compliance_record",
+    "subtype": "HIPAA Security Risk Assessment",
+    "jurisdiction": "State of New York",
+    "trait": "overdue remediation from a prior audit",
+    "format": "txt",
+    "filename": "082_hipaa_security_risk_assessment.txt"
+  },
+  {
+    "index": 83,
+    "doc_type": "compliance_record",
+    "subtype": "HIPAA Security Risk Assessment",
+    "jurisdiction": "State of Delaware",
+    "trait": "three critical findings with remediation deadlines",
+    "format": "txt",
+    "filename": "083_hipaa_security_risk_assessment.txt"
+  },
+  {
+    "index": 84,
+    "doc_type": "compliance_record",
+    "subtype": "HIPAA Security Risk Assessment",
+    "jurisdiction": "State of Texas",
+    "trait": "a vendor-risk gap",
+    "format": "txt",
+    "filename": "084_hipaa_security_risk_assessment.txt"
+  },
+  {
+    "index": 85,
+    "doc_type": "compliance_record",
+    "subtype": "SOX Internal Controls Review",
+    "jurisdiction": "Province of Ontario",
+    "trait": "a clean audit with minor observations",
+    "format": "txt",
+    "filename": "085_sox_internal_controls_review.txt"
+  },
+  {
+    "index": 86,
+    "doc_type": "compliance_record",
+    "subtype": "SOX Internal Controls Review",
+    "jurisdiction": "England and Wales",
+    "trait": "overdue remediation from a prior audit",
+    "format": "txt",
+    "filename": "086_sox_internal_controls_review.txt"
+  },
+  {
+    "index": 87,
+    "doc_type": "compliance_record",
+    "subtype": "SOX Internal Controls Review",
+    "jurisdiction": "State of Illinois",
+    "trait": "a potential regulatory fine",
+    "format": "txt",
+    "filename": "087_sox_internal_controls_review.txt"
+  },
+  {
+    "index": 88,
+    "doc_type": "compliance_record",
+    "subtype": "AML/KYC Compliance Review",
+    "jurisdiction": "State of New York",
+    "trait": "three critical findings with remediation deadlines",
+    "format": "txt",
+    "filename": "088_aml_kyc_compliance_review.txt"
+  },
+  {
+    "index": 89,
+    "doc_type": "compliance_record",
+    "subtype": "AML/KYC Compliance Review",
+    "jurisdiction": "State of Washington",
+    "trait": "a potential regulatory fine",
+    "format": "txt",
+    "filename": "089_aml_kyc_compliance_review.txt"
+  },
+  {
+    "index": 90,
+    "doc_type": "compliance_record",
+    "subtype": "AML/KYC Compliance Review",
+    "jurisdiction": "State of Washington",
+    "trait": "a potential regulatory fine",
+    "format": "txt",
+    "filename": "090_aml_kyc_compliance_review.txt"
+  },
+  {
+    "index": 91,
+    "doc_type": "compliance_record",
+    "subtype": "Data Breach Incident Report",
+    "jurisdiction": "England and Wales",
+    "trait": "three critical findings with remediation deadlines",
+    "format": "txt",
+    "filename": "091_data_breach_incident_report.txt"
+  },
+  {
+    "index": 92,
+    "doc_type": "compliance_record",
+    "subtype": "Data Breach Incident Report",
+    "jurisdiction": "State of California",
+    "trait": "three critical findings with remediation deadlines",
+    "format": "txt",
+    "filename": "092_data_breach_incident_report.txt"
+  },
+  {
+    "index": 93,
+    "doc_type": "compliance_record",
+    "subtype": "Data Breach Incident Report",
+    "jurisdiction": "State of Illinois",
+    "trait": "overdue remediation from a prior audit",
+    "format": "txt",
+    "filename": "093_data_breach_incident_report.txt"
+  },
+  {
+    "index": 94,
+    "doc_type": "other_legal",
+    "subtype": "Durable Power of Attorney",
+    "jurisdiction": "State of Washington",
+    "trait": "broad financial powers",
+    "format": "txt",
+    "filename": "094_durable_power_of_attorney.txt"
+  },
+  {
+    "index": 95,
+    "doc_type": "other_legal",
+    "subtype": "Durable Power of Attorney",
+    "jurisdiction": "State of Delaware",
+    "trait": "broad financial powers",
+    "format": "txt",
+    "filename": "095_durable_power_of_attorney.txt"
+  },
+  {
+    "index": 96,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of Illinois",
+    "trait": "no termination for convenience",
+    "format": "scanned_pdf",
+    "filename": "096_mutual_non_disclosure_agreement.pdf"
+  },
+  {
+    "index": 97,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of Delaware",
+    "trait": "missing data protection clause",
+    "format": "txt",
+    "filename": "097_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 98,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "England and Wales",
+    "trait": "automatic renewal with a 90-day notice window",
+    "format": "txt",
+    "filename": "098_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 99,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "England and Wales",
+    "trait": "missing data protection clause",
+    "format": "txt",
+    "filename": "099_mutual_non_disclosure_agreement.txt"
+  },
+  {
+    "index": 100,
+    "doc_type": "contract",
+    "subtype": "Mutual Non-Disclosure Agreement",
+    "jurisdiction": "State of Illinois",
+    "trait": "no termination for convenience",
+    "format": "txt",
+    "filename": "100_mutual_non_disclosure_agreement.txt"
+  }
+]

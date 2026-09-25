@@ -1,0 +1,148 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SAAS SUBSCRIPTION AGREEMENT
+
+This SaaS Subscription Agreement (“Agreement”) is entered into as of 1 March 2025 (“Effective Date”) by and between:
+
+Nimbus Solutions Ltd, a company incorporated under the laws of England and Wales, with registered number 10876543, and having its registered office at 27 Mountford Lane, London, EC1V 7HQ (“Provider”);
+
+and
+
+Ascend Retail Group plc, a public limited company registered in England and Wales with company number 05432189, whose registered office is at 90 Regent Street, London, W1B 4EZ (“Customer”).
+
+Each a “Party” and together the “Parties.”
+
+WHEREAS
+
+(A) Provider has developed and operates a cloud-based software platform called “Nimbus Flow” designed for inventory and sales management (“Software”);
+
+(B) Customer wishes to subscribe to the Software under the terms set forth herein;
+
+NOW, THEREFORE, the Parties agree as follows:
+
+1. Definitions
+
+1.1 “Subscription” means the right granted by Provider to Customer to access and use the Software pursuant to the terms of this Agreement.
+
+1.2 “Subscription Term” means the period set out in clause 3.1.
+
+1.3 “Documentation” means the user manuals and help files relating to the Software provided by Provider.
+
+1.4 “User” means an individual who is authorised by Customer to use the Software under this Agreement.
+
+1.5 “Confidential Information” means any information disclosed by one Party to the other in connection with this Agreement that is marked or identified as confidential or that ought reasonably to be considered confidential.
+
+2. Grant of Subscription
+
+2.1 Provider hereby grants to Customer a non-exclusive, non-transferable Subscription to access and use the Software through the Provider’s online platform solely for Customer’s internal business purposes.
+
+2.2 Customer shall ensure that only Users authorised under this Agreement access the Software and shall be responsible for all activities conducted by such Users.
+
+3. Subscription Term
+
+3.1 The Subscription shall commence on the Effective Date and shall continue for an initial period of twelve (12) months (“Initial Term”), unless terminated earlier in accordance with this Agreement.
+
+3.2 Upon expiry of the Initial Term, the Subscription will automatically renew for successive twelve (12) month terms (“Renewal Terms”) unless either Party gives at least ninety (90) days’ prior written notice of non-renewal.
+
+4. Fees and Payment
+
+4.1 Customer shall pay Provider the fees specified in Schedule A attached hereto (“Subscription Fees”).
+
+4.2 Subscription Fees shall be paid annually in advance no later than thirty (30) days after the date of invoice.
+
+4.3 Provider may increase the Subscription Fees for Renewal Terms by up to 5% per annum upon providing Customer not less than sixty (60) days’ prior written notice.
+
+4.4 All fees are exclusive of VAT, which shall be payable by Customer in addition where applicable.
+
+5. Provider Obligations
+
+5.1 Provider shall use commercially reasonable efforts to make the Software available with 99.5% uptime per calendar month, excluding scheduled maintenance or force majeure events.
+
+5.2 Provider shall provide Customer with access details to the Software within five (5) Business Days of the Effective Date.
+
+5.3 Provider shall provide basic technical support by email during Provider’s normal business hours (09:00 to 17:30 GMT, Monday to Friday, excluding public holidays in England and Wales).
+
+6. Customer Obligations
+
+6.1 Customer shall ensure that Users comply with this Agreement and shall promptly notify Provider of any unauthorised use of the Software.
+
+6.2 Customer shall provide Provider with accurate information necessary for the provision of the Subscription, including contact details for billing and support.
+
+6.3 Customer shall not use the Software for any unlawful purpose or in a manner that would damage, disable, or impair the Software or interfere with any other party’s use.
+
+7. Intellectual Property
+
+7.1 Provider retains all right, title and interest in and to the Software, Documentation, and any enhancements or modifications thereof.
+
+7.2 Customer is granted only the limited Subscription rights expressly set out in this Agreement and does not acquire any ownership rights.
+
+8. Confidentiality
+
+8.1 Each Party agrees to keep Confidential Information disclosed by the other Party confidential and to use it only for purposes of performing its obligations under this Agreement.
+
+8.2 The obligations in clause 8.1 shall not apply to Confidential Information which is or becomes publicly available otherwise than through breach of this Agreement.
+
+9. Termination
+
+9.1 Either Party may terminate this Agreement immediately by written notice if the other Party:
+
+(a) commits a material breach of this Agreement which is not remedied within thirty (30) days after receipt of written notice specifying the breach;
+
+(b) becomes subject to any insolvency or bankruptcy proceeding.
+
+9.2 Customer may terminate this Agreement without cause on not less than ninety (90) days’ prior written notice, provided that no refund shall be payable for any Subscription Fees already paid.
+
+9.3 Upon termination, Customer shall immediately cease all use of the Software and delete or return any Confidential Information of Provider.
+
+10. Limitation of Liability
+
+10.1 Subject to clause 10.3, neither Party shall be liable for any indirect, incidental, special or consequential damages arising out of or in connection with this Agreement.
+
+10.2 Subject to clause 10.3, Provider’s aggregate liability under or in connection with this Agreement shall not exceed the total Subscription Fees paid by Customer in the twelve (12) months preceding the claim.
+
+10.3 Nothing in this Agreement shall limit liability for death or personal injury caused by a Party’s negligence or for fraud.
+
+11. Miscellaneous
+
+11.1 Force Majeure. Neither Party shall be liable for any failure or delay in performing its obligations due to causes beyond its reasonable control.
+
+11.2 Assignment. Customer shall not assign or transfer this Agreement or any rights hereunder without the prior written consent of Provider. Provider may assign this Agreement to an affiliate or successor entity.
+
+11.3 Notices. All notices under this Agreement shall be in writing and sent to the respective Party’s registered office or such other address as notified.
+
+11.4 Entire Agreement. This Agreement, including Schedule A, constitutes the entire agreement between the Parties and supersedes all prior agreements.
+
+11.5 Amendments. Any amendments must be in writing and signed by authorized representatives of both Parties.
+
+11.6 Waiver. No waiver of any breach shall be effective unless in writing and shall not constitute a waiver of any other breach.
+
+11.7 Severability. If any provision is held invalid, it shall be severed, and the remainder of the Agreement shall continue in full force and effect.
+
+11.8 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of England and Wales. The Parties submit to the exclusive jurisdiction of the courts of England and Wales for any disputes arising hereunder.
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the date first above written.
+
+For Nimbus Solutions Ltd:  
+______________________________  
+Name: Oliver Kensington  
+Title: Chief Executive Officer  
+Date: 1 March 2025  
+
+For Ascend Retail Group plc:  
+______________________________  
+Name: Rebecca Sinclair  
+Title: Chief Financial Officer  
+Date: 1 March 2025
+
+SCHEDULE A – Subscription Fees
+
+Subscription Plan: Nimbus Flow Enterprise Edition  
+Number of Users: 50  
+Annual Subscription Fee: £45,000 (forty-five thousand pounds sterling)
+
+Payment Terms:  
+Customer shall pay the full annual Subscription Fee within thirty (30) days of invoice issued on or shortly after the Effective Date. Subsequent renewal invoices will be issued ninety (90) days prior to the start of each Renewal Term.
+
+---
+
+Note: This Agreement does not contain any provisions relating to data protection, data processing, or privacy obligations between the Parties. The Parties acknowledge that inclusion of data protection clauses is recommended but is expressly omitted in this Agreement.

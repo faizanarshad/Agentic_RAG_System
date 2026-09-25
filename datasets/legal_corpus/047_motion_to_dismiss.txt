@@ -1,0 +1,151 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+Court File No. 2027-ON-01123
+
+ONTARIO SUPERIOR COURT OF JUSTICE
+
+BETWEEN:
+
+GOLDEN SKY ENERGY INC.  
+Plaintiff
+
+– and –
+
+NOVA TECH SOLUTIONS LTD.  
+Defendant
+
+__________________________________________________________
+
+MOTION TO DISMISS  
+__________________________________________________________
+
+TO THE HONOURABLE JUSTICE MARTIN,
+
+The Defendant, Nova Tech Solutions Ltd. (“Nova Tech”), pursuant to Rule 21.01 of the Ontario Rules of Civil Procedure, hereby brings this Motion to Dismiss the Notice of Action filed by the Plaintiff, Golden Sky Energy Inc. (“Golden Sky”), on the grounds that the Plaintiff’s claim is statute-barred and therefore discloses no reasonable cause of action.
+
+This Motion is supported by the following grounds, affidavit evidence, and memorandum of law.
+
+DATED this 10th day of March, 2027.
+
+____________________________________  
+Counsel for Nova Tech Solutions Ltd.  
+Darren P. Lyle, LSO #398271  
+Lyle & McDowell LLP  
+250 Wellington Street West, Suite 900  
+Toronto, Ontario M5V 3P4  
+Phone: (416) 555-0193  
+Fax: (416) 555-0194  
+Email: d.lyle@lylemcdowell.ca  
+
+__________________________________________________________
+
+MOTION TO DISMISS
+
+I. INTRODUCTION
+
+1. Nova Tech Solutions Ltd. (“Nova Tech”) brings this motion to dismiss the claim brought by Golden Sky Energy Inc. (“Golden Sky”) pursuant to Rule 21.01(1)(a) of the Ontario Rules of Civil Procedure on the basis that the action is statute-barred under the Limitations Act, 2002, S.O. 2002, c. 24, Sch. B (“Limitations Act”).
+
+2. The Plaintiff’s claim arises from an alleged breach of contract regarding a software licensing agreement dated June 15, 2022, between the parties (the “Agreement”).
+
+3. Golden Sky commenced this action by Statement of Claim issued on February 1, 2027—more than four years after the alleged breach on January 31, 2023.
+
+4. The Limitations Act prescribes a two-year basic limitation period for contract claims, which bars claims brought after two years from the date on which the claim was discovered, or ought reasonably to have been discovered.
+
+5. For these reasons, Nova Tech requests that the action be dismissed with costs.
+
+II. FACTUAL BACKGROUND
+
+6. On or about June 15, 2022, Golden Sky and Nova Tech entered into the Agreement, pursuant to which Nova Tech licensed proprietary software solutions to Golden Sky for use in its oil and gas exploration operations.
+
+7. The Agreement required Nova Tech to deliver software updates and maintenance services on a quarterly basis and to ensure software functionality consistent with agreed-upon specifications.
+
+8. According to the Plaintiff, Nova Tech breached the Agreement by failing to provide a critical software update promised for delivery by January 31, 2023.
+
+9. Golden Sky alleges that this breach caused operational disruptions and financial losses amounting to $1,250,000.
+
+10. The Plaintiff did not take any steps to notify Nova Tech of these alleged breaches or seek remedies until a demand letter sent on January 25, 2027.
+
+11. On February 1, 2027, Golden Sky commenced this legal action.
+
+III. ISSUES
+
+12. The sole issue on this Motion is whether the Plaintiff’s claim is statute-barred by the Limitations Act, thereby justifying dismissal under Rule 21.01(1)(a).
+
+IV. LAW AND ARGUMENT
+
+A. The Basic Limitation Period Under the Limitations Act
+
+13. Section 4(1) of the Limitations Act establishes a two-year limitation period for most civil claims, including breach of contract claims: “An action respecting a claim shall not be commenced after the second anniversary of the day on which the claim was discovered.”
+
+14. Section 5(1) defines when a claim is discovered. It states that a claim is discovered on the earlier of the day on which the plaintiff first knew, or ought to have known, the material facts regarding the injury, loss or damage, the identity of the responsible party, and that a proceeding would be an appropriate means to seek remedy.
+
+B. Application of the Limitations Period to the Facts
+
+15. Here, Golden Sky alleges that Nova Tech failed to deliver the critical update by January 31, 2023.
+
+16. As a sophisticated corporate entity, Golden Sky ought reasonably to have discovered the breach on or shortly after January 31, 2023.
+
+17. Golden Sky did not commence proceeding until February 1, 2027, over four years after the alleged breach.
+
+18. No material facts suggest that Golden Sky was unaware of the breach or its effects until a later date.
+
+19. Nor does the Plaintiff claim any applicable exceptions such as fraud, concealment, or disability to extend the limitation period.
+
+20. Thus, the claim is clearly statute-barred because the claim was commenced beyond the two-year limitation period.
+
+21. The Ontario Court of Appeal has held in numerous cases, including XYZ Construction Inc. v. ABC Mechanical Ltd., 2018 ONCA 556, that strict adherence to limitation periods is essential to promote finality and certainty in commercial disputes.
+
+C. No Valid Exception Applies
+
+22. Section 16 of the Limitations Act provides certain discretionary extensions, including where fraud or deliberate concealment is involved.
+
+23. Golden Sky alleges no such misconduct.
+
+24. The Plaintiff’s delay is unexplained and inexcusable.
+
+25. Further, no separate discovery rule or equitable doctrine applies to extend the limitation period beyond two years from breach.
+
+V. CONCLUSION AND ORDER SOUGHT
+
+26. For the foregoing reasons, the Defendant Nova Tech Solutions Ltd. respectfully requests that:
+
+(a) The action be dismissed with costs pursuant to Rule 21.01(1)(a) of the Ontario Rules of Civil Procedure;
+
+(b) The Court order such further and other relief as this Honourable Court may deem just.
+
+DATED at Toronto, Ontario, this 10th day of March, 2027.
+
+__________________________________  
+Darren P. Lyle, Counsel for Defendant  
+Nova Tech Solutions Ltd.
+
+__________________________________________________________
+
+AFFIDAVIT OF DARREN P. LYLE, sworn March 10, 2027
+
+I, Darren P. Lyle, of the City of Toronto, in the Province of Ontario, MAKE OATH AND SAY:
+
+1. I am counsel for the Defendant in this matter and as such have knowledge of the matters hereinafter deposed to, except where stated to be on information and belief, and where so stated I verily believe the same to be true.
+
+2. On or about June 15, 2022, I reviewed and retained a copy of the software licensing agreement between Nova Tech Solutions Ltd. and Golden Sky Energy Inc.
+
+3. I have also reviewed all correspondence between the parties, including the Plaintiff’s demand letter dated January 25, 2027.
+
+4. The Plaintiff made no written or oral complaints regarding breaches of the Agreement prior to the demand letter.
+
+5. I have conducted a reasonable review of records and confirm that no notice of breach or claim was made before the demand letter.
+
+6. I swear that the Plaintiff’s claim was commenced beyond the two-year limitation period prescribed by the Limitations Act, 2002.
+
+SWORN before me at the )  
+City of Toronto, in the )  
+Province of Ontario, this )  
+10th day of March, 2027 )  
+
+__________________________________ )  
+Commissioner for Taking Affidavits )  
+Darren P. Lyle
+
+__________________________________________________________
+
+END OF DOCUMENT

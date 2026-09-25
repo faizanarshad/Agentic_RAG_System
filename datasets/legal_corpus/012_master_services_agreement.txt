@@ -1,0 +1,192 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement (“Agreement”) is entered into as of January 15, 2025 (“Effective Date”) by and between:
+
+Nexora Technologies, Inc., a Delaware corporation with its principal place of business at 425 Innovation Drive, Wilmington, Delaware 19801 (“Client”),
+
+and
+
+Astoria Solutions LLC, a Delaware limited liability company with its principal place of business at 301 Commerce Parkway, Newark, Delaware 19711 (“Service Provider”).
+
+Client and Service Provider may be collectively referred to as the “Parties” or individually as a “Party.”
+
+RECITALS
+
+WHEREAS, Client desires to retain Service Provider to perform certain technology consulting, software development, and related professional services as set forth herein and in Statements of Work issued pursuant to this Agreement;
+
+WHEREAS, Service Provider agrees to provide such services under the terms and conditions of this Agreement.
+
+NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means any non-public information designated as confidential by either Party in writing or that reasonably should be understood to be confidential given the nature of the information and circumstances of disclosure.
+
+1.2 “Deliverables” means any tangible or intangible work product, including software, documentation, and reports, delivered by Service Provider to Client as specified in a Statement of Work.
+
+1.3 “Services” means the professional services to be provided by Service Provider as described in each Statement of Work executed by the Parties under this Agreement.
+
+1.4 “Statement of Work” or “SOW” means a written document signed by authorized representatives of both Parties that describes the specific Services, Deliverables, timelines, fees, and other terms applicable to a particular project under this Agreement.
+
+2. SERVICES AND PERFORMANCE
+
+2.1 Scope. Service Provider shall perform the Services as set forth in one or more Statements of Work agreed to by the Parties.
+
+2.2 Standard of Performance. Service Provider agrees to perform the Services in a professional, diligent, and timely manner, consistent with industry standards applicable to similar services.
+
+2.3 Changes. Any changes to the Services or Deliverables must be documented in a written Change Order signed by both Parties.
+
+3. TERM AND TERMINATION
+
+3.1 Term. This Agreement shall commence on the Effective Date and shall continue for a period of two (2) years, unless earlier terminated as provided herein.
+
+3.2 Termination for Convenience. Either Party may terminate this Agreement or any SOW for any reason upon thirty (30) days’ prior written notice to the other Party.
+
+3.3 Termination for Cause. Either Party may terminate this Agreement or any SOW immediately upon written notice if the other Party materially breaches any provision and fails to cure such breach within fifteen (15) days after receipt of written notice thereof.
+
+3.4 Effects of Termination. Upon termination, Client shall pay Service Provider for all Services performed and Deliverables delivered up to the effective date of termination. Sections regarding Confidentiality, Intellectual Property, Indemnification, Limitation of Liability, and Payment shall survive termination.
+
+4. FEES AND PAYMENT
+
+4.1 Fees. Client shall pay Service Provider the fees as set forth in the applicable SOW. All fees are stated in U.S. dollars and do not include applicable taxes, which shall be paid by Client.
+
+4.2 Invoicing. Service Provider shall invoice Client monthly in arrears unless otherwise specified in the SOW.
+
+4.3 Payment Terms. Client shall pay undisputed invoices within thirty (30) calendar days of receipt.
+
+4.4 Late Payment Penalty. Any undisputed amount not paid within thirty (30) calendar days shall bear interest at a rate of two percent (2%) per month (or the maximum rate permitted by law, if less) from the due date until paid in full.
+
+4.5 Disputes. If Client disputes any portion of an invoice, Client shall notify Service Provider in writing within fifteen (15) days of receipt of the invoice, specifying the disputed amounts and reasons. The Parties shall endeavor to resolve the dispute promptly. Client shall pay the undisputed portion per the payment terms.
+
+5. INTELLECTUAL PROPERTY
+
+5.1 Ownership. Unless otherwise agreed, Client shall own all rights, title, and interest in and to Deliverables created specifically for Client under this Agreement, subject to Service Provider’s pre-existing intellectual property rights.
+
+5.2 License to Service Provider Materials. Service Provider grants Client a non-exclusive, worldwide, royalty-free license to use any pre-existing materials incorporated into the Deliverables to the extent necessary for Client’s use of the Deliverables.
+
+6. CONFIDENTIALITY
+
+6.1 Obligation. Each Party agrees to keep Confidential Information of the other Party confidential during the term of this Agreement and for three (3) years thereafter, using at least the same degree of care as it uses to protect its own confidential information, but not less than reasonable care.
+
+6.2 Exclusions. Confidential Information does not include information that: (a) is or becomes publicly available without breach; (b) was known to receiving Party without restriction prior to disclosure; (c) is independently developed without use of Confidential Information; or (d) is rightfully obtained from a third party without confidentiality obligations.
+
+7. WARRANTIES AND DISCLAIMERS
+
+7.1 Service Provider warrants that Services will be performed in a professional and workmanlike manner consistent with generally accepted industry standards.
+
+7.2 EXCEPT AS SET FORTH IN SECTION 7.1, SERVICE PROVIDER DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+8. INDEMNIFICATION
+
+8.1 By Service Provider. Service Provider shall indemnify, defend, and hold harmless Client and its officers, directors, employees, and agents from and against any claims, damages, costs, or liabilities arising out of (a) the gross negligence or willful misconduct of Service Provider; or (b) any claim that the Deliverables infringe a third party’s intellectual property rights.
+
+8.2 By Client. Client shall indemnify, defend, and hold harmless Service Provider and its officers, directors, employees, and agents from and against any claims, damages, costs, or liabilities arising out of (a) Client’s breach of this Agreement; or (b) Client’s use of the Deliverables in violation of this Agreement or applicable law.
+
+9. LIMITATION OF LIABILITY
+
+9.1 NEITHER PARTY SHALL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+9.2 EXCEPT FOR LIABILITY ARISING FROM A BREACH OF CONFIDENTIALITY OR INDEMNIFICATION OBLIGATIONS, THE AGGREGATE LIABILITY OF EITHER PARTY UNDER THIS AGREEMENT SHALL NOT EXCEED THE TOTAL FEES PAID BY CLIENT TO SERVICE PROVIDER IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+
+10. GENERAL PROVISIONS
+
+10.1 Independent Contractor. Service Provider is an independent contractor and nothing herein shall be construed to create an employer-employee, partnership, or joint venture relationship.
+
+10.2 Assignment. Neither Party may assign or delegate its rights or obligations under this Agreement without prior written consent of the other Party, except to a successor in interest of the entire business and assets.
+
+10.3 Force Majeure. Neither Party shall be liable for delays or failures due to causes beyond its reasonable control, including acts of God, war, terrorism, or governmental actions.
+
+10.4 Notices. All notices shall be in writing and delivered by certified mail, return receipt requested, overnight courier, or email (with confirmation of receipt) to the addresses set forth above or updated addresses provided in writing.
+
+10.5 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to conflicts of law principles. The Parties consent to exclusive jurisdiction and venue in the Delaware Court of Chancery or, if that court lacks jurisdiction, the United States District Court for the District of Delaware.
+
+10.6 Entire Agreement. This Agreement, including all Statements of Work and Change Orders, constitutes the entire agreement between the Parties relating to the subject matter hereof and supersedes all prior or contemporaneous communications and proposals.
+
+10.7 Amendments. This Agreement may be amended only by a written instrument signed by authorized representatives of both Parties.
+
+10.8 Severability. If any provision is held invalid or unenforceable, the remainder shall remain in full force and effect.
+
+10.9 Waiver. Failure or delay to enforce any right shall not constitute waiver of that right or any other rights.
+
+IN WITNESS WHEREOF, the Parties have caused this Master Services Agreement to be executed by their duly authorized representatives as of the Effective Date.
+
+NEXORA TECHNOLOGIES, INC.                       ASTORIA SOLUTIONS LLC
+
+By: _______________________________             By: _______________________________
+
+Name:  Olivia M. Carmichael                      Name:  Darius K. Trent
+
+Title:  Chief Operating Officer                  Title:  Managing Member
+
+Date:  January 15, 2025                          Date:  January 15, 2025
+
+
+[End of Agreement]
+
+--------------------------------------------------------------------------------
+
+EXHIBIT A
+
+SAMPLE STATEMENT OF WORK
+
+This Statement of Work (“SOW”) is issued pursuant to the Master Services Agreement dated January 15, 2025, between Nexora Technologies, Inc. (“Client”) and Astoria Solutions LLC (“Service Provider”).
+
+Project: Development and Deployment of Nexora Customer Portal
+
+1. Scope of Services:
+
+- Design, develop, test, and deploy a secure customer portal web application.
+
+- Integrate portal with Client’s existing user database and payment systems.
+
+- Provide user documentation and training materials.
+
+2. Deliverables:
+
+- Fully functional customer portal application.
+
+- Technical documentation and user manuals.
+
+- Training session scheduled no later than August 15, 2025.
+
+3. Timeline:
+
+- Project kickoff: March 1, 2025.
+
+- Initial prototype delivery: May 30, 2025.
+
+- Beta release: July 15, 2025.
+
+- Final deployment: August 31, 2025.
+
+4. Fees and Payment:
+
+- Fixed fee of $350,000 payable in installments: $100,000 upon project kickoff; $150,000 upon beta release; $100,000 upon final deployment.
+
+- Additional hourly consulting at $180/hour for out-of-scope changes approved in writing.
+
+5. Acceptance Criteria:
+
+- Portal shall pass all functionality tests as per agreed test plan.
+
+- Client shall provide acceptance or written feedback within ten (10) business days of each deliverable.
+
+6. Client Responsibilities:
+
+- Provide necessary access to systems and data by February 15, 2025.
+
+- Designate a project manager as primary contact.
+
+Both Parties hereby agree to this Statement of Work as of the date signed below.
+
+NEXORA TECHNOLOGIES, INC.                   ASTORIA SOLUTIONS LLC
+
+By: _____________________________           By: _____________________________
+
+Name: Olivia M. Carmichael                  Name: Darius K. Trent
+
+Title: Chief Operating Officer               Title: Managing Member
+
+Date: February 10, 2025                      Date: February 10, 2025

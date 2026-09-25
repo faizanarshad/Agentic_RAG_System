@@ -37,6 +37,27 @@ class Settings:
     CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "200"))
     MAX_RETRIEVAL_RESULTS: int = int(os.getenv("MAX_RETRIEVAL_RESULTS", "5"))
     
+    # Legal Document Intelligence Configuration
+    LEGAL_MODEL: str = os.getenv("LEGAL_MODEL", "gpt-4.1-mini")
+    LEGAL_DATA_DIR: str = os.getenv(
+        "LEGAL_DATA_DIR",
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "legal")
+    )
+    LEGAL_OCR_MAX_PAGES: int = int(os.getenv("LEGAL_OCR_MAX_PAGES", "30"))
+    LEGAL_FULL_TEXT_QA_CHARS: int = int(os.getenv("LEGAL_FULL_TEXT_QA_CHARS", "60000"))
+    LEGAL_MAX_BATCH_DOCS: int = int(os.getenv("LEGAL_MAX_BATCH_DOCS", "100"))
+    LEGAL_MAX_FILE_MB: int = int(os.getenv("LEGAL_MAX_FILE_MB", "25"))
+    LEGAL_WORKERS: int = int(os.getenv("LEGAL_WORKERS", "4"))
+    
+    # Engineering Drawing & Documentation Agent Configuration
+    ENGINEERING_MODEL: str = os.getenv("ENGINEERING_MODEL", "gpt-4.1")
+    ENGINEERING_DATA_DIR: str = os.getenv(
+        "ENGINEERING_DATA_DIR",
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "engineering")
+    )
+    ENGINEERING_MAX_PAGES: int = int(os.getenv("ENGINEERING_MAX_PAGES", "6"))
+    ENGINEERING_MAX_FILE_MB: int = int(os.getenv("ENGINEERING_MAX_FILE_MB", "50"))
+    
     # API Configuration
     API_HOST: str = os.getenv("API_HOST", "0.0.0.0")
     API_PORT: int = int(os.getenv("API_PORT", "8000"))

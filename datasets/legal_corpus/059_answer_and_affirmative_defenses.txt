@@ -1,0 +1,119 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE HIGH COURT OF JUSTICE  
+QUEEN’S BENCH DIVISION  
+Claim No: QB-2027-04215  
+
+BETWEEN:  
+PHOENIX TECH INDUSTRIES LIMITED  
+Claimant  
+
+-and-  
+
+CENTAUR SOLUTIONS LIMITED  
+Defendant  
+
+_________________________________________  
+
+DEFENDANT’S ANSWER AND AFFIRMATIVE DEFENCES  
+
+_________________________________________  
+
+1. Introduction  
+
+1.1 The Defendant, Centaur Solutions Limited ("Centaur"), by its solicitors, answers the Claim Form and Particulars of Claim issued by Phoenix Tech Industries Limited ("Phoenix Tech") on 15 January 2027 and served on 20 January 2027.
+
+1.2 This document also sets out Centaur’s Affirmative Defences and, in the event the Court considers it appropriate, a request for injunctive relief.
+
+2. Definitions and Interpretation  
+
+In this document:  
+(a) "Agreement" means the Software Development and Licensing Agreement dated 1 February 2025 entered into between Phoenix Tech and Centaur.  
+(b) "Confidential Information" means any commercially sensitive or proprietary information shared between the parties under the Agreement.  
+(c) "Deliverables" means all software code, documentation, and related materials that Centaur was obligated to develop and deliver to Phoenix Tech pursuant to the Agreement.  
+(d) "Completion Date" means 31 December 2026, the date by which Centaur was contractually obliged to deliver the Deliverables.  
+(e) "Claim" means the entirety of the claim as set out in Phoenix Tech’s Particulars of Claim dated 15 January 2027.  
+
+3. General Denial  
+
+3.1 Centaur denies each and every allegation of breach of contract and/or negligence made by Phoenix Tech except where expressly admitted.  
+
+3.2 Specifically, Centaur denies that it failed to meet its contractual obligations, that any breach caused loss to Phoenix Tech, or that any damages claimed are recoverable.  
+
+4. Answer to Particulars of Claim  
+
+4.1 In response to paragraph 5 of the Particulars of Claim, Centaur admits the execution of the Agreement but denies any breach of the contractual terms therein.  
+
+4.2 In response to paragraph 7, Centaur admits that the Completion Date was 31 December 2026. However, Centaur asserts that due to unforeseen technical difficulties and delays caused by Phoenix Tech’s failure to provide timely and accurate specifications, Centaur was entitled under clause 9.3 of the Agreement to an extension of time, which was tacitly agreed upon by both parties in communications dated 12 September 2026 and 15 October 2026.  
+
+4.3 In response to paragraph 9, Centaur admits delivery of partial Deliverables on 15 January 2027 but denies that such partial delivery constituted a breach or that Phoenix Tech suffered any loss.  
+
+5. Affirmative Defences  
+
+5.1 Set-Off and Counterclaim  
+
+5.1.1 Phoenix Tech materially breached its obligations under clause 6 of the Agreement by failing to provide essential technical specifications and timely approvals required for Centaur’s development work.  
+
+5.1.2 As a result of Phoenix Tech’s breaches, Centaur incurred additional costs amounting to £142,500, which remain unpaid. Centaur therefore makes a counterclaim for damages in this amount.  
+
+5.2 Force Majeure  
+
+5.2.1 Centaur relies on clause 12 of the Agreement which provides for relief from performance due to force majeure events.  
+
+5.2.2 Between 1 November 2026 and 15 December 2026, Centaur’s development team was impacted by a COVID-19 outbreak causing a temporary closure of its London office and remote working restrictions which substantially impaired its ability to perform.  
+
+5.2.3 Centaur gave timely notice of this force majeure event to Phoenix Tech on 3 November 2026, in accordance with the Agreement.  
+
+5.2.4 Centaur is therefore excused from non-performance or delay during the force majeure period.  
+
+5.3 Waiver and Estoppel  
+
+5.3.1 By conduct and correspondence, including emails dated 12 September 2026, 15 October 2026, and 18 December 2026, Phoenix Tech waived strict compliance with the Completion Date and accepted late deliveries without objection.  
+
+5.3.2 Phoenix Tech is estopped from now asserting breach based on timelines.  
+
+5.4 Failure to Mitigate Loss  
+
+5.4.1 Phoenix Tech failed to mitigate its alleged loss, including failing to continue using partial Deliverables or procure alternative solutions despite knowledge of delays.  
+
+5.4.2 Such failure precludes or reduces any damages claimable.  
+
+6. Request for Injunctive Relief  
+
+6.1 Centaur anticipates that Phoenix Tech may attempt to seek injunctive relief to prevent further distribution or use of the Deliverables by Centaur pending resolution of this dispute.  
+
+6.2 Centaur submits that any such injunction would be unjustified and oppressive because:  
+
+6.2.1 Centaur has continuously complied with its obligations to protect Phoenix Tech’s Confidential Information under clause 10 of the Agreement.  
+
+6.2.2 There is no risk of misappropriation or misuse of Confidential Information by Centaur.  
+
+6.2.3 The balance of convenience favors Centaur because an injunction would cause irreparable harm to Centaur’s legitimate business interests and reputation.  
+
+6.3 In the event the Court is inclined to grant any form of interim relief, Centaur requests that any injunction be narrowly tailored and conditional upon adequate security as the Court deems fit.  
+
+7. Further and Other Relief  
+
+7.1 Centaur reserves the right to rely upon any additional facts and defences arising from further disclosure or investigation.  
+
+7.2 Centaur also requests that the Court dismisses the Claim in its entirety, awards costs to Centaur, and makes such further order as it deems just.  
+
+8. Statement of Truth  
+
+The Defendant believes that the facts stated in this Defence and Affirmative Defences are true.  
+
+Signed:  
+_________________________  
+Jonathan Meyers  
+Partner, Caldwell & Partners Solicitors  
+Solicitor for the Defendant  
+Dated: 10 February 2027  
+Address for service: Caldwell & Partners Solicitors  
+12 Wellington Street  
+London WC2E 7HB  
+Tel: 020 7946 1234  
+Email: jm@caldwellpartners.co.uk  
+
+---
+
+END OF DOCUMENT

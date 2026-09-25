@@ -1,0 +1,103 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE SUPERIOR COURT OF THE STATE OF WASHINGTON  
+FOR KING COUNTY  
+
+Case No. 25-2-12345-6 SEA  
+
+JOHNSON TECHNOLOGIES, INC., a Washington corporation,  
+Plaintiff,  
+
+v.  
+
+HAVEN CONSTRUCTION, LLC, a Washington limited liability company,  
+Defendant.  
+
+COMPLAINT FOR BREACH OF CONTRACT  
+
+Plaintiff Johnson Technologies, Inc. ("Johnson Technologies" or "Plaintiff"), by and through its undersigned counsel, alleges as follows:  
+
+PARTIES, JURISDICTION, AND VENUE  
+
+1. Plaintiff Johnson Technologies is a corporation organized and existing under the laws of the State of Washington, with its principal place of business located at 1025 Innovation Way, Seattle, Washington 98109.  
+
+2. Defendant Haven Construction, LLC ("Haven Construction" or "Defendant") is a limited liability company organized and existing under the laws of the State of Washington, with its principal place of business located at 4712 Harbor Avenue South, Seattle, Washington 98118.  
+
+3. This Court has jurisdiction over this matter pursuant to RCW 2.08 because Defendant transacts business in King County, Washington, and the events giving rise to this Complaint occurred within King County.  
+
+4. Venue is proper in King County Superior Court pursuant to RCW 4.12.025 because the contract at issue was to be performed in King County and the Defendant resides and conducts business there.  
+
+FACTUAL ALLEGATIONS  
+
+5. On or about January 15, 2025, Johnson Technologies and Haven Construction entered into a written contract (the "Contract") whereby Haven Construction agreed to perform construction and installation services for Johnson Technologies’ new corporate headquarters located at 2500 Technology Drive, Bellevue, Washington.  
+
+6. The Contract called for Haven Construction to complete all construction, furnishing, and installation of building systems by November 30, 2026, for a total contract price of $12,000,000.  
+
+7. The Contract included detailed specifications and milestones, including:  
+   a. Completion of foundation and framing by June 30, 2026;  
+   b. Completion of electrical and HVAC installation by September 30, 2026;  
+   c. Final completion and handover by November 30, 2026.  
+
+8. The Contract further required Haven Construction to adhere to all applicable Washington State building codes and regulations and to obtain all necessary permits and inspections prior to completion.  
+
+9. Johnson Technologies timely paid an initial deposit of $3,000,000 upon contract execution and made subsequent progress payments totaling $7,000,000 through August 2026 in accordance with the Contract’s payment schedule.  
+
+10. Beginning in July 2026, Johnson Technologies observed significant delays in the progress of the construction work and received repeated assurances from Haven Construction that the project would still meet the November 30, 2026 deadline.  
+
+11. Despite these assurances, by October 15, 2026, it became apparent that Haven Construction had fallen behind schedule with less than 40% of the electrical and HVAC work completed rather than the expected 85%.  
+
+12. Johnson Technologies formally notified Haven Construction of these material breaches of the Contract by letter dated October 20, 2026, demanding immediate corrective action and adherence to the timeline.  
+
+13. Haven Construction failed to cure the breaches and instead continued to delay, ultimately failing to complete the project by the November 30, 2026 deadline.  
+
+14. On December 15, 2026, Johnson Technologies retained a third-party construction firm to assess the status and projected costs to complete the work, which concluded that substantial additional time and expense would be necessary due to Haven Construction’s defective workmanship and failure to adhere to building code requirements.  
+
+15. Johnson Technologies incurred significant additional costs in retaining the third-party firm, undertaking corrective work, securing temporary facilities for its employees, and delaying the planned operations at the new headquarters.  
+
+16. Despite multiple demands for performance or compensation, Haven Construction has refused to assume responsibility or provide reimbursement for these damages.  
+
+17. As a direct and proximate result of Haven Construction’s breaches, Johnson Technologies has suffered damages in excess of $5,000,000, including but not limited to additional construction costs, delay-related costs, lost business opportunities, and other consequential damages.  
+
+FIRST CAUSE OF ACTION  
+(Breach of Contract)  
+
+18. Plaintiff realleges and incorporates by reference paragraphs 1 through 17 as though fully set forth herein.  
+
+19. The Contract was a valid and enforceable agreement between Johnson Technologies and Haven Construction.  
+
+20. Johnson Technologies performed all conditions, covenants, and promises required under the Contract to be performed by it, including making payments as required.  
+
+21. Haven Construction breached the Contract by failing to complete the construction work by the agreed deadline, failing to comply with the contractual specifications and applicable building codes, and failing to remedy these breaches after notice.  
+
+22. Haven Construction’s breaches have caused Johnson Technologies to suffer damages, including but not limited to additional construction and completion costs, costs of temporary relocation of employees, delays in starting business operations, and lost profits.  
+
+23. The damages exceed $5,000,000, and Johnson Technologies is entitled to recover such damages together with costs and attorney fees as provided by the Contract or applicable law.  
+
+PRAYER FOR RELIEF  
+
+WHEREFORE, Plaintiff Johnson Technologies, Inc. respectfully requests that this Court enter judgment against Defendant Haven Construction, LLC as follows:  
+
+A. For compensatory damages in an amount to be proven at trial, but in excess of $5,000,000;  
+B. For pre-judgment and post-judgment interest as allowed by law;  
+C. For costs of suit incurred herein, including reasonable attorney fees pursuant to the Contract and/or RCW 4.84.330;  
+D. For such other and further relief as the Court deems just and proper.  
+
+DEMAND FOR JURY TRIAL  
+
+Plaintiff hereby demands a trial by jury on all issues so triable.  
+
+DATED this 15th day of March, 2027.  
+
+Respectfully submitted,  
+
+LAWSON & HART LLP  
+
+By: /s/ Emily R. Lawson  
+Emily R. Lawson, WSBA #41234  
+Attorney for Plaintiff  
+Lawson & Hart LLP  
+1400 Bell Tower Building  
+1201 Third Avenue  
+Seattle, Washington 98101  
+Phone: (206) 555-0123  
+Email: elawson@lawsonhart.com

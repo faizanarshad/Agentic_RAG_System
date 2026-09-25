@@ -1,0 +1,88 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOX Internal Controls Review Report  
+Compliance Record No. IC-2025-03  
+Prepared for: Hillcrest Capital Ltd.  
+Jurisdiction: England and Wales  
+Date: 14 March 2025  
+
+1. Introduction  
+1.1 This report documents the findings and assessment of the internal controls over financial reporting (ICFR) for Hillcrest Capital Ltd. ("the Company") in accordance with the Sarbanes-Oxley Act of 2002 (“SOX”) requirements as applied voluntarily by the Company, which is listed on the New York Alternative Exchange and subject to certain U.S. compliance standards while governed by English and Welsh law.  
+1.2 The scope of this review covers the Company’s fiscal year ending 31 December 2024 and includes follow-up on remediation activities pertaining to the prior SOX internal controls audit conducted in 2023.  
+1.3 This report is issued by the Compliance and Controls Department of Thornbridge Consulting LLP, external advisors engaged by the Company under contract number TC-2024-HC-007.  
+
+2. Definitions  
+2.1 “Internal Control(s)” means the processes, policies, and procedures designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements in accordance with applicable accounting standards.  
+2.2 “Remediation Plan” means the documented plan developed to address control deficiencies identified in prior audits.  
+2.3 “Overdue Remediation” refers to any remedial actions not completed within the timelines prescribed by the prior audit report or agreed remediation schedules.  
+2.4 “Management” refers to the executive officers of Hillcrest Capital Ltd. responsible for the design and maintenance of internal controls.  
+
+3. Background and Context  
+3.1 Hillcrest Capital Ltd. is a UK-based investment management firm with consolidated annual revenues of £120 million for the fiscal year 2024.  
+3.2 The 2023 SOX Internal Controls Review (Report No. IC-2023-15) identified three material weaknesses in the control environment:  
+     a) Inadequate segregation of duties in the revenue recognition process.  
+     b) Insufficient automated controls in the trade reconciliation system.  
+     c) Lack of formalised approval procedures for vendor payments exceeding £50,000.  
+3.3 The 2023 report required Management to implement a detailed Remediation Plan by the end of Q1 2024, with all corrective measures to be fully operational by 30 September 2024.  
+
+4. Scope of the 2025 Review  
+4.1 The current review examined:  
+    a) The status of remediation efforts against the previously identified material weaknesses.  
+    b) The overall integrity and operating effectiveness of the Company’s ICFR as at 31 December 2024.  
+    c) Recommendations for further improvements or deficiencies arising in the current period.  
+4.2 The review was conducted between 1 February and 28 February 2025 through a combination of document analysis, interviews with key personnel, and sample testing of transactions and system controls.  
+
+5. Findings  
+
+5.1 Overdue Remediation from Prior Audit  
+5.1.1 The remediation plan for the segregation of duties issue was partially implemented. Management restructured the revenue recognition team in July 2024 and introduced a dual review process for sales contracts. However, sample testing revealed that in 5 of 20 transactions reviewed (25%), the preparer and approver were the same individual, contrary to the new policy.  
+5.1.2 Automated controls in the trade reconciliation system were upgraded with new software modules deployed in September 2024. Testing of the reconciliation reports for Q4 2024 indicated a significant reduction in manual adjustments. Nevertheless, 2 instances were found where exceptions were overridden without documented justification. This represents incomplete adherence to the automated control procedures.  
+5.1.3 The formalised approval procedure for vendor payments exceeding £50,000 was not consistently followed. Out of 12 sampled payments exceeding the threshold between October and December 2024, 3 lacked the requisite two-tier approval signatures as mandated. These lapses led to a failure to fully close out the prior audit’s third material weakness.  
+
+5.2 New Observations  
+5.2.1 Changes in the organisational structure during H2 2024, including the appointment of a new Chief Financial Officer (CFO) in November 2024, have positively influenced the emphasis on internal controls. The CFO has initiated a quarterly controls review committee which convened for the first time in January 2025.  
+5.2.2 The Company has enhanced its internal training programme relating to SOX compliance, with 92% of finance staff completing updated modules within the reporting period.  
+5.2.3 However, there remains a lack of formal documentation for certain IT general controls, particularly related to user access rights management in the accounting software. Evidence showed that a former employee retained active system privileges for 3 weeks post-termination, posing a risk of unauthorised access.  
+
+6. Impact Assessment  
+6.1 The residual deficiencies identified in overdue remediation represent a moderate risk to the effectiveness of the Company’s ICFR. The failure to fully segregate duties and enforce approval procedures may lead to misstatements or errors in revenue recognition and payment processing.  
+6.2 The control weaknesses in IT access management expose the Company to potential fraud or data manipulation, which could adversely affect the reliability of financial statements.  
+6.3 The improvements noted, including the adoption of automation and increased oversight, indicate management’s commitment to control enhancement, mitigating long-term risks if fully realised.  
+
+7. Management’s Response  
+7.1 In a formal letter dated 28 February 2025 (reference HC/CF/025), Management acknowledged the overdue remediation status and outlined the following corrective actions:  
+    a) Immediate retraining of all personnel involved in revenue recognition to reinforce segregation of duties compliance. Complete by 31 March 2025.  
+    b) Implementation of an automated workflow for vendor payment approvals to prevent processing without dual sign-off. Target completion: 30 April 2025.  
+    c) Review and update of IT user access policies, including a mandatory monthly audit of all active user accounts. Scheduled to commence 1 April 2025.  
+    d) An internal audit follow-up scheduled for Q3 2025 to verify the effectiveness of these measures.  
+
+8. Recommendations  
+8.1 It is recommended that the quarterly controls review committee expands its mandate to include routine follow-up on overdue remediation items until full closure is certified.  
+8.2 Establishment of a formal SOX remediation tracker integrated into the Company’s governance, risk, and compliance (GRC) system to monitor deadlines and accountability.  
+8.3 Enhanced documentation standards for all ICFR processes, with particular emphasis on system access controls and exception handling protocols.  
+8.4 Consideration of external advisory support to assist Management in accelerating the remedial actions and embedding a sustainable control culture.  
+
+9. Conclusion  
+9.1 While notable progress has been made to address the material weaknesses identified in the prior audit, overdue remediation remains a concern that requires urgent attention to uphold the integrity of the Company’s financial reporting.  
+9.2 The control environment as at 31 December 2024 is assessed as satisfactory with important qualifications relating to incomplete implementation of key controls.  
+9.3 Hillcrest Capital Ltd. is encouraged to prioritise the remediation timetable and follow through on the commitments made by Management to ensure compliance with applicable ICFR standards and maintain investor confidence.  
+
+10. Certification  
+
+This SOX Internal Controls Review Report is issued by Thornbridge Consulting LLP with the information available as of the report date. The findings and opinions expressed herein are based on procedures agreed with Hillcrest Capital Ltd. and do not constitute an audit under International Standards on Auditing (UK).  
+
+Signed for and on behalf of Thornbridge Consulting LLP:  
+
+______________________________  
+Clara Montgomery  
+Partner, Compliance and Controls  
+Thornbridge Consulting LLP  
+Date: 14 March 2025  
+
+Acknowledged and accepted by:  
+
+______________________________  
+James Pembroke  
+Chief Financial Officer  
+Hillcrest Capital Ltd.  
+Date: 18 March 2025

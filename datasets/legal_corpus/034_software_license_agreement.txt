@@ -1,0 +1,135 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOFTWARE LICENSE AGREEMENT
+
+This Software License Agreement (“Agreement”) is made and entered into as of March 1, 2025 (“Effective Date”), by and between QuantumLeap Solutions, Inc., a Delaware corporation with its principal place of business at 4587 Bayview Road, Albany, NY 12203 (“Licensor”), and Bryson Analytics LLC, a New York limited liability company with offices located at 222 West 45th Street, New York, NY 10036 (“Licensee”).
+
+RECITALS
+
+WHEREAS, Licensor has developed certain proprietary software known as “DataVista Pro” and related documentation (collectively, the “Software”);
+
+WHEREAS, Licensee desires to license the Software for its internal business purposes, and Licensor agrees to grant such license under the terms stated herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants contained herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means any non-public information disclosed by one party to the other, whether oral or written, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure.
+
+1.2 “Documentation” means the user manuals, technical manuals, and other written materials provided by Licensor to Licensee describing the use and operation of the Software.
+
+1.3 “License Fee” means the monetary amount payable by Licensee to Licensor as specified in Section 5.
+
+1.4 “Term” means the duration of this Agreement as set forth in Section 4.
+
+2. GRANT OF LICENSE
+
+2.1 License. Subject to the terms and conditions of this Agreement, Licensor hereby grants to Licensee a non-exclusive, non-transferable, limited license to use the Software and Documentation solely for Licensee’s internal business operations.
+
+2.2 Restrictions. Licensee shall not (a) copy, modify, or create derivative works of the Software except as expressly permitted herein; (b) reverse engineer, decompile, or disassemble the Software; (c) sublicense, distribute, or otherwise make the Software available to third parties except as explicitly authorized in writing by Licensor; or (d) remove any proprietary notices or labels on the Software.
+
+3. DELIVERY AND INSTALLATION
+
+3.1 Delivery. Licensor shall deliver the Software and Documentation electronically or via physical media within fifteen (15) business days following the Effective Date.
+
+3.2 Installation Assistance. Upon Licensee’s written request, Licensor shall provide installation support remotely for up to five (5) hours at no additional cost, to be used within thirty (30) calendar days following delivery.
+
+4. TERM AND TERMINATION
+
+4.1 Initial Term. This Agreement shall commence on the Effective Date and continue for an initial period of twenty-four (24) months (“Initial Term”).
+
+4.2 Automatic Renewal. Upon expiration of the Initial Term, this Agreement shall automatically renew for successive twelve (12) month renewal terms (“Renewal Terms”), unless either party provides written notice of non-renewal to the other party at least ninety (90) days prior to the expiration of the then-current term.
+
+4.3 Termination for Cause. Either party may terminate this Agreement immediately upon written notice if the other party materially breaches any term and fails to cure such breach within thirty (30) days after receipt of written notice specifying the breach.
+
+4.4 Effect of Termination. Upon termination or expiration, Licensee shall cease all use of the Software and Documentation and certify to Licensor within fifteen (15) days that all copies have been deleted or returned.
+
+5. FEES AND PAYMENT
+
+5.1 License Fee. Licensee shall pay Licensor a license fee of $120,000.00 for the Initial Term, payable in equal quarterly installments of $15,000.00 due on the first day of each calendar quarter during the Initial Term.
+
+5.2 Renewal Fee. For each Renewal Term, Licensee shall pay Licensor $65,000.00, payable in two equal installments of $32,500.00 each due on the first day of the first and seventh months of the Renewal Term.
+
+5.3 Late Payments. Any amounts not paid within fifteen (15) calendar days of their due date shall bear interest at the rate of 1.5% per month, compounded monthly.
+
+6. LICENSEE OBLIGATIONS
+
+6.1 Compliance. Licensee shall use the Software only in accordance with all applicable laws and regulations.
+
+6.2 Security. Licensee shall take reasonable measures to prevent unauthorized access to the Software, including maintaining password confidentiality and securing access credentials.
+
+6.3 Reporting. Licensee shall provide Licensor with quarterly usage reports detailing the number of active users and any incidents affecting use of the Software within fifteen (15) days of each calendar quarter’s end.
+
+7. WARRANTY AND DISCLAIMER
+
+7.1 Limited Warranty. Licensor warrants that for a period of ninety (90) days from delivery, the Software will perform substantially in accordance with the Documentation under normal use.
+
+7.2 Disclaimer. EXCEPT AS EXPRESSLY SET FORTH IN SECTION 7.1, THE SOFTWARE IS PROVIDED “AS IS” WITHOUT ANY WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+8. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. LICENSOR’S TOTAL LIABILITY FOR ANY AND ALL CLAIMS SHALL NOT EXCEED THE AMOUNT OF LICENSE FEES PAID BY LICENSEE UNDER THIS AGREEMENT IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+
+9. CONFIDENTIALITY
+
+9.1 Protection. Each party agrees to protect the other party’s Confidential Information with at least the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care.
+
+9.2 Use. Confidential Information shall be used solely for purposes of performing this Agreement.
+
+9.3 Exceptions. Confidential Information does not include information that (a) is or becomes publicly known without breach of this Agreement; (b) is received from a third party without confidentiality obligations; or (c) is independently developed without use of Confidential Information.
+
+9.4 Duration. The confidentiality obligations set forth shall survive termination of this Agreement for a period of five (5) years.
+
+10. INTELLECTUAL PROPERTY RIGHTS
+
+All right, title, and interest in and to the Software, Documentation, and any derivative works thereof are and shall remain the exclusive property of Licensor and its licensors. No ownership rights are conveyed to Licensee under this Agreement.
+
+11. INDEMNIFICATION
+
+Licensee shall indemnify, defend, and hold harmless Licensor and its officers, directors, employees, and agents from and against any claims, damages, liabilities, costs, and expenses arising out of Licensee’s misuse of the Software or breach of this Agreement.
+
+12. GENERAL PROVISIONS
+
+12.1 Assignment. Neither party may assign or transfer this Agreement without the prior written consent of the other party, except to an affiliate or in connection with a merger or sale of substantially all assets, provided the assignee agrees in writing to be bound by the terms herein.
+
+12.2 Notices. All notices shall be in writing and delivered by personal delivery, certified mail (return receipt requested), or a nationally recognized courier service to the addresses listed above or such other address as a party may designate by notice.
+
+12.3 Entire Agreement. This Agreement constitutes the entire agreement between the parties concerning the subject matter and supersedes all prior agreements and understandings, whether written or oral.
+
+12.4 Amendments. Any amendment or modification hereto must be in writing and signed by authorized representatives of both parties.
+
+12.5 Severability. If any provision is held invalid or unenforceable by a court of competent jurisdiction, the remaining provisions shall remain in full force and effect.
+
+12.6 Waiver. Failure to enforce any provision shall not constitute a waiver of future enforcement of that or any other provision.
+
+12.7 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law principles. The parties agree to submit to the exclusive jurisdiction of the state and federal courts located in Albany County, New York for any disputes arising under or related to this Agreement.
+
+12.8 Dispute Resolution. In the event of any dispute, controversy, or claim arising out of or relating to this Agreement, the parties shall first attempt in good faith to resolve the dispute through negotiation within thirty (30) days. If unresolved, the dispute may be submitted to binding arbitration under the Commercial Arbitration Rules of the American Arbitration Association, with the arbitration to take place in Albany, New York.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+QUANTUMLEAP SOLUTIONS, INC.
+
+By: _____________________________________  
+Name: Elena M. Carter  
+Title: Chief Executive Officer  
+Date: March 1, 2025
+
+BRYSON ANALYTICS LLC
+
+By: _____________________________________  
+Name: Marcus P. Leighton  
+Title: Managing Member  
+Date: March 1, 2025
+
+EXHIBIT A: SOFTWARE LICENSE FEE SCHEDULE
+
+Period                             Fee Due                         Payment Due Date  
+---------------------------------------------------------------------------------------  
+Initial Term (24 months)           $120,000.00                     Quarterly installments of $15,000.00 due on January 1, April 1, July 1, October 1 2025 and 2026.
+
+Renewal Term (12 months)           $65,000.00                      Two installments of $32,500.00 due on first day of months 1 and 7 of each Renewal Term.
+
+---------------------------------------------------------------------------------------
+
+END OF AGREEMENT

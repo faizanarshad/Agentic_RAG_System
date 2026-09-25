@@ -1,0 +1,110 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE DISTRICT COURT OF TRAVIS COUNTY, TEXAS  
+400th JUDICIAL DISTRICT
+
+CASE NO. D-2025-CV-13579
+
+ELDORADO ENERGY SOLUTIONS, INC.,  
+Plaintiff,  
+
+v.
+
+BRIGHT TECH MANUFACTURING, LLC,  
+Defendant.
+
+______________________________________________
+
+COURT OPINION AND ORDER ON PLAINTIFF’S MOTION FOR PARTIAL SUMMARY JUDGMENT  
+______________________________________________
+
+Date: March 12, 2027
+
+Presiding Judge: The Honorable Martha L. Carrington
+
+______________________________________________
+
+I. INTRODUCTION
+
+1. This matter comes before the Court on Plaintiff Eldorado Energy Solutions, Inc.’s ("Plaintiff") Motion for Partial Summary Judgment filed on January 8, 2027. Defendant Bright Tech Manufacturing, LLC ("Defendant") timely filed a response on February 5, 2027. The motion concerns the enforceability of certain payment obligations under the parties’ Master Supply Agreement dated February 15, 2025 ("MSA"). The Court heard oral arguments on March 5, 2027.
+
+2. The underlying dispute arises from Defendant’s alleged failure to pay $1,245,000 for solar panel components delivered pursuant to the MSA. Defendant admits receipt of the components but asserts affirmative defenses based on alleged breach of warranty and claims of setoff due to delayed deliveries.
+
+3. The Court has jurisdiction over this matter pursuant to Tex. Gov’t Code § 22.221 and venue is proper in Travis County under Tex. Civ. Prac. & Rem. Code § 15.002(a)(1).
+
+4. A related appeal is currently pending before the Third Court of Appeals in Austin, Texas, Case No. 03-26-00437-CV, challenging the denial of Defendant’s Motion to Dismiss filed in the trial court on jurisdictional grounds. This appeal does not divest this Court of jurisdiction to rule on the instant motion per Texas appellate procedural law.
+
+II. FACTUAL AND PROCEDURAL BACKGROUND
+
+5. Plaintiff Eldorado Energy Solutions, Inc. is a Texas corporation engaged in the manufacture and distribution of solar energy components. Defendant Bright Tech Manufacturing, LLC is a Texas limited liability company that assembles industrial solar modules for commercial sale.
+
+6. The parties executed the MSA on February 15, 2025, under which Plaintiff agreed to supply Defendant with up to 10,000 units of solar photovoltaic panels at $125 per unit, with delivery deadlines specified in Exhibit B of the Agreement.
+
+7. Plaintiff delivered 9,960 units between March and December 2025; Defendant has paid $500,000 but has withheld the remaining balance alleging Plaintiff failed to meet warranty obligations and that certain shipments were delayed beyond contractually agreed dates.
+
+8. On September 21, 2026, Plaintiff filed its Original Petition alleging breach of contract and seeking damages for unpaid invoices totaling $1,245,000 plus interest and attorneys’ fees.
+
+9. Defendant responded with a general denial and asserted counterclaims for breach of warranty and fraud, demanding damages and asserting offset rights.
+
+10. On January 8, 2027, Plaintiff filed the instant Motion for Partial Summary Judgment solely on the issue of Defendant’s payment obligations for undisputed delivered units totaling $1,245,000, arguing there are no genuine issues of material fact that Defendant owes this amount under the MSA.
+
+III. LEGAL STANDARD
+
+11. Summary judgment shall be rendered if the movant shows there is no genuine issue of material fact and the movant is entitled to judgment as a matter of law. Tex. R. Civ. P. 166a(c).
+
+12. When a party seeks summary judgment on a claim or defense on which it bears the burden of proof at trial, it must conclusively establish all essential elements. Ryland Group, Inc. v. Hood, 924 S.W.2d 120, 121 (Tex. 1996).
+
+13. The Court considers all evidence in the light most favorable to the nonmovant. Nixon v. Mr. Property Management Co., 690 S.W.2d 546, 548–49 (Tex. 1985).
+
+IV. ANALYSIS
+
+A. Existence and Validity of Payment Obligations
+
+14. Plaintiff presents undisputed evidence including the MSA contract, delivery receipts signed by Defendant’s authorized representatives, and invoices showing the $1,245,000 balance due for delivered units.
+
+15. Defendant does not contest receipt or quantity of units delivered except for minor discrepancies amounting to less than 40 units, which would reduce the total by no more than $5,000.
+
+16. Therefore, the existence of the payment obligation under the MSA for $1,240,000 (adjusted amount) is established.
+
+B. Defendant’s Affirmative Defenses and Counterclaims
+
+17. Defendant argues breach of warranty and delays justify withholding payment; however, the Court finds Defendant has not presented summary judgment evidence sufficient to defeat Plaintiff’s Motion on those defenses under Tex. R. Civ. P. 166a(i).
+
+18. Defendant’s counterclaims require fact-intensive inquiry, which cannot be resolved on summary judgment. The Court notes such counterclaims remain pending.
+
+19. Defendant’s setoff argument lacks evidentiary support demonstrating the amount owed is equitable to the withheld sum.
+
+C. Impact of Pending Appeal
+
+20. Defendant points to the ongoing appeal of the Court’s prior denial of its Motion to Dismiss based on jurisdiction, claiming this should stay proceedings.
+
+21. The Court finds the appeal is interlocutory, and pursuant to Texas procedural law, does not divest this Court of jurisdiction to decide the present Motion for Partial Summary Judgment.
+
+22. No statutory or court order stay has been issued; thus, proceedings shall continue.
+
+V. ORDER
+
+23. Plaintiff’s Motion for Partial Summary Judgment is GRANTED IN PART as to the issue of Defendant’s payment obligation for delivered units under the MSA.
+
+24. It is ORDERED that Defendant Bright Tech Manufacturing, LLC shall pay Eldorado Energy Solutions, Inc. the principal sum of $1,240,000 plus contractual interest at the rate of 6% per annum accruing from January 1, 2026, until paid in full.
+
+25. Payment shall be made in full no later than April 30, 2027.
+
+26. Remaining issues including Defendant’s counterclaims, claims of warranty breach, alleged delays, and any damages related thereto remain pending and shall proceed as scheduled.
+
+27. The Court retains jurisdiction to enforce this Order and resolve outstanding matters in this cause.
+
+SIGNED this 12th day of March, 2027.
+
+__________________________________________  
+HON. MARTHA L. CARRINGTON  
+JUDGE, 400th DISTRICT COURT  
+TRAVIS COUNTY, TEXAS
+
+CERTIFICATE OF SERVICE
+
+I hereby certify that a true and correct copy of this Opinion and Order was served on counsel of record via electronic filing and certified mail on March 12, 2027.
+
+__________________________________________  
+JOHN E. MURPHY, CLERK  
+400th District Court, Travis County, Texas

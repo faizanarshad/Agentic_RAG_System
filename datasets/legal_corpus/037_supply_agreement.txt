@@ -1,0 +1,140 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SUPPLY AGREEMENT
+
+This SUPPLY AGREEMENT (“Agreement”) is entered into as of February 12, 2025 (“Effective Date”), by and between Apex Components, Inc., a Washington corporation with its principal place of business at 111 Cascade Drive, Seattle, WA 98109 (“Supplier”), and Orion Robotics LLC, a Washington limited liability company with its principal place of business at 450 Innovation Way, Bellevue, WA 98004 (“Buyer”).
+
+RECITALS
+
+WHEREAS, Buyer designs and sells advanced robotic systems and desires to purchase from Supplier certain custom electronic components for incorporation into its products; and
+
+WHEREAS, Supplier is in the business of manufacturing and supplying such electronic components and desires to sell such components to Buyer under the terms and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Products” means the custom electronic circuit boards and related components specified in Purchase Orders submitted by Buyer to Supplier pursuant to this Agreement.
+
+1.2 “Purchase Order” means any electronic or written order submitted by Buyer to Supplier for Products, referencing this Agreement.
+
+1.3 “Specifications” means the technical requirements, designs, drawings, and related documentation provided by Buyer to Supplier describing the Products.
+
+1.4 “Work Product” means all inventions, designs, developments, improvements, processes, computer programs, documentation, reports, drawings, and other works of authorship created, conceived, written, or otherwise developed by Supplier, alone or with others, in whole or in part, in connection with the performance of this Agreement, including all modifications and enhancements.
+
+1.5 “Pre-Existing IP” means Supplier’s proprietary inventions, developments, technologies, software, tools, or other intellectual property that exist prior to the Effective Date or are developed independently of this Agreement.
+
+2. SCOPE OF SUPPLY
+
+2.1 Supply of Products. Supplier shall manufacture and supply to Buyer the Products in accordance with the Specifications, quantities, delivery schedules, and prices set forth in Purchase Orders issued during the Term.
+
+2.2 Forecast and Minimum Orders. Buyer shall provide Supplier with a rolling forecast of Product quantities every quarter, but only Purchase Orders shall be binding. Buyer agrees to a minimum aggregate purchase quantity of 50,000 units over the Term.
+
+2.3 Delivery and Acceptance. Supplier shall deliver Products FOB Buyer’s facility in Bellevue, WA, by the delivery dates specified in Purchase Orders. Buyer shall conduct inspection within five (5) business days of delivery and may reject nonconforming Products by written notice to Supplier.
+
+3. PRICES AND PAYMENT
+
+3.1 Prices. Prices for Products are as set forth in Exhibit A attached hereto and incorporated herein. Prices are fixed for the Term and include all taxes and fees except applicable sales taxes.
+
+3.2 Payment Terms. Buyer shall pay Supplier within thirty (30) days of invoice date. Late payments shall bear interest at the rate of 1.5% per month or the maximum rate allowed by Washington law, whichever is less.
+
+4. INTELLECTUAL PROPERTY RIGHTS AND ASSIGNMENT
+
+4.1 Ownership of Pre-Existing IP. Supplier retains all rights, title, and interest in and to its Pre-Existing IP. Nothing in this Agreement shall affect such ownership.
+
+4.2 Work Product Ownership. To the extent any Work Product is created by Supplier in the performance of this Agreement, whether using Pre-Existing IP or not, Supplier hereby assigns, transfers, and conveys to Buyer, without additional consideration, all worldwide right, title, and interest in and to such Work Product, including all intellectual property rights therein, effective upon creation.
+
+4.3 Further Assurances. Supplier agrees to execute all documents and take all actions necessary to assign, transfer, and perfect ownership of Work Product to Buyer and to assist Buyer in obtaining, registering, and enforcing intellectual property rights.
+
+4.4 License to Pre-Existing IP. To the extent any Pre-Existing IP is incorporated into the Work Product, Supplier grants Buyer a perpetual, irrevocable, worldwide, royalty-free license, with the right to sublicense, to use, reproduce, modify, distribute, and exploit such Pre-Existing IP as embodied in or necessary to use the Work Product.
+
+5. QUALITY AND COMPLIANCE
+
+5.1 Conformance. All Products supplied shall conform to the Specifications and be free from defects in materials and workmanship for a period of twelve (12) months from delivery.
+
+5.2 Regulatory Compliance. Supplier warrants that Products comply with all applicable federal, state, and local laws and regulations, including but not limited to electrical safety, environmental, and export control laws.
+
+6. TERM AND TERMINATION
+
+6.1 Term. This Agreement shall commence on the Effective Date and continue for two (2) years, unless terminated earlier as provided herein.
+
+6.2 Termination for Cause. Either party may terminate this Agreement upon thirty (30) days’ written notice if the other party breaches any material term or condition and fails to cure such breach within the notice period.
+
+6.3 Termination for Convenience. Buyer may terminate this Agreement for convenience upon sixty (60) days’ prior written notice to Supplier, subject to payment for Products delivered prior to termination.
+
+6.4 Effect of Termination. Upon termination, Supplier shall promptly deliver to Buyer all Work Product completed or in progress and all materials related thereto.
+
+7. CONFIDENTIALITY
+
+7.1 Definition. “Confidential Information” means any non-public information, whether oral, written, or electronic, disclosed by one party to the other in connection with this Agreement, including but not limited to Specifications, business plans, technical data, and pricing.
+
+7.2 Obligations. The receiving party agrees to hold Confidential Information in strict confidence and not to disclose it to any third party except as required by law or with prior written consent.
+
+7.3 Exclusions. Confidential Information does not include information that (a) is or becomes publicly available without breach, (b) was rightfully in possession prior to disclosure, or (c) is independently developed without use of Confidential Information.
+
+8. WARRANTIES AND DISCLAIMERS
+
+8.1 Supplier Warranties. Supplier represents and warrants that (a) it has the right and authority to enter into this Agreement; (b) Products will conform to Specifications and be free of defects; and (c) delivery will not infringe any third-party intellectual property rights.
+
+8.2 Disclaimer. EXCEPT AS EXPRESSLY PROVIDED, SUPPLIER MAKES NO OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+9. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT, REGARDLESS OF THE THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY THEREOF. EACH PARTY’S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNTS PAID OR PAYABLE UNDER THIS AGREEMENT IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+
+10. INDEMNIFICATION
+
+Supplier shall indemnify, defend, and hold harmless Buyer and its affiliates, officers, and employees from any claims, liabilities, damages, or expenses arising out of Supplier’s breach of warranty or infringement of third-party intellectual property rights related to the Products.
+
+11. MISCELLANEOUS
+
+11.1 Independent Contractors. Supplier and Buyer are independent contractors, and nothing herein creates a partnership, joint venture, or agency relationship.
+
+11.2 Assignment. Neither party may assign this Agreement without prior written consent, except to a successor entity in connection with a merger or sale of substantially all assets.
+
+11.3 Notices. Notices shall be in writing and delivered by personal delivery, certified mail, or recognized overnight courier to the addresses set forth above or updated addresses as provided in writing.
+
+11.4 Entire Agreement. This Agreement, including Exhibits and Purchase Orders, constitutes the entire agreement between the parties and supersedes all prior agreements and understandings.
+
+11.5 Amendments. Any amendments must be in writing and signed by authorized representatives of both parties.
+
+11.6 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of Washington without regard to conflict of laws principles. The parties consent to the exclusive jurisdiction of the Superior Court of King County, Washington, for any disputes arising out of this Agreement. The parties agree that the case number for any related litigation initiated hereunder shall be 25-2-01789-1 SEA.
+
+IN WITNESS WHEREOF, the parties hereto have caused this Agreement to be executed by their duly authorized representatives as of the Effective Date.
+
+APEX COMPONENTS, INC.
+
+By: ___________________________
+
+Name: Miranda L. Chen
+
+Title: Vice President of Operations
+
+Date: February 12, 2025
+
+
+ORION ROBOTICS LLC
+
+By: ___________________________
+
+Name: Daniel T. Ferguson
+
+Title: Chief Procurement Officer
+
+Date: February 12, 2025
+
+EXHIBIT A
+
+PRICE SCHEDULE
+
+Product Description: Custom electronic circuit board model “XCR-2000”
+
+Unit Price: $48.75 per unit
+
+Minimum Annual Order Quantity: 25,000 units
+
+Delivery Lead Time: 60 days from Purchase Order acceptance
+
+Terms: Prices fixed for Term of Agreement (February 12, 2025 – February 11, 2027)
+
+End of Supply Agreement

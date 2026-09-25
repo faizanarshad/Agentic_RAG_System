@@ -1,0 +1,133 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+ANTI-MONEY LAUNDERING AND KNOW YOUR CUSTOMER (AML/KYC) COMPLIANCE REVIEW REPORT  
+Report Number: CR-2025-0742  
+Dated: March 18, 2025  
+Jurisdiction: State of New York  
+
+Subject: Compliance Review of Orion Capital Holdings LLC  
+Address: 125 Liberty Avenue, Suite 900, New York, NY 10006  
+
+Prepared by:  
+Regulatory Compliance Division  
+New York Financial Integrity Authority (NYFIA)  
+45 Broad Street, 12th Floor, New York, NY 10004  
+
+**I. INTRODUCTION**  
+
+1. This AML/KYC Compliance Review Report (“Report”) results from an on-site examination conducted by the New York Financial Integrity Authority (“NYFIA”) at the offices of Orion Capital Holdings LLC (“Orion” or “the Company”) between January 20 and February 5, 2025.  
+
+2. The scope of the examination included a comprehensive evaluation of Orion’s adherence to anti-money laundering (“AML”) and know your customer (“KYC”) regulatory obligations as mandated under New York State Banking Law Article VIII, and related federal regulations, including but not limited to the Bank Secrecy Act (31 U.S.C. § 5311 et seq.).  
+
+3. This Report identifies critical findings discovered during the examination, sets forth required remedial actions, and establishes deadlines for compliance correction pursuant to NYFIA authority under New York Executive Law § 94-b.  
+
+**II. EXECUTIVE SUMMARY**  
+
+4. Orion Capital Holdings LLC, incorporated in New York in 2018, is a private equity fund manager offering investment advisory and capital management services to institutional and accredited investors.  
+
+5. The examination revealed significant compliance deficiencies in Orion’s AML/KYC procedures and controls. Three critical findings have been identified: (i) inadequate customer due diligence documentation; (ii) failure to maintain timely suspicious activity reporting; and (iii) insufficient risk-based customer monitoring protocols.  
+
+6. Orion is required to implement corrective actions within specified time frames to avoid enforcement actions, including potential civil penalties or license suspension.  
+
+**III. DEFINITIONS**  
+
+7. For the purposes of this Report, the following defined terms shall apply:  
+
+a. “AML” means Anti-Money Laundering, referring to laws, regulations, and procedures intended to prevent criminals from disguising illegally obtained funds as legitimate income.  
+
+b. “KYC” means Know Your Customer, the process of a business verifying the identity, suitability, and risks involved with maintaining a business relationship.  
+
+c. “SAR” means Suspicious Activity Report, a document filed by financial institutions with the Financial Crimes Enforcement Network (FinCEN) when suspicious transactions or activities are detected.  
+
+d. “CIP” means Customer Identification Program, a process required under federal regulations to verify the identity of customers.  
+
+**IV. FINDINGS AND RECOMMENDATIONS**  
+
+**Finding 1: Inadequate Customer Due Diligence Documentation**  
+
+8. During record review, it was found that Orion’s customer files lacked sufficient documentation to meet regulatory standards. Specifically, 27% of sampled client files (total sample size 150) were missing critical identification documents or did not have updated KYC information in accordance with the firm’s own policies.  
+
+9. This deficiency contravenes New York Banking Law § 595-a, which requires firms to maintain robust CIP and KYC records to prevent the onboarding of illicit actors. Inadequate documentation heightens the risk of money laundering activities going undetected.  
+
+10. Furthermore, the Company’s written AML Policy Manual, last updated in 2021, does not reflect recent regulatory changes enacted in 2024, including enhanced due diligence for politically exposed persons (PEPs).  
+
+**Remediation Requirement:**  
+a. Orion shall conduct a full review and update of all client files to ensure compliance with CIP and KYC documentation requirements.  
+b. Update the AML Policy Manual to incorporate 2024 regulatory amendments, including specific protocols for PEPs and high-risk clients.  
+c. Submit a detailed remediation plan and status report to NYFIA by no later than July 1, 2025.  
+
+**Finding 2: Failure to File Suspicious Activity Reports (SARs) Timely**  
+
+11. Examination findings revealed multiple instances where suspicious transactions detected by Orion were not promptly reported to FinCEN as required under 31 C.F.R. § 1023.320.  
+
+12. Specifically, three separate transactions between May 2024 and December 2024, each exceeding $100,000 and exhibiting red flags such as sudden account activity spikes and transactions involving high-risk jurisdictions, were only reported after a delay exceeding 90 days from detection.  
+
+13. Such delays undermine the effectiveness of the U.S. AML regime and contravene both state and federal regulatory standards imposing a 30-day filing deadline upon determination of suspicion.  
+
+**Remediation Requirement:**  
+a. Immediately implement a revised SAR reporting procedure with clear escalation protocols ensuring all suspicious transactions are reported within 30 days.  
+b. Provide all compliance staff with refresher training on SAR obligations and timelines by May 15, 2025.  
+c. Submit evidence of SAR system improvements and training completion to NYFIA by June 1, 2025.  
+
+**Finding 3: Insufficient Risk-Based Customer Monitoring Protocols**  
+
+14. The firm’s ongoing monitoring program fails to adequately risk-rank customers or adjust monitoring frequency based on risk profile. The examination found that clients categorized as “high risk” were subject to the same level of transaction scrutiny as “low risk” clients, contrary to best practices and regulatory guidance under FinCEN Advisory FIN-2023-A001.  
+
+15. Additionally, the Company’s automated transaction monitoring software had outdated parameters and thresholds that failed to flag several complex transaction patterns identified during the review.  
+
+**Remediation Requirement:**  
+a. Conduct a comprehensive risk assessment of the entire client base and implement a tiered monitoring system in accordance with risk profiles.  
+b. Upgrade transaction monitoring systems with updated algorithms and thresholds reflecting current money laundering typologies by August 1, 2025.  
+c. Provide a post-implementation report on the enhanced monitoring framework to NYFIA by September 15, 2025.  
+
+**V. COMPLIANCE OBLIGATIONS AND DEADLINES SUMMARY**  
+
+16. The following table summarizes the critical remediation deadlines imposed on Orion Capital Holdings LLC:  
+
+| Finding No. | Remediation Action                                 | Deadline         |  
+|-------------|----------------------------------------------------|------------------|  
+| 1           | File review, AML Policy update, plan submission    | July 1, 2025     |  
+| 2           | SAR procedure revision, staff training, proof submission | June 1, 2025    |  
+| 3           | Risk assessment, system upgrade, report submission | September 15, 2025|  
+
+**VI. POTENTIAL ENFORCEMENT ACTIONS**  
+
+17. Failure to timely comply with the remediation requirements may subject Orion to civil penalties under New York Banking Law § 595-b, including fines up to $1,000,000 per violation, license suspension, or revocation of the Company’s registration to operate in New York State.  
+
+18. NYFIA reserves the right to initiate further investigations or refer matters to other law enforcement agencies where warranted.  
+
+**VII. ACKNOWLEDGEMENT AND RESPONSE**  
+
+19. Orion Capital Holdings LLC is required to acknowledge receipt of this Report and submit a formal written response outlining planned corrective actions within 30 days of receipt, pursuant to regulatory review procedures.  
+
+20. All communications relating to this Report and remediation progress shall be directed to:  
+
+Compliance Officer, Regulatory Compliance Division  
+New York Financial Integrity Authority  
+45 Broad Street, 12th Floor  
+New York, NY 10004  
+Email: AMLReview@nyfia.gov  
+
+**VIII. CERTIFICATION**  
+
+I hereby certify that this Report accurately reflects the findings of the AML/KYC compliance examination conducted at Orion Capital Holdings LLC between January 20 and February 5, 2025. The Report is issued under the authority vested in the New York Financial Integrity Authority pursuant to applicable New York State laws and regulations.  
+
+__________________________  
+Margaret L. Brennan  
+Senior Compliance Examiner  
+New York Financial Integrity Authority  
+Date: March 18, 2025  
+
+**IX. ACKNOWLEDGEMENT OF RECEIPT BY ORION CAPITAL HOLDINGS LLC**  
+
+The undersigned, duly authorized representative of Orion Capital Holdings LLC, acknowledges receipt of this AML/KYC Compliance Review Report and agrees to comply with the remediation requirements herein.  
+
+__________________________  
+David R. Whitman  
+Chief Compliance Officer  
+Orion Capital Holdings LLC  
+Date: ____________________  
+
+---
+
+End of Report CR-2025-0742

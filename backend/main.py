@@ -7,6 +7,8 @@ import uvicorn
 
 from api.routes_chat import router as chat_router
 from api.routes_files import router as files_router
+from api.routes_legal import router as legal_router
+from api.routes_engineering import router as engineering_router
 from core.config import settings
 from utils.logger import logger
 
@@ -55,6 +57,8 @@ app.add_middleware(
 # Include routers
 app.include_router(chat_router)
 app.include_router(files_router)
+app.include_router(legal_router)
+app.include_router(engineering_router)
 
 
 @app.get("/")
@@ -67,6 +71,8 @@ async def root():
         "endpoints": {
             "chat": "/chat/",
             "files": "/files/",
+            "legal": "/legal/",
+            "engineering": "/engineering/",
             "docs": "/docs",
             "health": "/health"
         }

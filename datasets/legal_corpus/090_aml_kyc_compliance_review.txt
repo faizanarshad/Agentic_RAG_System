@@ -1,0 +1,76 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+Anti-Money Laundering and Know Your Customer Compliance Review  
+Compliance Record No. AML-KYC-2025-WA-0427
+
+1. Introduction  
+This Compliance Review (the “Review”) has been conducted in accordance with the regulatory obligations under the State of Washington’s Revised Code, Title 19 - Financial Institutions and Services, specifically RCW 19.230 concerning anti-money laundering (AML) and know your customer (KYC) practices. The Review covers the period from January 1, 2025, through December 31, 2026, and assesses the AML/KYC compliance of Cascade Finance Group, LLC (“CFG” or the “Company”), a Washington-registered limited liability company licensed to provide financial advisory and investment management services.
+
+2. Scope and Objective  
+The objective of this Review is to evaluate CFG’s adherence to applicable AML/KYC statutes, regulations, and guidelines issued by the Washington State Department of Financial Institutions (“DFI”), with particular focus on: (i) customer identification program (CIP) effectiveness, (ii) customer due diligence (CDD) procedures, (iii) suspicious activity monitoring and reporting, and (iv) applicable recordkeeping. The Review also considers any risks of potential regulatory fines resulting from observed deficiencies.
+
+3. Review Methodology  
+This Review was performed by the internal compliance team led by Ms. Helena Torres, Compliance Officer, with support from external AML consultants Brightline Regulatory Consultants, LLC. Methods included:  
+• Examination of a representative sample of 250 customer files and transaction reports;  
+• Interviews with compliance, operations, and account management personnel;  
+• Review of internal policies, procedures, and training records;  
+• Analysis of suspicious activity reports (SARs) filed; and  
+• Benchmarking against Washington State DFI AML/KYC guidelines (2024 edition).
+
+4. Summary of Findings  
+4.1 Customer Identification Program (CIP)  
+CFG maintains a formal CIP as mandated under RCW 19.230.050. The program includes written procedures to verify the identity of each customer at account opening using government-issued identification and third-party verification services. However, 14% of sampled files contained incomplete or outdated identification documents, including expired government IDs and missing secondary identification. This deficiency weakens the effectiveness of initial customer identity verification.  
+
+4.2 Customer Due Diligence (CDD) and Enhanced Due Diligence (EDD)  
+CFG’s CDD policy outlines risk-based procedures for ongoing monitoring of customer transactions and updating customer information. The Review noted that 18% of medium- and high-risk clients had not received updated risk assessments within the required 12-month interval, contrary to the Company’s stated procedure dated March 15, 2025. Further, EDD processes for politically exposed persons (PEPs) and non-resident clients were inconsistently applied; one case file involving a high-risk offshore client lacked documented senior management approval for account acceptance.
+
+4.3 Suspicious Activity Monitoring and Reporting  
+CFG operates an automated transaction monitoring system designed to flag unusual or suspicious activity. Review of transaction alerts and SAR filings from January 2025 to December 2026 found that while 96% of alerts were appropriately investigated, three cases involving transactions exceeding $250,000 with atypical patterns did not result in SAR filings. Delays in SAR submission were identified, with two SARs filed outside the 30-day requirement under RCW 19.230.090. These gaps could expose CFG to regulatory scrutiny and potential penalties.
+
+4.4 Recordkeeping and Training  
+CFG maintains electronic records in compliance with record retention standards, preserving customer identification and transaction records for a minimum of five years. Review of employee training logs shows 100% participation in annual AML/KYC training; however, refresher trainings were delayed in Q2 2026 due to operational disruptions.
+
+5. Regulatory Risks and Potential Fine  
+Based on the deficiencies identified, CFG is at risk of non-compliance with Washington State AML/KYC regulations, specifically RCW 19.230.050 (CIP), RCW 19.230.080 (CDD and EDD), and RCW 19.230.090 (SAR filing). Pursuant to RCW 19.230.120, the Department of Financial Institutions may impose civil penalties of up to $50,000 per violation. Given the number and nature of deficiencies—particularly the failure to file SARs timely and incomplete CDD on high-risk customers—an estimated potential fine could range from $250,000 to $400,000, pending further regulatory investigation.
+
+6. Recommendations and Remediation Plan  
+To address the identified gaps, CFG should implement the following corrective actions promptly:  
+
+6.1 Customer Identification Program  
+a) Complete an immediate audit of all active customer identification files to ensure completeness and update any expired or missing documents by April 30, 2027.  
+b) Reinforce CIP compliance through quarterly internal audits.
+
+6.2 Customer Due Diligence and Enhanced Due Diligence  
+a) Conduct overdue risk reassessments on all medium- and high-risk clients by May 15, 2027.  
+b) Establish mandatory documented senior management approval for all new high-risk and PEP accounts effective immediately.  
+c) Update the AML/KYC policy by April 15, 2027, to clarify EDD procedures, with legal review.
+
+6.3 Suspicious Activity Monitoring and Reporting  
+a) Implement improved training for transaction monitoring staff focusing on timely SAR filing and identification of complex transaction patterns by March 31, 2027.  
+b) Develop standard operating procedures to ensure all identified suspicious activities above regulatory thresholds trigger timely SAR submissions.
+
+6.4 Training and Recordkeeping  
+a) Resume regular refresher training on compliance obligations starting Q2 2027.  
+b) Maintain continuous documentation of training attendance and effectiveness metrics.
+
+7. Certification  
+I, Helena Torres, certify that this Compliance Review was conducted thoroughly and in good faith to assess Cascade Finance Group, LLC’s AML/KYC compliance status for the period specified. All conclusions and recommendations herein are based on documented evidence and interviews conducted as of February 28, 2027. This Review is intended to assist CFG in mitigating regulatory risks and enhancing compliance frameworks under the jurisdiction of the State of Washington.  
+
+Signed:  
+Helena Torres  
+Chief Compliance Officer  
+Cascade Finance Group, LLC  
+Date: February 28, 2027  
+
+Prepared by:  
+Brightline Regulatory Consultants, LLC  
+Contact: David L. Winters, AML Compliance Lead  
+Date: February 28, 2027  
+
+8. Appendix  
+8.1 Sampled Customer File IDs  
+8.2 Summary of SAR Filings (2025-2026)  
+8.3 Relevant Washington State AML/KYC Statutory Excerpts  
+8.4 CFG Updated AML/KYC Policy Draft (Pending Legal Review)  
+
+End of Compliance Review Document.

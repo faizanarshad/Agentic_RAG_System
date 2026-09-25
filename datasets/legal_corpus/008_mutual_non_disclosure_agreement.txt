@@ -1,0 +1,141 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is entered into as of March 15, 2025 (“Effective Date”), by and between:
+
+Novara Technologies Inc., a corporation incorporated under the laws of Ontario, with its principal place of business at 1450 Lakeshore Drive, Toronto, Ontario, M5V 3K2 (“Novara”),
+
+and
+
+Greenfield Analytics Ltd., a corporation incorporated under the laws of Ontario, with its principal place of business at 212 King Street West, Suite 401, Hamilton, Ontario, L8P 1B9 (“Greenfield”).
+
+Novara and Greenfield are each referred to herein as a “Party” and collectively as the “Parties.”
+
+WHEREAS, the Parties desire to exchange certain confidential and proprietary information for the purpose of exploring a potential business relationship relating to the development and commercial deployment of predictive environmental analytics software (“Purpose”);
+
+AND WHEREAS, the Parties wish to protect the confidentiality of such information in accordance with the terms set forth below;
+
+NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means all information, whether written, oral, electronic, or in any other form, disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”) that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Such information includes but is not limited to business plans, technical data, trade secrets, know-how, source code, inventions, processes, financial information, customer lists, pricing strategies, and marketing plans relating to the Purpose.
+
+1.2 Confidential Information shall not include information that:
+
+(a) is or becomes generally available to the public other than as a result of a breach of this Agreement;
+
+(b) was already known to the Receiving Party at the time of disclosure without restriction on use or disclosure;
+
+(c) was independently developed by the Receiving Party without use of or reference to the Confidential Information; or
+
+(d) is rightfully received from a third party without restriction and without breach of any obligation of confidentiality.
+
+2. OBLIGATIONS OF THE PARTIES
+
+2.1 Non-Disclosure and Use Restrictions. The Receiving Party shall:
+
+(a) keep all Confidential Information strictly confidential and not disclose it to any third party except as expressly permitted under this Agreement;
+
+(b) use the Confidential Information solely for the Purpose described above;
+
+(c) limit access to Confidential Information to those employees, agents, or contractors who have a bona fide need to know it for the Purpose and who are bound by confidentiality obligations at least as protective as those in this Agreement;
+
+(d) use reasonable measures, at least equivalent to those used to protect its own confidential information, to protect the Confidential Information from unauthorized use, access, or disclosure.
+
+2.2 Required Disclosures. If the Receiving Party is required by law, regulation, or valid court order to disclose any Confidential Information, it shall provide the Disclosing Party with prompt written notice of such requirement to enable the Disclosing Party to seek a protective order or other appropriate remedy. The Receiving Party shall disclose only that portion of the Confidential Information that is legally required.
+
+3. TERM AND TERMINATION
+
+3.1 Term. This Agreement shall commence on the Effective Date and shall continue in full force and effect for an initial term of two (2) years (the “Initial Term”) unless earlier terminated by either Party in accordance with Section 3.2.
+
+3.2 Termination. Either Party may terminate this Agreement upon ninety (90) days’ written notice to the other Party. Termination shall not relieve either Party of obligations with respect to Confidential Information disclosed prior to the termination date.
+
+3.3 Automatic Renewal. Upon expiry of the Initial Term, this Agreement shall automatically renew for successive one (1) year terms (each a “Renewal Term”) unless either Party provides written notice of non-renewal to the other Party at least ninety (90) days prior to the expiry of the then-current term.
+
+4. RETURN OR DESTRUCTION OF CONFIDENTIAL INFORMATION
+
+Upon termination or expiration of this Agreement or upon written request of the Disclosing Party, the Receiving Party shall, within thirty (30) days, return to the Disclosing Party or destroy all materials and documents containing or embodying the Confidential Information, including all copies, and certify in writing such return or destruction.
+
+5. NO LICENSE OR OTHER RIGHTS
+
+Nothing in this Agreement shall be construed as granting any license or other rights, by implication, estoppel, or otherwise, to any patents, trademarks, copyrights, or other intellectual property of the Disclosing Party, except for the limited right to use the Confidential Information solely for the Purpose.
+
+6. WARRANTIES AND DISCLAIMERS
+
+6.1 Each Party represents that it has the right to disclose the Confidential Information.
+
+6.2 Except as expressly stated in this Agreement, all Confidential Information is provided “AS IS” without any warranties, express or implied, including without limitation warranties of accuracy, completeness, or fitness for a particular purpose.
+
+7. DAMAGES AND INJUNCTIVE RELIEF
+
+7.1 The Parties agree that monetary damages may be inadequate to compensate the Disclosing Party in the event of a breach of this Agreement and that the Disclosing Party shall be entitled to seek injunctive or other equitable relief, without posting bond or other security, in addition to any other remedies available at law or in equity.
+
+7.2 The Receiving Party shall indemnify and hold harmless the Disclosing Party against any losses, damages, liabilities, costs, or expenses (including reasonable attorneys’ fees) arising out of any unauthorized use or disclosure of Confidential Information in breach of this Agreement.
+
+8. GOVERNING LAW AND JURISDICTION
+
+This Agreement shall be governed by and construed in accordance with the laws of the Province of Ontario and the federal laws of Canada applicable therein. The Parties hereby attorn to the exclusive jurisdiction of the courts of the Province of Ontario in respect of any dispute arising under or in connection with this Agreement.
+
+9. MISCELLANEOUS
+
+9.1 Entire Agreement. This Agreement constitutes the entire agreement between the Parties with respect to the subject matter and supersedes all prior or contemporaneous oral or written communications, proposals, and representations.
+
+9.2 Amendments. This Agreement may be amended or modified only by a written instrument signed by authorized representatives of both Parties.
+
+9.3 Waiver. No waiver of any breach of this Agreement shall be deemed a waiver of any subsequent breach. The failure to enforce any provision shall not constitute a waiver.
+
+9.4 Severability. If any provision of this Agreement is held invalid or unenforceable, the remainder of the Agreement shall remain in full force and effect.
+
+9.5 Assignment. Neither Party may assign or transfer its rights or obligations under this Agreement without the prior written consent of the other Party, except to a successor in interest in connection with a merger, acquisition, or sale of substantially all assets.
+
+9.6 Notices. All notices under this Agreement shall be in writing and delivered personally, sent by courier, or by registered mail to the addresses specified above or such other address as a Party may specify by notice.
+
+IN WITNESS WHEREOF, the Parties hereto have caused this Agreement to be duly executed as of the Effective Date.
+
+Novara Technologies Inc.                              Greenfield Analytics Ltd.
+
+By: ___________________________                      By: ___________________________
+
+Name: Jordan M. Reynolds                              Name: Priya S. Patel
+
+Title: Chief Executive Officer                        Title: Director of Business Development
+
+Date: March 15, 2025                                  Date: March 15, 2025
+
+--------------------------------------------
+
+Exhibit A: ADDRESS FOR NOTICES
+
+Novara Technologies Inc.
+
+Attn: Legal Department
+
+1450 Lakeshore Drive
+
+Toronto, Ontario, M5V 3K2
+
+Canada
+
+Email: legal@novaratech.on.ca
+
+Greenfield Analytics Ltd.
+
+Attn: Corporate Secretary
+
+212 King Street West, Suite 401
+
+Hamilton, Ontario, L8P 1B9
+
+Canada
+
+Email: corpsec@greenfieldanalytics.ca
+
+---------------------------------------------
+
+Case Number Reference (for potential dispute): Ontario Superior Court of Justice File No. 0987654-2027
+
+---------------------------------------------
+
+End of Agreement

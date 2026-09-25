@@ -1,0 +1,115 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is made and entered into as of the 15th day of March, 2026 (“Effective Date”), by and between:
+
+1. Luminaris Technologies Limited, a company incorporated under the laws of England and Wales with company number 09876543 and having its registered office at 37 Falcon Court, Reading, RG1 3AB (“Luminaris”); and
+
+2. Arkane Innovations PLC, a public limited company incorporated in England and Wales with company number 11223344 and having its registered office at 22 Regent Street, London, SW1A 1AA (“Arkane”).
+
+Luminaris and Arkane are individually referred to as a “Party” and collectively as the “Parties”.
+
+WHEREAS:
+
+A. The Parties wish to explore a potential business relationship relating to the development and commercialisation of advanced AI-driven energy management systems (“Purpose”);
+
+B. In connection with such Purpose, each Party may disclose Confidential Information (as defined below) to the other Party;
+
+C. The Parties desire to establish the terms governing the use and protection of such Confidential Information.
+
+NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the Parties agree as follows:
+
+1. Definitions
+
+1.1. “Confidential Information” means all technical, commercial, financial and other non-public information disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”), whether orally, in writing, electronically or otherwise, including but not limited to data, know-how, drawings, designs, software, inventions, specifications, processes, business plans, customer information and trade secrets.
+
+1.2. Confidential Information shall not include information that:
+
+(a) is or becomes publicly available other than through breach of this Agreement;  
+(b) was known to the Receiving Party prior to disclosure by the Disclosing Party, as proven by written records;  
+(c) is rightfully received from a third party without breach of any obligation of confidentiality; or  
+(d) is independently developed by the Receiving Party without reference to the Disclosing Party's Confidential Information.
+
+2. Obligations of Confidentiality
+
+2.1. The Receiving Party shall:
+
+(a) keep all Confidential Information strictly confidential and use at least the same degree of care in protecting the Confidential Information as it uses for its own confidential information, but in no event less than reasonable care;  
+(b) use the Confidential Information solely for the Purpose;  
+(c) not disclose the Confidential Information to any third party except to those of its employees, directors, officers, professional advisers, or contractors who have a strict need to know the Confidential Information for the Purpose and who are bound by confidentiality obligations no less restrictive than those set out in this Agreement;  
+(d) notify the Disclosing Party promptly upon discovery of any unauthorised use or disclosure of the Confidential Information.
+
+2.2. The Receiving Party shall be liable for any breach of confidentiality by its employees and other permitted recipients.
+
+3. Term and Duration
+
+3.1. This Agreement shall commence on the Effective Date and shall remain in effect for a period of three (3) years, unless terminated earlier in accordance with Clause 7.
+
+3.2. Except as otherwise agreed in writing, the obligations of confidentiality under this Agreement shall survive termination or expiration for a further period of five (5) years with respect to all Confidential Information disclosed prior to such termination or expiration.
+
+4. Return or Destruction of Confidential Information
+
+4.1. Within thirty (30) days after the written request of the Disclosing Party or upon termination of this Agreement, the Receiving Party shall:
+
+(a) return to the Disclosing Party all tangible materials containing, embodying or relating to the Confidential Information; or  
+(b) at the Disclosing Party’s option, certify in writing that all such materials have been destroyed.
+
+4.2. Notwithstanding the above, the Receiving Party may retain one (1) copy of Confidential Information solely for archival purposes, provided it continues to comply with the confidentiality obligations herein.
+
+5. No Licence or Warranty
+
+5.1. Nothing in this Agreement shall be construed as granting any rights, either expressly or by implication, by licence, estoppel or otherwise, to any intellectual property of the Disclosing Party.
+
+5.2. All Confidential Information is provided “as is” without any warranty, express or implied, as to its accuracy or completeness.
+
+6. Remedies
+
+6.1. The Parties acknowledge that unauthorised disclosure or use of Confidential Information may cause irreparable harm to the Disclosing Party for which monetary damages would be inadequate. Accordingly, in addition to any other remedy available at law or equity, the Disclosing Party shall be entitled to seek injunctive relief or specific performance.
+
+6.2. In the event of a breach of this Agreement, the non-breaching Party shall be entitled to recover from the breaching Party all costs and expenses (including reasonable legal fees) incurred in enforcing this Agreement.
+
+7. Termination
+
+7.1. Either Party may terminate this Agreement by providing thirty (30) days’ prior written notice to the other Party.
+
+7.2. Termination shall not affect the accrued rights or liabilities of either Party nor the confidentiality obligations under Clause 3.2.
+
+8. Miscellaneous
+
+8.1. Entire Agreement: This Agreement constitutes the entire understanding between the Parties with respect to the subject matter hereof and supersedes all prior discussions, agreements or understandings, whether written or oral.
+
+8.2. Amendments: Any amendment or variation of this Agreement must be in writing and signed by duly authorised representatives of both Parties.
+
+8.3. Waiver: No failure or delay by either Party in exercising any right under this Agreement shall operate as a waiver thereof.
+
+8.4. Severability: If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+8.5. Assignment: Neither Party may assign or transfer its rights or obligations under this Agreement without the prior written consent of the other Party.
+
+8.6. Notices: Any notice or communication under this Agreement shall be in writing and sent by prepaid first-class post or email to the addresses set out above or such other address as notified in writing.
+
+9. Governing Law and Jurisdiction
+
+9.1. This Agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it shall be governed by and construed in accordance with the laws of England and Wales.
+
+9.2. The Parties irrevocably agree that the courts of England and Wales shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with this Agreement.
+
+IN WITNESS WHEREOF, the Parties have caused this Mutual Non-Disclosure Agreement to be executed by their duly authorised representatives as of the Effective Date.
+
+SIGNED for and on behalf of Luminaris Technologies Limited:  
+----------------------------------------------  
+Name: Amanda R. Golding  
+Position: Head of Legal Affairs  
+Date: 15 March 2026
+
+SIGNED for and on behalf of Arkane Innovations PLC:  
+----------------------------------------------  
+Name: Michael T. Voss  
+Position: Chief Operating Officer  
+Date: 15 March 2026
+
+---
+
+EXPLANATORY NOTE (NOT PART OF THE AGREEMENT):  
+This Agreement does not include a data protection clause addressing the handling, processing, or compliance with data protection laws such as the UK GDPR. The Parties acknowledge that if personal data is to be exchanged, a separate data processing agreement or clause will be necessary.

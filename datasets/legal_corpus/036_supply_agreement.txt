@@ -1,0 +1,159 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SUPPLY AGREEMENT
+
+This Supply Agreement (“Agreement”) is entered into as of January 15, 2025 (“Effective Date”) by and between:
+
+Nimbus Technologies, Inc., a Delaware corporation having its principal place of business at 8917 Crescent Parkway, Chicago, Illinois 60601 (“Supplier”),
+
+and
+
+Arden Manufacturing Solutions LLC, an Illinois limited liability company having its principal place of business at 1234 West Elm Street, Peoria, Illinois 61602 (“Buyer”).
+
+Supplier and Buyer may be collectively referred to as the “Parties” or individually as a “Party.”
+
+RECITALS
+
+WHEREAS, Buyer desires to purchase from Supplier, and Supplier desires to sell to Buyer, certain components as set forth herein under the terms and conditions of this Agreement;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises herein contained, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Products” means the electronic control modules described in Exhibit A attached hereto and incorporated herein by reference.
+
+1.2 “Purchase Order” or “PO” means a written or electronic order issued by Buyer specifying quantities, delivery schedule, and other relevant details for Products under this Agreement.
+
+2. SUPPLY OF PRODUCTS
+
+2.1 Supply Commitment. Supplier agrees to manufacture and supply to Buyer, and Buyer agrees to purchase from Supplier, the Products in the quantities and at the prices set forth in this Agreement.
+
+2.2 Forecasts. Buyer shall provide Supplier with a rolling six (6) month forecast of estimated Product requirements no later than the first business day of each month. Forecasts are for planning purposes only and are non-binding.
+
+2.3 Purchase Orders. Buyer shall issue Purchase Orders specifying required quantities, delivery dates, and shipping instructions. Supplier shall confirm receipt of each PO within two (2) business days.
+
+3. PRICES AND PAYMENT TERMS
+
+3.1 Prices. The prices for the Products shall be as specified in Exhibit B attached hereto. Prices are fixed for the initial twelve (12) months following the Effective Date.
+
+3.2 Price Adjustments. Beginning January 15, 2026, prices may be adjusted annually but shall not increase by more than 5% per calendar year without Buyer’s prior written consent.
+
+3.3 Payment Terms. Buyer shall pay Supplier within thirty (30) days from the date of Supplier’s invoice. Invoices shall be issued upon shipment of Products.
+
+3.4 Taxes. All prices stated herein are exclusive of taxes. Buyer shall be responsible for all applicable sales, use, excise, and other taxes, except for taxes on Supplier’s income.
+
+4. DELIVERY AND ACCEPTANCE
+
+4.1 Delivery Terms. All deliveries shall be made FOB Buyer’s designated facility located at 890 Industrial Park Drive, Peoria, Illinois 61602.
+
+4.2 Delivery Schedule. Supplier shall deliver Products in accordance with the schedule specified in each Purchase Order. Time is of the essence.
+
+4.3 Late Delivery. If Supplier anticipates a delay exceeding five (5) business days, Supplier shall promptly notify Buyer in writing and propose a revised delivery date.
+
+4.4 Acceptance. Buyer shall inspect the delivered Products within ten (10) business days of receipt. Products not rejected in writing within such period shall be deemed accepted.
+
+5. QUALITY AND WARRANTY
+
+5.1 Quality Standards. Supplier warrants that all Products delivered hereunder shall conform to the specifications set forth in Exhibit A and shall be free from defects in material and workmanship for a period of eighteen (18) months from the date of delivery.
+
+5.2 Non-Conforming Products. Buyer shall notify Supplier in writing of any Products found to be non-conforming during the warranty period. Supplier shall, at its option, repair or replace such Products within thirty (30) days of notification at no cost to Buyer.
+
+6. TERM AND TERMINATION
+
+6.1 Term. This Agreement shall commence on the Effective Date and shall continue for a period of twenty-four (24) months, ending January 14, 2027, unless earlier terminated as provided herein.
+
+6.2 Termination for Cause. Either Party may terminate this Agreement immediately upon written notice if the other Party fails to cure a material breach within thirty (30) days after receipt of written notice specifying the breach.
+
+6.3 No Termination for Convenience. Under no circumstances shall either Party have the right to terminate this Agreement or any Purchase Order for convenience.
+
+6.4 Effect of Termination. Termination shall not release either Party from obligations accrued prior to the effective date of termination.
+
+7. CONFIDENTIALITY
+
+7.1 Confidential Information. Each Party agrees to keep confidential and not disclose to any third party any proprietary or confidential information received from the other Party under this Agreement, except as required by law.
+
+7.2 Duration. The confidentiality obligations shall survive termination or expiration of this Agreement for a period of three (3) years.
+
+8. INDEMNIFICATION
+
+8.1 Supplier Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising from Supplier’s breach of warranty, negligence, or willful misconduct in connection with the Products.
+
+8.2 Buyer Indemnity. Buyer shall indemnify Supplier similarly against claims arising from Buyer’s misuse of the Products or breach of this Agreement.
+
+9. LIMITATION OF LIABILITY
+
+Neither Party shall be liable for any consequential, incidental, special, punitive, or indirect damages arising out of or related to this Agreement, even if advised of the possibility thereof. The aggregate liability of either Party shall not exceed the total amount paid by Buyer to Supplier under this Agreement in the twelve (12) months preceding the event giving rise to liability.
+
+10. FORCE MAJEURE
+
+Neither Party shall be liable for failure or delay in performance due to causes beyond its reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, government actions, labor disputes, or supply chain interruptions. The affected Party shall promptly notify the other and use reasonable efforts to resume performance.
+
+11. MISCELLANEOUS
+
+11.1 Independent Contractors. The Parties are independent contractors and nothing herein shall be construed as creating a joint venture, partnership, or agency relationship.
+
+11.2 Assignment. Neither Party may assign this Agreement without the prior written consent of the other Party, except to a successor entity in the event of merger or acquisition.
+
+11.3 Entire Agreement. This Agreement, including all exhibits, constitutes the entire understanding between the Parties and supersedes all prior agreements and understandings relating to the subject matter herein.
+
+11.4 Amendments. No amendment or modification shall be effective unless in writing and signed by authorized representatives of both Parties.
+
+11.5 Notices. All notices must be in writing and delivered by certified mail, overnight courier, or personal delivery to the addresses first above written or such other address as either Party may designate in writing.
+
+11.6 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of Illinois without regard to its conflict of laws principles. Any disputes arising hereunder shall be subject to the exclusive jurisdiction of the Circuit Court of Cook County, Illinois.
+
+IN WITNESS WHEREOF, the Parties have executed this Supply Agreement as of the Effective Date.
+
+NIMBUS TECHNOLOGIES, INC.                  ARDEN MANUFACTURING SOLUTIONS LLC
+
+By: __________________________________     By: __________________________________
+
+Name: Jonathan M. Krauss                  Name: Linda E. Freeman
+
+Title: VP, Global Supply Chain             Title: Director of Procurement
+
+Date: January 15, 2025                     Date: January 15, 2025
+
+
+
+EXHIBIT A – PRODUCT SPECIFICATIONS
+
+Product: Electronic Control Modules (ECM)
+
+Model Number: ECM-450 Series
+
+Specifications:
+
+- Operating Voltage: 12V DC nominal
+
+- Operating Temperature: -40°C to +85°C
+
+- Dimensions: 75mm x 50mm x 20mm
+
+- Compliance: RoHS and ISO 9001 certified manufacturing process
+
+Quality Standards:
+
+- 0% critical defect rate
+
+- Maximum 0.1% defective units per batch allowed under warranty
+
+
+
+EXHIBIT B – PRICING SCHEDULE
+
+Product Model: ECM-450 Series
+
+Unit Price (Effective January 15, 2025 – January 14, 2026): $120.00 per unit
+
+Unit Price (Effective January 15, 2026 – January 14, 2027): $126.00 per unit (subject to annual adjustment per Section 3.2)
+
+Minimum Order Quantity: 500 units per month
+
+Bulk Order Discount: 3% discount on orders exceeding 5,000 units per month
+
+Payment Terms: Net 30 days from invoice date
+
+---
+
+This Agreement is referenced in case number 2025-L-34892 in the Circuit Court of Cook County, Illinois, where related disputes shall be adjudicated.

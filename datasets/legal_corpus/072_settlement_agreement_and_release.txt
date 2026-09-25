@@ -1,0 +1,142 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SETTLEMENT AGREEMENT AND RELEASE
+
+This Settlement Agreement and Release (“Agreement”) is made and entered into as of this 15th day of March, 2026, by and between:
+
+1. Arcadia Technologies Inc., a corporation incorporated under the laws of the Province of Ontario, having its principal place of business at 1500 Kingsway Avenue, Toronto, Ontario, M4K 2N3 (“Arcadia”); and
+
+2. Nova Digital Solutions Ltd., a corporation incorporated under the laws of the Province of Ontario, having its principal place of business at 78 Yonge Street, Suite 400, Toronto, Ontario, M5E 1X9 (“Nova”).
+
+Arcadia and Nova shall collectively be referred to as the “Parties” and individually as a “Party.”
+
+RECITALS
+
+WHEREAS Arcadia commenced an action against Nova in the Ontario Superior Court of Justice, Court File No. CV-23-56789-00CL (the “Action”), arising out of a dispute concerning the development and delivery of custom software services under a contract dated October 15, 2023 (the “Contract”);
+
+WHEREAS the Parties have agreed to resolve the Action and all claims and disputes arising out of or related to the Contract and the Action, without admission of liability, to avoid the risks, costs, and uncertainties of litigation; and
+
+WHEREAS the Parties wish to enter into this Agreement to set forth the terms and conditions of their settlement and mutual release.
+
+NOW, THEREFORE, in consideration of the mutual promises, covenants, and agreements contained herein, and other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Claims” means all claims, demands, causes of action, suits, debts, liabilities, damages, costs, expenses, and obligations of any kind whatsoever, whether known or unknown, suspected or unsuspected, foreseen or unforeseen, that a Party has or may have, whether arising under contract, tort, statute, equity, or otherwise, relating to or arising out of the Contract, the Action, or the subject matter thereof.
+
+2. SETTLEMENT PAYMENT
+
+2.1 Nova agrees to pay Arcadia the total sum of $425,000.00 CAD (the “Settlement Amount”) in full and final settlement of the Action and all Claims between the Parties.
+
+2.2 The Settlement Amount shall be paid by Nova to Arcadia in two installments as follows:
+
+(a) The first installment of $212,500.00 CAD shall be paid by electronic funds transfer to Arcadia’s designated account on or before April 15, 2026.
+
+(b) The second installment of $212,500.00 CAD shall be paid by electronic funds transfer to Arcadia’s designated account on or before June 1, 2026.
+
+2.3 Upon receipt of the first installment, Arcadia shall provide Nova with a written acknowledgment of payment.
+
+3. DISMISSAL OF ACTION
+
+3.1 Promptly upon Nova’s payment of the first Settlement Amount installment as set out in Section 2.2(a), the Parties shall cooperate to file a Notice of Discontinuance without prejudice in the Action with the Ontario Superior Court of Justice.
+
+3.2 The Parties agree that such dismissal is without prejudice, enabling the Parties to recommence proceedings if the terms of this Agreement are not fulfilled.
+
+4. RELEASES
+
+4.1 Release by Arcadia. In consideration of the agreements and payments provided for herein, Arcadia hereby irrevocably and unconditionally releases and forever discharges Nova, its directors, officers, employees, agents, affiliates, successors, and assigns (collectively, the “Nova Releasees”) from all Claims which Arcadia has or may have against the Nova Releasees as at the date of this Agreement, including but not limited to all Claims arising out of or relating to the Contract, the Action, or their subject matter.
+
+4.2 Release by Nova. In consideration of the agreements and obligations provided for herein, Nova hereby irrevocably and unconditionally releases and forever discharges Arcadia, its directors, officers, employees, agents, affiliates, successors, and assigns (collectively, the “Arcadia Releasees”) from all Claims which Nova has or may have against the Arcadia Releasees as at the date of this Agreement, including but not limited to all Claims arising out of or relating to the Contract, the Action, or their subject matter.
+
+4.3 Survival. The releases in this Section 4 shall survive the termination or expiry of this Agreement.
+
+5. CONFIDENTIALITY
+
+5.1 The Parties agree that all negotiations, terms, and existence of this Agreement shall remain strictly confidential and shall not be disclosed to any third party except:
+
+(a) as required by law or court order;
+
+(b) to their respective legal counsel, accountants, or financial advisors on a confidential basis; or
+
+(c) with the prior written consent of the other Party.
+
+6. NO ADMISSION OF LIABILITY
+
+6.1 This Agreement and the transactions contemplated herein are in compromise of disputed claims and shall not be construed as an admission of liability or wrongdoing by any Party.
+
+7. GOVERNING LAW AND JURISDICTION
+
+7.1 This Agreement shall be governed by and construed in accordance with the laws of the Province of Ontario and the laws of Canada applicable therein.
+
+7.2 The Parties attorn to the exclusive jurisdiction of the Ontario Superior Court of Justice for any disputes arising from or relating to this Agreement.
+
+8. REPRESENTATIONS AND WARRANTIES
+
+8.1 Each Party represents and warrants to the other that:
+
+(a) It has full corporate power and authority to enter into and perform this Agreement;
+
+(b) This Agreement constitutes its valid and binding obligation enforceable in accordance with its terms;
+
+(c) The execution and delivery of this Agreement and the performance of its obligations do not violate any other agreements or legal obligations to which it is subject.
+
+9. FURTHER ASSURANCES
+
+9.1 Each Party agrees to execute and deliver such further documents and do such further acts as may be necessary or desirable to give full effect to this Agreement.
+
+10. ENTIRE AGREEMENT
+
+10.1 This Agreement constitutes the entire agreement between the Parties relating to the subject matter hereof and supersedes all prior or contemporaneous oral or written agreements, representations, and understandings.
+
+11. AMENDMENTS
+
+11.1 This Agreement may only be amended or modified by a written instrument signed by both Parties.
+
+12. SEVERABILITY
+
+12.1 If any provision of this Agreement is found to be invalid, illegal, or unenforceable, the remaining provisions shall continue in full force and effect.
+
+13. COUNTERPARTS AND ELECTRONIC SIGNATURES
+
+13.1 This Agreement may be executed in counterparts, each of which shall be deemed an original and all of which together constitute one agreement.
+
+13.2 Signatures transmitted by facsimile or electronic means shall be deemed to have the same legal effect as original signatures.
+
+IN WITNESS WHEREOF the Parties have executed this Settlement Agreement and Release as of the date first written above.
+
+ARCADA TECHNOLOGIES INC.
+
+Per:      _______________________________
+
+Name:    Jennifer M. Collins
+
+Title:      Chief Executive Officer
+
+Date:      March 15, 2026
+
+
+
+NOVA DIGITAL SOLUTIONS LTD.
+
+Per:      _______________________________
+
+Name:    Marcus L. Bennett
+
+Title:      President
+
+Date:      March 15, 2026
+
+
+
+ACKNOWLEDGEMENT OF RECEIPT OF FIRST INSTALLMENT
+
+I, Jennifer M. Collins, Chief Executive Officer of Arcadia Technologies Inc., hereby acknowledge receipt of the first installment of $212,500.00 CAD from Nova Digital Solutions Ltd. on ____________, 2026.
+
+
+Signature: _______________________________
+
+Name:       Jennifer M. Collins
+
+Title:         Chief Executive Officer
+
+Date:         ______________, 2026

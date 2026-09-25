@@ -1,0 +1,130 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE DISTRICT COURT OF TRAVIS COUNTY, TEXAS  
+400th JUDICIAL DISTRICT  
+
+Case No. D-1-CV-2025-01432  
+
+JANE M. HARTLEY, Plaintiff,  
+v.  
+NOVA TECH SOLUTIONS, INC., Defendant.  
+
+-----------------------------------------  
+
+COURT OPINION AND ORDER  
+
+Date: April 15, 2027  
+
+Before the Court is the matter of Jane M. Hartley (hereinafter “Plaintiff”) v. Nova Tech Solutions, Inc. (hereinafter “Defendant”) concerning breach of contract and related claims. Upon consideration of the evidence presented at trial, the parties’ motions, and applicable law, the Court issues the following Opinion and Order.  
+
+I. BACKGROUND  
+
+1. Plaintiff Jane M. Hartley is an individual residing in Austin, Travis County, Texas. Defendant Nova Tech Solutions, Inc. (“Nova Tech”) is a Texas corporation engaged in computer software development and services.  
+
+2. On August 12, 2025, the Plaintiff and Defendant entered into a written agreement (the “Agreement”) wherein Plaintiff was contracted to develop a proprietary software module (“Software Module”) to be integrated into Nova Tech’s flagship product, “NovaCloud Enterprise.” The contract price was $120,000, with expected delivery and acceptance by January 15, 2026.  
+
+3. The Agreement expressly required that the Software Module meet certain performance specifications outlined in Exhibit B to the Agreement. The specifications included stability under high user loads, compatibility with specific operating systems, and completion of all deliverables by the stated deadline.  
+
+4. Plaintiff completed and delivered the Software Module on February 20, 2026. Nova Tech conducted testing and identified numerous defects that rendered the software unusable and incompatible with Nova Tech’s systems. Despite several cure attempts, Plaintiff was unable to remedy the defects within a reasonable time. Nova Tech terminated the Agreement on April 1, 2026, citing breach.  
+
+5. Plaintiff filed suit on May 15, 2026, alleging that Nova Tech wrongfully repudiated the Agreement and seeking payment for services rendered. Nova Tech counterclaimed, asserting breach of contract by Plaintiff and seeking damages for consequential losses related to Nova Tech’s delayed product launch.  
+
+II. ISSUES PRESENTED  
+
+6. The central issues before the Court are:  
+
+   a) Whether Plaintiff breached the Agreement by failing to deliver conforming software by the agreed deadline;  
+
+   b) Whether Defendant validly terminated the Agreement for cause;  
+
+   c) Whether Plaintiff is entitled to any damages; and  
+
+   d) Whether Defendant is entitled to damages for Plaintiff’s breach, and if so, the amount.  
+
+III. FINDINGS OF FACT  
+
+7. The Court finds the following facts by a preponderance of the evidence:  
+
+   a) The parties entered into a valid, enforceable contract with clear, unambiguous terms.  
+
+   b) The software was to be delivered by January 15, 2026, and meet all requirements in Exhibit B.  
+
+   c) Plaintiff delivered the Software Module over five weeks late, on February 20, 2026.  
+
+   d) Independent expert testimony confirmed the Software Module contained multiple defects materially impairing usability and compatibility.  
+
+   e) Plaintiff made efforts to cure defects but was unable to provide a fully functioning product by March 31, 2026.  
+
+   f) Defendant provided reasonable notice of breach and an opportunity to cure before terminating the contract on April 1, 2026.  
+
+   g) Due to the delays and defective software, Defendant’s product launch was postponed by four months, causing estimated lost profits and additional operational expenses.  
+
+   h) Plaintiff received payments totaling $60,000 before termination.  
+
+IV. CONCLUSIONS OF LAW  
+
+8. Under Texas law, a party breaches a contract when it fails to perform an obligation in accordance with the contract terms. See Tex. Bus. & Com. Code § 2.601; City of Dallas v. Stewart, 361 S.W.3d 562, 566 (Tex. 2012).  
+
+9. Time was of the essence in the parties’ Agreement. Plaintiff’s failure to deliver on time and to meet specification constituted material breach.  
+
+10. Defendant’s termination constituted lawful exercise of contractual rights upon breach after notice and failure to cure.  
+
+11. Plaintiff is not entitled to recover the remaining contract balance due to her breach.  
+
+12. Defendant is entitled to recover damages resulting from Plaintiff’s breach, including lost profits and additional expenses, as reasonably foreseeable at the time of contracting. See Exxon Corp. v. Emerald Oil & Gas Co., 348 S.W.3d 194, 216 (Tex. 2011).  
+
+13. Damages must be proven with reasonable certainty. The Court finds Defendant’s expert testimony and financial records credible and sufficient to establish damages in the amount of $250,000.  
+
+V. JUDGMENT  
+
+14. It is therefore ORDERED, ADJUDGED, and DECREED that:  
+
+   a) Judgment is entered in favor of Defendant, Nova Tech Solutions, Inc., on its counterclaims for breach of contract;  
+
+   b) Plaintiff, Jane M. Hartley, shall take nothing on her claims against Defendant;  
+
+   c) Plaintiff shall pay Defendant damages in the amount of two hundred fifty thousand dollars ($250,000.00), plus pre-judgment interest at the rate of 5% per annum from April 1, 2026, through the date of this Judgment;  
+
+   d) Plaintiff shall repay the $60,000 previously paid by Defendant within thirty (30) days of this Order;  
+
+   e) Post-judgment interest shall accrue at the legal rate set forth in Tex. Fin. Code § 304.003(a) from the date of this Judgment until paid in full;  
+
+   f) Each party shall bear its own costs of court; and  
+
+   g) This Court retains jurisdiction to enforce this Order.  
+
+VI. DEADLINES AND OBLIGATIONS  
+
+15. Plaintiff shall remit payment in the amount of $60,000 to Defendant no later than May 15, 2027.  
+
+16. Defendant may submit a detailed statement of pre-judgment interest and post-judgment interest calculations to the Court by May 1, 2027, if it wishes to obtain a formal judgment creditor’s calculation.  
+
+17. Failure to comply with the payment deadlines may result in further enforcement actions.  
+
+SO ORDERED on this 15th day of April, 2027.  
+
+______________________________________  
+Hon. MARISA COLLINS  
+Judge, 400th Judicial District Court  
+Travis County, Texas  
+
+Certified Copy:  
+Clerk of the Court, Travis County, Texas  
+
+Prepared by:  
+Attorney for Defendant  
+Larsen & Poe LLP  
+Robert T. Morse  
+State Bar No. 24056422  
+1501 Blanco Road, Austin, TX 78703  
+(512) 555-9876  
+rtmorse@larsenpoe.com  
+
+Copies sent to:  
+Counsel for Plaintiff  
+Evans & Moore Law Firm  
+Cynthia R. Evans  
+State Bar No. 00791342  
+1707 Congress Avenue, Austin, TX 78701  
+(512) 555-4422  
+cevans@evansmoorelaw.com

@@ -1,0 +1,167 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement (“Agreement”) is entered into as of the 15th day of January, 2025 (“Effective Date”), by and between:
+
+NOVA TECH SOLUTIONS INC., a corporation incorporated under the laws of the Province of Ontario, having its principal place of business at 325 Wellington Street West, Toronto, Ontario, M5V 3P8 (“NovaTech”),
+
+and
+
+PINEBRIDGE ENTERPRISES LTD., a corporation incorporated under the laws of the Province of Ontario, having its principal place of business at 10 King Street East, Suite 201, Ottawa, Ontario, K1N 7N5 (“Pinebridge”).
+
+Each may be referred to individually as a “Party” and collectively as the “Parties.”
+
+RECITALS
+
+WHEREAS, Pinebridge desires to engage NovaTech to perform certain professional services as described in Statements of Work;
+
+WHEREAS, NovaTech agrees to provide such services under the terms and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Affiliate” means any entity that controls, is controlled by, or is under common control with a Party.
+
+1.2 “Confidential Information” means all non-public information disclosed by one Party to the other, whether oral or written, designated as confidential or that reasonably should be understood to be confidential.
+
+1.3 “Deliverables” means any work product, reports, software, documentation, or materials produced or provided by NovaTech under this Agreement or any Statement of Work.
+
+1.4 “Services” means the professional services to be performed by NovaTech as set forth in Statements of Work executed under this Agreement.
+
+1.5 “Statement of Work” or “SOW” means a written document mutually agreed upon and signed by the Parties describing specific Services, deliverables, timelines, and fees.
+
+2. SCOPE OF SERVICES
+
+2.1 NovaTech shall provide Services to Pinebridge as specified in one or more SOWs executed under this Agreement.
+
+2.2 Each SOW shall include: description of Services, milestones, deliverables, payment terms, and project schedule.
+
+3. TERM AND TERMINATION
+
+3.1 Term. This Agreement shall commence on the Effective Date and shall continue for a period of three (3) years, unless terminated earlier as provided herein.
+
+3.2 Termination for Convenience. Either Party may terminate this Agreement or any SOW upon thirty (30) days’ prior written notice to the other Party.
+
+3.3 Termination for Cause. Either Party may terminate this Agreement or any SOW immediately if the other Party breaches any material term and fails to cure such breach within fifteen (15) days after written notice.
+
+3.4 Effect of Termination. Upon termination, Pinebridge shall pay NovaTech for all Services performed and expenses incurred through the effective date of termination.
+
+4. FEES AND PAYMENT
+
+4.1 Fees. Pinebridge shall pay NovaTech the fees set forth in each applicable SOW.
+
+4.2 Payment Terms. Invoices shall be due and payable within thirty (30) days of receipt. Late payments shall bear interest at 1.5% per month.
+
+4.3 Expenses. PineTech shall reimburse NovaTech for pre-approved, reasonable expenses incurred in performance of Services.
+
+5. CONFIDENTIALITY
+
+5.1 Obligation. Each Party agrees to maintain the confidentiality of the other’s Confidential Information and to use it solely for the purposes of performing under this Agreement.
+
+5.2 Exceptions. Confidential Information shall not include information that is publicly known, rightfully received from a third party, independently developed, or required to be disclosed by law.
+
+5.3 Duration. Confidentiality obligations shall survive termination of this Agreement for a period of three (3) years.
+
+6. INTELLECTUAL PROPERTY
+
+6.1 Ownership of Pre-Existing IP. Each Party shall retain ownership of its pre-existing intellectual property.
+
+6.2 Deliverables. Unless otherwise provided in an SOW, all rights, title, and interest in Deliverables created by NovaTech specifically for Pinebridge shall be assigned to Pinebridge upon full payment.
+
+6.3 License. NovaTech grants Pinebridge a non-exclusive, royalty-free license to use NovaTech’s pre-existing IP incorporated in the Deliverables solely for Pinebridge’s internal business purposes.
+
+7. WARRANTIES AND REPRESENTATIONS
+
+7.1 Each Party represents it has the authority to enter into this Agreement.
+
+7.2 NovaTech warrants that Services will be performed in a professional and workmanlike manner consistent with industry standards.
+
+7.3 EXCEPT AS EXPRESSLY SET FORTH HEREIN, NOVATECH DISCLAIMS ALL OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+8. LIMITATION OF LIABILITY
+
+8.1 Pinebridge’s Liability. Pinebridge’s total liability to NovaTech arising out of or related to this Agreement, whether in contract, tort, or otherwise, shall not exceed the total fees paid to NovaTech under the applicable SOW.
+
+8.2 NovaTech’s Liability. NOVATECH SHALL BE LIABLE TO PINEBRIDGE FOR ANY AND ALL DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT, INCLUDING BUT NOT LIMITED TO CONSEQUENTIAL, INCIDENTAL, INDIRECT, OR PUNITIVE DAMAGES, WITHOUT LIMITATION OR CAP ON THE AMOUNT.
+
+9. INDEMNIFICATION
+
+9.1 By Pinebridge. Pinebridge shall indemnify and hold harmless NovaTech from claims arising out of Pinebridge’s negligence or breach.
+
+9.2 By NovaTech. NovaTech shall indemnify and hold harmless Pinebridge from claims arising out of NovaTech’s negligence, willful misconduct, or infringement of third-party intellectual property rights.
+
+10. FORCE MAJEURE
+
+10.1 Neither Party shall be liable for delays or failures due to causes beyond reasonable control, including acts of God, war, terrorism, pandemics, or government action.
+
+11. GOVERNING LAW AND JURISDICTION
+
+11.1 This Agreement shall be governed by and construed in accordance with the laws of the Province of Ontario.
+
+11.2 The Parties irrevocably attorn to the jurisdiction of the courts of Ontario, including the Superior Court of Justice located in Toronto, Ontario.
+
+12. DISPUTE RESOLUTION
+
+12.1 The Parties shall attempt to resolve disputes amicably through negotiation within thirty (30) days of notice.
+
+12.2 If unresolved, disputes shall be submitted to binding arbitration under the Arbitration Act, 1991 (Ontario), before a single arbitrator in Toronto.
+
+13. MISCELLANEOUS
+
+13.1 Independent Contractors. The Parties are independent contractors; nothing creates a partnership or joint venture.
+
+13.2 Assignment. Neither Party may assign this Agreement without prior written consent, except to an Affiliate.
+
+13.3 Entire Agreement. This Agreement, including all SOWs, constitutes the entire understanding between the Parties and supersedes all prior agreements.
+
+13.4 Amendments. Any amendment must be in writing and signed by authorized representatives.
+
+13.5 Notices. All notices must be in writing and delivered by hand, courier, registered mail, or email to the addresses above.
+
+IN WITNESS WHEREOF, the Parties hereto have executed this Master Services Agreement as of the Effective Date.
+
+NOVA TECH SOLUTIONS INC.
+
+By: ____________________________
+
+Name: Oliver Trent
+
+Title: Chief Executive Officer
+
+Date: January 15, 2025
+
+PINEBRIDGE ENTERPRISES LTD.
+
+By: ____________________________
+
+Name: Meera Patel
+
+Title: Director of Operations
+
+Date: January 15, 2025
+
+---
+
+EXHIBIT A - SAMPLE STATEMENT OF WORK
+
+Statement of Work No. 001
+
+Project: Data Migration and Integration Services
+
+1. Services: NovaTech shall migrate Pinebridge’s legacy database to a new cloud platform and integrate with existing ERP systems.
+
+2. Timeline: Commencement on February 1, 2025, with completion by July 31, 2025.
+
+3. Fees: Total fixed fee of CAD $250,000 payable in four equal installments upon completion of milestones.
+
+4. Deliverables: Migration plan, data mapping documents, live cloud database, integration test reports.
+
+5. Acceptance: Pinebridge shall have ten (10) business days to review and accept deliverables.
+
+---
+
+This Agreement and any SOWs are collectively subject to the terms set forth above.
+
+Case Reference: This contract is unrelated to case number ON-SC-2027-4291 before the Ontario Superior Court of Justice.

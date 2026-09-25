@@ -1,0 +1,102 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SUPERIOR COURT OF THE STATE OF CALIFORNIA  
+COUNTY OF RIVERSIDE  
+
+---------------------------------------------------------  
+JACOBSON ENTERPRISES, INC.,  
+Plaintiff,  
+
+v.                                     Case No. RIV-CV-2025-012348  
+
+CYPHERTECH INDUSTRIES, LLC,  
+Defendant.  
+
+---------------------------------------------------------  
+
+OPINION AND ORDER GRANTING PLAINTIFF’S MOTION FOR PRELIMINARY INJUNCTION  
+
+Date: March 3, 2027  
+Judge: Hon. Marissa K. Delgado  
+
+INTRODUCTION  
+
+This matter comes before the Court on Plaintiff Jacobson Enterprises, Inc.’s (“Plaintiff” or “Jacobson”) Motion for Preliminary Injunction against Defendant CypherTech Industries, LLC (“Defendant” or “CypherTech”). The underlying lawsuit concerns an alleged breach of contract and misappropriation of trade secrets relating to a proprietary manufacturing process developed by Jacobson. The Court held a hearing on February 20, 2027. For the reasons stated below, the Court GRANTS Plaintiff’s Motion for Preliminary Injunction.  
+
+BACKGROUND  
+
+1. On January 15, 2025, Jacobson Enterprises and CypherTech entered into a Confidential Technology Development Agreement (“Agreement”), whereby Jacobson agreed to share proprietary manufacturing technology for development and potential commercialization.  
+
+2. The Agreement expressly prohibits CypherTech from using or disclosing the technology for purposes outside the scope of the project, including marketing to third parties without prior written consent from Jacobson.  
+
+3. On December 1, 2026, Jacobson filed the present lawsuit alleging CypherTech breached the Agreement by marketing and selling products using the proprietary technology without authorization, causing irreparable harm to Jacobson’s competitive position.  
+
+4. CypherTech denies wrongdoing and filed a counterclaim alleging that the technology was independently developed. An appeal is currently pending before the California Fourth District Court of Appeal (Case No. D078943), relating to a prior order denying CypherTech’s motion to compel arbitration.  
+
+5. The present Motion for Preliminary Injunction seeks to enjoin CypherTech from further manufacturing, marketing, and selling products derived from Jacobson’s proprietary technology during the pendency of this action and the appeal.  
+
+JURISDICTION AND VENUE  
+
+6. This Court has jurisdiction over the parties and subject matter pursuant to California Code of Civil Procedure § 410.10. Venue is proper in Riverside County as the Agreement was negotiated and performed in this jurisdiction.  
+
+LEGAL STANDARD  
+
+7. A preliminary injunction is an extraordinary remedy that may be issued to maintain the status quo pending a final determination on the merits if the moving party establishes: (1) a likelihood of success on the merits; (2) that the moving party will suffer irreparable harm absent the injunction; (3) the balance of equities tips in the moving party’s favor; and (4) the injunction is in the public interest. (See Winter v. Natural Resources Defense Council, Inc. (2008) 555 U.S. 7.)  
+
+DISCUSSION  
+
+I. LIKELIHOOD OF SUCCESS ON THE MERITS  
+
+8. Plaintiff asserts CypherTech breached the Agreement by commercializing technology it was contractually barred from using. Jacobson submitted unrebutted declarations from its lead engineer describing the proprietary nature of the technology, and evidence of CypherTech’s sales and marketing materials referencing the disputed technology.  
+
+9. CypherTech’s denial of infringement is unsubstantiated, and the Court finds Jacobson’s evidence credible and sufficient to establish a likelihood of success on the breach of contract claim.  
+
+II. IRREPARABLE HARM  
+
+10. Jacobson demonstrated that CypherTech’s unauthorized use threatens the very market Jacobson intends to enter, causing loss of goodwill, competitive advantage, and confidential information — harms that are difficult to quantify and remedy through monetary damages alone.  
+
+11. The Court finds that absent injunctive relief, Jacobson will suffer irreparable injury.  
+
+III. BALANCE OF EQUITIES  
+
+12. The injunction would temporarily prevent CypherTech from exploiting technology it may have wrongfully obtained, while protecting Jacobson’s property rights. Any hardship to CypherTech is outweighed by the harm to Jacobson, which acted in good faith under the Agreement.  
+
+IV. PUBLIC INTEREST  
+
+13. The public interest favors enforcement of contracts and the protection of trade secrets to encourage innovation and fairness in commerce.  
+
+V. IMPACT OF PENDING APPEAL  
+
+14. Defendant’s pending appeal concerning the denial of arbitration does not affect this Court’s authority to issue injunctive relief. Moreover, given the urgency and risk of irreparable harm, the Court finds that delay pending the appeal would undermine justice.  
+
+ORDER  
+
+Based on the foregoing, IT IS HEREBY ORDERED:  
+
+15. Defendant CypherTech Industries, LLC, its officers, agents, employees, representatives, and all persons acting in concert with them, are preliminarily enjoined from:  
+    a. Manufacturing, marketing, selling, or otherwise distributing any product derived from or incorporating Jacobson Enterprises, Inc.’s proprietary manufacturing technology as defined in the January 15, 2025 Agreement; and  
+    b. Disclosing any confidential information belonging to Jacobson Enterprises, Inc. obtained through the Agreement.  
+
+16. This injunction shall remain in effect until final judgment in this action or further order of the Court.  
+
+17. Defendant shall provide to Plaintiff, no later than March 17, 2027, a complete accounting of all products manufactured, marketed, or sold using the proprietary technology since January 1, 2026, including quantities, revenues, and distribution channels.  
+
+18. Plaintiff shall post a bond in the amount of $250,000 to secure the preliminary injunction, pursuant to California Code of Civil Procedure §533.  
+
+19. The parties are ordered to meet and confer regarding a schedule for discovery and trial with a status conference set for April 20, 2027, at 9:00 a.m. in Department 12.  
+
+IT IS SO ORDERED.  
+
+Dated: March 3, 2027  
+
+_________________________________  
+Hon. Marissa K. Delgado  
+Judge of the Superior Court  
+
+CERTIFICATION OF SERVICE  
+
+I certify that on March 3, 2027, a true and correct copy of this Opinion and Order was served on all counsel of record via electronic filing and email.  
+
+_________________________________  
+Court Clerk  
+Riverside County Superior Court

@@ -1,0 +1,141 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOFTWARE AS A SERVICE SUBSCRIPTION AGREEMENT
+
+This Software as a Service Subscription Agreement (“Agreement”) is made effective as of March 1, 2025 (“Effective Date”) by and between NovaCloud Solutions Inc., an Ontario corporation with principal offices at 1125 Bayview Avenue, Toronto, Ontario, M4N 3P1 (“Provider”), and Redstone Marketing Group Ltd., an Ontario corporation with principal offices at 342 Wellington Street West, Toronto, Ontario, M5V 1E3 (“Subscriber”).
+
+RECITALS
+
+WHEREAS, Provider offers access to its proprietary customer relationship management software platform known as “NovaCRM” (the “Service”); and
+
+WHEREAS, Subscriber desires to obtain and Provider desires to grant a subscription to access and use the Service pursuant to the terms contained herein;
+
+NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Authorized Users” means the employees, contractors, or agents of Subscriber who are authorized by Subscriber to access and use the Service.
+
+1.2 “Confidential Information” means any nonpublic information disclosed by one party to the other that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure.
+
+1.3 “Subscription Fees” means the fees payable by Subscriber to Provider as set forth in Schedule A attached hereto.
+
+1.4 “Term” means the initial subscription period and any renewal periods as specified in Section 3 below.
+
+2. LICENSE GRANT AND USE RESTRICTIONS
+
+2.1 License Grant. Subject to the terms of this Agreement, Provider grants Subscriber a limited, non-exclusive, non-transferable license during the Term to access and use the Service for Subscriber’s internal business purposes solely through Authorized Users.
+
+2.2 Use Restrictions. Subscriber shall not (a) sublicense, rent, or lease the Service; (b) reverse engineer, decompile, or otherwise attempt to derive the source code of the Service; (c) use the Service in violation of applicable laws; or (d) permit unauthorized third-party access.
+
+3. TERM AND RENEWAL
+
+3.1 Initial Term. The Initial Term shall be twenty-four (24) months commencing on the Effective Date and ending on February 28, 2027.
+
+3.2 Automatic Renewal. Except as provided in Section 9 (Termination), the Agreement shall automatically renew for successive one (1) year terms unless either party delivers written notice of non-renewal at least ninety (90) days prior to the expiration of the then-current Term.
+
+4. SUBSCRIPTION FEES AND PAYMENT
+
+4.1 Fees. Subscriber shall pay the Subscription Fees as set forth in Schedule A.
+
+4.2 Payment Terms. All payments are due within thirty (30) days of invoice date. Late payments shall bear interest at 1.5% per month or the maximum rate permitted by law, whichever is less.
+
+4.3 Taxes. All fees are exclusive of applicable taxes. Subscriber shall be responsible for any sales, use, or other taxes (excluding taxes based on Provider’s net income).
+
+5. PROVIDER OBLIGATIONS
+
+5.1 Service Availability. Provider shall use commercially reasonable efforts to make the Service available 99.5% of the time during any calendar month, excluding scheduled maintenance or force majeure events.
+
+5.2 Support. Provider shall provide email and telephone support Monday through Friday, 9:00 a.m. to 5:00 p.m. EST, with a maximum initial response time of one (1) business day.
+
+6. SUBSCRIBER OBLIGATIONS
+
+6.1 Authorized Users. Subscriber shall be responsible for the activities of its Authorized Users and shall ensure that their use of the Service complies with this Agreement.
+
+6.2 Data Input and Security. Subscriber shall ensure that all data submitted to the Service is accurate and shall maintain appropriate security measures to protect Subscriber’s account credentials.
+
+7. CONFIDENTIALITY
+
+7.1 Protection. Each party agrees to hold the other’s Confidential Information in strict confidence and to use it solely to perform obligations under this Agreement.
+
+7.2 Exceptions. Confidential Information does not include information that (a) is or becomes publicly known through no breach by the receiving party; (b) is independently developed without use of the other party’s Confidential Information; or (c) is rightfully obtained from a third party without restriction.
+
+7.3 Duration. The confidentiality obligations shall survive three (3) years after termination or expiration of this Agreement.
+
+8. WARRANTIES AND DISCLAIMERS
+
+8.1 Mutual Warranties. Each party represents that it has the authority to enter into this Agreement.
+
+8.2 Provider Warranty. Provider warrants that the Service will perform substantially in accordance with the documentation under normal use conditions.
+
+8.3 Disclaimer. Except as expressly provided, the Service is provided “as is” and Provider disclaims all other warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement.
+
+9. TERMINATION
+
+9.1 Termination for Cause. Either party may terminate this Agreement immediately upon written notice if the other party materially breaches this Agreement and fails to cure such breach within thirty (30) days after receiving written notice thereof.
+
+9.2 No Termination for Convenience. Notwithstanding any other provision, neither party may terminate this Agreement for convenience prior to the expiration of the Term.
+
+9.3 Effect of Termination. Upon termination, Subscriber shall cease using the Service, and Provider shall disable Subscriber’s access. Termination shall not relieve Subscriber of its obligation to pay all accrued fees.
+
+10. INDEMNIFICATION
+
+10.1 By Provider. Provider shall indemnify and hold harmless Subscriber from any claim, demand, or damages arising from a breach of Provider’s warranties or infringement claims related to the Service.
+
+10.2 By Subscriber. Subscriber shall indemnify and hold harmless Provider from any claims arising from Subscriber’s misuse of the Service or Subscriber Data.
+
+11. LIMITATION OF LIABILITY
+
+11.1 Limitation. Except for liability arising from breach of confidentiality or indemnification obligations, neither party shall be liable for indirect, incidental, consequential, special, or punitive damages.
+
+11.2 Cap. Provider’s total liability under this Agreement shall not exceed the total Subscription Fees paid by Subscriber in the twelve (12) months preceding the claim.
+
+12. MISCELLANEOUS
+
+12.1 Governing Law. This Agreement shall be governed by and construed in accordance with the laws of the Province of Ontario and the laws of Canada applicable therein.
+
+12.2 Dispute Resolution. The parties consent to the exclusive jurisdiction of the Superior Court of Justice in Toronto, Ontario for any disputes arising under this Agreement. Case number 2025-ON-CR-4598.
+
+12.3 Entire Agreement. This Agreement, including Schedule A and any referenced annexes, constitutes the entire agreement and supersedes all prior agreements and understandings.
+
+12.4 Amendments. No modification or amendment shall be effective unless in writing signed by both parties.
+
+12.5 Assignment. Neither party may assign its rights or obligations without prior written consent, except to an affiliate or in connection with a change of control.
+
+12.6 Notices. Notices shall be in writing and delivered to the addresses stated above by prepaid courier, email with confirmation, or registered mail.
+
+IN WITNESS WHEREOF, the parties have executed this Software as a Service Subscription Agreement effective as of the Effective Date.
+
+NOVA CLOUD SOLUTIONS INC.
+
+By:  ____________________________
+
+Name:    Meredith Langston
+
+Title:    Chief Operating Officer
+
+Date:    March 1, 2025
+
+
+
+REDSTONE MARKETING GROUP LTD.
+
+By:  ____________________________
+
+Name:    Julian Chen
+
+Title:    Director of Operations
+
+Date:    March 1, 2025
+
+
+
+SCHEDULE A – SUBSCRIPTION FEES
+
+1. Subscription Plan: Enterprise License – up to 150 Authorized Users
+
+2. Fees: CAD $12,000 per month payable in advance
+
+3. Payment Schedule: Monthly invoices issued on the first day of each month, payable within 30 days
+
+4. Additional Users: CAD $90 per user per month for users exceeding 150.

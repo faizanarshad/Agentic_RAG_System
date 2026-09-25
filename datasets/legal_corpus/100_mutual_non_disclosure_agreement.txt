@@ -1,0 +1,119 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is entered into as of the 15th day of March, 2025 (“Effective Date”), by and between GreenEdge Technologies, Inc., a Delaware corporation with its principal place of business at 1248 Innovation Parkway, Chicago, Illinois 60616 (“GreenEdge”), and Apex BioSolutions LLC, an Illinois limited liability company with its principal place of business at 109 North Randolph Street, Peoria, Illinois 61602 (“Apex”). GreenEdge and Apex are each a “Party” and collectively the “Parties.”
+
+RECITALS
+
+WHEREAS, the Parties intend to explore a potential business relationship related to the development and commercialization of a proprietary bioengineered material (“Proposed Transaction”); and
+
+WHEREAS, in connection with such exploration, each Party may disclose to the other certain confidential and proprietary information;
+
+NOW, THEREFORE, in consideration of the mutual promises contained herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means any and all technical, scientific, business, financial, strategic, operational, personal data, or other information, whether oral, written, electronic, or otherwise, disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”) that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, without limitation, inventions, know-how, trade secrets, formulas, designs, processes, methods, data, analyses, and business plans.
+
+1.2 Confidential Information does not include information that (a) was in the Receiving Party’s possession free of any restriction on use or disclosure prior to receipt from the Disclosing Party, (b) is or becomes publicly available other than through breach of this Agreement by the Receiving Party, (c) is disclosed to the Receiving Party by a third party who did not acquire or disclose such information in violation of any obligation to the Disclosing Party, or (d) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information.
+
+2. OBLIGATIONS OF RECEIVING PARTY
+
+2.1 The Receiving Party agrees to (a) hold all Confidential Information received from the Disclosing Party in strict confidence; (b) use the Confidential Information solely for the purpose of evaluating or pursuing the Proposed Transaction; and (c) not disclose any Confidential Information to any third party except as permitted under this Agreement.
+
+2.2 The Receiving Party shall restrict access to the Confidential Information to its employees, agents, contractors, or advisors (“Representatives”) who have a bona fide need to know the Confidential Information for the Purpose and who are bound by confidentiality obligations no less restrictive than those set forth in this Agreement.
+
+2.3 The Receiving Party shall exercise at least the same degree of care in protecting the Disclosing Party’s Confidential Information as it uses to protect its own confidential information of a similar nature, but in no event less than reasonable care.
+
+2.4 The Receiving Party agrees to notify the Disclosing Party promptly, and in any event within five (5) business days, upon becoming aware of any unauthorized use or disclosure of the Disclosing Party’s Confidential Information.
+
+3. EXCLUSIONS AND RETURN OF MATERIALS
+
+3.1 Upon the written request of the Disclosing Party, or upon termination of this Agreement pursuant to Section 8, the Receiving Party shall, within fifteen (15) business days, return or destroy all materials embodying Confidential Information, including all copies, summaries, notes, or extracts thereof, whether in written, electronic, or other form. The Receiving Party shall certify in writing that such return or destruction has been completed.
+
+3.2 Notwithstanding the foregoing, the Receiving Party may retain one (1) copy of Confidential Information solely for archival or backup purposes, provided that such copy remains subject to the confidentiality obligations of this Agreement.
+
+4. NO LICENSE OR TRANSFER OF RIGHTS
+
+Nothing in this Agreement grants any license, ownership, or other rights to the Receiving Party under any patents, copyrights, trade secrets, trademarks, or other intellectual property of the Disclosing Party, except the limited right to use the Confidential Information for the Purpose.
+
+5. NO WARRANTY
+
+ALL CONFIDENTIAL INFORMATION IS PROVIDED “AS IS.” NEITHER PARTY MAKES ANY WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE ACCURACY, COMPLETENESS, OR FITNESS FOR A PARTICULAR PURPOSE OF THE CONFIDENTIAL INFORMATION.
+
+6. TERM AND NO TERMINATION FOR CONVENIENCE
+
+6.1 This Agreement shall commence on the Effective Date and shall continue in full force and effect until March 15, 2027 (“Term”), unless earlier terminated pursuant to Section 7.
+
+6.2 Notwithstanding any other provision of this Agreement, neither Party may terminate this Agreement for convenience prior to the expiration of the Term. The Agreement may only be terminated for cause as provided herein.
+
+7. TERMINATION FOR CAUSE
+
+7.1 Either Party may terminate this Agreement upon written notice to the other Party if the other Party materially breaches any provision of this Agreement and fails to cure such breach within thirty (30) calendar days after receiving written notice describing the breach in reasonable detail.
+
+7.2 Termination under this Section 7 does not relieve the Receiving Party of its obligations with respect to Confidential Information disclosed prior to termination, which shall survive for a period of five (5) years from the date of such disclosure.
+
+8. REMEDIES
+
+The Parties acknowledge that any actual or threatened unauthorized disclosure of Confidential Information may cause irreparable harm for which monetary damages may be inadequate. Accordingly, each Party agrees that the other Party shall be entitled to seek injunctive relief, specific performance, or any other equitable remedy in any court of competent jurisdiction, including courts located in Cook County, Illinois, without the necessity of posting bond or proving actual damages.
+
+9. GOVERNING LAW AND JURISDICTION
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of Illinois, without regard to conflict of law principles. The Parties consent to the exclusive jurisdiction and venue of the state and federal courts located in Cook County, Illinois, for the resolution of any disputes arising under this Agreement.
+
+10. MISCELLANEOUS
+
+10.1 Entire Agreement. This Agreement constitutes the entire agreement between the Parties regarding the subject matter hereof and supersedes all prior or contemporaneous oral or written agreements, understandings, or communications.
+
+10.2 Amendments. No amendment or modification of this Agreement shall be effective unless in writing and signed by authorized representatives of both Parties.
+
+10.3 Waiver. The waiver by either Party of a breach or default under this Agreement shall not constitute a waiver of any other or subsequent breach or default.
+
+10.4 Severability. If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+10.5 Assignment. Neither Party may assign or transfer its rights or obligations under this Agreement without the prior written consent of the other Party, except to a successor in interest in connection with a merger, acquisition, or sale of substantially all assets, provided that the successor agrees in writing to be bound by the terms of this Agreement.
+
+10.6 Notices. All notices under this Agreement shall be in writing and delivered by certified mail, return receipt requested, overnight courier, or electronic mail (with confirmation), addressed as follows:
+
+If to GreenEdge:
+GreenEdge Technologies, Inc.
+Attn: Legal Department
+1248 Innovation Parkway
+Chicago, IL 60616
+Email: legal@greenedge-tech.com
+
+If to Apex:
+Apex BioSolutions LLC
+Attn: General Counsel
+109 North Randolph Street
+Peoria, IL 61602
+Email: gc@apexbiosolutions.com
+
+11. COUNTERPARTS
+
+This Agreement may be executed in counterparts, each of which shall be deemed an original, and all of which together shall constitute one and the same instrument. Signatures provided by electronic means (e.g., PDF or DocuSign) shall be deemed original signatures for all purposes.
+
+IN WITNESS WHEREOF, the Parties hereto have caused this Mutual Non-Disclosure Agreement to be executed by their duly authorized representatives as of the Effective Date.
+
+GREENEDGE TECHNOLOGIES, INC.
+
+By: ______________________________________
+Name: Laura M. Chen  
+Title: Vice President, Legal Affairs  
+Date: March 15, 2025  
+
+APEX BIOSOLUTIONS LLC
+
+By: ______________________________________
+Name: Daniel R. Hoffman  
+Title: Managing Member  
+Date: March 15, 2025  
+
+---
+
+EXHIBIT A
+
+DESCRIPTION OF PURPOSE
+
+The Parties intend to engage in discussions and evaluation related to a potential collaboration for research, development, and commercialization of a novel bioengineered polymer composed of renewable feedstocks designed for use in medical implant devices. Such discussions may include sharing technical data, market analyses, manufacturing processes, and regulatory strategies.

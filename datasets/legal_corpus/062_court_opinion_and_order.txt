@@ -1,0 +1,116 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SUPREME COURT OF THE STATE OF NEW YORK  
+COUNTY OF NEW YORK  
+
+------------------------------------------------------------------  
+JULIANA MARSHALL,  
+Plaintiff,  
+
+-against-                                              Index No.: 501239/2025  
+
+NORTHBRIDGE TECHNOLOGIES, INC., and  
+STEVEN CALLAHAN,  
+
+Defendants.  
+------------------------------------------------------------------  
+
+COURT OPINION AND ORDER ON PLAINTIFF’S MOTION FOR A PRELIMINARY INJUNCTION  
+
+Date of Decision: March 18, 2027  
+
+Hon. Marcus L. Reynolds, Justice  
+
+INTRODUCTION  
+
+1. This matter comes before the Court on Plaintiff Juliana Marshall’s motion for a preliminary injunction seeking to enjoin Defendants Northbridge Technologies, Inc. (“Northbridge”) and Steven Callahan (“Callahan”) from launching a new software product allegedly containing Plaintiff’s proprietary trade secrets. The motion was filed on December 1, 2026.  
+
+2. Defendants oppose the motion and argue, among other things, that the alleged trade secrets are either not protectable or not used in the challenged product. Defendants also note that an appeal is currently pending before the Appellate Division, First Department, challenging the Court’s prior denial of Plaintiff’s prior motion for preliminary relief. (See Northbridge Technologies, Inc. v. Marshall, 2026 NY Slip Op 31345(U), pending, Appellate Division, Case No. 2026-04578.)  
+
+3. For the reasons set forth below, Plaintiff’s motion is GRANTED IN PART and DENIED IN PART. The Court finds that Plaintiff has demonstrated a likelihood of success on the merits with respect to certain narrowly defined trade secrets, and a threat of irreparable harm sufficient to warrant preliminary injunctive relief, but only as to limited portions of the contested product and only for a defined duration pending final resolution of the case.  
+
+FACTUAL BACKGROUND  
+
+4. Plaintiff Juliana Marshall (“Marshall”) is a software engineer and former senior product manager at Northbridge Technologies, where she was employed from January 2019 until her resignation in September 2025.  
+
+5. Northbridge is a New York-based software development company specializing in artificial intelligence solutions for financial compliance. Defendant Callahan is the founder and CEO of Northbridge.  
+
+6. During her employment, Marshall developed proprietary algorithms and methodologies relating to the automated detection of anomalous financial transactions (“the Algorithms”), which she alleges are trade secrets owned by Northbridge but unlawfully used by Defendants after her departure.  
+
+7. In August 2025, following her resignation, Marshall allegedly discovered that Northbridge was preparing to launch a new software product, “FinSentinel AI,” incorporating the challenged Algorithms without her authorization or credit.  
+
+8. Plaintiff thereafter commenced this action on October 15, 2025, alleging misappropriation of trade secrets under New York Civil Rights Law Article 39 and common law claims for breach of fiduciary duty and unjust enrichment.  
+
+9. On November 10, 2026, this Court denied Plaintiff’s initial motion for a preliminary injunction (the “Prior Decision”). That decision is currently under appeal to the Appellate Division, First Department (Index No. 2026-04578).  
+
+LEGAL STANDARD  
+
+10. To obtain a preliminary injunction under New York law, the movant must demonstrate (1) a likelihood of success on the merits, (2) irreparable harm in the absence of the injunction, (3) a balancing of equities in the movant’s favor, and (4) that the public interest favors granting the injunction. See CPLR 6301; see also Faiveley Transport Malmo AB v. Wabtec Corp., 559 F.3d 110, 118 (2d Cir. 2009).  
+
+11. The burden is on the plaintiff to justify the extraordinary relief of injunctive relief, especially where the movant has not prevailed on prior motions.  
+
+DISCUSSION  
+
+I. Likelihood of Success on the Merits  
+
+12. Plaintiff contends that the Algorithms constitute valid trade secrets subject to protection under New York law. Northbridge counters that the information was publicly known and developed independently by Defendants’ in-house team post-September 2025.  
+
+13. The Court has reviewed the parties’ evidentiary submissions and finds that Plaintiff has made a prima facie showing that the Algorithms contain unique and confidential information not generally known or ascertainable by proper means, and that reasonable measures to maintain secrecy were implemented.  
+
+14. Notably, Defendants have not disputed that the disputed Algorithms were developed primarily by Plaintiff during her employment period and that the FinSentinel AI product includes functionalities highly similar to those described in Plaintiff’s confidential materials.  
+
+15. However, Plaintiff has not demonstrated that the entirety of the FinSentinel AI product is derived from the Algorithms. Some portions rely on broadly known industry techniques.  
+
+16. Accordingly, Plaintiff is likely to succeed on the merits only as to the specific components of FinSentinel AI that incorporate the discrete Algorithms developed by her.  
+
+II. Irreparable Harm  
+
+17. Plaintiff has demonstrated a credible threat of irreparable harm absent injunctive relief. The commercial release of FinSentinel AI embedding Plaintiff’s confidential Algorithms would render the harm effectively irreversible, as Plaintiff’s proprietary competitive advantage would be lost and damages would be difficult to quantify.  
+
+18. Defendants argue that monetary damages would be an adequate remedy, but the sophistication and uniqueness of the trade secrets here weigh against that argument.  
+
+III. Balancing of Equities  
+
+19. The equities favor Plaintiff with respect to the protection of legitimate trade secrets but must be balanced against Defendants’ interest in commercial enterprise and product launch.  
+
+20. To avoid undue prejudice to Defendants, the injunction will be narrowly tailored to prohibit use of the identified Algorithms within FinSentinel AI for a period limited to 90 days from the date of this order.  
+
+21. This limited duration will allow Plaintiff to pursue appellate review and trial proceedings while preventing irreparable harm during the pendency of appeals and trial.  
+
+IV. Public Interest  
+
+22. Protecting intellectual property rights fosters innovation and is in the public interest. Conversely, unwarranted restraints on commerce are disfavored. The limited scope and duration of the injunction balance these competing concerns.  
+
+ORDER  
+
+23. Plaintiff’s motion for a preliminary injunction is GRANTED IN PART and DENIED IN PART.  
+
+24. Defendants Northbridge Technologies, Inc. and Steven Callahan, their officers, agents, servants, employees, and all persons acting in concert with them, are hereby ENJOINED from using, deploying, marketing, or otherwise incorporating the trade secret Algorithms specifically developed by Plaintiff Juliana Marshall into the FinSentinel AI software product or any other product or service, pending further order of this Court or final adjudication.  
+
+25. This injunction shall remain in effect for a period of ninety (90) days from the date of this order, i.e., until June 16, 2027, unless extended or modified by further order of this Court.  
+
+26. Within 14 days of this order, Plaintiff shall provide Defendants with a detailed specification identifying the exact portions of the FinSentinel AI product subject to this injunction to avoid undue interference with lawful portions of Defendants’ business.  
+
+27. The parties are directed to submit a joint status report no later than May 15, 2027, regarding the status of the pending appeal and any other pertinent developments.  
+
+28. The Court recognizes that the Appellate Division, First Department, has jurisdiction over the pending appeal (Index No. 2026-04578) and that the appeal may impact the scope of relief herein. Accordingly, this order does not prejudice the parties’ rights to seek modification pending appellate review.  
+
+29. Defendants shall post a bond in the amount of $250,000 within 10 days of this order to secure potential damages should it be later determined that the injunction was improvidently granted.  
+
+SO ORDERED.  
+
+Dated: March 18, 2027  
+New York, New York  
+
+__________________________________  
+Hon. Marcus L. Reynolds  
+Justice of the Supreme Court  
+
+CERTIFICATION  
+
+I hereby certify that the foregoing constitutes the Court’s Opinion and Order with respect to Plaintiff’s motion for a preliminary injunction filed on December 1, 2026, and is duly entered in the records of the Supreme Court of the State of New York, County of New York.  
+
+March 18, 2027  
+
+__________________________________  
+Clerk of the Court

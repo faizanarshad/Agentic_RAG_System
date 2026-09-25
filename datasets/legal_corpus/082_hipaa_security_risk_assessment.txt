@@ -1,0 +1,123 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+HIPAA Security Risk Assessment and Compliance Record  
+AvanteHealth Medical Group  
+Conducted for the Period: January 2025 – December 2026  
+Jurisdiction: State of New York  
+
+1. Introduction  
+This Security Risk Assessment and Compliance Record (“Assessment”) has been prepared for AvanteHealth Medical Group (“AvanteHealth” or “the Covered Entity”), pursuant to the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”) Security Rule, 45 C.F.R. § 164.308, and the applicable laws of the State of New York. This Assessment covers all electronic protected health information (ePHI) systems and processes managed or operated by AvanteHealth within the State of New York for the period January 1, 2025 through December 31, 2026.  
+
+2. Purpose  
+The primary purpose of this Assessment is to identify security risks and vulnerabilities affecting AvanteHealth’s ePHI, evaluate existing administrative, physical, and technical safeguards, and establish a remediation roadmap to ensure ongoing HIPAA Security Rule compliance. This Assessment also addresses overdue remediation items identified in a prior audit conducted in March 2024.  
+
+3. Scope  
+3.1 Covered Systems: Electronic Health Record (EHR) System — AvanteHealth EHR v4.9; Patient Portal; Internal Network Infrastructure; and Third-Party Cloud Storage Provider (SecureDataCloud, Inc.).  
+3.2 Locations: AvanteHealth main office (1204 Madison Avenue, Albany, NY) and remote telehealth sites.  
+3.3 Personnel: All clinical, administrative, and IT staff with access to ePHI.  
+
+4. Previous Audit Findings and Overdue Remediation  
+On March 15, 2024, an external audit was conducted by SecureCom Consulting, LLC (Audit Report No. SC-2024-03-AH). The audit identified several critical findings requiring remediation by September 15, 2024. As of December 31, 2024, two remediation items remained outstanding:  
+4.1 Multi-Factor Authentication (MFA) Implementation: The audit recommended full MFA deployment for all systems accessing ePHI. Partial implementation occurred, but MFA remains disabled for remote telehealth staff.  
+4.2 Risk Analysis Documentation: The prior risk analysis was deemed incomplete, lacking sufficient threat modeling and risk prioritization documentation.  
+
+Failure to remediate these items violates 45 C.F.R. § 164.308(a)(1)(ii)(B) and exposes AvanteHealth to liability under New York State Public Health Law § 499-c.  
+
+5. Current Risk Assessment Methodology  
+5.1 Risk Identification: Review of system architecture, access controls, security incident logs (January 2025–July 2026), employee interviews, and policy documents.  
+5.2 Risk Analysis: Evaluation of likelihood and impact of identified threats on confidentiality, integrity, and availability of ePHI, using a qualitative risk matrix.  
+5.3 Risk Mitigation Planning: Development of remedial actions prioritized by risk severity and resource availability.  
+
+6. Findings and Risk Analysis  
+6.1 Access Control and Authentication  
+6.1.1 Risk: MFA is not fully implemented for remote telehealth personnel, which exposes ePHI to unauthorized access through compromised credentials.  
+6.1.2 Likelihood: High  
+6.1.3 Impact: Severe — potential breach involving patient records could lead to regulatory penalties and reputational harm.  
+6.2 Risk Status: Overdue since prior audit (expected remediation by 09/15/2024).  
+
+6.2 Network Security  
+6.2.1 Risk: Firewall configurations lack segmentation between clinical systems and administrative networks, increasing the attack surface.  
+6.2.2 Likelihood: Moderate  
+6.2.3 Impact: High — possible lateral movement by threat actors could lead to large-scale data exposure.  
+6.3 Risk Status: New finding.  
+
+6.3 Risk Analysis Documentation  
+6.3.1 Risk: Prior risk analysis documentation remains incomplete, with inadequate threat models and insufficient prioritization of risks.  
+6.3.2 Likelihood: N/A (Documentation deficiency)  
+6.3.3 Impact: Moderate — impedes effective remediation planning and compliance reporting.  
+6.4 Risk Status: Overdue since prior audit.  
+
+6.4 Data Backup and Recovery  
+6.4.1 Risk: Backup schedules do not align with current data volumes, leading to potential loss of recent ePHI in case of system failure.  
+6.4.2 Likelihood: Moderate  
+6.4.3 Impact: High — loss of patient data may disrupt care delivery and violate HIPAA data integrity requirements.  
+6.5 Risk Status: New finding.  
+
+7. Remediation Plan and Deadlines  
+7.1 Multi-Factor Authentication (MFA) for Remote Telehealth Staff  
+7.1.1 Obligation: Complete rollout of MFA for all remote users accessing ePHI systems.  
+7.1.2 Responsible Party: IT Security Department, led by Chief Information Security Officer (CISO), Ms. Amelia Roth.  
+7.1.3 Deadline: March 31, 2025.  
+7.1.4 Estimated Cost: $45,000 (software licensing, hardware tokens, employee training).  
+
+7.2 Network Segmentation and Firewall Improvement  
+7.2.1 Obligation: Implement network segmentation between clinical and administrative systems and enhance firewall rules to reduce lateral movement risk.  
+7.2.2 Responsible Party: IT Infrastructure Team, overseen by Network Administrator Mr. Julian Mercado.  
+7.2.3 Deadline: June 30, 2025.  
+7.2.4 Estimated Cost: $75,000 (hardware upgrades, consulting fees).  
+
+7.3 Complete and Update Risk Analysis Documentation  
+7.3.1 Obligation: Conduct comprehensive risk analysis including threat modeling, risk prioritization, and documentation per OCR guidelines.  
+7.3.2 Responsible Party: Compliance Officer, Ms. Serena Delgado.  
+7.3.3 Deadline: February 28, 2025.  
+7.3.4 Estimated Cost: $15,000 (consulting and internal labor).  
+
+7.4 Data Backup Policy Revision and Implementation  
+7.4.1 Obligation: Restructure backup schedules to daily incremental backups with weekly full backups; test restoration procedures quarterly.  
+7.4.2 Responsible Party: Data Management Team, led by Backup Coordinator Mr. Raj Patel.  
+7.4.3 Deadline: April 30, 2025.  
+7.4.4 Estimated Cost: $30,000 (additional storage resources, backup software licensing).  
+
+8. Risk Acceptance  
+AvanteHealth management acknowledges the risks outlined and commits to the above remediation schedule. Delayed remediation from the 2024 audit is recognized as a compliance deficiency and priority will be given to addressing overdue items by the deadlines specified.  
+
+9. Compliance Obligations and Legal Considerations  
+9.1 Under 45 C.F.R. § 164.308(a)(1), AvanteHealth is required to perform accurate and thorough risk assessments and implement security measures sufficient to reduce risks and vulnerabilities to a reasonable and appropriate level.  
+9.2 New York State Public Health Law § 499-c requires covered entities to safeguard confidential patient information and report breaches within the statutory timeframes.  
+9.3 Failure to remediate outstanding risks increases exposure to Office for Civil Rights (“OCR”) enforcement actions, including but not limited to monetary penalties up to $1,919,173 per violation under HIPAA’s Civil Money Penalties provisions (45 C.F.R. § 160.404).  
+9.4 This Assessment will be submitted to the AvanteHealth Board of Directors at the next meeting scheduled for February 4, 2025, for formal review and approval.  
+
+10. Monitoring and Follow-Up  
+10.1 Quarterly internal review of remediation progress will be conducted, with reports submitted to the Compliance Committee.  
+10.2 A follow-up external security audit is scheduled for November 2025 to verify implementation efficacy and ongoing compliance.  
+10.3 Continuous training programs for all staff on HIPAA security policies and incident reporting will be instituted starting March 2025.  
+
+11. Signatures and Certification  
+
+By signing below, the undersigned certify that this Security Risk Assessment and Compliance Record has been completed to the best of their knowledge, reflecting an accurate assessment of the current state of AvanteHealth’s HIPAA Security compliance and the commitment to remediate all identified risks within the stipulated deadlines.  
+
+_____________________________  
+Amelia Roth  
+Chief Information Security Officer  
+AvanteHealth Medical Group  
+Date: January 20, 2025  
+
+_____________________________  
+Serena Delgado  
+Compliance Officer  
+AvanteHealth Medical Group  
+Date: January 20, 2025  
+
+_____________________________  
+Dr. Marcus L. Fontaine  
+Chief Executive Officer  
+AvanteHealth Medical Group  
+Date: January 20, 2025  
+
+Document Control:  
+Document Version: 2.1  
+Document ID: AH-HIPAA-SRA-0125-26  
+Prepared by: SecureCom Consulting, LLC  
+Prepared Date: January 15, 2025  
+
+End of Document

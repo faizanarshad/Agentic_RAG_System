@@ -18,12 +18,19 @@ import {
   Sparkles,
   Zap,
   Database,
-  Brain
+  Brain,
+  Scale,
+  Stethoscope,
+  Ruler
 } from 'lucide-react';
 import './index.css';
+import { fetchBackend } from './api';
+import LegalSynthesis from './LegalSynthesis';
+import EngineeringWorkspace from './EngineeringWorkspace';
 
 // Types
-type Tab = 'chat' | 'upload' | 'status';
+type Tab = 'medical' | 'legal' | 'engineering' | 'status';
+type MedicalView = 'chat' | 'upload';
 
 interface Message {
   id: string;
@@ -52,17 +59,6 @@ interface HealthStatus {
   message: string;
 }
 
-// API functions
-const API_BASE = 'http://localhost:8000';
-
-const fetchBackend = async (endpoint: string, options?: RequestInit) => {
-  const response = await fetch(`${API_BASE}${endpoint}`, options);
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({ detail: response.statusText }));
-    throw new Error(errorData.detail || response.statusText);
-  }
-  return response.json();
-};
 
 // Utility functions
 const formatFileSize = (bytes: number): string => {
@@ -96,7 +92,8 @@ const sampleQuestions = [
 
 const App: React.FC = () => {
   // State management
-  const [activeTab, setActiveTab] = useState<Tab>('chat');
+  const [activeTab, setActiveTab] = useState<Tab>('medical');
+  const [medicalView, setMedicalView] = useState<MedicalView>('chat');
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const saved = localStorage.getItem('theme');
     return (saved as 'light' | 'dark') || 'light';
@@ -122,6 +119,8 @@ const App: React.FC = () => {
   const [health, setHealth] = useState<HealthStatus | null>(null);
   const [dragActive, setDragActive] = useState(false);
   
+  const successfulUploads = uploadedFiles.filter(f => f.status === 'success').length;
+
   // Refs
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -249,6 +248,11 @@ const App: React.FC = () => {
     } finally {
       setIsChatLoading(false);
     }
+  };
+
+  const openMedicalChat = () => {
+    setMedicalView('chat');
+    setTimeout(() => inputRef.current?.focus(), 0);
   };
 
   const handleSampleQuestion = (question: string) => {
@@ -458,8 +462,9 @@ const App: React.FC = () => {
             
             <nav className="nav">
               {[
-                { id: 'chat' as const, label: 'Chat', icon: MessageSquare },
-                { id: 'upload' as const, label: 'Upload', icon: Upload },
+                { id: 'medical' as const, label: 'Medical', icon: Stethoscope },
+                { id: 'legal' as const, label: 'Legal', icon: Scale },
+                { id: 'engineering' as const, label: 'Engineering', icon: Ruler },
                 { id: 'status' as const, label: 'Status', icon: Activity },
               ].map((tab) => {
                 const Icon = tab.icon;
@@ -481,7 +486,33 @@ const App: React.FC = () => {
 
       {/* Main Content */}
       <main className="main">
-        {activeTab === 'chat' && (
+        {activeTab === 'medical' && (
+          <div className="medical-page">
+            <div className="medical-header">
+              <div>
+                <h2 className="legal-page-title"><Stethoscope size={22} /> Medical</h2>
+                <p className="legal-muted">Upload clinical documents and ask questions grounded in them.</p>
+              </div>
+              <nav className="legal-subnav" aria-label="Medical views">
+                <button
+                  onClick={() => setMedicalView('chat')}
+                  className={`nav-button ${medicalView === 'chat' ? 'active' : ''}`}
+                >
+                  <MessageSquare size={16} />
+                  Chat
+                </button>
+                <button
+                  onClick={() => setMedicalView('upload')}
+                  className={`nav-button ${medicalView === 'upload' ? 'active' : ''}`}
+                >
+                  <Upload size={16} />
+                  Documents
+                  {successfulUploads > 0 && <span className="medical-count">{successfulUploads}</span>}
+                </button>
+              </nav>
+            </div>
+            <div className="medical-body">
+        {medicalView === 'chat' && (
           <div className="chat-container">
             {/* Messages */}
             <div className="messages">
@@ -503,6 +534,10 @@ const App: React.FC = () => {
                       </button>
                     ))}
                   </div>
+                  <button className="legal-link medical-upload-link" onClick={() => setMedicalView('upload')}>
+                    <Upload size={14} />
+                    Have your own clinical documents? Upload PDFs or CSVs to ground the answers in them
+                  </button>
                 </div>
               )}
 
@@ -598,7 +633,7 @@ const App: React.FC = () => {
           </div>
         )}
         
-        {activeTab === 'upload' && (
+        {medicalView === 'upload' && (
           <div className="upload-container">
             <div className="upload-content">
               <div className="upload-card">
@@ -649,10 +684,18 @@ const App: React.FC = () => {
 
               {uploadedFiles.length > 0 && (
                 <div className="upload-card">
-                  <h3 className="upload-title">
-                    <FileText size={20} />
-                    Uploaded Files ({uploadedFiles.length})
-                  </h3>
+                  <div className="medical-files-header">
+                    <h3 className="upload-title">
+                      <FileText size={20} />
+                      Uploaded Files ({uploadedFiles.length})
+                    </h3>
+                    {successfulUploads > 0 && (
+                      <button className="upload-button" onClick={openMedicalChat}>
+                        <MessageSquare size={16} />
+                        Ask in chat
+                      </button>
+                    )}
+                  </div>
                   <div className="file-list">
                     {uploadedFiles.map((file) => (
                       <div key={file.id} className="file-item">
@@ -713,7 +756,14 @@ const App: React.FC = () => {
             </div>
           </div>
         )}
-        
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'legal' && <LegalSynthesis />}
+
+        {activeTab === 'engineering' && <EngineeringWorkspace />}
+
         {activeTab === 'status' && (
           <div className="status-container">
             <div className="status-content">

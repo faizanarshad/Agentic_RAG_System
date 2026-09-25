@@ -1,0 +1,111 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SUPREME COURT OF THE STATE OF NEW YORK  
+COUNTY OF WESTCHESTER  
+
+----------------------------------------------------------  
+GREENHAVEN TECHNOLOGIES, INC.,  
+Plaintiff,  
+
+-against-  
+
+PINEHURST SUPPLIES LLC,  
+Defendant.  
+----------------------------------------------------------  
+
+Index No.: 512345/2027  
+
+COMPLAINT FOR BREACH OF CONTRACT  
+
+Plaintiff Greenhaven Technologies, Inc. (“Greenhaven” or “Plaintiff”), by its attorneys, Smith & Reilly LLP, for its Complaint against Defendant Pinehurst Supplies LLC (“Pinehurst” or “Defendant”), alleges as follows:
+
+1.   PARTIES  
+
+1.1 Plaintiff Greenhaven Technologies, Inc. is a corporation organized and existing under the laws of the State of Delaware, with its principal place of business located at 250 Maple Avenue, White Plains, New York.  
+
+1.2 Defendant Pinehurst Supplies LLC is a limited liability company organized under the laws of the State of New York, with a principal place of business located at 100 Industrial Parkway, Yonkers, New York.  
+
+2.   JURISDICTION AND VENUE  
+
+2.1 Jurisdiction is proper in this Court pursuant to CPLR § 301 as Defendant is a New York limited liability company with its principal place of business in Westchester County, New York.  
+
+2.2 Venue lies in Westchester County pursuant to CPLR § 503 because the Defendant’s principal place of business is in Westchester County, and the contract at issue was to be performed in Westchester County.  
+
+3.   FACTUAL ALLEGATIONS  
+
+3.1 On or about March 15, 2025, Plaintiff and Defendant entered into a written agreement (the “Agreement”) whereby Defendant agreed to supply Greenhaven with custom electronic components for use in its manufacturing operations (the “Products”). A true and correct copy of the Agreement is annexed hereto as Exhibit A.  
+
+3.2 Pursuant to the Agreement, Defendant agreed to deliver 10,000 units of the Products to Plaintiff at Plaintiff’s facility in White Plains, New York, in quarterly shipments of 2,500 units each, with the first shipment due by June 30, 2025, and all shipments to be completed by March 31, 2026.  
+
+3.3 Defendant was obligated to provide Products meeting the precise specifications set forth in Exhibit B to the Agreement, including quality standards, testing results, and certifications.  
+
+3.4 The total contract price for the Products was $1,500,000.00, payable in installments coinciding with delivery dates. Plaintiff paid Defendant $375,000.00 upon execution of the Agreement as an advance payment on the first shipment.  
+
+3.5 Defendant failed to deliver the first shipment by June 30, 2025, and subsequent shipments were delayed repeatedly and delivered with defective components that did not comply with the specifications.  
+
+3.6 Plaintiff notified Defendant in writing on October 10, 2025, and subsequently on February 5, 2026, of the defects and late deliveries, requesting cure under the terms of the Agreement.  
+
+3.7 Despite repeated demands, Defendant failed to cure its breach and ceased all deliveries as of March 1, 2026.  
+
+3.8 As a result of Defendant’s breaches, Plaintiff suffered significant operational disruptions, lost profits, and incurred additional expenses sourcing replacement components elsewhere.  
+
+3.9 On or about April 15, 2026, Plaintiff formally terminated the Agreement due to Defendant’s material breach and notified Defendant accordingly.  
+
+3.10 The total amount remaining unpaid to Plaintiff, representing damages, is $750,000.00 plus consequential damages and costs incurred due to Defendant’s breach.  
+
+4.   CLAIM FOR RELIEF – BREACH OF CONTRACT  
+
+4.1 Plaintiff repeats and realleges each and every allegation set forth in paragraphs 1 through 3.  
+
+4.2 Defendant breached the Agreement by failing to deliver the Products in accordance with the contract specification, failing to meet delivery deadlines, and ultimately refusing to perform its remaining obligations.  
+
+4.3 Plaintiff fully performed all conditions precedent required under the Agreement, including payment of advance sums.  
+
+4.4 As a direct and proximate result of Defendant’s breach, Plaintiff has sustained damages in the amount of $750,000.00, plus consequential damages and costs.  
+
+5.   DEFENDANT’S STATUTE OF LIMITATIONS DEFENSE  
+
+5.1 Defendant may assert a defense based on the statute of limitations under CPLR § 213(2), which provides a six-year limitation period for breach of contract claims.  
+
+5.2 Plaintiff asserts that this action is timely filed, as the most recent breach occurred on March 1, 2026, and this Complaint is filed within one year thereafter, on or before March 1, 2027, well within the six-year limitation period.  
+
+5.3 Furthermore, the breach was ongoing, with repeated failures and refusals to deliver, and Defendant’s material breach was not fully ascertainable until termination of the Agreement in April 2026.  
+
+5.4 Plaintiff is entitled to equitable tolling and/or delayed accrual of the statute of limitations by virtue of Defendant’s concealment and ongoing breaches.  
+
+WHEREFORE, Plaintiff respectfully requests that the Court enter judgment:  
+
+a. Awarding Plaintiff damages in the amount of $750,000.00, plus consequential damages and costs;  
+
+b. Awarding Plaintiff prejudgment and post-judgment interest at the lawful rate;  
+
+c. Awarding Plaintiff costs and attorneys’ fees as permitted by law or contract;  
+
+d. Granting such other and further relief as this Court deems just and proper.  
+
+Dated: White Plains, New York  
+       February 15, 2027  
+
+Respectfully submitted,  
+
+SMITH & REILLY LLP  
+
+By:  
+/s/ Amanda J. Reilly  
+Amanda J. Reilly, Esq.  
+Attorneys for Plaintiff  
+Greenhaven Technologies, Inc.  
+450 Mamaroneck Avenue, Suite 300  
+White Plains, NY 10605  
+Phone: (914) 555-1234  
+Email: areilly@smithreillylaw.com  
+
+TO:  
+Pinehurst Supplies LLC  
+Attn: Legal Department  
+100 Industrial Parkway  
+Yonkers, NY 10701  
+
+----------------------------------------------------------  
+
+EXHIBIT A: Agreement dated March 15, 2025 (attached herewith)
