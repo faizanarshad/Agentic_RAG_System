@@ -9,6 +9,7 @@ from api.routes_chat import router as chat_router
 from api.routes_files import router as files_router
 from api.routes_legal import router as legal_router
 from api.routes_engineering import router as engineering_router
+from api.routes_contact import router as contact_router
 from core.config import settings
 from utils.logger import logger
 
@@ -39,7 +40,7 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI application
 app = FastAPI(
-    title="Agentic RAG System",
+    title="AIDocumentAgent API",
     description="A Retrieval-Augmented Generation system using LangGraph, Pinecone, and OpenAI",
     version="1.0.0",
     lifespan=lifespan
@@ -59,13 +60,14 @@ app.include_router(chat_router)
 app.include_router(files_router)
 app.include_router(legal_router)
 app.include_router(engineering_router)
+app.include_router(contact_router)
 
 
 @app.get("/")
 async def root():
     """Root endpoint with API information."""
     return {
-        "message": "Agentic RAG System API",
+        "message": "AIDocumentAgent API",
         "version": "1.0.0",
         "description": "A Retrieval-Augmented Generation system using LangGraph, Pinecone, and OpenAI",
         "endpoints": {
@@ -73,6 +75,7 @@ async def root():
             "files": "/files/",
             "legal": "/legal/",
             "engineering": "/engineering/",
+            "contact": "/contact",
             "docs": "/docs",
             "health": "/health"
         }

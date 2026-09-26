@@ -1,82 +1,38 @@
-# 🎨 RAG System Frontend
+# AIDocumentAgent website and workspace (Next.js, JavaScript)
 
-A clean, modern React frontend for the Agentic RAG System.
+Public marketing site (Home, Solutions, About, Contact) plus the AIDocumentAgent workspace
+(Engineering, Legal, Medical). Built with the Next.js App Router in JavaScript.
 
-## 🚀 Quick Start
+## Run
 
 ```bash
-# Install dependencies
+cp .env.example .env.local   # then edit the values
 npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
+npm run dev                  # http://localhost:3001
 ```
 
-## 📁 Project Structure
-
-```
-frontend/
-├── src/
-│   ├── App.tsx          # Main application component
-│   ├── main.tsx         # Application entry point
-│   ├── index.css        # Global styles
-│   └── assets/          # Static assets
-├── public/              # Public assets
-├── package.json         # Dependencies and scripts
-└── README.md           # This file
-```
-
-## 🎯 Features
-
-- **Clean Interface**: Simple, professional design
-- **Responsive Layout**: Works on all device sizes
-- **Real-time Chat**: Interactive conversation interface
-- **File Upload**: Drag-and-drop PDF upload
-- **Status Monitoring**: System health dashboard
-- **TypeScript**: Type-safe development
-
-## 🛠️ Development
-
-The frontend is built with:
-- **React 19** - Modern React with latest features
-- **TypeScript** - Type-safe JavaScript
-- **Vite** - Fast build tool and dev server
-- **Custom CSS** - Clean, maintainable styles
-
-## 🔗 API Integration
-
-The frontend connects to the backend API at `http://localhost:8000`:
-
-- **Chat**: `POST /chat/` - Send queries and get responses
-- **File Upload**: `POST /files/add_file` - Upload PDF documents
-- **Health Check**: `GET /health` - Check system status
-
-## 📱 Responsive Design
-
-The interface adapts to different screen sizes:
-- **Desktop**: Full-featured layout with sidebar
-- **Tablet**: Optimized for touch interaction
-- **Mobile**: Compact, mobile-friendly design
-
-## 🎨 Styling
-
-Uses custom CSS with:
-- Clean, modern design
-- Consistent color scheme
-- Smooth animations
-- Accessible contrast ratios
-
-## 🚀 Deployment
+Production:
 
 ```bash
-# Build for production
 npm run build
-
-# Preview production build
-npm run preview
+npm start                    # http://localhost:3001
 ```
 
-The built files will be in the `dist/` directory, ready for deployment to any static hosting service.
+The workspaces and contact form need the FastAPI back end (`../backend`, port 8000).
+
+## Structure
+
+- `app/(site)/` – statically rendered public pages with shared header and footer
+- `app/(workspace)/workspace/` – the application (client-rendered, `noindex`, own stylesheet)
+- `app/sitemap.js`, `app/robots.js`, `app/manifest.js`, `app/opengraph-image.js`, `app/icon.svg`, `app/apple-icon.js` – SEO and icons
+- `components/site/` – header, footer, breadcrumbs, JSON-LD, product frames, contact form
+- `components/workspace/` – Engineering, Legal, Medical and Status workspaces
+- `lib/site.js` – brand, URLs and contact details; `lib/content.js` – page copy; `lib/structured-data.js` – schema.org helpers
+- `assets/` – product screenshots (statically imported, served as AVIF/WebP by `next/image`)
+
+## SEO checklist
+
+- Set `NEXT_PUBLIC_SITE_URL` to the production origin before building; canonical URLs, the sitemap and structured data use it.
+- Each public page exports its own title, description, canonical URL and Open Graph data.
+- Structured data: Organization, WebSite, SoftwareApplication and FAQPage (home), Service (solution pages), AboutPage, ContactPage, CollectionPage and BreadcrumbList.
+- `/workspace` is `noindex, nofollow` and disallowed in `robots.txt`.

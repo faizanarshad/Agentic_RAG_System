@@ -1,6 +1,6 @@
-# 🤖 Agentic RAG System
+# AIDocumentAgent
 
-A comprehensive Retrieval-Augmented Generation (RAG) system built with FastAPI, React, and modern AI technologies. This system allows you to upload documents, generate embeddings, and ask questions about your content using advanced language models.
+AI agents that read, check and document technical, legal and clinical files: engineering drawing review against ISO/ASME, legal document synthesis across whole collections, and clinical question answering over your own documents. FastAPI + LangGraph + Pinecone back end, Next.js (JavaScript) website and workspace.
 
 ## 🏗️ Architecture
 
@@ -13,9 +13,10 @@ Agentic_RAG_System/
 │   ├── utils/              # Utility functions and logging
 │   ├── sample_documents/   # Test PDF and CSV documents
 │   └── requirements.txt    # Python dependencies
-├── frontend/               # React frontend application
-│   ├── src/                # Source code
-│   ├── public/             # Static assets
+├── frontend/               # Next.js (JavaScript) website + workspace
+│   ├── app/                # App Router: public pages, /workspace app, SEO files
+│   ├── components/         # Site and workspace components
+│   ├── lib/                # Site config, content, structured data
 │   └── package.json        # Node.js dependencies
 ├── docs/                   # Documentation
 │   └── TESTING_GUIDE.md    # Comprehensive testing guide
@@ -30,7 +31,7 @@ Agentic_RAG_System/
 - **Medical CSV Support**: Automatic medical content detection and HIPAA-compliant PHI removal
 - **RAG Pipeline**: OpenAI + Pinecone for intelligent document retrieval
 - **FastAPI Endpoints**: RESTful APIs for chat and file management
-- **React UI**: Medical (chat + documents), Legal, Engineering and Status pages
+- **Website**: Next.js marketing site with technical SEO (metadata, canonical URLs, sitemap, robots.txt, structured data, OG images) and the workspace app
 - **File Management**: Upload, delete, and replace file vectors from UI
 - **Medical Specialization**: Optimized for medical datasets and clinical documentation
 - **Legal Data Synthesis**: Agentic analysis of contracts, court filings, case files and compliance records, with cross-document synthesis (see below)
@@ -60,15 +61,19 @@ PINECONE_INDEX_NAME=rag-documents
 PINECONE_ENVIRONMENT=ap-southeast-1
 ```
 
-### Frontend
+### Frontend (Next.js)
 ```
 cd frontend
+cp .env.example .env.local   # set NEXT_PUBLIC_SITE_URL before deploying
 npm install
 npm run dev
 ```
 
-- Frontend: http://localhost:5173
+- Website: http://localhost:3001 (Home, Solutions, About, Contact)
+- Workspace: http://localhost:3001/workspace (Engineering, Legal, Medical)
 - API docs: http://localhost:8000/docs
+
+See `frontend/README.md` for structure and the SEO checklist. Contact-form messages are stored in `backend/data/contact/messages.db`.
 
 ## 🧪 Test
 
@@ -205,6 +210,7 @@ pip install -r requirements.txt
 - `POST /legal/ask` – cited Q&A (`question`, optional `file_id`)
 - `POST /legal/search` – semantic passage search (`query`, optional `doc_type`, `overall_risk`, `top_k`)
 - `POST /legal/synthesize` – cross-document synthesis report (`question`, optional `doc_type`, `overall_risk`, `max_documents`)
+- `POST /contact` – store a website contact-form message (validated, honeypot, rate-limited)
 - `POST /engineering/drawings` – upload and review a drawing (multipart `file`, `standard` = ISO|ASME)
 - `GET /engineering/drawings`, `GET /engineering/drawings/{id}`, `GET /engineering/drawings/{id}/pages/{n}` – library, review detail, rendered sheet
 - `POST /engineering/drawings/{id}/review`, `POST /engineering/drawings/{id}/ask`, `DELETE /engineering/drawings/{id}` – re-review, ask, delete
