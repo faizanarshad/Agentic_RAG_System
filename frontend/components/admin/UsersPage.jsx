@@ -90,7 +90,7 @@ export default function UsersPage() {
         {data && (
           <div className="legal-table-wrap">
             <table className="legal-table admin-table">
-              <thead><tr><th>User</th><th>Role</th><th>Status</th><th>Last sign-in</th><th>Events (30d)</th><th /></tr></thead>
+              <thead><tr><th>User</th><th>Role</th><th>Status</th><th>2FA</th><th>Last sign-in</th><th>Events (30d)</th><th /></tr></thead>
               <tbody>
                 {data.users.map((u) => {
                   const self = u.id === me?.id;
@@ -111,11 +111,21 @@ export default function UsersPage() {
                         <span className={`legal-badge ${u.status === 'active' ? 'risk-low' : 'neutral'}`}>{u.status}</span>
                         {u.must_change_password ? <span className="legal-badge risk-medium" style={{ marginLeft: 6 }}>temp password</span> : null}
                       </td>
+                      <td>
+                        <span className={`status-pill status-pill--${u.totp_enabled ? 'published' : 'draft'}`}>{u.totp_enabled ? 'On' : 'Off'}</span>
+                      </td>
                       <td>{u.last_login_at ? new Date(u.last_login_at).toLocaleString() : 'Never'}</td>
                       <td>{u.events_30d}</td>
                       <td>
                         <div className="admin-actions">
                           <button className="action-button update" onClick={() => resetPassword(u)}>Reset password</button>
+                          {u.totp_enabled ? (
+                            <button className="action-button update" onClick={() => {
+                              if (window.confirm(`Turn off two-factor authentication for ${u.email}? Use this only if they lost their phone and recovery codes.`)) {
+                                act(() => fetchBackend(`/admin/users/${u.id}/reset-2fa`, jsonRequest('POST', {})), `2FA reset for ${u.email}.`);
+                              }
+                            }}>Reset 2FA</button>
+                          ) : null}
                           {!self && (u.status === 'active' ? (
                             <button className="action-button update" onClick={() => patch(u, { status: 'disabled' }, `${u.email} disabled.`)}>Disable</button>
                           ) : (

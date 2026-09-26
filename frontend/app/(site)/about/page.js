@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Eye, ListChecks, ShieldCheck, UserCheck } from 'lucide-react';
 import Breadcrumbs from '@/components/site/Breadcrumbs';
 import JsonLd from '@/components/site/JsonLd';
+import { defaultShareImage } from '@/lib/metadata';
 import { techStack } from '@/lib/content';
 import { site } from '@/lib/site';
 import { webPageSchema } from '@/lib/structured-data';
@@ -13,7 +14,7 @@ export const metadata = {
   title: 'About',
   description,
   alternates: { canonical: '/about' },
-  openGraph: { url: '/about', title: `About ${site.name}`, description },
+  openGraph: { url: '/about', title: `About ${site.name}`, description, images: [defaultShareImage] },
 };
 
 const PRINCIPLES = [

@@ -97,8 +97,25 @@ class PlatformStore:
                     created_at TEXT NOT NULL
                 );
                 CREATE INDEX IF NOT EXISTS idx_llm_usage_created ON llm_usage(created_at);
+                CREATE TABLE IF NOT EXISTS mfa_challenges (
+                    token_hash TEXT PRIMARY KEY,
+                    user_id TEXT NOT NULL,
+                    expires_at TEXT NOT NULL,
+                    attempts INTEGER NOT NULL DEFAULT 0
+                );
                 """
             )
+            # Migration: two-factor authentication columns
+            columns = {row[1] for row in c.execute("PRAGMA table_info(users)")}
+            for name, ddl in (
+                ("totp_secret", "TEXT"),
+                ("totp_pending_secret", "TEXT"),
+                ("totp_enabled", "INTEGER NOT NULL DEFAULT 0"),
+                ("totp_last_step", "INTEGER"),
+                ("recovery_codes", "TEXT"),
+            ):
+                if name not in columns:
+                    c.execute(f"ALTER TABLE users ADD COLUMN {name} {ddl}")
 
     # ------------------------------------------------------------------ users
 
@@ -137,6 +154,7 @@ class PlatformStore:
         with self._connect() as c:
             rows = c.execute(
                 "SELECT u.id, u.email, u.name, u.role, u.status, u.must_change_password, u.created_at, u.last_login_at, "
+                "u.totp_enabled, "
                 "(SELECT COUNT(*) FROM events e WHERE e.user_id = u.id AND e.created_at >= ?) AS events_30d "
                 "FROM users u ORDER BY u.created_at",
                 (iso(utcnow() - timedelta(days=30)),),
@@ -208,6 +226,29 @@ class PlatformStore:
     def purge_expired_sessions(self) -> None:
         with self._lock, self._connect() as c:
             c.execute("DELETE FROM sessions WHERE expires_at < ?", (iso(utcnow()),))
+
+    # ------------------------------------------------------------------ two-factor challenges
+
+    def create_mfa_challenge(self, token_hash: str, user_id: str, minutes: int = 5) -> None:
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM mfa_challenges WHERE expires_at < ?", (iso(utcnow()),))
+            c.execute("INSERT INTO mfa_challenges (token_hash, user_id, expires_at) VALUES (?, ?, ?)",
+                      (token_hash, user_id, iso(utcnow() + timedelta(minutes=minutes))))
+
+    def get_mfa_challenge(self, token_hash: str) -> Optional[Dict[str, Any]]:
+        with self._connect() as c:
+            row = c.execute("SELECT * FROM mfa_challenges WHERE token_hash = ?", (token_hash,)).fetchone()
+        if row is None or row["expires_at"] < iso(utcnow()):
+            return None
+        return dict(row)
+
+    def bump_mfa_attempts(self, token_hash: str) -> None:
+        with self._lock, self._connect() as c:
+            c.execute("UPDATE mfa_challenges SET attempts = attempts + 1 WHERE token_hash = ?", (token_hash,))
+
+    def delete_mfa_challenge(self, token_hash: str) -> None:
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM mfa_challenges WHERE token_hash = ?", (token_hash,))
 
     # ------------------------------------------------------------------ login throttling
 

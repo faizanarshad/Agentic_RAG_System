@@ -389,6 +389,20 @@ def reset_password(user_id: str, request: Request) -> Dict[str, Any]:
     return {"temporary_password": password}
 
 
+@router.post("/users/{user_id}/reset-2fa")
+def reset_two_factor(user_id: str, request: Request) -> Dict[str, Any]:
+    """For a user who lost their authenticator and recovery codes."""
+    store = get_platform_store()
+    target = store.get_user(user_id)
+    if target is None:
+        raise HTTPException(status_code=404, detail="User not found.")
+    store.update_user(user_id, totp_secret=None, totp_pending_secret=None, totp_enabled=0, totp_last_step=None,
+                      recovery_codes=None)
+    store.delete_user_sessions(user_id)
+    store.log_event("admin.2fa_reset", request.state.user["id"], "admin", {"user": target["email"]}, client_ip(request))
+    return {"ok": True}
+
+
 @router.delete("/users/{user_id}")
 def delete_user(user_id: str, request: Request) -> Dict[str, Any]:
     store = get_platform_store()

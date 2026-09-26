@@ -1,6 +1,7 @@
 import { Clock, Mail, ShieldCheck } from 'lucide-react';
 import Breadcrumbs from '@/components/site/Breadcrumbs';
 import JsonLd from '@/components/site/JsonLd';
+import { defaultShareImage } from '@/lib/metadata';
 import ContactForm from '@/components/site/ContactForm';
 import { site } from '@/lib/site';
 import { getSiteSettings } from '@/lib/content-api';
@@ -13,7 +14,7 @@ export const metadata = {
   title: 'Contact',
   description,
   alternates: { canonical: '/contact' },
-  openGraph: { url: '/contact', title: `Contact ${site.name}`, description },
+  openGraph: { url: '/contact', title: `Contact ${site.name}`, description, images: [defaultShareImage] },
 };
 
 export const revalidate = 60;

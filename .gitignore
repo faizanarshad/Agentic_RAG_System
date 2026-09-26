@@ -57,10 +57,17 @@ logs/
 temp/
 tmp/
 
-# Test files
+# Test files (ad-hoc scripts; the real test suites below are tracked)
 test_*.py
 debug_*.py
+!backend/tests/test_*.py
+!frontend/e2e/*.js
 frontend/node_modules/
 
 # Uploaded legal documents and analyses (may contain confidential data)
 backend/data/
+
+# Test and QA artefacts
+frontend/playwright-report/
+frontend/test-results/
+.pytest_cache/

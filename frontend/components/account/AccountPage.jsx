@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { AlertTriangle, CheckCircle, KeyRound, Loader2, Monitor, ShieldCheck } from 'lucide-react';
 import { useAuth } from '@/components/auth/AuthProvider';
 import { fetchBackend, jsonRequest } from '@/lib/api';
+import TwoFactorCard from './TwoFactorCard';
 
 const MIN_LENGTH = 10;
 
@@ -118,6 +119,8 @@ export default function AccountPage() {
             </div>
           </form>
         </section>
+
+        {!required && <TwoFactorCard />}
 
         <section className="upload-card" aria-labelledby="sessions-title">
           <div className="medical-files-header">

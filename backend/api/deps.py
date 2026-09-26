@@ -1,5 +1,6 @@
 """Authentication dependencies shared by the API routers."""
 
+import json
 from typing import Any, Dict
 
 from fastapi import HTTPException, Request
@@ -21,6 +22,8 @@ def public_user(user: Dict[str, Any]) -> Dict[str, Any]:
         "name": user["name"],
         "role": user["role"],
         "must_change_password": bool(user["must_change_password"]),
+        "totp_enabled": bool(user.get("totp_enabled")),
+        "recovery_codes_left": len(json.loads(user["recovery_codes"])) if user.get("recovery_codes") else 0,
     }
 
 

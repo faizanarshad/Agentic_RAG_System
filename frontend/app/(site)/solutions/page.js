@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Ruler, Scale, Stethoscope } from 'lucide-react';
 import Breadcrumbs from '@/components/site/Breadcrumbs';
 import JsonLd from '@/components/site/JsonLd';
+import { defaultShareImage } from '@/lib/metadata';
 import { solutionList } from '@/lib/content';
 import { site } from '@/lib/site';
 import { webPageSchema } from '@/lib/structured-data';
@@ -13,7 +14,7 @@ export const metadata = {
   title: 'Solutions',
   description,
   alternates: { canonical: '/solutions' },
-  openGraph: { url: '/solutions', title: `Solutions | ${site.name}`, description },
+  openGraph: { url: '/solutions', title: `Solutions | ${site.name}`, description, images: [defaultShareImage] },
 };
 
 const ICONS = { engineering: Ruler, legal: Scale, medical: Stethoscope };

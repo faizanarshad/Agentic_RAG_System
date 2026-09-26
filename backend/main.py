@@ -15,7 +15,7 @@ from api.routes_admin import router as admin_router
 from api.routes_analytics import router as analytics_router
 from api.routes_posts import admin_router as content_admin_router, public_router
 from api.deps import require_user
-from api.middleware import activity_logger, origin_guard
+from api.middleware import activity_logger, origin_guard, security_headers
 from core.config import settings
 from utils.logger import logger
 
@@ -57,6 +57,7 @@ app = FastAPI(
 # rejected responses carry CORS headers the browser can read.
 app.middleware("http")(activity_logger)
 app.middleware("http")(origin_guard)
+app.middleware("http")(security_headers)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.FRONTEND_ORIGINS,  # explicit origins: required for credentialed (cookie) requests
@@ -128,5 +129,6 @@ if __name__ == "__main__":
         host=settings.API_HOST,
         port=settings.API_PORT,
         reload=settings.DEBUG,
-        log_level="info"
+        log_level="info",
+        server_header=False,  # don't advertise the server software
     )

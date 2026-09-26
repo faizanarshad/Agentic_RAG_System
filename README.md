@@ -36,6 +36,7 @@ AIDocumentAgent reviews engineering drawings against ISO and ASME standards, syn
 - [API reference](#api-reference)
 - [Website: SEO and performance](#website-seo-and-performance)
 - [Evaluation](#evaluation)
+- [Quality assurance](#quality-assurance)
 - [Security and data handling](#security-and-data-handling)
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
@@ -149,7 +150,12 @@ See **[Admin panel](#admin-panel)** for every admin screen and a how-to guide.
   - errors are generic, and verification runs in constant time;
   - an origin guard provides CSRF defence, with explicit CORS origins;
   - changing a password signs out other sessions.
-- **Account page**: change password, see active sessions, sign out other devices.
+- **Two-factor authentication (TOTP)**:
+  - enrol from the Account page by QR code or manual key; works with Google Authenticator, Microsoft Authenticator, 1Password, Authy and others;
+  - 10 single-use recovery codes, stored as hashes;
+  - replay protection, and a limit of 5 attempts per sign-in challenge;
+  - admins can see who has 2FA and reset it for a user who lost their phone.
+- **Account page**: change password, manage 2FA and recovery codes, see active sessions, sign out other devices.
 - **Admin panel**:
   - **Overview**:
     - KPIs with **change against the previous period**;
@@ -218,6 +224,12 @@ Forgotten password: `venv/bin/python manage.py reset-password --email you@exampl
 | First sign-in: forced password change | Account page: password and active sessions |
 |---|---|
 | ![Temporary password must be changed](docs/images/account-required.png) | ![Account page](docs/images/account.png) |
+
+**Two-factor authentication**
+
+| Set up with an authenticator app | Save recovery codes | Sign in with a code |
+|---|---|---|
+| ![2FA setup with QR code](docs/images/mfa-setup.png) | ![Recovery codes shown once](docs/images/mfa-recovery.png) | ![Second sign-in step](docs/images/mfa-login.png) |
 
 ### Sections at a glance
 
@@ -639,6 +651,9 @@ All workspace endpoints (chat, files, legal, engineering) require a signed-in se
 | `POST` | `/auth/change-password` | Change password (signs out other sessions) |
 | `GET` | `/auth/sessions` | Active sessions |
 | `POST` | `/auth/sessions/revoke-others` | Sign out all other sessions |
+| `POST` | `/auth/login/mfa` | Second sign-in step (`mfa_token` from `/auth/login`, authenticator or recovery `code`) |
+| `POST` | `/auth/2fa/setup` · `/auth/2fa/enable` | Start 2FA enrolment (secret, `otpauth://` URI, QR SVG) / confirm with a code (returns recovery codes once) |
+| `POST` | `/auth/2fa/disable` · `/auth/2fa/recovery-codes` | Turn off 2FA (password + code) / regenerate recovery codes (password) |
 
 </details>
 
@@ -654,6 +669,7 @@ All workspace endpoints (chat, files, legal, engineering) require a signed-in se
 | `GET` · `POST` | `/admin/users` | List / invite users (returns a one-time temporary password) |
 | `PATCH` · `DELETE` | `/admin/users/{id}` | Change name, role or status / delete |
 | `POST` | `/admin/users/{id}/reset-password` | New temporary password, sessions revoked |
+| `POST` | `/admin/users/{id}/reset-2fa` | Turn off a user's 2FA (lost device), sessions revoked |
 | `GET` | `/admin/messages?status=` · `/admin/messages.csv` | Contact inbox / CSV export |
 | `PATCH` · `DELETE` | `/admin/messages/{id}` | Mark read or unread / delete |
 | `GET` | `/admin/activity` · `/admin/activity.csv` | Audit log with filters / CSV export |
@@ -799,6 +815,26 @@ Issues found during development, and the fixes now in place:
 
 ---
 
+## Quality assurance
+
+Automated checks run locally and in CI (`.github/workflows/qa.yml`). The full results, fixed issues and open risks are in **[docs/QA_REPORT.md](docs/QA_REPORT.md)**.
+
+| Suite | Tool | Result |
+|---|---|---|
+| Backend API tests: auth, 2FA, access control, CSRF/CORS, XSS sanitising, uploads, contact, analytics privacy, headers | pytest (`backend/tests`) | **76 passed** |
+| End-to-end: SEO and structured data on every page, broken links, sitemap/robots, mobile layout, console errors, security headers, access control | Playwright (`frontend/e2e`), desktop + mobile | **54 passed** |
+| Accessibility (WCAG 2.1 A/AA) | axe-core | 0 serious or critical violations |
+| Dependency audit | `npm audit` · `pip-audit` | npm: 0 · Python: 67 advisories, all needing Python ≥ 3.10 ([R1](docs/QA_REPORT.md#high)) |
+
+```bash
+cd backend && venv/bin/python -m pytest          # API tests (isolated temp data, no model calls)
+cd frontend && npm run qa                          # lint + build + Playwright (site and API running)
+PW_CHANNEL=chrome npm run test:e2e                 # use an installed Chrome
+E2E_EMAIL=… E2E_PASSWORD=… npm run test:e2e        # include the signed-in journey
+```
+
+---
+
 ## Security and data handling
 
 - **Authentication**: every workspace and admin API requires a session.
@@ -806,6 +842,10 @@ Issues found during development, and the fixes now in place:
   - Passwords use PBKDF2-HMAC-SHA256 with 600,000 iterations.
   - Failed sign-ins are throttled.
   - Users are invite-only and must change the temporary password at first sign-in.
+  - Optional **TOTP two-factor authentication**, with hashed recovery codes and replay protection.
+- **Security headers**:
+  - Website: Content-Security-Policy (scripts from the site only, no framing, `object-src 'none'`), `nosniff`, `X-Frame-Options: DENY`, Referrer-Policy, Permissions-Policy, COOP, and HSTS when served over HTTPS.
+  - API: `nosniff`, `DENY`, `no-referrer`, `no-store` on auth and admin responses; no server banner.
 - **CSRF and CORS**:
   - CORS allows only the configured `FRONTEND_ORIGINS` (credentials enabled);
   - an origin guard rejects state-changing requests from other origins;
@@ -870,11 +910,14 @@ Open http://localhost:8000/files/health and check that `vectordb` and `llm` are 
 
 - [x] **Authentication, roles and admin panel** with analytics, user management, contact inbox and audit log
 - [ ] **Per-user / per-team data scoping** (today all signed-in users share the workspaces' documents)
-- [ ] **Two-factor authentication** (TOTP) and single sign-on (SAML/OIDC)
+- [x] **Two-factor authentication** (TOTP with recovery codes)
+- [x] **Automated QA**: API tests, end-to-end, accessibility and CI workflow
+- [ ] **Python 3.12 upgrade** to clear 67 dependency advisories ([QA report R1](docs/QA_REPORT.md#high))
+- [ ] Single sign-on (SAML/OIDC)
 - [ ] **Email delivery** for invitations and self-service password reset
 - [ ] **Deployment**: Dockerfiles, `docker-compose`, and a guide for Vercel (front end) plus a container host (API)
-- [ ] **CI**: lint, build and tests on every pull request
-- [ ] **Automated tests**: pytest for rule engines and stores, Playwright end-to-end tests, and an evaluation harness that scores agents against the synthetic answer keys
+- [x] **CI**: lint, build, API and end-to-end tests on every push and pull request
+- [ ] **Agent evaluation harness** in CI, scoring agents against the synthetic answer keys
 - [x] Contact-form admin inbox (read/unread, CSV export)
 - [ ] **Contact form notifications** (email/Slack)
 - [ ] Remove the committed `backend/venv/` from the repository; move to Python 3.11+

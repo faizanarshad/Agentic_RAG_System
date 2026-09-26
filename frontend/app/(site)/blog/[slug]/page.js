@@ -7,6 +7,7 @@ import JsonLd from '@/components/site/JsonLd';
 import PostCard, { formatDate } from '@/components/site/PostCard';
 import { getPost, getPublishedPosts, uploadUrl } from '@/lib/content-api';
 import { absoluteUrl, site } from '@/lib/site';
+import { defaultShareImage } from '@/lib/metadata';
 
 export const revalidate = 60;
 
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }) {
       publishedTime: post.published_at,
       modifiedTime: post.updated_at,
       tags: post.tags,
-      ...(post.cover_image && { images: [{ url: uploadUrl(post.cover_image), alt: post.cover_alt || post.title }] }),
+      images: post.cover_image ? [{ url: uploadUrl(post.cover_image), alt: post.cover_alt || post.title }] : [defaultShareImage],
     },
   };
 }

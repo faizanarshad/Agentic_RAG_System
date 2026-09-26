@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { CircleAlert, Eye, EyeOff, Loader2, LogIn } from 'lucide-react';
+import { CircleAlert, Eye, EyeOff, KeyRound, Loader2, LogIn, ShieldCheck } from 'lucide-react';
 import { fetchBackend, jsonRequest } from '@/lib/api';
 
 // Only allow redirects to paths inside this site (prevents open redirects)
@@ -18,6 +18,11 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [mfaToken, setMfaToken] = useState(null);
+  const [code, setCode] = useState('');
+  const [useRecovery, setUseRecovery] = useState(false);
+
+  const finish = (user) => router.replace(user.must_change_password ? '/workspace/account?required=1' : next);
 
   // Already signed in: go straight to the workspace
   useEffect(() => {
@@ -34,12 +39,63 @@ export default function LoginForm() {
     setError('');
     try {
       const data = await fetchBackend('/auth/login', jsonRequest('POST', { email: email.trim(), password }));
-      router.replace(data.user.must_change_password ? '/workspace/account?required=1' : next);
+      if (data.mfa_required) {
+        setMfaToken(data.mfa_token);
+        setBusy(false);
+        return;
+      }
+      finish(data.user);
     } catch (e) {
       setError(e.message);
       setBusy(false);
     }
   };
+
+  const submitCode = async (event) => {
+    event.preventDefault();
+    if (!code.trim()) return setError(useRecovery ? 'Enter a recovery code.' : 'Enter the 6-digit code.');
+    setBusy(true);
+    setError('');
+    try {
+      const data = await fetchBackend('/auth/login/mfa', jsonRequest('POST', { mfa_token: mfaToken, code: code.trim() }));
+      finish(data.user);
+    } catch (e) {
+      setError(e.message);
+      setBusy(false);
+      if (/expired|sign in again/i.test(e.message)) {
+        setMfaToken(null);
+        setCode('');
+      }
+    }
+  };
+
+  if (mfaToken) {
+    return (
+      <form className="auth-form" onSubmit={submitCode} noValidate>
+        <p className="mfa-intro">
+          <ShieldCheck size={18} aria-hidden="true" />
+          {useRecovery ? 'Enter one of your recovery codes.' : 'Enter the 6-digit code from your authenticator app.'}
+        </p>
+        <div className="field">
+          <label htmlFor="login-code">{useRecovery ? 'Recovery code' : 'Authentication code'}</label>
+          <input id="login-code" value={code} onChange={(e) => setCode(e.target.value)} autoFocus required
+            autoComplete="one-time-code" inputMode={useRecovery ? 'text' : 'numeric'}
+            pattern={useRecovery ? undefined : '[0-9 ]*'} maxLength={useRecovery ? 12 : 7}
+            placeholder={useRecovery ? 'xxxx-xxxx' : '123 456'} className="mfa-code" />
+        </div>
+        <div aria-live="assertive">
+          {error && <p className="form-status form-status--error"><CircleAlert size={18} aria-hidden="true" />{error}</p>}
+        </div>
+        <button className="btn btn--primary auth-submit" type="submit" disabled={busy}>
+          {busy ? <Loader2 size={17} aria-hidden="true" /> : <KeyRound size={17} aria-hidden="true" />}
+          {busy ? 'Verifying…' : 'Verify and sign in'}
+        </button>
+        <button type="button" className="text-link auth-alt" onClick={() => { setUseRecovery(!useRecovery); setCode(''); setError(''); }}>
+          {useRecovery ? 'Use my authenticator app instead' : 'Lost your phone? Use a recovery code'}
+        </button>
+      </form>
+    );
+  }
 
   return (
     <form className="auth-form" onSubmit={submit} noValidate>

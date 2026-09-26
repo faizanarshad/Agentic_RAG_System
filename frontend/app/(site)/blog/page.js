@@ -1,5 +1,6 @@
 import Breadcrumbs from '@/components/site/Breadcrumbs';
 import JsonLd from '@/components/site/JsonLd';
+import { defaultShareImage } from '@/lib/metadata';
 import PostCard from '@/components/site/PostCard';
 import { getPublishedPosts } from '@/lib/content-api';
 import { absoluteUrl, site } from '@/lib/site';
@@ -12,7 +13,7 @@ export const metadata = {
   title: 'Blog',
   description,
   alternates: { canonical: '/blog' },
-  openGraph: { url: '/blog', title: `Blog | ${site.name}`, description },
+  openGraph: { url: '/blog', title: `Blog | ${site.name}`, description, images: [defaultShareImage] },
 };
 
 export default async function BlogPage() {

@@ -7,7 +7,7 @@ import { site } from '@/lib/site';
 import { faqSchema, organizationSchema, softwareSchema, websiteSchema } from '@/lib/structured-data';
 
 export const metadata = {
-  title: { absolute: `${site.name} | AI agents for engineering drawings, legal and clinical documents` },
+  title: { absolute: 'AIDocumentAgent: AI review for drawings, legal and clinical files' },
   description:
     'AI agents that review engineering drawings, synthesise legal documents and answer clinical questions from your files, with cited, verifiable results.',
   alternates: { canonical: '/' },

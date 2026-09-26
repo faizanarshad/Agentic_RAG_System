@@ -38,6 +38,19 @@ ACTIVITY_RULES = [
 _COMPILED = [(m, re.compile(p), a, w) for m, p, a, w in ACTIVITY_RULES]
 
 
+async def security_headers(request: Request, call_next):
+    """Defence-in-depth headers on every API response."""
+    response = await call_next(request)
+    response.headers.setdefault("X-Content-Type-Options", "nosniff")
+    response.headers.setdefault("X-Frame-Options", "DENY")
+    response.headers.setdefault("Referrer-Policy", "no-referrer")
+    response.headers.setdefault("Cross-Origin-Resource-Policy", "same-site")
+    if request.url.path.startswith(("/auth", "/admin")):
+        # Account and admin data must never be stored by browsers or proxies
+        response.headers["Cache-Control"] = "no-store"
+    return response
+
+
 async def origin_guard(request: Request, call_next):
     """Browsers always send Origin on cross-origin unsafe requests; reject unknown origins."""
     origin = request.headers.get("origin")
