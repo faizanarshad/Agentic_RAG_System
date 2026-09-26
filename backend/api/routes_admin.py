@@ -144,7 +144,10 @@ def realtime() -> Dict[str, Any]:
     return {
         "active_visitors": store.scalar("SELECT COUNT(DISTINCT visitor) FROM page_views WHERE created_at >= ?", (five,)),
         "views_30m": store.scalar("SELECT COUNT(*) FROM page_views WHERE created_at >= ?", (thirty,)),
-        "active_users": store.scalar("SELECT COUNT(DISTINCT user_id) FROM sessions WHERE last_seen_at >= ?", (five,)),
+        # Only unexpired sessions of existing, active users count as "signed in"
+        "active_users": store.scalar(
+            "SELECT COUNT(DISTINCT s.user_id) FROM sessions s JOIN users u ON u.id = s.user_id "
+            "WHERE s.last_seen_at >= ? AND s.expires_at > ? AND u.status = 'active'", (five, iso(utcnow()))),
         "pages": [[r["path"], r["n"]] for r in store.query(
             "SELECT path, COUNT(*) AS n FROM page_views WHERE created_at >= ? GROUP BY path ORDER BY n DESC LIMIT 6",
             (thirty,))],

@@ -3129,3 +3129,33 @@ a.action-button {
 .md-upload:hover {
   background: var(--bg-secondary);
 }
+
+/* The site-wide `svg { display: block }` would stack icons above labels inside buttons */
+.action-button,
+.upload-button,
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.realtime__page {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 4px 3px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.realtime__page b {
+  min-width: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: var(--accent-primary);
+  text-align: center;
+  font-size: 0.75rem;
+}

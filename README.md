@@ -9,6 +9,7 @@ AIDocumentAgent reviews engineering drawings against ISO and ASME standards, syn
 <p align="center">
   <a href="#screenshots">Screenshots</a> ·
   <a href="#features">Features</a> ·
+  <a href="#admin-panel">Admin</a> ·
   <a href="#architecture">Architecture</a> ·
   <a href="#getting-started">Getting started</a> ·
   <a href="#configuration">Configuration</a> ·
@@ -24,6 +25,7 @@ AIDocumentAgent reviews engineering drawings against ISO and ASME standards, syn
 - [Overview](#overview)
 - [Screenshots](#screenshots)
 - [Features](#features)
+- [Admin panel](#admin-panel)
 - [Architecture](#architecture)
 - [Agent workflows](#agent-workflows)
 - [Tech stack](#tech-stack)
@@ -82,17 +84,7 @@ The three workspaces share one design principle: **models do the reading, but de
 |---|---|
 | ![Sign-in page](docs/images/login.png) | ![Admin overview with KPIs and daily charts](docs/images/admin-overview.png) |
 
-| Website traffic | Usage and model cost |
-|---|---|
-| ![Traffic analytics](docs/images/admin-traffic.png) | ![Usage and estimated model cost](docs/images/admin-usage.png) |
-
-| Post editor (Markdown, preview, SEO) | Site settings |
-|---|---|
-| ![Post editor with preview and search appearance](docs/images/admin-post-editor.png) | ![Announcement bar and feature switches](docs/images/admin-settings.png) |
-
-| Published blog article |
-|---|
-| ![Blog article page](docs/images/blog-post.png) |
+See **[Admin panel](#admin-panel)** for every admin screen and a how-to guide.
 
 ### Workspace
 
@@ -200,6 +192,150 @@ The three workspaces share one design principle: **models do the reading, but de
   - generated Open Graph images;
   - JSON-LD structured data and semantic HTML.
 - Contact form with client and server validation, a honeypot and per-IP rate limiting.
+
+---
+
+## Admin panel
+
+The admin panel is where administrators run the product: analytics, content, users, messages, settings and system health. It lives at **http://localhost:3001/admin** and is visible only to accounts with the **admin** role.
+
+![Admin overview with the account menu open](docs/images/admin-menu.png)
+
+### Access
+
+1. **Create the first administrator** (once, on the server):
+   ```bash
+   cd backend
+   venv/bin/python manage.py create-admin --email you@example.com --name "Your Name"
+   ```
+   A temporary password is printed **once**.
+2. **Sign in** at http://localhost:3001/login.
+3. **Choose a new password.** You're asked to replace the temporary one before anything else.
+4. Open **Admin** from the workspace navigation, or go to `/admin` directly.
+
+Forgotten password: `venv/bin/python manage.py reset-password --email you@example.com` prints a new temporary password and signs out that account's sessions.
+
+| First sign-in: forced password change | Account page: password and active sessions |
+|---|---|
+| ![Temporary password must be changed](docs/images/account-required.png) | ![Account page](docs/images/account.png) |
+
+### Sections at a glance
+
+| Section | What you see | What you can do |
+|---|---|---|
+| **Overview** | Live "right now" card, KPIs with change vs the previous period, daily workspace actions and page views, actions by workspace, content counts, recent activity | Switch the range (7 / 30 / 90 days) |
+| **Traffic** | Page views, daily unique visitors, conversion rate, contact conversions per day, landing pages, top blog posts, top pages, referrers, devices | Switch range, **export CSV** |
+| **Usage & cost** | Model calls, input/output tokens, **estimated OpenAI cost** per day, by model and by feature; most-used actions; actions per user | Switch range |
+| **Posts** | All posts with status (draft / scheduled / published) and views (30 days / all time) | Create, edit, publish, schedule, unpublish, delete |
+| **Users** | Every account with role, status, last sign-in and activity | Invite users, change roles, disable/enable, reset passwords, delete |
+| **Messages** | Contact-form inbox with read/unread state and topic breakdown | Mark read/unread, reply by email, delete, **export CSV** |
+| **Activity** | Audit log: sign-ins (including failures), workspace actions, content and admin changes | Filter by area and action, page through, **export CSV** |
+| **Settings** | Announcement bar and website feature switches | Show a site-wide announcement; pause the contact form; turn analytics on/off |
+| **System** | Vector-database namespaces, storage per data folder, configured models, security settings | Check health at a glance |
+
+### Screens
+
+| Overview | Traffic |
+|---|---|
+| ![Overview](docs/images/admin-overview.png) | ![Traffic analytics](docs/images/admin-traffic.png) |
+
+| Usage & cost | Posts |
+|---|---|
+| ![Usage and estimated model cost](docs/images/admin-usage.png) | ![Posts list](docs/images/admin-posts.png) |
+
+| Post editor (Markdown, preview, SEO) | Published article |
+|---|---|
+| ![Post editor with preview and search appearance](docs/images/admin-post-editor.png) | ![Blog article page](docs/images/blog-post.png) |
+
+| Users | Messages |
+|---|---|
+| ![User management](docs/images/admin-users.png) | ![Contact inbox](docs/images/admin-messages.png) |
+
+| Activity log | Settings |
+|---|---|
+| ![Activity log](docs/images/admin-activity.png) | ![Announcement bar and feature switches](docs/images/admin-settings.png) |
+
+| System |
+|---|
+| ![System status](docs/images/admin-system.png) |
+
+### How to…
+
+<details>
+<summary><strong>Invite a teammate</strong></summary>
+
+1. **Admin → Users → Invite a user**: enter name and email, choose **Member** (workspaces only) or **Admin**.
+2. Click **Create user** and copy the temporary password that appears. It is shown **only once**.
+3. Send the password to the person securely. They must change it at first sign-in.
+</details>
+
+<details>
+<summary><strong>Remove or lock out a user</strong></summary>
+
+- **Disable** keeps the account and its history but signs the user out everywhere and blocks sign-in; **Enable** restores it.
+- **Reset password** issues a new temporary password and signs out all their sessions.
+- **Delete** removes the account permanently. You cannot delete yourself, and the last active admin cannot be demoted, disabled or deleted.
+</details>
+
+<details>
+<summary><strong>Write, publish or schedule a blog post</strong></summary>
+
+1. **Admin → Posts → New post**. Add a title (the URL slug fills itself in) and a short excerpt.
+2. **Write in Markdown**:
+   - use the toolbar for headings, bold, italic, links, lists, quotes, code and images;
+   - switch to **Preview** to see exactly what will be published.
+3. **Upload a cover image** and add alt text. Uploads are resized and converted to WebP.
+4. Fill **Search appearance** (SEO title ≤ 60 characters, meta description ≤ 155) and check the Google-style preview.
+5. Click **Publish**, or set a **future publish date** first to **Schedule** it. **Save draft** keeps it private; on a live post the same button **unpublishes** it.
+6. The public page at `/blog/<slug>` updates on the next page load and the post joins the sitemap automatically. Views appear in the post's chart and in **Traffic → Top blog posts**.
+</details>
+
+<details>
+<summary><strong>Show an announcement across the website</strong></summary>
+
+**Admin → Settings → Announcement bar**:
+1. Switch on **Show announcement**.
+2. Write the message, and optionally add link text and a URL (a site path such as `/blog/…` or an `https://` link).
+3. Pick a style and check the live preview, then click **Save settings**.
+
+Turn the switch off to remove it.
+</details>
+
+<details>
+<summary><strong>Pause the contact form or analytics</strong></summary>
+
+**Admin → Settings → Website features**:
+- **Contact form off**: the Contact page shows a notice, and the API refuses new submissions.
+- **Analytics off**: no page views are recorded. Existing data is kept.
+</details>
+
+<details>
+<summary><strong>Track model spend</strong></summary>
+
+**Admin → Usage & cost** shows estimated OpenAI cost per day, per model (calls and tokens) and per feature (engineering, legal, OCR, medical chat, embeddings), plus which users drive activity.
+
+Estimates use list prices in `backend/services/usage_tracker.py`; update `PRICING` if provider prices change.
+</details>
+
+<details>
+<summary><strong>Export data</strong></summary>
+
+- **Traffic → Export CSV**: daily page views, visitors and contact messages for the selected range.
+- **Messages → Export CSV**: every contact message.
+- **Activity → Export CSV**: the audit log, respecting the current filters.
+
+Exports neutralise spreadsheet formula injection.
+</details>
+
+### Roles and permissions
+
+| Capability | Member | Admin |
+|---|:---:|:---:|
+| Engineering, Legal and Medical workspaces | ✅ | ✅ |
+| Own account: change password, manage sessions | ✅ | ✅ |
+| Admin panel (analytics, posts, users, messages, activity, settings, system) | – | ✅ |
+
+Every admin change (users, posts, settings, deletions) is written to the **Activity** log with who did it and when.
 
 ---
 

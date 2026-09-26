@@ -44,7 +44,9 @@ function RealtimeCard() {
           <div><strong>{live.views_30m}</strong><span>page views (30 min)</span></div>
           <div className="realtime__pages">
             {live.pages.length === 0 ? <span className="legal-muted small">No recent page views</span> :
-              live.pages.map(([path, n]) => <span key={path}><code>{path}</code> {n}</span>)}
+              live.pages.map(([path, n]) => (
+                <span key={path} className="realtime__page"><code>{path}</code><b>{n}</b></span>
+              ))}
           </div>
         </div>
       )}
