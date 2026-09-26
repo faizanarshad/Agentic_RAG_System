@@ -24,6 +24,7 @@ from .engineering_prompts import (
 )
 from .engineering_rules import diff_extractions, run_rule_checks
 from .engineering_store import EngineeringStore
+from .usage_tracker import record_usage
 
 
 FIELD_TYPES = {"text", "longtext", "date", "table"}
@@ -71,6 +72,7 @@ class EngineeringAgentService:
             temperature=temperature,
             max_tokens=max_tokens,
         )
+        record_usage(self.model, response.usage, "engineering")
         return json.loads(response.choices[0].message.content or "{}")
 
     @staticmethod

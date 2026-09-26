@@ -1405,7 +1405,7 @@ const EngineeringWorkspace = () => {
                 className="action-button update"
                 onClick={async () => {
                   const text = await (
-                    await fetch(`${API_BASE}/engineering/documents/${openDocument.id}/export?format=md`)
+                    await fetch(`${API_BASE}/engineering/documents/${openDocument.id}/export?format=md`, { credentials: "include" })
                   ).text();
                   navigator.clipboard.writeText(text);
                 }}

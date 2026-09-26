@@ -23,6 +23,7 @@ from .legal_prompts import (
     REDUCE_SYSTEM, RISK_SYSTEM, SUMMARY_SYSTEM,
 )
 from .legal_store import LegalStore
+from .usage_tracker import record_usage
 from .vectordb_service import VectorDBService
 
 
@@ -108,6 +109,7 @@ class LegalAgentService:
             temperature=0.1,
             max_tokens=max_tokens,
         )
+        record_usage(self.model, response.usage, "legal")
         return json.loads(response.choices[0].message.content or "{}")
 
     # ------------------------------------------------------------------ ingestion

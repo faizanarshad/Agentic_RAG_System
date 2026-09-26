@@ -3,7 +3,8 @@
 import { useEffect, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutGrid, Moon, Ruler, Scale, Stethoscope, Sun } from 'lucide-react';
+import { LayoutGrid, LogOut, Moon, Ruler, Scale, ShieldCheck, Stethoscope, Sun, UserRound } from 'lucide-react';
+import { useAuth } from '@/components/auth/AuthProvider';
 import { Brand } from '@/components/site/Logo';
 
 const TABS = [
@@ -45,6 +46,10 @@ function saveTheme(theme) {
 
 export default function WorkspaceShell({ children }) {
   const pathname = usePathname();
+  const { user, logout } = useAuth();
+  const tabs = user?.role === 'admin' ? [...TABS, { href: '/admin', label: 'Admin', icon: ShieldCheck }] : TABS;
+  const isCurrent = (href) =>
+    href === '/workspace' ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
   const theme = useSyncExternalStore(subscribe, readTheme, () => 'light');
 
   useEffect(() => {
@@ -60,8 +65,8 @@ export default function WorkspaceShell({ children }) {
             <small>Workspace</small>
           </Link>
           <nav className="ws-nav" aria-label="Workspaces">
-            {TABS.map(({ href, label, icon: Icon }) => (
-              <Link key={href} href={href} aria-current={pathname === href ? 'page' : undefined}>
+            {tabs.map(({ href, label, icon: Icon }) => (
+              <Link key={href} href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
                 <Icon size={15} aria-hidden="true" />
                 {label}
               </Link>
@@ -79,6 +84,22 @@ export default function WorkspaceShell({ children }) {
             >
               {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
             </button>
+            {user && (
+              <details className="ws-user">
+                <summary aria-label="Account menu">
+                  <span className="ws-avatar" aria-hidden="true">{user.name.slice(0, 1).toUpperCase()}</span>
+                </summary>
+                <div className="ws-user__menu">
+                  <p className="ws-user__who">
+                    <strong>{user.name}</strong>
+                    <span>{user.email}</span>
+                    <span className="ws-role">{user.role}</span>
+                  </p>
+                  <Link href="/workspace/account"><UserRound size={15} aria-hidden="true" /> Account</Link>
+                  <button type="button" onClick={logout}><LogOut size={15} aria-hidden="true" /> Sign out</button>
+                </div>
+              </details>
+            )}
           </div>
         </div>
       </header>

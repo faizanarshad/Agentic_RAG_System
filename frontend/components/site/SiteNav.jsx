@@ -29,6 +29,7 @@ export default function SiteNav() {
       </nav>
       <div className="site-header__actions">
         {/* Plain <a>: the workspace is a separate app shell with its own stylesheet */}
+        <a className="site-signin btn--desktop" href="/login">Sign in</a>
         <a className="btn btn--primary btn--desktop" href="/workspace">
           Open workspace <ArrowRight size={16} aria-hidden="true" />
         </a>
@@ -42,6 +43,7 @@ export default function SiteNav() {
                 {item.label}
               </Link>
             ))}
+            <a href="/login">Sign in</a>
             <a className="btn btn--primary" href="/workspace">
               Open workspace <ArrowRight size={16} aria-hidden="true" />
             </a>

@@ -6,6 +6,7 @@ from langchain.schema import Document
 
 from core.config import settings
 from utils.logger import logger
+from .usage_tracker import record_usage
 
 
 class EmbeddingsService:
@@ -45,6 +46,7 @@ class EmbeddingsService:
                 input=text
             )
             
+            record_usage(self.model, response.usage, "embeddings")
             embedding = response.data[0].embedding
             logger.debug(f"Successfully generated embedding of dimension: {len(embedding)}")
             return embedding
@@ -83,6 +85,7 @@ class EmbeddingsService:
                 input=texts
             )
             
+            record_usage(self.model, response.usage, "embeddings")
             embeddings = [data.embedding for data in response.data]
             logger.info(f"Successfully generated {len(embeddings)} embeddings")
             return embeddings

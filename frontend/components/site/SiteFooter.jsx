@@ -38,6 +38,7 @@ export default function SiteFooter() {
             <h2>Product</h2>
             <ul>
               <li><a href="/workspace">Open workspace</a></li>
+              <li><a href="/login">Sign in</a></li>
               <li><a href="/workspace/engineering">Drawing review</a></li>
               <li><a href="/workspace/legal">Legal synthesis</a></li>
             </ul>

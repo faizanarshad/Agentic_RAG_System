@@ -9,6 +9,7 @@ from openai import OpenAI
 
 from core.config import settings
 from utils.logger import logger
+from .usage_tracker import record_usage
 
 
 SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".txt", ".md", ".png", ".jpg", ".jpeg", ".tif", ".tiff"}
@@ -139,4 +140,5 @@ class LegalDocumentLoader:
             temperature=0,
             max_tokens=4000,
         )
+        record_usage(self.model, response.usage, "legal-ocr")
         return response.choices[0].message.content or ""

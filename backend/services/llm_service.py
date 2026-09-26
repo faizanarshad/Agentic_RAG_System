@@ -6,6 +6,7 @@ from langchain.schema import Document
 
 from core.config import settings
 from utils.logger import logger
+from .usage_tracker import record_usage
 
 
 class LLMService:
@@ -66,6 +67,7 @@ class LLMService:
                 temperature=0.1
             )
             
+            record_usage(self.model, response.usage, "medical-chat")
             answer = response.choices[0].message.content
             logger.info("Successfully generated response")
             return answer

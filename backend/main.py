@@ -1,6 +1,6 @@
-"""FastAPI entrypoint for the Agentic RAG System."""
+"""FastAPI entrypoint for the AIDocumentAgent API."""
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import uvicorn
@@ -10,6 +10,11 @@ from api.routes_files import router as files_router
 from api.routes_legal import router as legal_router
 from api.routes_engineering import router as engineering_router
 from api.routes_contact import router as contact_router
+from api.routes_auth import router as auth_router
+from api.routes_admin import router as admin_router
+from api.routes_analytics import router as analytics_router
+from api.deps import require_user
+from api.middleware import activity_logger, origin_guard
 from core.config import settings
 from utils.logger import logger
 
@@ -47,20 +52,30 @@ app = FastAPI(
 )
 
 # Add CORS middleware
+# Middleware order: the last added runs first. CORS must wrap everything so even
+# rejected responses carry CORS headers the browser can read.
+app.middleware("http")(activity_logger)
+app.middleware("http")(origin_guard)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure this properly for production
+    allow_origins=settings.FRONTEND_ORIGINS,  # explicit origins: required for credentialed (cookie) requests
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type"],
 )
 
-# Include routers
-app.include_router(chat_router)
-app.include_router(files_router)
-app.include_router(legal_router)
-app.include_router(engineering_router)
+# Public routers
+app.include_router(auth_router)
 app.include_router(contact_router)
+app.include_router(analytics_router)
+
+# Workspace routers require a signed-in user; admin routes check the admin role themselves
+signed_in = [Depends(require_user)]
+app.include_router(chat_router, dependencies=signed_in)
+app.include_router(files_router, dependencies=signed_in)
+app.include_router(legal_router, dependencies=signed_in)
+app.include_router(engineering_router, dependencies=signed_in)
+app.include_router(admin_router)
 
 
 @app.get("/")
@@ -76,6 +91,8 @@ async def root():
             "legal": "/legal/",
             "engineering": "/engineering/",
             "contact": "/contact",
+            "auth": "/auth/",
+            "admin": "/admin/",
             "docs": "/docs",
             "health": "/health"
         }

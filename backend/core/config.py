@@ -58,6 +58,24 @@ class Settings:
     ENGINEERING_MAX_PAGES: int = int(os.getenv("ENGINEERING_MAX_PAGES", "6"))
     ENGINEERING_MAX_FILE_MB: int = int(os.getenv("ENGINEERING_MAX_FILE_MB", "50"))
     
+    # Authentication, admin and analytics
+    PLATFORM_DATA_DIR: str = os.getenv(
+        "PLATFORM_DATA_DIR",
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "platform")
+    )
+    FRONTEND_ORIGINS: list = [
+        origin.strip().rstrip("/")
+        for origin in os.getenv("FRONTEND_ORIGINS", "http://localhost:3001").split(",")
+        if origin.strip()
+    ]
+    SESSION_COOKIE_NAME: str = os.getenv("SESSION_COOKIE_NAME", "ada_session")
+    SESSION_TTL_HOURS: int = int(os.getenv("SESSION_TTL_HOURS", "168"))
+    COOKIE_SECURE: bool = os.getenv("COOKIE_SECURE", "False").lower() == "true"
+    LOGIN_MAX_ATTEMPTS: int = int(os.getenv("LOGIN_MAX_ATTEMPTS", "5"))
+    LOGIN_LOCKOUT_MINUTES: int = int(os.getenv("LOGIN_LOCKOUT_MINUTES", "15"))
+    PASSWORD_MIN_LENGTH: int = int(os.getenv("PASSWORD_MIN_LENGTH", "10"))
+    ANALYTICS_ENABLED: bool = os.getenv("ANALYTICS_ENABLED", "True").lower() == "true"
+
     # API Configuration
     API_HOST: str = os.getenv("API_HOST", "0.0.0.0")
     API_PORT: int = int(os.getenv("API_PORT", "8000"))

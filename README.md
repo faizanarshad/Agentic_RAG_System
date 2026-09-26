@@ -48,7 +48,8 @@ AIDocumentAgent has three parts:
 | Part | What it is | Where |
 |---|---|---|
 | **Website** | Public marketing site: Home, Solutions, About, Contact. Statically rendered with full technical SEO. | `frontend/app/(site)` → http://localhost:3001 |
-| **Workspace** | The application: Engineering, Legal and Medical workspaces plus system status. | `frontend/app/(workspace)` → http://localhost:3001/workspace |
+| **Workspace** | The application: Engineering, Legal and Medical workspaces plus system status. Requires sign-in. | `frontend/app/(workspace)` → http://localhost:3001/workspace |
+| **Admin panel** | Analytics (traffic, usage, model cost), users, contact inbox, activity log, system health. Admins only. | http://localhost:3001/admin |
 | **API** | FastAPI back end running the LangGraph agents, vector search and storage. | `backend/` → http://localhost:8000/docs |
 
 The three workspaces share one design principle: **models do the reading, but deterministic checks, targeted re-verification and explicit gap-flagging make the results auditable.** A qualified person always makes the final call.
@@ -74,6 +75,16 @@ The three workspaces share one design principle: **models do the reading, but de
 **Mobile** (390 px: home, navigation menu, contact form)
 
 ![Mobile views](docs/images/site-mobile.png)
+
+### Sign-in and admin panel
+
+| Sign-in | Admin overview |
+|---|---|
+| ![Sign-in page](docs/images/login.png) | ![Admin overview with KPIs and daily charts](docs/images/admin-overview.png) |
+
+| Website traffic | Usage and model cost |
+|---|---|
+| ![Traffic analytics](docs/images/admin-traffic.png) | ![Usage and estimated model cost](docs/images/admin-usage.png) |
 
 ### Workspace
 
@@ -124,6 +135,34 @@ The three workspaces share one design principle: **models do the reading, but de
 - **Identifier removal**: CSV columns that look like patient identifiers (names, IDs, contact details, dates of birth) are dropped before indexing.
 - Replace or delete indexed documents at any time.
 
+### 🔐 Accounts, admin panel and analytics
+
+- **Sign-in** with email and password.
+  - Passwords are hashed with PBKDF2-HMAC-SHA256 (600,000 iterations).
+  - Sessions are random tokens in an **HttpOnly, SameSite=Lax** cookie; only a SHA-256 digest of each token is stored.
+- **Roles**: `admin` and `member`.
+  - Every workspace API requires sign-in; admin APIs require the admin role.
+  - At least one active admin is always kept.
+- **Invite-only**: admins create users, who receive a temporary password (shown once) and must change it at first sign-in.
+- **Protection**:
+  - failed sign-ins are throttled per email and per IP address;
+  - errors are generic, and verification runs in constant time;
+  - an origin guard provides CSRF defence, with explicit CORS origins;
+  - changing a password signs out other sessions.
+- **Account page**: change password, see active sessions, sign out other devices.
+- **Admin panel**:
+  - **Overview**: KPIs, daily workspace actions and page views, actions by workspace, content counts, recent activity.
+  - **Traffic**: page views, daily unique visitors, top pages, referrers, devices.
+  - **Usage & cost**: model calls, tokens and **estimated cost** by day, model and feature; most-used actions; activity per user.
+  - **Users**: invite, change role, disable or enable, reset password, delete.
+  - **Messages**: contact-form inbox with read/unread, reply, delete and CSV export.
+  - **Activity**: filterable audit log of sign-ins, workspace actions and admin changes, with CSV export.
+  - **System**: vector database namespaces, storage use, configured models, security settings.
+- **Privacy-friendly website analytics**:
+  - first-party beacon, no cookies;
+  - IP addresses are never stored, and visitor IDs are salted hashes that reset daily;
+  - Do Not Track is respected and bots are excluded.
+
 ### 🌐 Website
 
 - Next.js App Router in **JavaScript**, statically rendered public pages.
@@ -147,7 +186,8 @@ flowchart LR
     end
 
     subgraph Backend["FastAPI · port 8000"]
-        API["REST API<br/>/chat /files /legal /engineering /contact"]
+        API["REST API<br/>/auth /admin /analytics /contact<br/>/chat /files /legal /engineering"]
+        Auth["Sessions · roles<br/>origin guard · audit log"]
         Agents["LangGraph agents"]
         Rules["Deterministic rule engines"]
         Stores[("SQLite stores<br/>+ uploaded files")]
@@ -158,8 +198,9 @@ flowchart LR
         Pinecone[("Pinecone<br/>default + legal namespaces")]
     end
 
-    WS -->|fetch| API
-    Site -->|contact form| API
+    WS -->|fetch + session cookie| API
+    Site -->|contact form · page-view beacon| API
+    API --> Auth
     API --> Agents
     Agents --> Rules
     Agents --> OpenAI
@@ -177,6 +218,8 @@ flowchart LR
 | **Numeric fact-checking** of generated documents | A corrupted value like `8.9.0` for `9.0` does real damage in engineering documentation. |
 | **Separate Pinecone namespace** for legal vectors | The general Chat never retrieves contract passages. |
 | **SQLite** for legal, engineering and contact data | Zero-ops, safe for concurrent background workers (WAL mode), easy to inspect. |
+| **Server-side sessions** (not JWT) with hashed tokens | Sessions can be revoked instantly (sign-out, password change, disabled user) and a database leak exposes no usable tokens. |
+| **Activity logging in middleware** | Every meaningful workspace action is audited without touching each route; model usage is attributed to the signed-in user via a context variable. |
 | **Static public pages + client-only workspace** | Public pages are fast and crawlable; the app is `noindex` and loads its own stylesheet. |
 
 ---
@@ -250,22 +293,34 @@ Agentic_RAG_System/
 │   │   ├── routes_files.py         # PDF/CSV upload, replace, delete
 │   │   ├── routes_legal.py         # Legal batches, documents, Q&A, synthesis
 │   │   ├── routes_engineering.py   # Drawings, compare, templates, documents
-│   │   └── routes_contact.py       # Website contact form
+│   │   ├── routes_contact.py       # Website contact form
+│   │   ├── routes_auth.py          # Sign-in, sign-out, sessions, password change
+│   │   ├── routes_admin.py         # Admin analytics, users, inbox, activity, system
+│   │   ├── routes_analytics.py     # Cookie-less page-view beacon
+│   │   ├── deps.py                 # require_user / require_admin
+│   │   └── middleware.py           # Origin guard and activity logging
 │   ├── services/
 │   │   ├── rag_service.py, llm_service.py, embeddings_service.py, vectordb_service.py
 │   │   ├── legal_agent_service.py, legal_document_loader.py, legal_prompts.py, legal_store.py
 │   │   └── engineering_agent_service.py, engineering_loader.py, engineering_rules.py,
 │   │       engineering_prompts.py, engineering_store.py, engineering_templates.py
+│   │   ├── platform_store.py, security.py, usage_tracker.py   # Users, sessions, analytics, model cost
+│   ├── manage.py                   # create-admin / reset-password
 │   ├── data/                       # Runtime data (git-ignored): SQLite DBs, uploads
 │   └── requirements.txt
 ├── frontend/
 │   ├── app/
 │   │   ├── (site)/                 # Home, solutions, about, contact (static)
-│   │   ├── (workspace)/workspace/  # The application (noindex)
+│   │   ├── (auth)/login/           # Sign-in page
+│   │   ├── (workspace)/workspace/  # The application (sign-in required, noindex)
+│   │   ├── (workspace)/admin/      # Admin panel (admins only)
 │   │   ├── sitemap.js, robots.js, manifest.js, opengraph-image.js, icon.svg, apple-icon.js
 │   │   └── globals.css, styles/workspace.css
 │   ├── components/site/            # Header, footer, breadcrumbs, JSON-LD, contact form
 │   ├── components/workspace/       # Engineering, Legal, Medical, Status
+│   ├── components/auth/            # AuthProvider, login form
+│   ├── components/admin/           # Admin pages and SVG charts
+│   ├── components/account/         # Account page
 │   ├── lib/                        # site.js, content.js, structured-data.js, api.js, og.js
 │   └── assets/                     # Product screenshots (static imports)
 ├── scripts/
@@ -300,6 +355,14 @@ cp env.example .env        # then add your keys (see Configuration)
 python main.py             # http://localhost:8000  ·  docs at /docs
 ```
 
+Create the first administrator (a temporary password is printed once and must be changed at first sign-in):
+
+```bash
+python manage.py create-admin --email you@example.com --name "Your Name"
+# Forgotten password:
+python manage.py reset-password --email you@example.com
+```
+
 ### 2. Front end
 
 ```bash
@@ -317,10 +380,11 @@ npm run build && npm start # http://localhost:3001
 
 ### 3. Try it
 
-1. Generate the sample data (see [Sample data](#sample-data)).
-2. **Engineering**: open `/workspace/engineering`, upload `datasets/engineering_samples/bracket_EP-1001_revA.pdf`, then revision B, and compare them.
-3. **Legal**: open `/workspace/legal`, select the `datasets/legal_corpus` folder, watch the batch progress, then try *Synthesize*.
-4. **Medical**: open `/workspace/medical`, upload a PDF from `backend/sample_documents/`, and ask a question.
+1. Sign in at http://localhost:3001/login with the administrator account and choose a new password.
+2. Generate the sample data (see [Sample data](#sample-data)).
+3. **Engineering**: open `/workspace/engineering`, upload `datasets/engineering_samples/bracket_EP-1001_revA.pdf`, then revision B, and compare them.
+4. **Legal**: open `/workspace/legal`, select the `datasets/legal_corpus` folder, watch the batch progress, then try *Synthesize*.
+5. **Medical**: open `/workspace/medical`, upload a PDF from `backend/sample_documents/`, and ask a question.
 
 ---
 
@@ -347,6 +411,12 @@ npm run build && npm start # http://localhost:3001
 | `ENGINEERING_MODEL` | `gpt-4.1` | Engineering vision and review model |
 | `ENGINEERING_MAX_PAGES` | `6` | Sheets reviewed per drawing |
 | `ENGINEERING_MAX_FILE_MB` | `50` | Maximum size per drawing |
+| `FRONTEND_ORIGINS` | `http://localhost:3001` | Browser origins allowed to call the API with cookies (comma-separated) |
+| `SESSION_TTL_HOURS` | `168` | Session lifetime (7 days) |
+| `COOKIE_SECURE` | `False` | Set `True` when serving over HTTPS |
+| `LOGIN_MAX_ATTEMPTS` / `LOGIN_LOCKOUT_MINUTES` | `5` / `15` | Failed sign-ins per email before a temporary lockout |
+| `PASSWORD_MIN_LENGTH` | `10` | Minimum password length |
+| `ANALYTICS_ENABLED` | `True` | Cookie-less website page-view analytics |
 | `API_HOST` / `API_PORT` | `0.0.0.0` / `8000` | Server binding |
 
 ### Front end (`frontend/.env.local`)
@@ -387,6 +457,49 @@ backend/venv/bin/python scripts/generate_legal_corpus.py --count 100
 ## API reference
 
 Interactive documentation: **http://localhost:8000/docs**
+
+All workspace endpoints (chat, files, legal, engineering) require a signed-in session cookie; `/admin/*` requires the admin role.
+
+<details>
+<summary><strong>Auth</strong></summary>
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/auth/login` | Sign in (`email`, `password`); sets the HttpOnly session cookie |
+| `POST` | `/auth/logout` | Sign out and revoke the session |
+| `GET` | `/auth/me` | Current user |
+| `POST` | `/auth/change-password` | Change password (signs out other sessions) |
+| `GET` | `/auth/sessions` | Active sessions |
+| `POST` | `/auth/sessions/revoke-others` | Sign out all other sessions |
+
+</details>
+
+<details>
+<summary><strong>Admin</strong> (admin role)</summary>
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/admin/overview?days=` | KPIs, daily series, content counts, recent activity |
+| `GET` | `/admin/traffic?days=` | Page views, visitors, top pages, referrers, devices |
+| `GET` | `/admin/usage?days=` | Model calls, tokens and estimated cost by day, model, feature; actions per user |
+| `GET` | `/admin/system` | Vector DB namespaces, storage, models, security settings |
+| `GET` · `POST` | `/admin/users` | List / invite users (returns a one-time temporary password) |
+| `PATCH` · `DELETE` | `/admin/users/{id}` | Change name, role or status / delete |
+| `POST` | `/admin/users/{id}/reset-password` | New temporary password, sessions revoked |
+| `GET` | `/admin/messages?status=` · `/admin/messages.csv` | Contact inbox / CSV export |
+| `PATCH` · `DELETE` | `/admin/messages/{id}` | Mark read or unread / delete |
+| `GET` | `/admin/activity` · `/admin/activity.csv` | Audit log with filters / CSV export |
+
+</details>
+
+<details>
+<summary><strong>Analytics</strong> (public)</summary>
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/analytics/pageview` | Cookie-less page-view beacon (`text/plain` JSON `{path, referrer}`); always returns 204 |
+
+</details>
 
 <details>
 <summary><strong>Chat and files</strong> (medical / general RAG)</summary>
@@ -509,7 +622,21 @@ Issues found during development, and the fixes now in place:
 
 ## Security and data handling
 
-- **No authentication yet.** The API and workspace assume a trusted local or private network. CORS is open (`*`). Do not expose the back end publicly until authentication is added (see [Roadmap](#roadmap)).
+- **Authentication**: every workspace and admin API requires a session.
+  - Session tokens live in an HttpOnly, SameSite=Lax cookie and are stored only as SHA-256 digests.
+  - Passwords use PBKDF2-HMAC-SHA256 with 600,000 iterations.
+  - Failed sign-ins are throttled.
+  - Users are invite-only and must change the temporary password at first sign-in.
+- **CSRF and CORS**:
+  - CORS allows only the configured `FRONTEND_ORIGINS` (credentials enabled);
+  - an origin guard rejects state-changing requests from other origins;
+  - CSV exports neutralise spreadsheet formula injection.
+- **Before deploying**:
+  - serve over HTTPS and set `COOKIE_SECURE=True`;
+  - set `FRONTEND_ORIGINS` to your site's origin;
+  - put the API behind a reverse proxy that forwards the client IP, so sign-in throttling and analytics see real addresses.
+- **Audit trail**: sign-ins (including failures), workspace actions and admin changes are recorded in the activity log.
+- **Analytics privacy**: no cookies, no stored IP addresses, daily-rotating anonymous visitor IDs, Do Not Track respected.
 - Documents are processed by your back end and sent to **OpenAI** for analysis. Passages are indexed in **your** Pinecone project. Review the providers' terms before using confidential or regulated data.
 - Uploaded files are stored under generated names; user-supplied filenames never form filesystem paths.
 - Runtime data (`backend/data/`) and secrets (`.env`, `.env.local`) are git-ignored.
@@ -562,11 +689,15 @@ Open http://localhost:8000/files/health and check that `vectordb` and `llm` are 
 
 ### Near term: production readiness
 
-- [ ] **Authentication and per-user workspaces** (API keys or OAuth; scoped data per user/team)
+- [x] **Authentication, roles and admin panel** with analytics, user management, contact inbox and audit log
+- [ ] **Per-user / per-team data scoping** (today all signed-in users share the workspaces' documents)
+- [ ] **Two-factor authentication** (TOTP) and single sign-on (SAML/OIDC)
+- [ ] **Email delivery** for invitations and self-service password reset
 - [ ] **Deployment**: Dockerfiles, `docker-compose`, and a guide for Vercel (front end) plus a container host (API)
 - [ ] **CI**: lint, build and tests on every pull request
 - [ ] **Automated tests**: pytest for rule engines and stores, Playwright end-to-end tests, and an evaluation harness that scores agents against the synthetic answer keys
-- [ ] **Contact form notifications** (email/Slack) and a simple admin inbox
+- [x] Contact-form admin inbox (read/unread, CSV export)
+- [ ] **Contact form notifications** (email/Slack)
 - [ ] Remove the committed `backend/venv/` from the repository; move to Python 3.11+
 - [ ] Choose and add a licence
 

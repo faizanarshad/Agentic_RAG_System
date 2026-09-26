@@ -43,6 +43,10 @@ def _connect() -> sqlite3.Connection:
             created_at TEXT NOT NULL
         )"""
     )
+    # Migration: read status for the admin inbox
+    columns = {row[1] for row in connection.execute("PRAGMA table_info(messages)")}
+    if "read_at" not in columns:
+        connection.execute("ALTER TABLE messages ADD COLUMN read_at TEXT")
     return connection
 
 
@@ -107,4 +111,44 @@ def submit_contact(payload: ContactMessage, request: Request) -> Dict[str, bool]
             ),
         )
     logger.info(f"Contact message stored (topic: {payload.topic})")
+    from services.platform_store import get_platform_store
+    get_platform_store().log_event("contact.message", None, "website", {"topic": payload.topic}, client_ip)
     return {"ok": True}
+
+
+# ---------------------------------------------------------------------- admin inbox helpers
+
+def list_messages(status: str = "all", limit: int = 200, offset: int = 0):
+    where = {"unread": "WHERE read_at IS NULL", "read": "WHERE read_at IS NOT NULL"}.get(status, "")
+    with _connect() as connection:
+        connection.row_factory = sqlite3.Row
+        total = connection.execute(f"SELECT COUNT(*) FROM messages {where}").fetchone()[0]
+        rows = connection.execute(
+            f"SELECT id, name, email, company, topic, message, created_at, read_at FROM messages {where} "
+            f"ORDER BY id DESC LIMIT ? OFFSET ?",
+            (limit, offset),
+        ).fetchall()
+    return {"total": total, "messages": [dict(r) for r in rows]}
+
+
+def message_stats():
+    with _connect() as connection:
+        total = connection.execute("SELECT COUNT(*) FROM messages").fetchone()[0]
+        unread = connection.execute("SELECT COUNT(*) FROM messages WHERE read_at IS NULL").fetchone()[0]
+        by_topic = connection.execute("SELECT topic, COUNT(*) FROM messages GROUP BY topic ORDER BY 2 DESC").fetchall()
+    return {"total": total, "unread": unread, "by_topic": [[t or "other", n] for t, n in by_topic]}
+
+
+def set_message_read(message_id: int, read: bool) -> bool:
+    with _connect() as connection:
+        cursor = connection.execute(
+            "UPDATE messages SET read_at = ? WHERE id = ?",
+            (datetime.now(timezone.utc).isoformat(timespec="seconds") if read else None, message_id),
+        )
+    return cursor.rowcount == 1
+
+
+def delete_message(message_id: int) -> bool:
+    with _connect() as connection:
+        cursor = connection.execute("DELETE FROM messages WHERE id = ?", (message_id,))
+    return cursor.rowcount == 1
