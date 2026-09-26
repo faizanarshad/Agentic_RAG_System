@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/site/Breadcrumbs';
 import JsonLd from '@/components/site/JsonLd';
 import ContactForm from '@/components/site/ContactForm';
 import { site } from '@/lib/site';
+import { getSiteSettings } from '@/lib/content-api';
 import { webPageSchema } from '@/lib/structured-data';
 
 const description =
@@ -15,7 +16,10 @@ export const metadata = {
   openGraph: { url: '/contact', title: `Contact ${site.name}`, description },
 };
 
-export default function ContactPage() {
+export const revalidate = 60;
+
+export default async function ContactPage() {
+  const { contact_form_enabled: formEnabled } = await getSiteSettings();
   return (
     <>
       <JsonLd data={webPageSchema('ContactPage', { path: '/contact', name: `Contact ${site.name}`, description })} />
@@ -34,7 +38,17 @@ export default function ContactPage() {
 
       <section className="section">
         <div className="container contact-grid">
-          <ContactForm />
+          {formEnabled ? (
+            <ContactForm />
+          ) : (
+            <div className="form" role="status">
+              <h2 className="h3">The contact form is paused</h2>
+              <p className="muted">
+                We are not accepting messages through the form right now.
+                {site.contactEmail ? <> Please email <a className="text-link" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.</> : ' Please try again later.'}
+              </p>
+            </div>
+          )}
           <aside aria-label="Contact information">
             <div className="aside-card">
               <h2 className="h3"><Clock size={18} aria-hidden="true" style={{ display: 'inline', verticalAlign: '-3px', marginRight: 8 }} />What happens next</h2>

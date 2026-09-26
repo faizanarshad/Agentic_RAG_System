@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Activity, BarChart3, Coins, Globe, Inbox, Server, Users } from 'lucide-react';
+import { Activity, BarChart3, Coins, FileText, Globe, Inbox, Server, Settings, Users } from 'lucide-react';
 import { useAuth } from '@/components/auth/AuthProvider';
 import { fetchBackend } from '@/lib/api';
 
@@ -11,9 +11,11 @@ const NAV = [
   { href: '/admin', label: 'Overview', icon: BarChart3 },
   { href: '/admin/traffic', label: 'Traffic', icon: Globe },
   { href: '/admin/usage', label: 'Usage & cost', icon: Coins },
+  { href: '/admin/posts', label: 'Posts', icon: FileText },
   { href: '/admin/users', label: 'Users', icon: Users },
   { href: '/admin/messages', label: 'Messages', icon: Inbox },
   { href: '/admin/activity', label: 'Activity', icon: Activity },
+  { href: '/admin/settings', label: 'Settings', icon: Settings },
   { href: '/admin/system', label: 'System', icon: Server },
 ];
 
@@ -77,7 +79,8 @@ export default function AdminFrame({ children }) {
         </div>
         <nav className="admin-nav" aria-label="Admin sections">
           {NAV.map(({ href, label, icon: Icon }) => (
-            <Link key={href} href={href} className={`nav-button ${pathname === href ? 'active' : ''}`}
+            <Link key={href} href={href}
+              className={`nav-button ${pathname === href || (href !== '/admin' && pathname.startsWith(`${href}/`)) ? 'active' : ''}`}
               aria-current={pathname === href ? 'page' : undefined}>
               <Icon size={15} aria-hidden="true" />
               {label}

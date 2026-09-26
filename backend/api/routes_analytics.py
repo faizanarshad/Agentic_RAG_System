@@ -23,7 +23,7 @@ router = APIRouter(prefix="/analytics", tags=["analytics"])
 
 BOT_PATTERN = re.compile(r"bot|crawl|spider|slurp|lighthouse|preview|facebookexternalhit|monitor", re.IGNORECASE)
 PATH_PATTERN = re.compile(r"^/[A-Za-z0-9\-._~/]{0,200}$")
-EXCLUDED_PREFIXES = ("/workspace", "/admin", "/login", "/_next")
+EXCLUDED_PREFIXES = ("/workspace", "/admin", "/login", "/_next", "/api")
 RATE_LIMIT, RATE_WINDOW = 120, 3600
 
 _recent: Dict[str, Deque[float]] = defaultdict(deque)
@@ -71,7 +71,8 @@ def _rate_limited(ip: str) -> bool:
 async def pageview(request: Request) -> Response:
     """Accepts a text/plain JSON beacon: {"path": "/about", "referrer": "https://…"}. Always returns 204."""
     empty = Response(status_code=204)
-    if not settings.ANALYTICS_ENABLED:
+    from services.content_store import get_content_store
+    if not settings.ANALYTICS_ENABLED or not get_content_store().get_settings()["analytics_enabled"]:
         return empty
     user_agent = request.headers.get("user-agent", "")
     ip = client_ip(request)

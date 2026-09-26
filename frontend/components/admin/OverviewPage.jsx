@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { fetchBackend } from '@/lib/api';
 import Link from 'next/link';
 import { AlertTriangle, CheckCircle, Inbox, Info, XCircle } from 'lucide-react';
 import { AdminState, RangePicker, useAdminData } from './AdminFrame';
@@ -24,9 +25,37 @@ export function ActivityRow({ event }) {
   );
 }
 
+function RealtimeCard() {
+  const [live, setLive] = useState(null);
+  useEffect(() => {
+    let active = true;
+    const load = () => fetchBackend('/admin/realtime').then((d) => active && setLive(d)).catch(() => {});
+    load();
+    const timer = setInterval(load, 30000);
+    return () => { active = false; clearInterval(timer); };
+  }, []);
+  return (
+    <section className="upload-card realtime" aria-live="polite">
+      <h3 className="legal-card-title"><span className="live-dot" aria-hidden="true" /> Right now</h3>
+      {!live ? <p className="legal-empty-note">Loading…</p> : (
+        <div className="realtime__grid">
+          <div><strong>{live.active_visitors}</strong><span>website visitors (5 min)</span></div>
+          <div><strong>{live.active_users}</strong><span>signed-in users (5 min)</span></div>
+          <div><strong>{live.views_30m}</strong><span>page views (30 min)</span></div>
+          <div className="realtime__pages">
+            {live.pages.length === 0 ? <span className="legal-muted small">No recent page views</span> :
+              live.pages.map(([path, n]) => <span key={path}><code>{path}</code> {n}</span>)}
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export default function OverviewPage() {
   const [days, setDays] = useState(30);
   const { data, loading, error } = useAdminData(`/admin/overview?days=${days}`);
+  const d = data?.deltas;
 
   return (
     <>
@@ -37,11 +66,13 @@ export default function OverviewPage() {
       <AdminState loading={loading && !data} error={error} />
       {data && (
         <>
+          <RealtimeCard />
           <div className="legal-tiles">
-            <StatTile label="Workspace actions" value={data.kpis.actions.toLocaleString()} sub={`${data.kpis.signed_in_users} users signed in`} />
-            <StatTile label="Website page views" value={data.kpis.page_views.toLocaleString()} sub={`${data.kpis.visitors} unique visitors`} />
-            <StatTile label="Model cost (est.)" value={`$${data.kpis.llm_cost_usd.toFixed(2)}`} sub={`last ${days} days`} />
-            <StatTile label="Unread messages" value={data.messages.unread} sub={`${data.messages.total} total`} />
+            <StatTile label="Workspace actions" value={data.kpis.actions.toLocaleString()} delta={d.actions} sub={`${data.kpis.signed_in_users} users signed in`} />
+            <StatTile label="Website page views" value={data.kpis.page_views.toLocaleString()} delta={d.page_views} sub={`${data.kpis.visitors} unique visitors`} />
+            <StatTile label="Contact conversions" value={d.messages.current} delta={d.messages}
+              sub={d.conversion_rate.current === null ? 'no visitors yet' : `${d.conversion_rate.current}% of visitors`} />
+            <StatTile label="Model cost (est.)" value={`$${data.kpis.llm_cost_usd.toFixed(2)}`} delta={d.llm_cost_usd} upIsGood={false} sub={`${data.messages.unread} unread messages`} />
           </div>
 
           <div className="admin-grid">

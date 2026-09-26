@@ -133,11 +133,22 @@ export function BarList({ items, formatLabel = (l) => l, formatValue = (v) => v.
   );
 }
 
-export function StatTile({ label, value, sub }) {
+/** KPI tile; `delta` is {change_pct} vs the previous period. `upIsGood` sets the colour meaning. */
+export function StatTile({ label, value, sub, delta, upIsGood = true }) {
+  const change = delta?.change_pct;
+  let trend = null;
+  if (change === null || change === undefined) {
+    if (delta && delta.previous === 0 && delta.current > 0) trend = { text: 'New this period', tone: 'neutral' };
+  } else {
+    const up = change > 0;
+    const tone = change === 0 ? 'neutral' : up === upIsGood ? 'good' : 'bad';
+    trend = { text: `${up ? '▲' : change < 0 ? '▼' : '■'} ${Math.abs(change)}% vs previous period`, tone };
+  }
   return (
     <div className="legal-tile">
       <span className="legal-tile-label">{label}</span>
       <span className="legal-tile-value">{value}</span>
+      {trend && <span className={`kpi-trend kpi-trend--${trend.tone}`}>{trend.text}</span>}
       {sub && <span className="legal-tile-sub">{sub}</span>}
     </div>
   );

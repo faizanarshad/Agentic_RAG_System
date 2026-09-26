@@ -28,6 +28,7 @@ export default function SiteFooter() {
             <h2>Company</h2>
             <ul>
               <li><Link href="/about">About</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/contact">Contact</Link></li>
               {site.contactEmail && (
                 <li><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></li>

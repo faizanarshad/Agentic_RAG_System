@@ -28,12 +28,13 @@ def _since(days: int) -> str:
     return iso(utcnow() - timedelta(days=days))
 
 
-def _daily(table: str, days: int, value_sql: str = "COUNT(*)", where: str = "") -> List[Dict[str, Any]]:
-    """Per-day series for the last `days` days, with zero-filled gaps (UTC days)."""
+def _daily(table: str, days: int, value_sql: str = "COUNT(*)", where: str = "", params: tuple = ()) -> List[Dict[str, Any]]:
+    """Per-day series for the last `days` days, with zero-filled gaps (UTC days).
+    `where` is a trusted SQL fragment; user values go in `params`."""
     rows = get_platform_store().query(
         f"SELECT substr(created_at, 1, 10) AS day, {value_sql} AS value FROM {table} "
         f"WHERE created_at >= ? {where} GROUP BY day",
-        (_since(days),),
+        (_since(days), *params),
     )
     by_day = {r["day"]: r["value"] or 0 for r in rows}
     start = date.today() - timedelta(days=days - 1)
@@ -103,7 +104,56 @@ def _dir_size_mb(path: str) -> float:
     return round(total / (1024 * 1024), 1)
 
 
+def _between(start_days_ago: int, end_days_ago: int) -> tuple:
+    return (iso(utcnow() - timedelta(days=start_days_ago)), iso(utcnow() - timedelta(days=end_days_ago)))
+
+
+def _period_metrics(start: str, end: str) -> Dict[str, float]:
+    """Headline metrics for [start, end), used for current vs previous period comparisons."""
+    store = get_platform_store()
+    workspace = "workspace IN ('engineering','legal','medical')"
+    return {
+        "actions": store.scalar(f"SELECT COUNT(*) FROM events WHERE created_at >= ? AND created_at < ? AND {workspace}", (start, end)),
+        "page_views": store.scalar("SELECT COUNT(*) FROM page_views WHERE created_at >= ? AND created_at < ?", (start, end)),
+        "visitors": store.scalar("SELECT COUNT(DISTINCT visitor) FROM page_views WHERE created_at >= ? AND created_at < ?", (start, end)),
+        "messages": store.scalar("SELECT COUNT(*) FROM events WHERE action = 'contact.message' AND created_at >= ? AND created_at < ?", (start, end)),
+        "llm_cost_usd": round(store.scalar("SELECT COALESCE(SUM(cost_usd), 0) FROM llm_usage WHERE created_at >= ? AND created_at < ?", (start, end)), 4),
+    }
+
+
+def _deltas(days: int) -> Dict[str, Dict[str, Any]]:
+    current = _period_metrics(*_between(days, -1))
+    previous = _period_metrics(*_between(2 * days, days))
+    result = {}
+    for key, value in current.items():
+        before = previous[key]
+        change = None if not before else round(100 * (value - before) / before, 1)
+        result[key] = {"current": value, "previous": before, "change_pct": change}
+    visitors = current["visitors"]
+    result["conversion_rate"] = {"current": round(100 * current["messages"] / visitors, 2) if visitors else None}
+    return result
+
+
 # ---------------------------------------------------------------------- analytics
+
+@router.get("/realtime")
+def realtime() -> Dict[str, Any]:
+    """Visitors and pages in the last few minutes (for the live card)."""
+    store = get_platform_store()
+    five, thirty = _since_minutes(5), _since_minutes(30)
+    return {
+        "active_visitors": store.scalar("SELECT COUNT(DISTINCT visitor) FROM page_views WHERE created_at >= ?", (five,)),
+        "views_30m": store.scalar("SELECT COUNT(*) FROM page_views WHERE created_at >= ?", (thirty,)),
+        "active_users": store.scalar("SELECT COUNT(DISTINCT user_id) FROM sessions WHERE last_seen_at >= ?", (five,)),
+        "pages": [[r["path"], r["n"]] for r in store.query(
+            "SELECT path, COUNT(*) AS n FROM page_views WHERE created_at >= ? GROUP BY path ORDER BY n DESC LIMIT 6",
+            (thirty,))],
+    }
+
+
+def _since_minutes(minutes: int) -> str:
+    return iso(utcnow() - timedelta(minutes=minutes))
+
 
 @router.get("/overview")
 def overview(days: int = Query(default=30, ge=7, le=365)) -> Dict[str, Any]:
@@ -132,6 +182,7 @@ def overview(days: int = Query(default=30, ge=7, le=365)) -> Dict[str, Any]:
                 "SELECT COUNT(*) FROM login_attempts WHERE success = 0 AND created_at >= ?", (since,)),
         },
         "messages": routes_contact.message_stats(),
+        "deltas": _deltas(days),
         "content": _content_stats(),
         "series": {
             "actions": _daily("events", days, where="AND workspace IN ('engineering','legal','medical')"),
@@ -165,7 +216,29 @@ def traffic(days: int = Query(default=30, ge=7, le=365)) -> Dict[str, Any]:
         "devices": [[r["device"], r["n"]] for r in store.query(
             "SELECT device, COUNT(*) AS n FROM page_views WHERE created_at >= ? GROUP BY device ORDER BY n DESC",
             (since,))],
+        # First page each (daily) visitor saw
+        "landing_pages": [[r["path"], r["n"]] for r in store.query(
+            "SELECT v.path, COUNT(*) AS n FROM page_views v JOIN ("
+            "  SELECT visitor, MIN(id) AS first_id FROM page_views WHERE created_at >= ? GROUP BY visitor"
+            ") f ON f.first_id = v.id GROUP BY v.path ORDER BY n DESC LIMIT 10", (since,))],
+        "top_posts": [[r["path"].replace("/blog/", ""), r["n"]] for r in store.query(
+            "SELECT path, COUNT(*) AS n FROM page_views WHERE created_at >= ? AND path LIKE '/blog/%' "
+            "GROUP BY path ORDER BY n DESC LIMIT 10", (since,))],
+        "conversions": _daily("events", days, where="AND action = 'contact.message'"),
+        "deltas": _deltas(days),
     }
+
+
+@router.get("/traffic.csv")
+def traffic_csv(days: int = Query(default=30, ge=7, le=365)) -> StreamingResponse:
+    views = _daily("page_views", days)
+    visitors = {p["day"]: p["value"] for p in _daily("page_views", days, value_sql="COUNT(DISTINCT visitor)")}
+    conversions = {p["day"]: p["value"] for p in _daily("events", days, where="AND action = 'contact.message'")}
+    return _csv_response(
+        f"traffic-{days}d.csv",
+        ["date", "page_views", "visitors", "contact_messages"],
+        [[p["day"], p["value"], visitors.get(p["day"], 0), conversions.get(p["day"], 0)] for p in views],
+    )
 
 
 @router.get("/usage")

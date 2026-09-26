@@ -76,6 +76,10 @@ def _rate_limited(client_ip: str) -> bool:
 @router.post("")
 def submit_contact(payload: ContactMessage, request: Request) -> Dict[str, bool]:
     """Validate and store a contact message."""
+    from services.content_store import get_content_store
+    if not get_content_store().get_settings()["contact_form_enabled"]:
+        raise HTTPException(status_code=503, detail="The contact form is temporarily unavailable.")
+
     # Silently accept honeypot submissions so bots get no signal
     if payload.website.strip():
         logger.info("Contact form honeypot triggered; message discarded")

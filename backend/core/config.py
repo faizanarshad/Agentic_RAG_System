@@ -75,6 +75,10 @@ class Settings:
     LOGIN_LOCKOUT_MINUTES: int = int(os.getenv("LOGIN_LOCKOUT_MINUTES", "15"))
     PASSWORD_MIN_LENGTH: int = int(os.getenv("PASSWORD_MIN_LENGTH", "10"))
     ANALYTICS_ENABLED: bool = os.getenv("ANALYTICS_ENABLED", "True").lower() == "true"
+    # On-demand revalidation of the Next.js site when posts or settings change
+    SITE_REVALIDATE_URL: str = os.getenv("SITE_REVALIDATE_URL", "http://localhost:3001/api/revalidate")
+    REVALIDATE_SECRET: str = os.getenv("REVALIDATE_SECRET", "")
+    UPLOAD_MAX_MB: int = int(os.getenv("UPLOAD_MAX_MB", "8"))
 
     # API Configuration
     API_HOST: str = os.getenv("API_HOST", "0.0.0.0")

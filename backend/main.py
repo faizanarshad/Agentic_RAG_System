@@ -13,6 +13,7 @@ from api.routes_contact import router as contact_router
 from api.routes_auth import router as auth_router
 from api.routes_admin import router as admin_router
 from api.routes_analytics import router as analytics_router
+from api.routes_posts import admin_router as content_admin_router, public_router
 from api.deps import require_user
 from api.middleware import activity_logger, origin_guard
 from core.config import settings
@@ -68,6 +69,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(contact_router)
 app.include_router(analytics_router)
+app.include_router(public_router)
 
 # Workspace routers require a signed-in user; admin routes check the admin role themselves
 signed_in = [Depends(require_user)]
@@ -76,6 +78,7 @@ app.include_router(files_router, dependencies=signed_in)
 app.include_router(legal_router, dependencies=signed_in)
 app.include_router(engineering_router, dependencies=signed_in)
 app.include_router(admin_router)
+app.include_router(content_admin_router)
 
 
 @app.get("/")

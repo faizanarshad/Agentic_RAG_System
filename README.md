@@ -86,6 +86,14 @@ The three workspaces share one design principle: **models do the reading, but de
 |---|---|
 | ![Traffic analytics](docs/images/admin-traffic.png) | ![Usage and estimated model cost](docs/images/admin-usage.png) |
 
+| Post editor (Markdown, preview, SEO) | Site settings |
+|---|---|
+| ![Post editor with preview and search appearance](docs/images/admin-post-editor.png) | ![Announcement bar and feature switches](docs/images/admin-settings.png) |
+
+| Published blog article |
+|---|
+| ![Blog article page](docs/images/blog-post.png) |
+
 ### Workspace
 
 | Engineering: drawing review | Engineering: revision comparison |
@@ -151,8 +159,19 @@ The three workspaces share one design principle: **models do the reading, but de
   - changing a password signs out other sessions.
 - **Account page**: change password, see active sessions, sign out other devices.
 - **Admin panel**:
-  - **Overview**: KPIs, daily workspace actions and page views, actions by workspace, content counts, recent activity.
-  - **Traffic**: page views, daily unique visitors, top pages, referrers, devices.
+  - **Overview**:
+    - KPIs with **change against the previous period**;
+    - a live **"right now"** card (visitors and signed-in users in the last 5 minutes);
+    - contact conversions and conversion rate;
+    - daily actions and page views, actions by workspace, content counts, recent activity.
+  - **Traffic**: page views, daily unique visitors, conversion rate, contact conversions per day, landing pages, top blog posts, top pages, referrers, devices, and CSV export.
+  - **Posts**: a blog content manager.
+    - Markdown editor with a formatting toolbar and write/preview modes (same renderer and sanitiser as the live page).
+    - Cover and inline image uploads, re-encoded to WebP.
+    - Tags, URL slug, SEO title and description with counters, and a Google result preview.
+    - Drafts, publishing and **scheduling** (a future publish date).
+    - Per-post views chart.
+  - **Settings**: announcement bar (message, link, style, live preview) and switches for the contact form and website analytics.
   - **Usage & cost**: model calls, tokens and **estimated cost** by day, model and feature; most-used actions; activity per user.
   - **Users**: invite, change role, disable or enable, reset password, delete.
   - **Messages**: contact-form inbox with read/unread, reply, delete and CSV export.
@@ -162,6 +181,14 @@ The three workspaces share one design principle: **models do the reading, but de
   - first-party beacon, no cookies;
   - IP addresses are never stored, and visitor IDs are salted hashes that reset daily;
   - Do Not Track is respected and bots are excluded.
+
+### 📝 Blog
+
+- Public `/blog` listing and `/blog/[slug]` articles, statically generated and refreshed every 60 seconds.
+- The API triggers an **immediate refresh** through `/api/revalidate` (shared secret) whenever a post or setting changes.
+- Each article has canonical URLs, Open Graph article metadata, **BlogPosting** JSON-LD, breadcrumbs, reading time and related posts.
+- Published posts are added to the sitemap automatically.
+- Post HTML is rendered from Markdown and **sanitised with an allow-list** (nh3) on the server when saved.
 
 ### 🌐 Website
 
@@ -416,7 +443,10 @@ npm run build && npm start # http://localhost:3001
 | `COOKIE_SECURE` | `False` | Set `True` when serving over HTTPS |
 | `LOGIN_MAX_ATTEMPTS` / `LOGIN_LOCKOUT_MINUTES` | `5` / `15` | Failed sign-ins per email before a temporary lockout |
 | `PASSWORD_MIN_LENGTH` | `10` | Minimum password length |
-| `ANALYTICS_ENABLED` | `True` | Cookie-less website page-view analytics |
+| `ANALYTICS_ENABLED` | `True` | Cookie-less website page-view analytics (also switchable in Admin → Settings) |
+| `SITE_REVALIDATE_URL` | `http://localhost:3001/api/revalidate` | Website endpoint called after posts or settings change |
+| `REVALIDATE_SECRET` | – | Shared secret for on-demand revalidation (same value in `frontend/.env.local`) |
+| `UPLOAD_MAX_MB` | `8` | Maximum image upload size |
 | `API_HOST` / `API_PORT` | `0.0.0.0` / `8000` | Server binding |
 
 ### Front end (`frontend/.env.local`)
@@ -426,6 +456,8 @@ npm run build && npm start # http://localhost:3001
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost:3001` | **Set before deploying.** Drives canonical URLs, sitemap, robots.txt, Open Graph URLs and structured data |
 | `NEXT_PUBLIC_API_BASE` | `http://localhost:8000` | FastAPI back end |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | – | Optional email shown on the Contact page, footer and Organization schema |
+| `API_INTERNAL_BASE` | `NEXT_PUBLIC_API_BASE` | API base used by the Next.js server when rendering blog pages (e.g. an internal hostname) |
+| `REVALIDATE_SECRET` | – | Must match the back end's `REVALIDATE_SECRET` |
 
 ### Approximate costs (OpenAI)
 
@@ -489,6 +521,14 @@ All workspace endpoints (chat, files, legal, engineering) require a signed-in se
 | `GET` | `/admin/messages?status=` · `/admin/messages.csv` | Contact inbox / CSV export |
 | `PATCH` · `DELETE` | `/admin/messages/{id}` | Mark read or unread / delete |
 | `GET` | `/admin/activity` · `/admin/activity.csv` | Audit log with filters / CSV export |
+| `GET` | `/admin/realtime` | Visitors and signed-in users in the last 5 minutes, recent pages |
+| `GET` | `/admin/traffic.csv?days=` | Daily page views, visitors and contact messages as CSV |
+| `GET` · `POST` | `/admin/posts` | List posts (with views) / create |
+| `GET` · `PUT` · `DELETE` | `/admin/posts/{id}` | Read / update (publish, unpublish, schedule) / delete |
+| `GET` | `/admin/posts/{id}/stats` | Views, visitors, daily series and referrers for one post |
+| `POST` | `/admin/posts/preview` | Render Markdown with the publishing sanitiser |
+| `POST` | `/admin/uploads` | Upload an image (re-encoded to WebP, max 2000 px) |
+| `GET` · `PUT` | `/admin/settings` | Announcement bar, contact-form and analytics switches |
 
 </details>
 
@@ -498,6 +538,9 @@ All workspace endpoints (chat, files, legal, engineering) require a signed-in se
 | Method | Endpoint | Description |
 |---|---|---|
 | `POST` | `/analytics/pageview` | Cookie-less page-view beacon (`text/plain` JSON `{path, referrer}`); always returns 204 |
+| `GET` | `/public/posts` · `/public/posts/{slug}` | Published posts (scheduled posts appear at their publish time) |
+| `GET` | `/public/settings` | Announcement bar and contact-form status |
+| `GET` | `/public/uploads/{name}` | Uploaded images (immutable, cached for a year) |
 
 </details>
 
@@ -728,7 +771,9 @@ Open http://localhost:8000/files/health and check that `vectordb` and `llm` are 
 - [ ] Streaming responses and progress for long-running agent steps
 - [ ] Usage and cost dashboard per workspace
 - [ ] Model provider abstraction (e.g. Claude, Azure OpenAI, local models)
-- [ ] Blog / case-study section and internationalisation (hreflang) on the website
+- [x] Blog with admin editor, scheduling, SEO fields and on-demand revalidation
+- [ ] Rich-text (WYSIWYG) editing option and post revision history
+- [ ] Internationalisation (hreflang) on the website
 - [ ] Field Core Web Vitals monitoring after deployment
 
 ---
