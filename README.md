@@ -4,7 +4,7 @@
 
 AIDocumentAgent reviews engineering drawings against ISO and ASME standards, synthesises insights across whole collections of legal documents, and answers clinical questions from your own files. Every finding is located, every answer is sourced, and anything the system cannot verify is flagged instead of filled in.
 
-![AIDocumentAgent home page](docs/images/site-home.png)
+![AIDocumentAgent home page: hero with the product tour slider](docs/images/site-home.png)
 
 <p align="center">
   <a href="#screenshots">Screenshots</a> ·
@@ -63,27 +63,47 @@ The three workspaces share one design principle: **models do the reading, but de
 
 ### Website
 
+**Home page product tour.** The hero slider fades between the three workspaces. Each slide has its own annotated callouts, and there are tabs, autoplay with a progress bar, and a pause button.
+
+![Hero slider: Engineering, Legal and Medical slides](docs/images/site-hero-slides.png)
+
+**Start a task.** Pick a workspace and a task, and the workspace opens on that tab. Popular shortcuts and a scrolling "Built with" strip sit underneath.
+
+![Start a task picker with popular tasks and the Built with marquee](docs/images/site-home-task-finder.png)
+
+| Capabilities slider with numbered workspace filters | Hover: lift, cursor spotlight, accent number |
+|---|---|
+| ![Capabilities slider with All, Engineering, Legal and Medical tabs](docs/images/site-home-capabilities.png) | ![Capability card hover state](docs/images/site-home-hover.png) |
+
+| Real findings from the test runs (slider) | Measured results (count up on scroll) |
+|---|---|
+| ![Findings slider with critical, unrecorded and verified findings](docs/images/site-home-findings.png) | ![Results from internal test suites](docs/images/site-home-results.png) |
+
 | Workflow | Verification guardrails |
 |---|---|
 | ![How it works section](docs/images/site-home-workflow.png) | ![Guardrails section](docs/images/site-home-guardrails.png) |
 
-| Engineering solution page | Measured results |
+| Engineering solution page | About |
 |---|---|
-| ![Engineering solution page](docs/images/site-solution-engineering.png) | ![Results from internal test suites](docs/images/site-home-results.png) |
+| ![Engineering solution page](docs/images/site-solution-engineering.png) | ![About page](docs/images/site-about.png) |
 
-| About | Contact |
-|---|---|
-| ![About page](docs/images/site-about.png) | ![Contact page with form](docs/images/site-contact.png) |
+**Contact**
 
-**Mobile** (390 px: home, navigation menu, contact form)
+![Contact page with form](docs/images/site-contact.png)
+
+**Mobile** (390 px: hero, product tour, start-a-task picker)
 
 ![Mobile views](docs/images/site-mobile.png)
 
 ### Sign-in and admin panel
 
-| Sign-in | Admin overview |
+| Sign-in (with "Forgot password?") | Self-service password reset |
 |---|---|
-| ![Sign-in page](docs/images/login.png) | ![Admin overview with KPIs and daily charts](docs/images/admin-overview.png) |
+| ![Sign-in page](docs/images/login.png) | ![Forgot password page](docs/images/forgot-password.png) |
+
+| Admin overview | Users: invite by single-use link |
+|---|---|
+| ![Admin overview with KPIs and daily charts](docs/images/admin-overview.png) | ![Invite a user: the link is shown when email is not configured](docs/images/admin-users.png) |
 
 See **[Admin panel](#admin-panel)** for every admin screen and a how-to guide.
 
@@ -274,9 +294,9 @@ account's sessions.
 |---|---|
 | ![Post editor with preview and search appearance](docs/images/admin-post-editor.png) | ![Blog article page](docs/images/blog-post.png) |
 
-| Users | Messages |
+| Users (invitations, reset links, 2FA status) | Messages |
 |---|---|
-| ![User management](docs/images/admin-users.png) | ![Contact inbox](docs/images/admin-messages.png) |
+| ![User management with an invitation link](docs/images/admin-users.png) | ![Contact inbox](docs/images/admin-messages.png) |
 
 | Activity log | Settings |
 |---|---|
@@ -496,27 +516,34 @@ Agentic_RAG_System/
 │   │   └── engineering_agent_service.py, engineering_loader.py, engineering_rules.py,
 │   │       engineering_prompts.py, engineering_store.py, engineering_templates.py
 │   │   ├── platform_store.py, security.py, usage_tracker.py   # Users, sessions, analytics, model cost
-│   ├── manage.py                   # create-admin / reset-password
+│   │   ├── crypto.py, file_safety.py, prompt_guard.py, phi_redaction.py   # Hardening
+│   │   └── account_links.py, mailer.py, backup.py   # Invite/reset links, SMTP, backups
+│   ├── tests/                      # pytest suite (113 tests)
+│   ├── manage.py                   # create-admin, reset-password, backup, restore
 │   ├── data/                       # Runtime data (git-ignored): SQLite DBs, uploads
 │   └── requirements.txt
 ├── frontend/
 │   ├── app/
 │   │   ├── (site)/                 # Home, solutions, about, contact (static)
-│   │   ├── (auth)/login/           # Sign-in page
+│   │   ├── (auth)/                 # Sign-in, forgot-password, reset-password
 │   │   ├── (workspace)/workspace/  # The application (sign-in required, noindex)
 │   │   ├── (workspace)/admin/      # Admin panel (admins only)
 │   │   ├── sitemap.js, robots.js, manifest.js, opengraph-image.js, icon.svg, apple-icon.js
-│   │   └── globals.css, styles/workspace.css
-│   ├── components/site/            # Header, footer, breadcrumbs, JSON-LD, contact form
+│   │   └── globals.css, styles/{workspace,motion,carousel}.css
+│   ├── components/site/            # Header, footer, contact form, Carousel, Marquee, TaskFinder,
+│   │                               # CapabilitySlider, SiteMotion (spotlight, tilt, count-up)
 │   ├── components/workspace/       # Engineering, Legal, Medical, Status
-│   ├── components/auth/            # AuthProvider, login form
+│   ├── components/auth/            # AuthProvider, login, forgot and reset password forms
 │   ├── components/admin/           # Admin pages and SVG charts
 │   ├── components/account/         # Account page
-│   ├── lib/                        # site.js, content.js, structured-data.js, api.js, og.js
+│   ├── lib/                        # site.js, content.js, structured-data.js, api.js, og.js, initial-view.js
+│   ├── proxy.js                    # Per-request nonce CSP for sign-in, workspace and admin
+│   ├── e2e/                        # Playwright end-to-end and accessibility tests
 │   └── assets/                     # Product screenshots (static imports)
 ├── scripts/
 │   ├── generate_engineering_samples.py   # Drawings with planted errors + answer key
-│   └── generate_legal_corpus.py          # 100 fictional legal documents
+│   ├── generate_legal_corpus.py          # 100 fictional legal documents
+│   └── evaluate_agents.py                # Score the agents against the answer keys
 ├── datasets/
 │   ├── engineering_samples/        # Generated drawings (PDF, DXF)
 │   └── legal_corpus/               # Generated legal documents
