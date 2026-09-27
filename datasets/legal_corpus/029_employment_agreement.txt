@@ -1,0 +1,107 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+EMPLOYMENT AGREEMENT
+
+This Employment Agreement (“Agreement”) is entered into as of January 15, 2025 (“Effective Date”), by and between SolaraTech Innovations, Inc., a California corporation having its principal place of business at 4527 Meridian Avenue, San Diego, CA 92116 (“Company”), and Jonathan Michael Preston, an individual residing at 3824 Laurel Grove Lane, Irvine, CA 92614 (“Employee”).
+
+RECITALS
+
+WHEREAS, the Company desires to employ the Employee and the Employee desires to accept such employment on the terms and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the parties hereby agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means all proprietary information, trade secrets, data, know-how, and any other non-public information of the Company or its affiliates, whether disclosed orally, visually, or in writing, including without limitation, customer lists, business plans, software, inventions, and financial information.
+
+1.2 “Cause” means (i) Employee’s willful misconduct or gross negligence in the performance of duties; (ii) commission of a felony or any crime involving moral turpitude; (iii) material breach of this Agreement or any Company policy, after written notice and failure to cure within five (5) business days; or (iv) willful violation of any law that materially harms Company’s business.
+
+1.3 “Term” means the period beginning on the Effective Date and ending on January 14, 2027, unless terminated earlier pursuant to Section 6.
+
+2. POSITION AND DUTIES
+
+2.1 Position. The Company hereby employs Employee in the capacity of Vice President of Product Development. Employee shall report directly to the Company’s Chief Executive Officer (“CEO”) and shall perform all duties as are customary for such position and as may be reasonably assigned by the CEO.
+
+2.2 Best Efforts. Employee agrees to devote full business time, attention, knowledge, and skills to the performance of Employee’s duties hereunder and shall not, during the Term, engage in any other business, profession, or occupation for compensation or otherwise without the prior written consent of the Company.
+
+3. COMPENSATION AND BENEFITS
+
+3.1 Base Salary. Company shall pay Employee an annual base salary of Two Hundred and Forty Thousand Dollars ($240,000), payable in accordance with the Company’s standard payroll practices but no less frequently than monthly.
+
+3.2 Annual Bonus. Employee shall be eligible to receive an annual discretionary bonus with a target amount of Forty-Eight Thousand Dollars ($48,000) based on Company performance and Employee’s achievement of performance objectives, to be paid within 90 days following the close of each fiscal year.
+
+3.3 Employee Benefits. Employee shall be entitled to participate in such employee benefit plans and programs as are made available to other senior executives of the Company, subject to the terms of those plans and programs.
+
+3.4 Vacation. Employee is entitled to four (4) weeks of paid vacation per year, accrued monthly and subject to Company’s vacation policies.
+
+4. EMPLOYEE OBLIGATIONS
+
+4.1 Confidentiality. Employee agrees at all times during and after the Term to hold all Confidential Information in strict confidence and not to use or disclose any Confidential Information without Company’s prior written consent, except as required by law.
+
+4.2 Inventions and Work Product. Employee agrees that all inventions, discoveries, developments, improvements, works of authorship, and related intellectual property that Employee conceives or develops during the Term that relate to the Company’s business or result from Employee’s use of Company resources are the sole property of the Company.
+
+4.3 Return of Property. Upon termination of employment for any reason, Employee shall immediately return to the Company all property belonging to the Company, including but not limited to documents, devices, and electronic media.
+
+5. TERM AND TERMINATION
+
+5.1 Term. The Term shall commence on the Effective Date and continue until January 14, 2027, unless terminated earlier pursuant to this Agreement.
+
+5.2 Termination by Company. The Company may terminate Employee’s employment at any time:
+
+(a) for Cause upon written notice to Employee, effective immediately;
+
+(b) without Cause upon thirty (30) days’ written notice, or immediately upon payment of severance in lieu of notice equal to three (3) months’ base salary.
+
+5.3 Termination by Employee. Employee may terminate employment upon thirty (30) days’ written notice to the Company.
+
+5.4 Effect of Termination. Upon termination of employment, Employee shall be entitled only to accrued base salary, accrued vacation pay, and any earned but unpaid bonuses as of the date of termination, except as otherwise expressly provided herein.
+
+6. INDEMNIFICATION
+
+6.1 Indemnification by Employee. Employee agrees to indemnify, defend, and hold harmless the Company, its affiliates, officers, directors, employees, agents, and assigns (collectively “Indemnitees”) from and against any and all claims, losses, liabilities, damages, costs, expenses (including reasonable attorneys’ fees), judgments, fines, settlements, and other amounts arising from or relating to any acts or omissions of Employee in the performance of Employee’s duties under this Agreement, including but not limited to any claims of third parties for personal injury, property damage, or infringement of intellectual property rights.
+
+6.2 Notice and Cooperation. The Company shall notify Employee promptly in writing of any claim for which indemnification is sought under this Section 6. The Company shall cooperate with Employee, at Employee’s expense, in the defense of such claim.
+
+6.3 No Indemnification of Employee. The Company shall have no obligation to indemnify Employee under this Agreement.
+
+7. NONCOMPETE AND NONSOLICITATION
+
+7.1 Noncompetition. During the Term and for a period of twelve (12) months following termination for any reason, Employee shall not engage in any business that directly competes with the Company within the State of California.
+
+7.2 Nonsolicitation. For twelve (12) months following termination, Employee shall not directly or indirectly solicit or induce any employee or consultant of the Company to terminate their relationship with the Company.
+
+8. MISCELLANEOUS
+
+8.1 Entire Agreement. This Agreement constitutes the entire agreement between the parties and supersedes all prior agreements or understandings, oral or written, relating to the subject matter hereof.
+
+8.2 Amendments. This Agreement may be amended or modified only by a written instrument signed by both parties.
+
+8.3 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of California without regard to its conflict of laws principles. The parties consent to the exclusive jurisdiction and venue of the Superior Court of California, County of San Diego, for any dispute arising under this Agreement.
+
+8.4 Severability. If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+
+8.5 Waiver. The failure of either party to enforce any right or provision under this Agreement shall not constitute a waiver of such right or provision.
+
+8.6 Notices. All notices required or permitted under this Agreement shall be in writing and shall be deemed given upon delivery if delivered personally, or three (3) business days after mailing by certified mail, return receipt requested, to the addresses set forth above or to such other address as either party may designate in writing.
+
+9. SIGNATURES
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+SolaraTech Innovations, Inc.
+
+By: _______________________________
+
+Name: Monica R. Delgado
+
+Title: Chief Executive Officer
+
+Date: January 15, 2025
+
+Employee:
+
+_______________________________
+
+Jonathan Michael Preston
+
+Date: January 15, 2025

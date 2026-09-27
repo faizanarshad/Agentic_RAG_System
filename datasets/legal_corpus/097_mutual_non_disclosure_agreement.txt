@@ -1,0 +1,87 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is entered into as of January 15, 2025 (“Effective Date”), by and between Titanis Innovations, Inc., a Delaware corporation with its principal place of business at 4501 Meridian Boulevard, Wilmington, DE 19801 (“Titanis”), and Helios Cybernetics LLC, a Delaware limited liability company with its principal office at 2897 Harborview Drive, Newark, DE 19702 (“Helios”). Titanis and Helios may be referred to individually as a “Party” and collectively as the “Parties.”
+
+WHEREAS, the Parties wish to explore and evaluate a potential business relationship concerning the joint development of advanced autonomous drone technologies (the “Purpose”);
+
+WHEREAS, in connection with this Purpose, each Party may disclose to the other certain confidential and proprietary information;
+
+NOW, THEREFORE, in consideration of the mutual promises contained herein, the Parties agree as follows:
+
+1. Definition of Confidential Information  
+1.1 “Confidential Information” means any and all information disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”), whether orally, in writing, or by any other means, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, but is not limited to, business plans, technical data, product designs, software code, financial information, trade secrets, customer lists, marketing plans, and other proprietary data.  
+1.2 Confidential Information does not include information that:  
+(a) was already known to the Receiving Party at the time of disclosure without any obligation of confidentiality;  
+(b) becomes publicly available through no fault of the Receiving Party;  
+(c) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information; or  
+(d) is rightfully obtained from a third party without breach of any obligation of confidentiality.
+
+2. Obligations of Receiving Party  
+2.1 The Receiving Party agrees to use the Confidential Information solely for the Purpose described above and not for any other purpose.  
+2.2 The Receiving Party shall restrict disclosure of Confidential Information to its directors, officers, employees, contractors, and agents (“Representatives”) who have a legitimate need to know such information for the Purpose and who are bound by confidentiality obligations at least as restrictive as those contained in this Agreement.  
+2.3 The Receiving Party shall protect the Confidential Information with at least the same degree of care it uses to protect its own confidential information, but in no event with less than reasonable care.  
+2.4 The Receiving Party shall notify the Disclosing Party promptly in writing upon discovery of any unauthorized use or disclosure of Confidential Information.
+
+3. Exclusions and Limitations  
+3.1 Nothing in this Agreement shall be construed as granting any license or rights under any patents, copyrights, trade secrets, trademarks, or other intellectual property rights of the Disclosing Party, except the limited right to use Confidential Information for the Purpose.  
+3.2 Neither Party shall be obligated to disclose any particular information under this Agreement.
+
+4. Term and Termination  
+4.1 This Agreement shall commence on the Effective Date and shall continue in effect for a period of two (2) years, unless earlier terminated by mutual written consent of the Parties.  
+4.2 Upon termination or expiration of this Agreement, the Receiving Party shall, within thirty (30) calendar days, return or destroy all tangible materials containing Confidential Information of the Disclosing Party, including all copies, excerpts, and summaries thereof, and certify in writing to the Disclosing Party that such return or destruction has been completed.  
+4.3 The obligations of confidentiality under this Agreement shall survive the termination or expiration hereof for a period of five (5) years.
+
+5. Remedies  
+5.1 Each Party acknowledges that unauthorized disclosure or use of Confidential Information may cause irreparable harm for which monetary damages may be inadequate. Accordingly, the Parties agree that the Disclosing Party shall be entitled to seek injunctive relief in addition to any other remedies available at law or in equity.  
+5.2 The prevailing Party in any litigation or arbitration arising out of or relating to this Agreement shall be entitled to recover reasonable attorneys’ fees and costs.
+
+6. No Warranty  
+6.1 All Confidential Information is provided “AS IS” without any warranty, express or implied, as to its accuracy or completeness. Neither Party shall be liable to the other for any errors or omissions in the Confidential Information.
+
+7. Miscellaneous  
+7.1 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law principles. The Parties consent to the exclusive jurisdiction and venue of the Delaware Court of Chancery in any dispute arising out of or related to this Agreement.  
+7.2 Entire Agreement. This Agreement constitutes the entire agreement between the Parties with respect to the subject matter hereof and supersedes all prior discussions, understandings, and agreements, whether oral or written.  
+7.3 Amendments. No modification or amendment of this Agreement shall be binding unless in writing and signed by authorized representatives of both Parties.  
+7.4 Waiver. The failure of either Party to enforce any provision of this Agreement shall not be deemed a waiver of future enforcement of that or any other provision.  
+7.5 Severability. If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.  
+7.6 Assignment. Neither Party may assign its rights or obligations under this Agreement without the prior written consent of the other Party, except to a successor entity in connection with a merger or sale of substantially all assets.
+
+IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure Agreement as of the Effective Date.
+
+TITANIS INNOVATIONS, INC.           HELIOS CYBERNETICS LLC
+
+By: ____________________________   By: ____________________________
+
+Name: Laura J. Merrick              Name: Daniel R. Kohler
+
+Title: Chief Legal Officer          Title: Managing Member
+
+Date: January 15, 2025             Date: January 15, 2025
+
+-------------------------------------
+
+EXHIBIT A
+
+AUTHORIZED REPRESENTATIVES LIST
+
+Titanis:  
+- Laura J. Merrick, Chief Legal Officer  
+- Marcus E. Daly, Director of Engineering  
+- Sophia Li, Senior Systems Architect
+
+Helios:  
+- Daniel R. Kohler, Managing Member  
+- Priya S. Patel, Lead Software Engineer  
+- Omar A. Hernandez, Head of R&D
+
+-------------------------------------
+
+CASE HISTORY REFERENCE
+
+For purposes of internal record-keeping, this Agreement is tracked under case number TC-DEL-2025-00487.
+
+-------------------------------------
+
+Note: This Agreement intentionally omits a specific data protection clause addressing data security standards, breach notification obligations, or compliance with data privacy laws, and the Parties acknowledge this gap and agree to address it separately if and when appropriate.

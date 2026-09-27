@@ -13,6 +13,7 @@ import json
 import re
 
 from core.config import settings
+from services.phi_redaction import redact_text
 from utils.logger import logger
 
 # Token limit for OpenAI embeddings (text-embedding-ada-002)
@@ -155,6 +156,11 @@ class CSVProcessor:
                     r'\b[A-Z][a-z]+\s+[A-Z][a-z]+\b', 'Patient', regex=True
                 )
         
+        # Identifiers inside free-text values (a phone number in clinical notes, an email in a comment)
+        if settings.MEDICAL_REDACT_PHI:
+            for col in df_clean.select_dtypes(include=['object']).columns:
+                df_clean[col] = df_clean[col].map(lambda v: redact_text(v) if isinstance(v, str) else v)
+
         logger.info(f"Anonymized CSV data: removed {len(columns_to_remove)} potential PHI columns")
         return df_clean
     

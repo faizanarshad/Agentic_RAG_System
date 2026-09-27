@@ -1,0 +1,113 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+HIPAA Security Risk Assessment Report  
+Prepared for: Lone Star Health Partners, LLC  
+Assessment Period: January 1, 2025 – December 31, 2025  
+Date of Report: March 15, 2026  
+
+1. Introduction  
+This HIPAA Security Risk Assessment (“Assessment”) has been conducted for Lone Star Health Partners, LLC (“Lone Star” or “Covered Entity”) pursuant to the Health Insurance Portability and Accountability Act of 1996 (HIPAA), the HIPAA Privacy and Security Rules, and applicable Texas state laws. This Assessment evaluates the administrative, physical, and technical safeguards in place as of December 31, 2025, focusing on compliance with applicable HIPAA Security Rule requirements, with special attention to identified vendor-related risks.  
+
+This Assessment is conducted in accordance with 45 CFR Part 164 Subpart C and the Texas Medical Privacy Act (Texas Health & Safety Code, Chapter 181).  
+
+2. Scope and Methodology  
+The scope of this Assessment includes all electronic protected health information (“ePHI”) handled, stored, or transmitted by Lone Star and its business associates within the calendar year 2025. Specific focus was given to systems supporting patient scheduling, billing, and electronic medical records. Document review, system and network scans, staff interviews, and policy audits were performed from November 2025 through January 2026.  
+
+The Assessment team included:  
+- Julia Ramirez, Lead Compliance Officer, Lone Star Health Partners, LLC  
+- Mark Holder, IT Security Consultant, Holder Cybersecurity, Inc.  
+- Samantha Lee, Legal Counsel, Grayton & Pierce Law Firm  
+
+3. Executive Summary  
+Lone Star maintains a generally compliant security posture but exhibits one significant compliance gap relating to vendor risk management. The business associate agreement (“BAA”) with MediSys Data Solutions, a vendor providing cloud storage services for ePHI, was found insufficiently detailed regarding breach notification obligations and independent security auditing rights. Additionally, no formal risk reassessments or penetration tests of MediSys systems have been conducted within the past two years.  
+
+Other findings include outdated employee training materials and incomplete encryption of data at rest on mobile devices. Lone Star leadership is committed to remediation to minimize risk exposure and ensure compliance with HIPAA Security Rule and Texas Privacy Law obligations.  
+
+4. Definitions  
+“Covered Entity” means Lone Star Health Partners, LLC.  
+“Business Associate” means any person or entity performing services involving access to ePHI on behalf of Lone Star, including MediSys Data Solutions.  
+“ePHI” means electronic protected health information as defined by HIPAA.  
+“Security Rule” means HIPAA Security Rule, 45 CFR Part 164, Subpart C.  
+
+5. Detailed Findings and Risk Ratings  
+
+5.1 Vendor Risk Gap: MediSys Data Solutions  
+Risk Description: MediSys provides cloud storage and backup solutions hosting Lone Star’s patient records. The existing BAA, executed January 2018, lacks provisions for:  
+- Timely breach notification within 24 hours of suspected incidents  
+- Rights of Lone Star to conduct independent security audits and penetration tests  
+- Specific encryption standards for data in transit and at rest  
+Evidence indicates MediSys’ last internal security audit was performed March 2023, with no third-party penetration testing since 2022. Moreover, a recent security bulletin dated November 2025 revealed vulnerabilities in MediSys’ storage platform that could expose ePHI to unauthorized access.  
+
+Risk Rating: High  
+Potential Impact: Unauthorized disclosure of sensitive patient data could result in civil penalties up to $1.5 million per violation under HIPAA, loss of patient trust, and reputational damage.  
+
+5.2 Employee Security Awareness Training  
+Risk Description: Employee training materials have not been updated since 2022 and do not incorporate the latest phishing techniques or ransomware trends prevalent in 2025. Approximately 15% of staff failed the most recent security quiz administered December 2025.  
+
+Risk Rating: Moderate  
+Potential Impact: Increased likelihood of credential compromise leading to potential ePHI exposure.  
+
+5.3 Encryption of Data on Mobile Devices  
+Risk Description: Approximately 30% of mobile devices used by clinicians to access ePHI lack full-disk encryption. Procedures require encryption but enforcement and monitoring are inconsistent.  
+
+Risk Rating: Moderate  
+Potential Impact: Loss or theft of unencrypted devices could expose ePHI, leading to HIPAA violations.  
+
+5.4 Network Access Controls  
+Risk Description: Network architecture employs role-based access controls (RBAC) limiting ePHI access to authorized personnel only. However, periodic access reviews are not consistently documented.  
+
+Risk Rating: Low  
+Potential Impact: Potential for unauthorized access if access rights are not promptly revoked upon personnel changes.  
+
+6. Applicable Law and Regulatory Standards  
+- HIPAA Security Rule, 45 CFR Part 164  
+- Texas Medical Privacy Act, Texas Health & Safety Code Chapter 181  
+- Texas Business and Commerce Code § 521 (relating to data breach notification)  
+- OCR Enforcement Guidance, including case reference: OCR Case #TX2025-0457, resolved with compliance requirements for business associates (2025)  
+
+7. Recommendations and Corrective Actions  
+
+7.1 Immediate Vendor Risk Mitigation (Deadline: June 30, 2026)  
+- Renegotiate and amend the BAA with MediSys Data Solutions to include:  
+  * Breach notification within 24 hours of suspected incident discovery  
+  * Rights to conduct annual independent security audits and penetration tests of systems hosting ePHI  
+  * Specific encryption requirements aligned with NIST 800-66 Rev 2 guidelines  
+- Request MediSys provide current third-party penetration test reports by May 31, 2026  
+- Consider alternative vendors with stronger security postures if MediSys cannot comply  
+
+7.2 Employee Training Update (Deadline: July 31, 2026)  
+- Revise employee training curriculum to include recent cyber threat intelligence and attack vectors  
+- Conduct mandatory retraining for all staff by July 31, 2026, followed by quarterly refresher sessions  
+- Implement phishing simulation exercises semi-annually  
+
+7.3 Mobile Device Encryption Compliance (Deadline: August 31, 2026)  
+- Enforce full-disk encryption policy across all mobile devices accessing ePHI  
+- Deploy Mobile Device Management (MDM) solutions to enforce encryption and remote wipe capabilities  
+- Perform monthly compliance audits and remediate exceptions promptly  
+
+7.4 Access Review Procedures (Deadline: Ongoing; first review by September 30, 2026)  
+- Implement formalized, documented quarterly access reviews for all systems containing ePHI  
+- Integrate HR offboarding with IT access revocation workflows to prevent orphaned credentials  
+
+8. Management Certification  
+We certify that this HIPAA Security Risk Assessment is complete and accurate to the best of our knowledge and reflects Lone Star Health Partners, LLC’s current security posture as of December 31, 2025.  
+
+Julia Ramirez  
+Lead Compliance Officer  
+Lone Star Health Partners, LLC  
+Date: March 15, 2026  
+
+Mark Holder  
+IT Security Consultant  
+Holder Cybersecurity, Inc.  
+Date: March 15, 2026  
+
+Samantha Lee, Esq.  
+Legal Counsel  
+Grayton & Pierce Law Firm  
+Date: March 15, 2026  
+
+9. Conclusion  
+Addressing the identified vendor risk gap with MediSys Data Solutions is critical to maintaining HIPAA compliance and safeguarding patient information. Lone Star Health Partners, LLC is committed to executing all recommended remediation steps within the specified deadlines and conducting regular reassessments thereafter. Further reviews of vendor relationships and internal security policies will be integrated into Lone Star’s annual compliance strategy for calendar years 2026 and beyond.  
+
+--- End of Report ---

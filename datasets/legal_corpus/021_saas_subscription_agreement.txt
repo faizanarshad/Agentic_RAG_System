@@ -1,0 +1,140 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOFTWARE AS A SERVICE (SaaS) SUBSCRIPTION AGREEMENT
+
+This Software as a Service Subscription Agreement ("Agreement") is entered into as of March 15, 2025 ("Effective Date") by and between Solstice Cloud Solutions, Inc., a Delaware corporation with its principal place of business at 845 Hawthorne Street, Suite 210, Albany, NY 12207 ("Provider"), and BrightWave Marketing LLC, a New York limited liability company with offices at 320 Sterling Road, New York, NY 10019 ("Subscriber"). Provider and Subscriber may be referred to individually as a "Party" and collectively as the "Parties."
+
+RECITALS
+
+WHEREAS, Provider develops and operates an online software platform known as "Solstice Insight" designed for marketing analytics and campaign management (the "Service");
+
+WHEREAS, Subscriber desires to obtain a subscription to the Service for its internal business purposes; and
+
+WHEREAS, Provider agrees to provide such Service to Subscriber under the terms and conditions set forth in this Agreement.
+
+NOW, THEREFORE, in consideration of the mutual promises contained herein, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 "Authorized Users" means Subscriber's employees, contractors, and agents authorized to use the Service under this Agreement.
+
+1.2 "Confidential Information" means any non-public information disclosed by either Party to the other, including but not limited to business operations, technical information, pricing, and customer data.
+
+1.3 "Service Fees" means the subscription fees set forth in Section 4.
+
+1.4 "Subscription Term" means the initial period during which Subscriber is entitled to use the Service as specified in Section 3.
+
+2. SERVICE LICENSE
+
+2.1 License Grant. Subject to the terms and conditions of this Agreement, Provider hereby grants Subscriber a non-exclusive, non-transferable, limited right to access and use the Service solely for Subscriber’s internal business purposes during the Subscription Term.
+
+2.2 Restrictions. Subscriber shall not (a) modify, copy, or create derivative works based upon the Service; (b) reverse engineer or attempt to discover the source code of the Service; (c) sublicense, sell, or distribute the Service to any third parties; or (d) use the Service in violation of applicable law.
+
+3. SUBSCRIPTION TERM AND RENEWAL
+
+3.1 Initial Term. The Subscription Term shall commence on the Effective Date and continue for twelve (12) months unless terminated earlier in accordance with Section 9.
+
+3.2 Renewal. The Agreement shall automatically renew for successive one (1) year terms unless either Party provides written notice of non-renewal at least sixty (60) days prior to the expiration of the then-current term.
+
+4. FEES AND PAYMENT
+
+4.1 Subscription Fees. Subscriber shall pay Provider a monthly fee of $3,000 USD for up to 50 Authorized Users. Additional users will be billed at $50 USD per user per month.
+
+4.2 Invoices. Provider shall invoice Subscriber monthly in advance. All payments are due net thirty (30) days from the invoice date.
+
+4.3 Late Payment. Any payment not received within fifteen (15) days after the due date shall incur a late fee of 1.5% per month or the maximum permitted by law, whichever is less.
+
+5. PROVIDER OBLIGATIONS
+
+5.1 Service Availability. Provider shall use commercially reasonable efforts to make the Service available 99.5% of the time during each calendar month, excluding scheduled maintenance.
+
+5.2 Support. Provider shall provide email and phone support to Subscriber’s designated contacts during Provider’s normal business hours (9:00 AM to 6:00 PM Eastern Time, Monday through Friday).
+
+5.3 Data Backup. Provider shall perform regular backups of Subscriber's data stored within the Service and retain backups for a minimum of thirty (30) days.
+
+6. SUBSCRIBER OBLIGATIONS
+
+6.1 Authorized Use. Subscriber shall be responsible for all activity under its Authorized Users’ accounts and ensure compliance with this Agreement.
+
+6.2 Access Credentials. Subscriber shall maintain the confidentiality of usernames, passwords, and other access credentials and notify Provider immediately of any unauthorized use or security breach.
+
+6.3 Compliance. Subscriber shall comply with all applicable laws, regulations, and industry standards in its use of the Service.
+
+7. CONFIDENTIALITY
+
+7.1 Obligations. Each Party agrees to hold the other Party’s Confidential Information in strict confidence and only use it for purposes permitted under this Agreement.
+
+7.2 Exclusions. Confidential Information shall not include information that (a) is or becomes publicly available without breach of this Agreement; (b) was already known to the recipient; or (c) is independently developed without use of the other Party’s Confidential Information.
+
+7.3 Duration. The confidentiality obligations shall survive termination of this Agreement for a period of three (3) years.
+
+8. WARRANTY AND DISCLAIMER
+
+8.1 Limited Warranty. Provider warrants that the Service will perform substantially in accordance with the documentation during the Subscription Term.
+
+8.2 Exclusive Remedy. Provider’s sole obligation and Subscriber’s exclusive remedy for breach of warranty shall be for Provider to use commercially reasonable efforts to correct any non-conformity.
+
+8.3 Disclaimer. EXCEPT AS EXPRESSLY PROVIDED HEREIN, THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+9. TERMINATION
+
+9.1 Termination for Convenience. Either Party may terminate this Agreement without cause by providing ninety (90) days prior written notice.
+
+9.2 Termination for Cause. Either Party may terminate immediately upon written notice if the other Party breaches any material term and fails to cure such breach within thirty (30) days of written notice.
+
+9.3 Effect of Termination. Upon termination, Subscriber shall cease all use of the Service and Provider shall disable Subscriber’s access. Provider shall provide Subscriber a copy of Subscriber data within sixty (60) days following termination upon request.
+
+10. INDEMNIFICATION
+
+10.1 By Provider. Provider shall indemnify and hold harmless Subscriber from and against any third party claims alleging that the Service infringes any U.S. patent, trademark, copyright, or trade secret, provided Subscriber promptly notifies Provider and cooperates in defense.
+
+10.2 By Subscriber. Subscriber shall indemnify and hold harmless Provider from any claims arising from Subscriber’s use of the Service in violation of this Agreement or applicable law.
+
+11. LIMITATION OF LIABILITY
+
+11.1 Limitation. IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT.
+
+11.2 Cap. PROVIDER’S AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE TOTAL AMOUNTS PAID BY SUBSCRIBER TO PROVIDER IN THE SIX (6) MONTHS PRECEDING THE CLAIM.
+
+12. GENERAL PROVISIONS
+
+12.1 Force Majeure. Neither Party shall be liable for failure to perform due to causes beyond reasonable control, including natural disasters, labor disputes, or internet outages.
+
+12.2 Assignment. Neither Party may assign this Agreement without the prior written consent of the other, except to an affiliate or successor in interest.
+
+12.3 Entire Agreement. This Agreement constitutes the entire understanding between the Parties and supersedes all prior agreements related to the subject matter hereof.
+
+12.4 Amendments. Any modifications must be in writing and signed by both Parties.
+
+12.5 Notices. Notices shall be given in writing and delivered via certified mail or email to the addresses set forth above.
+
+12.6 Severability. If any provision is held invalid or unenforceable, the remainder shall remain in full force and effect.
+
+12.7 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to conflict of law principles. The Parties agree to submit to the exclusive jurisdiction of the federal and state courts located in Albany County, New York.
+
+IN WITNESS WHEREOF, the Parties hereto have executed this SaaS Subscription Agreement as of the Effective Date.
+
+SOLSTICE CLOUD SOLUTIONS, INC.
+
+By: ____________________________
+
+Name: Michael J. Renner
+
+Title: Chief Executive Officer
+
+Date: March 15, 2025
+
+
+BRIGHTWAVE MARKETING LLC
+
+By: ____________________________
+
+Name: Lisa M. Fernandez
+
+Title: Managing Member
+
+Date: March 15, 2025
+
+---
+
+NOTE: This Agreement does not contain any clause specifically addressing data protection or privacy obligations. The Parties are encouraged to negotiate and include appropriate data protection provisions as necessary to comply with applicable laws.

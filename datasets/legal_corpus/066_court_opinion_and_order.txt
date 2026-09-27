@@ -1,0 +1,112 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE HIGH COURT OF JUSTICE  
+QUEEN’S BENCH DIVISION  
+Claim No: QB-2025-0417  
+
+BETWEEN:  
+
+RAZORTECH SOLUTIONS LIMITED  
+Claimant  
+
+-and-  
+
+DYNAFORGE SYSTEMS PLC  
+Defendant  
+
+_________________________________________  
+
+JUDGMENT AND ORDER  
+_________________________________________  
+
+Before: The Honourable Mr Justice Harrington  
+Date: 14 January 2027  
+
+_________________________________________  
+
+Introduction  
+
+1. This judgment concerns the enforcement of a confidential settlement agreement (the “Settlement Agreement”) entered into on 3 September 2026 between Razortech Solutions Limited (“Razortech”) and Dynaforge Systems PLC (“Dynaforge”) following a commercial dispute arising from a contract for the supply and integration of advanced robotic manufacturing systems.  
+
+2. Razortech sought an order for specific performance of the Settlement Agreement and an injunction to enforce a non-disparagement clause therein. Dynaforge opposed, alleging the Settlement Agreement was procured by misrepresentation and sought the variation or nullification of the non-disparagement provisions.  
+
+Factual Background  
+
+3. Razortech and Dynaforge had a longstanding commercial relationship, with a contract dated 12 March 2025 under which Dynaforge agreed to supply ten robotic assembly units and provide installation and technical support over 24 months. Following delays and alleged technical defects reported by Razortech in early 2026, disputes arose regarding liability and damages.  
+
+4. On 3 September 2026, the parties entered into the Settlement Agreement following mediation before the Centre for Dispute Resolution (CEDR). The key terms were as follows:  
+
+   (a) Dynaforge agreed to pay Razortech £1,250,000 in three instalments: £500,000 on execution, £400,000 by 30 November 2026, and £350,000 by 31 January 2027;  
+
+   (b) Razortech agreed to accept the settlement in full and final satisfaction of any and all claims concerning the underlying contract;  
+
+   (c) A mutual confidentiality clause requiring the parties to keep the terms and negotiations confidential save as required by law or professional advisers;  
+
+   (d) A mutual non-disparagement clause preventing either party or their representatives from making any statements or communications which could reasonably be construed as harmful or damaging to the reputation or business interests of the other party, effective until 3 September 2028;  
+
+   (e) Governing law was expressly stated as English law, with disputes to be determined in the courts of England and Wales.  
+
+5. Razortech received the first payment on 3 September 2026 as agreed, but payments due on 30 November 2026 and 31 January 2027 were not made. Razortech commenced proceedings on 15 February 2027, seeking specific performance of the payment obligations and injunctive relief to enforce the non-disparagement clause following social media posts by Dynaforge’s Chief Technology Officer that Razortech claimed amounted to disparagement.  
+
+Issues  
+
+6. The principal issues for determination were:  
+
+   (i) Whether Razortech was entitled to specific performance of the payment obligations under the Settlement Agreement;  
+
+   (ii) Whether the non-disparagement clause was enforceable and whether it had been breached by Dynaforge;  
+
+   (iii) Whether the Settlement Agreement should be set aside on grounds of misrepresentation.  
+
+The Law  
+
+7. It is well established that settlement agreements are contracts and are to be construed and enforced as such. Specific performance is an equitable remedy that may be granted where damages are an insufficient remedy and where the terms are clear and enforceable: see De Francesco v Barnum [1890] 45 Ch D 430.  
+
+8. Confidentiality and non-disparagement clauses are generally enforceable where they are reasonable in scope and duration: see Interflora Inc v Marks & Spencer plc [2014] EWCA Civ 1403. Breach of such clauses may attract injunctions to prevent further breaches.  
+
+9. To challenge a settlement on the basis of misrepresentation, the claimant must establish that a false representation of fact was made, inducing the party to enter into the contract and that the misrepresentation was material: see Smith New Court Securities Ltd v Scrimgeour Vickers (Asset Management) Ltd [1997] AC 254.  
+
+Findings  
+
+10. Specific Performance: Razortech has established its entitlement to receive the outstanding sums of £400,000 and £350,000 on the agreed dates. Dynaforge’s failure to pay is a clear breach. Monetary damages would be inadequate given Razortech’s reliance on the settlement funds to meet contractual obligations with third parties and the clear and certain payment schedule agreed. The payment obligations are precisely defined; thus, specific performance is appropriate.  
+
+11. Non-Disparagement Clause: The clause is mutual, limited in duration to two years from the date of the Settlement Agreement, and restricted to statements that could reasonably harm reputation or business interests. The social media remarks identified by Razortech, including statements implying incompetence and deliberate delay by Razortech engineers, are reasonably construed as disparaging.  
+
+12. Dynaforge’s defence that these statements fell within fair comment or were truthfully made is not supported by the evidence. The statements were made publicly in a manner likely to cause reputational damage and were not privileged. Accordingly, an injunction preventing further disparaging statements is justified.  
+
+13. Misrepresentation: Dynaforge alleges that Razortech knowingly concealed performance issues during negotiations. However, the Settlement Agreement contains mutual warranties as to information disclosure, and the mediation involved full disclosure to both parties’ professional advisers. There is insufficient evidence to establish any actionable misrepresentation that would vitiate the Agreement.  
+
+Order  
+
+14. For the foregoing reasons, the Court orders as follows:  
+
+   a) Specific performance: Dynaforge Systems PLC shall pay Razortech Solutions Limited £400,000 on or before 28 February 2027 and £350,000 on or before 31 March 2027;  
+
+   b) Injunction: Dynaforge Systems PLC and its officers, employees, agents, and representatives shall refrain from making or publishing any statements, whether oral, written, or electronic, that disparage or harm the reputation or business interests of Razortech Solutions Limited, until 3 September 2028;  
+
+   c) Costs: Dynaforge Systems PLC shall pay Razortech Solutions Limited’s costs of these proceedings, to be assessed if not agreed;  
+
+   d) Confidentiality: The terms of this judgment, insofar as they relate to the Settlement Agreement’s financial and non-disparagement provisions, shall remain confidential between the parties and the Court, save as required by law or professional advisers.  
+
+15. Liberty to apply to the Court in the event of any further dispute or breach arising under the Settlement Agreement is hereby granted.  
+
+16. The Court will retain jurisdiction to supervise compliance with this Order until 3 September 2028.  
+
+_________________________________________  
+
+Signed:  
+Mr Justice Harrington  
+High Court Judge  
+Queen’s Bench Division  
+
+Dated: 14 January 2027  
+
+_________________________________________  
+
+Certified a true copy of the Judgment and Order delivered.  
+
+_________________________________________  
+
+Registrar of the High Court  
+
+_________________________________________

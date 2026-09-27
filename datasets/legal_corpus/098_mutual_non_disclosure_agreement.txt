@@ -1,0 +1,91 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is made and entered into as of the 15th day of January, 2025 (“Effective Date”), by and between:
+
+Aventis Solutions Limited, a company incorporated under the laws of England and Wales with registered number 11223344, having its registered office at 57 Greenford Road, London, W5 2HT (“Aventis”);
+
+and
+
+Nexus Innovate Incorporated, a company incorporated under the laws of England and Wales with registered number 22334455, having its registered office at 16 Fleet Street, London, EC4A 2BR (“Nexus”);
+
+(each a “Party” and collectively the “Parties”).
+
+WHEREAS, the Parties wish to explore potential business opportunities, collaborations, and/or joint projects (the “Purpose”), which may require the disclosure of certain confidential and proprietary information;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the Parties agree as follows:
+
+1. Definitions  
+1.1 “Confidential Information” means any and all non-public, proprietary or confidential information, whether disclosed orally, visually, in writing, electronically, or by any other means, including but not limited to business plans, financial data, trade secrets, specifications, customer information, technical data, inventions, processes, software or documentation, disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”) in connection with the Purpose. Confidential Information shall not include information which:  
+(a) is or becomes generally available to the public other than as a result of a breach of this Agreement;  
+(b) was lawfully in the Receiving Party’s possession prior to disclosure by the Disclosing Party, as evidenced by the Receiving Party’s written records;  
+(c) is received from a third party without breach of any confidentiality obligation; or  
+(d) is independently developed by the Receiving Party without reference to the Disclosing Party’s Confidential Information.
+
+2. Obligations of Confidentiality  
+2.1 The Receiving Party agrees:  
+(a) to maintain the Disclosing Party’s Confidential Information in strict confidence and to use at least the same degree of care as it uses to protect its own confidential information, and in no event less than reasonable care;  
+(b) not to disclose the Disclosing Party’s Confidential Information to any third party except to those employees, officers, consultants, or advisors who need to know such information for the Purpose and who are bound by confidentiality obligations no less protective than those set forth herein;  
+(c) not to use the Confidential Information for any purpose other than the Purpose without the prior written consent of the Disclosing Party; and  
+(d) to promptly notify the Disclosing Party of any unauthorised use or disclosure of Confidential Information of which it becomes aware.
+
+2.2 The Receiving Party shall ensure that all persons to whom Confidential Information is disclosed comply with the terms of this Agreement.
+
+3. Permitted Disclosures  
+3.1 The Receiving Party may disclose Confidential Information to the extent required by law, regulation, or court order, provided that, to the extent permitted, it gives the Disclosing Party prompt written notice of such requirement and cooperates in any attempt by the Disclosing Party to obtain protective orders or otherwise limit disclosure.
+
+4. Term and Termination  
+4.1 This Agreement shall commence on the Effective Date and shall continue in effect for an initial term of two (2) years (the “Initial Term”), unless terminated earlier in accordance with this Agreement.  
+4.2 Thereafter, this Agreement shall automatically renew for successive one (1) year periods (each a “Renewal Term”), unless either Party provides written notice of its intent not to renew at least ninety (90) calendar days prior to the expiration of the then-current term.  
+4.3 Either Party may terminate this Agreement for convenience upon ninety (90) calendar days’ prior written notice to the other Party.  
+4.4 Notwithstanding termination or expiration, the Receiving Party’s obligations with respect to Confidential Information disclosed during the term shall survive for a period of five (5) years after the date of termination or expiration.
+
+5. Return or Destruction of Confidential Information  
+5.1 Upon termination or expiration of this Agreement, or upon the Disclosing Party’s written request, the Receiving Party shall, within thirty (30) calendar days:  
+(a) return or destroy all tangible materials containing Confidential Information; and  
+(b) certify in writing that it has complied with this obligation, provided that the Receiving Party may retain one (1) archival copy solely for legal compliance or record-keeping purposes subject to confidentiality obligations hereunder.
+
+6. No License or Transfer of Rights  
+6.1 Nothing in this Agreement grants either Party any license or rights under any patent, copyright, trademark, trade secret or other intellectual property of the other Party, except as expressly set forth herein.
+
+7. No Obligation to Proceed  
+7.1 Neither Party is under any obligation to proceed with any transaction or business relationship resulting from the Purpose, and neither Party shall be liable to the other if it elects not to proceed.
+
+8. Remedies  
+8.1 The Receiving Party acknowledges that any breach or threatened breach of this Agreement may cause irreparable harm to the Disclosing Party for which monetary damages may be inadequate, and the Disclosing Party shall be entitled to seek injunctive relief in addition to any other remedies available at law or in equity.
+
+9. Governing Law and Jurisdiction  
+9.1 This Agreement shall be governed by and construed in accordance with the laws of England and Wales.  
+9.2 The parties agree that the courts of England and Wales shall have exclusive jurisdiction to resolve any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity or termination.  
+9.3 The Parties submit to the exclusive jurisdiction of the High Court of Justice of England and Wales and expressly waive any objection based on venue or inconvenient forum.
+
+10. Miscellaneous  
+10.1 Entire Agreement. This Agreement constitutes the entire understanding between the Parties with respect to the subject matter and supersedes all prior agreements, understandings or arrangements, oral or written.  
+10.2 Amendments. No amendment or modification of this Agreement shall be effective unless in writing and signed by duly authorised representatives of both Parties.  
+10.3 Waiver. No waiver of any provision of this Agreement shall be effective unless in writing and signed by the waiving Party. Failure to enforce any provision shall not constitute a waiver of future enforcement rights.  
+10.4 Severability. If any provision of this Agreement is held invalid or unenforceable, such provision shall be severed and the remainder shall continue in full force and effect.  
+10.5 Assignment. Neither Party may assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the other Party, except to a successor entity in connection with a merger or acquisition.  
+10.6 Notices. All notices under this Agreement shall be in writing and delivered by hand, recorded delivery, or email (with delivery confirmation) to the Parties at their respective addresses set forth above or as otherwise notified.
+
+IN WITNESS WHEREOF, the Parties have caused this Mutual Non-Disclosure Agreement to be executed by their duly authorised representatives as of the Effective Date.
+
+Signed for and on behalf of Aventis Solutions Limited:
+
+_______________________________  
+Jonathan Mercer  
+Chief Executive Officer  
+Date: 15 January 2025
+
+Signed for and on behalf of Nexus Innovate Incorporated:
+
+_______________________________  
+Emily Stanton  
+Director of Legal Affairs  
+Date: 15 January 2025
+
+---
+
+Contract Reference: ASD/NND/2025/001  
+Document Version: 1.0  
+Registered Case Number (for any future disputes): EWCHB/2027/04512

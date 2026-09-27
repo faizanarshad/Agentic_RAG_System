@@ -1,15 +1,27 @@
-fastapi>=0.104.1
-uvicorn>=0.24.0
-python-multipart>=0.0.6
-pydantic>=2.5.0
-openai>=1.6.1
-pinecone>=6.0.0
-langchain>=0.0.350
-langchain-openai>=0.0.2
-langchain-community>=0.0.10
-langgraph>=0.0.20
-pypdf2>=3.0.1
-python-dotenv>=1.0.0
-numpy>=1.24.3
-tiktoken>=0.5.2
-pandas>=2.0.0
+# Web API
+fastapi>=0.118
+uvicorn>=0.37
+python-multipart>=0.0.31
+pydantic>=2.11
+python-dotenv>=1.2.2
+
+# AI and retrieval
+openai>=2.0
+pinecone>=7.0
+langchain-core>=1.2.22
+langchain-text-splitters>=1.1.2
+langgraph>=1.0.10
+
+# Document processing
+pypdf>=6.0
+pymupdf>=1.26.7
+python-docx>=1.2
+ezdxf>=1.4
+pillow>=12.3
+pandas>=2.3
+
+# Content, security and 2FA
+markdown>=3.9
+nh3>=0.3
+segno>=1.6
+cryptography>=46

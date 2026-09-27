@@ -1,0 +1,93 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+AML/KYC Compliance Review Report  
+Case No. WSH-AML-2025-0921  
+Conducted for: Evergreen Financial Services, Inc.  
+Governing Law: State of Washington  
+Date of Report: March 18, 2027  
+
+1. Introduction  
+This AML/KYC Compliance Review (“Review”) is conducted pursuant to the internal compliance mandate of Evergreen Financial Services, Inc. (“Evergreen” or the “Company”), a Washington state-chartered limited liability company specializing in digital payment solutions. The Review assesses Evergreen’s adherence to applicable anti-money laundering (“AML”) and know-your-customer (“KYC”) regulatory requirements as established under Washington state law and relevant federal statutes, including the Bank Secrecy Act (BSA) as incorporated into state law. This Review covers the period from January 1, 2025 through December 31, 2026.  
+
+2. Scope and Methodology  
+The Review was performed by the Compliance and Risk Advisory Group (“CRAG”), engaged by Evergreen’s Board of Directors on November 12, 2026. CRAG’s scope included:  
+a) Examination of customer onboarding and ongoing due diligence documentation;  
+b) Evaluation of transaction monitoring systems and alert handling processes;  
+c) Review of AML training programs and employee certification records;  
+d) Assessment of internal escalation procedures;  
+e) Interviews with key compliance and operational staff.  
+
+Information requests and site visits were conducted at Evergreen’s headquarters in Seattle, Washington during January and February 2027. Source documents reviewed included customer files, suspicious activity reports (SARs), internal memos, and third-party audit reports.  
+
+3. Defined Terms  
+- “Customer Due Diligence” or “CDD”: The process of verifying customer identity, assessing risk, and gathering relevant information to prevent money laundering.  
+- “Enhanced Due Diligence” or “EDD”: Additional scrutiny applied to higher-risk customers or transactions.  
+- “Suspicious Activity Reports” or “SARs”: Reports filed with the Financial Crimes Enforcement Network (FinCEN) regarding potentially suspicious transactions.  
+- “Regulatory Authority”: The Washington Department of Financial Institutions (“WDFI”) and any relevant federal oversight agencies.  
+
+4. Findings  
+
+4.1 Customer Onboarding and Due Diligence  
+CRAG observed that Evergreen maintains a written AML/KYC policy updated as of June 2026, consistent with Washington state AML requirements. The policy mandates identity verification for all new customers within seven business days of account opening.  
+
+However, testing of a sample of 150 new customer accounts opened between July 2025 and June 2026 revealed:  
+- 11 accounts (7.3%) where identity verification documents (government-issued ID, proof of address) were missing or incomplete beyond the 7-day period.  
+- 5 accounts (3.3%) categorized as high risk were not subjected to Enhanced Due Diligence procedures as required under internal policy and regulatory guidelines.  
+
+4.2 Transaction Monitoring and SAR Filing  
+Evergreen utilizes a proprietary transaction monitoring system (“TMS”) designed to flag transactions exceeding $10,000 and those matching risk indicators prescribed under state law. Review of 2026 TMS reports disclosed:  
+- 42 flagged transactions not followed up within the 14-day internal investigation deadline.  
+- 13 alerts escalated for review that were subsequently closed without documented justification.  
+- 7 SAR filings delayed by an average of 18 days beyond the mandated 30 calendar day filing deadline after identifying suspicious transactions.  
+
+4.3 AML Training and Staff Certification  
+Annual AML training is mandated by Evergreen’s policy for all front-line and compliance personnel. Records indicate:  
+- 4 key compliance staff failed to complete the 2026 AML refresher training by the December 31 deadline.  
+- Training content lacks specific Washington state regulatory updates introduced in 2026, including the increased focus on cryptocurrency-related risks.  
+
+4.4 Internal Controls and Escalation Procedures  
+CRAG noted that while Evergreen has a designated AML Compliance Officer (“AMLCO”), there is no documented procedure for reporting identified non-compliance autonomously to the WDFI absent senior management approval, contrary to state guidance.  
+
+Additionally, whistleblower mechanisms are in place but current confidentiality protections appear insufficient to encourage reporting without fear of retaliation.  
+
+5. Potential Regulatory Fine and Recommendations  
+
+5.1 Potential Fine  
+Under the Washington Financial Institutions Code, violations of AML/KYC regulations can result in fines up to $150,000 per incident, with possible civil penalties for repeated or willful non-compliance. The issues identified—particularly incomplete CDD, delayed SARs, and failure to follow up on alerts—constitute multiple regulatory breaches.  
+
+CRAG estimates a potential regulatory fine in the range of $600,000 to $900,000 if the WDFI pursues enforcement based on these findings. This estimate is derived by applying an average penalty of $75,000 per individual breach multiplied by the number of documented instances (12 breaches related to CDD and transaction monitoring delays).  
+
+5.2 Recommendations  
+CRAG advises Evergreen to:  
+a) Immediately remediate gaps in customer documentation and implement automated alerts to prevent delays in identity verification.  
+b) Conduct a targeted audit of at-risk accounts to apply overdue EDD measures.  
+c) Enhance the TMS to include mandatory escalation workflows with audit trails and automatic SAR filing reminders.  
+d) Incorporate the latest Washington state regulatory updates into the AML training curriculum and enforce strict employee compliance with training deadlines.  
+e) Establish a formal policy permitting the AMLCO to report compliance failures directly to the WDFI without senior management gatekeeping.  
+f) Strengthen whistleblower confidentiality provisions to comply with Washington Administrative Code (WAC) 208-620-280.  
+g) Submit a voluntary disclosure report to the WDFI by May 1, 2027, outlining identified deficiencies and remediation plans to potentially mitigate fines.  
+
+6. Management Response (Summary)  
+On March 10, 2027, Evergreen’s Chief Compliance Officer, Ms. Lillian Hargrave, submitted a formal response acknowledging the findings. The Company commits to initiating remediation actions immediately and engaging external AML consultants by April 15, 2027. Evergreen requests a meeting with the WDFI by June 2027 to discuss the voluntary disclosure and mitigation efforts.  
+
+7. Conclusion  
+This Review finds Evergreen Financial Services, Inc. presently non-compliant with certain core AML/KYC procedural requirements under Washington state law, exposing the Company to regulatory sanctions including fines potentially exceeding $600,000. Prompt remedial actions and transparent engagement with regulatory authorities are critical to mitigating enforcement risk.  
+
+The CRAG team expresses appreciation to Evergreen’s staff for cooperation during this Review and remains available for ongoing advisory support.  
+
+Certified by:  
+
+/s/ Jonathan Myles  
+Jonathan Myles, CPA, CFE  
+Senior Compliance Auditor  
+Compliance and Risk Advisory Group  
+March 18, 2027  
+
+Reviewed and Approved by:  
+
+/s/ Lillian Hargrave  
+Lillian Hargrave, CCO  
+Evergreen Financial Services, Inc.  
+March 18, 2027  
+
+End of Report

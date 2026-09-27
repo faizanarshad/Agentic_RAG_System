@@ -2,11 +2,13 @@
 
 import os
 import tempfile
-from fastapi import APIRouter, HTTPException, UploadFile, File, Path
+from fastapi import APIRouter, HTTPException, UploadFile, File, Path, Request
 from pydantic import BaseModel
 from typing import Dict, Any
 
-from services.rag_service import RAGService
+from api.deps import current_owner_id, owner_scope
+from services.platform_store import get_platform_store
+from services.rag_service import RAGService, tag_owner
 from services.data_injestion_service import DataIngestionService
 from services.csv_processor import CSVProcessor
 from utils.logger import logger
@@ -37,7 +39,31 @@ def get_csv_processor():
     return csv_processor
 
 
-async def process_csv_file(file_path: str, filename: str) -> Dict[str, Any]:
+MAX_UPLOAD_BYTES = 50 * 1024 * 1024
+
+
+def _check_upload(filename: str, content: bytes, allowed) -> None:
+    """Size limit plus content/type and virus checks shared by the medical upload endpoints."""
+    from services.file_safety import UnsafeFileError, validate_upload
+    if len(content) > MAX_UPLOAD_BYTES:
+        raise HTTPException(status_code=413, detail="Files must be under 50 MB")
+    try:
+        validate_upload(filename, content, allowed)
+    except UnsafeFileError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+def _check_owner(request: Request, file_id: str) -> None:
+    """Members may only change files they uploaded; anyone else's (or an unknown) file is reported as not found."""
+    scope = owner_scope(request)
+    if scope is None:
+        return
+    record = get_platform_store().get_medical_file(file_id)
+    if record is None or record["owner_id"] != scope:
+        raise HTTPException(status_code=404, detail="File not found")
+
+
+async def process_csv_file(file_path: str, filename: str, owner_id: str = None) -> Dict[str, Any]:
     """Process CSV file and add to RAG system"""
     import uuid
     
@@ -56,7 +82,7 @@ async def process_csv_file(file_path: str, filename: str) -> Dict[str, Any]:
     total_text_length = 0
     
     # Import Document class
-    from langchain.schema import Document
+    from langchain_core.documents import Document
     from services.embeddings_service import EmbeddingsService
     from services.vectordb_service import VectorDBService
     
@@ -88,6 +114,7 @@ async def process_csv_file(file_path: str, filename: str) -> Dict[str, Any]:
             try:
                 # Generate embedding for single document
                 embedding_docs = embeddings_service.process_documents([doc])
+                tag_owner(embedding_docs, owner_id)
                 
                 # Store in vector database
                 vectordb_service.upsert_documents(embedding_docs)
@@ -125,7 +152,7 @@ class UpdateFileResponse(BaseModel):
 
 
 @router.post("/add_file", response_model=FileResponse)
-async def add_file(file: UploadFile = File(...)) -> FileResponse:
+async def add_file(request: Request, file: UploadFile = File(...)) -> FileResponse:
     """
     Upload a PDF file, extract text, create embeddings, and store in Pinecone.
     
@@ -155,10 +182,12 @@ async def add_file(file: UploadFile = File(...)) -> FileResponse:
                 detail="Only PDF and CSV files are supported"
             )
         
+        owner_id = current_owner_id(request)
         # Save uploaded file temporarily
         suffix = file_ext
+        content = await file.read()
+        _check_upload(file.filename, content, allowed_extensions)
         with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
-            content = await file.read()
             temp_file.write(content)
             temp_file_path = temp_file.name
         
@@ -174,7 +203,7 @@ async def add_file(file: UploadFile = File(...)) -> FileResponse:
                 
                 # Process PDF file through RAG service
                 rag_service = get_rag_service()
-                result = rag_service.add_document(temp_file_path)
+                result = rag_service.add_document(temp_file_path, owner_id=owner_id)
                 
             elif file_ext == '.csv':
                 # Validate CSV file
@@ -186,7 +215,7 @@ async def add_file(file: UploadFile = File(...)) -> FileResponse:
                     )
                 
                 # Process CSV file
-                result = await process_csv_file(temp_file_path, file.filename)
+                result = await process_csv_file(temp_file_path, file.filename, owner_id=owner_id)
             
             else:
                 raise HTTPException(
@@ -194,6 +223,7 @@ async def add_file(file: UploadFile = File(...)) -> FileResponse:
                     detail=f"Unsupported file type: {file_ext}"
                 )
             
+            get_platform_store().record_medical_file(result["file_id"], owner_id, os.path.basename(file.filename))
             logger.info(f"Successfully processed file: {file.filename}")
             
             return FileResponse(
@@ -219,7 +249,7 @@ async def add_file(file: UploadFile = File(...)) -> FileResponse:
 
 
 @router.delete("/delete_file/{file_id}")
-async def delete_file(file_id: str = Path(..., description="File ID to delete")) -> Dict[str, Any]:
+async def delete_file(request: Request, file_id: str = Path(..., description="File ID to delete")) -> Dict[str, Any]:
     """
     Delete all vectors related to a given file ID from Pinecone.
     
@@ -242,9 +272,11 @@ async def delete_file(file_id: str = Path(..., description="File ID to delete"))
                 detail="File ID cannot be empty"
             )
         
+        _check_owner(request, file_id)
         # Delete file through RAG service
         rag_service = get_rag_service()
         result = rag_service.delete_document(file_id)
+        get_platform_store().delete_medical_file(file_id)
         
         logger.info(f"Successfully deleted file: {file_id}")
         
@@ -265,6 +297,7 @@ async def delete_file(file_id: str = Path(..., description="File ID to delete"))
 
 @router.put("/update_file/{file_id}", response_model=UpdateFileResponse)
 async def update_file(
+    request: Request,
     file_id: str = Path(..., description="File ID to update"),
     file: UploadFile = File(...)
 ) -> UpdateFileResponse:
@@ -290,6 +323,7 @@ async def update_file(
                 status_code=400,
                 detail="File ID cannot be empty"
             )
+        _check_owner(request, file_id)
         
         # Validate file type
         if not file.filename.lower().endswith('.pdf'):
@@ -299,8 +333,9 @@ async def update_file(
             )
         
         # Save uploaded file temporarily
+        content = await file.read()
+        _check_upload(file.filename, content, ['.pdf'])
         with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as temp_file:
-            content = await file.read()
             temp_file.write(content)
             temp_file_path = temp_file.name
         
@@ -315,7 +350,7 @@ async def update_file(
             
             # Update file through RAG service
             rag_service = get_rag_service()
-            result = rag_service.update_document(file_id, temp_file_path)
+            result = rag_service.update_document(file_id, temp_file_path, owner_id=current_owner_id(request))
             
             logger.info(f"Successfully updated file: {file_id}")
             
@@ -360,8 +395,9 @@ async def get_csv_info(file: UploadFile = File(...)) -> Dict[str, Any]:
             )
         
         # Save file temporarily
+        content = await file.read()
+        _check_upload(file.filename, content, ['.csv'])
         with tempfile.NamedTemporaryFile(delete=False, suffix='.csv') as temp_file:
-            content = await file.read()
             temp_file.write(content)
             temp_file_path = temp_file.name
         

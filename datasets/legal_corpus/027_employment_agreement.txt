@@ -1,0 +1,112 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+EMPLOYMENT AGREEMENT
+
+This Employment Agreement (the “Agreement”) is made and entered into effective as of March 15, 2025 (the “Effective Date”), by and between Crimson Horizon Technologies, Inc., a Washington corporation with its principal place of business at 1587 Meridian Avenue, Seattle, WA 98101 (“Company”), and Jonathan M. Reyes, an individual residing at 4278 Willow Creek Lane, Bellevue, WA 98004 (“Employee”).
+
+RECITALS
+
+WHEREAS, the Company is engaged in the business of developing and marketing advanced cloud-based cybersecurity software solutions; and
+
+WHEREAS, the Company desires to employ Employee, and Employee desires to accept such employment, upon the terms and conditions set forth herein.
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means all trade secrets, proprietary data, technical and business information, including but not limited to software code, development plans, marketing strategies, customer lists, pricing, and financial information, disclosed by the Company to Employee during the term of employment.
+
+1.2 “Competitive Business” means any business that develops, markets, or sells software products or services that compete directly or indirectly with any product or service offered by the Company at any time during the last two years of Employee’s employment.
+
+2. EMPLOYMENT AND DUTIES
+
+2.1 Position. The Company hereby employs Employee as Senior Software Architect, and Employee accepts such employment subject to the terms herein. Employee shall report directly to the Chief Technology Officer.
+
+2.2 Duties. Employee agrees to perform diligently and to the best of his ability all duties assigned by the Company and will comply with all Company policies and procedures. Employee shall devote full working time, attention, and energies to the business of the Company.
+
+3. TERM
+
+3.1 Initial Term. This Agreement shall commence on the Effective Date and shall continue for a period of two (2) years, unless earlier terminated pursuant to Section 7.
+
+3.2 Extension. The Agreement may be extended or renewed upon mutual written agreement of the parties.
+
+4. COMPENSATION AND BENEFITS
+
+4.1 Base Salary. The Company shall pay Employee an annual base salary of One Hundred Thirty Thousand Dollars ($130,000), payable in accordance with the Company’s standard payroll practices.
+
+4.2 Bonus. Employee shall be eligible to receive an annual performance bonus of up to twenty percent (20%) of Employee’s base salary, based on achievement of mutually agreed performance goals, payable no later than March 31 of the following year.
+
+4.3 Benefits. Employee shall be entitled to participate in all employee benefit plans, policies, and programs generally available to employees of the Company, subject to the terms of those plans.
+
+4.4 Vacation. Employee shall be entitled to four (4) weeks of paid vacation annually, to be scheduled in advance and approved by Employee’s supervisor.
+
+5. CONFIDENTIALITY AND NON-DISCLOSURE
+
+5.1 Confidentiality Obligations. Employee acknowledges that during employment he will have access to Confidential Information. Employee agrees not to disclose, use, or permit the use of Confidential Information except as authorized by the Company.
+
+5.2 Return of Materials. Upon termination or at any time requested by the Company, Employee shall return all documents, files, and materials containing or relating to Confidential Information.
+
+6. NON-COMPETE AND NON-SOLICITATION
+
+6.1 Non-Compete Covenant. Employee agrees that during the term of employment and for a period of three (3) years following the date of termination for any reason (the “Restricted Period”), Employee shall not, directly or indirectly, engage in, own, manage, operate, control, be employed by, consult for, or participate in any Competitive Business within the States of Washington, Oregon, and California.
+
+6.2 Reasonableness. Employee acknowledges that the restrictions set forth in this Section 6 are reasonable in scope, duration, and geographic area given the nature of the Company’s business and Employee’s role.
+
+6.3 Non-Solicitation. For the Restricted Period, Employee agrees not to solicit, induce, or attempt to induce any employee, consultant, or customer of the Company to terminate or alter their relationship with the Company.
+
+7. TERMINATION
+
+7.1 Termination by Company. The Company may terminate Employee’s employment at any time, with or without Cause (as defined below), upon written notice.
+
+7.2 Termination by Employee. Employee may terminate this Agreement upon thirty (30) days’ prior written notice to the Company.
+
+7.3 Definition of Cause. “Cause” shall mean (a) Employee’s willful misconduct or gross negligence in performing duties; (b) Employee’s material breach of this Agreement, including the confidentiality or non-compete provisions; (c) Employee’s conviction of a felony; or (d) any act of dishonesty or fraud against the Company.
+
+7.4 Obligations Upon Termination. Upon termination, Employee shall promptly return all Company property and Confidential Information and comply with post-termination obligations under Sections 5 and 6.
+
+8. INJUNCTIVE RELIEF
+
+Employee acknowledges that breach of Sections 5 (Confidentiality) or 6 (Non-Compete and Non-Solicitation) would cause irreparable harm to the Company for which damages would be an inadequate remedy. Therefore, the Company shall be entitled to seek injunctive relief to enforce such provisions in addition to any other remedies at law or in equity.
+
+9. GOVERNING LAW AND JURISDICTION
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of Washington, without regard to conflict of laws principles. Any legal action or proceeding arising out of or relating to this Agreement shall be brought exclusively in the Superior Court of King County, Washington. The parties hereby consent to such jurisdiction and venue.
+
+10. MISCELLANEOUS
+
+10.1 Entire Agreement. This Agreement contains the entire understanding between the parties concerning the subject matter hereof and supersedes all prior agreements or understandings, oral or written.
+
+10.2 Amendments. Any amendment or modification of this Agreement must be in writing and signed by both parties.
+
+10.3 Severability. If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+
+10.4 Waiver. The failure of either party to enforce any provision shall not be deemed a waiver of future enforcement of that or any other provision.
+
+10.5 Notices. All notices required or permitted under this Agreement shall be in writing and delivered personally, by certified mail, or by recognized overnight courier to the addresses first above written or to such other address as either party may designate in writing.
+
+10.6 Headings. Section and paragraph headings are for convenience only and shall not affect interpretation.
+
+IN WITNESS WHEREOF, the parties hereto have executed this Employment Agreement as of the Effective Date.
+
+CRIMSON HORIZON TECHNOLOGIES, INC.
+
+By: _________________________________  
+Name: Samantha L. Harper  
+Title: Chief Executive Officer  
+Date: March 15, 2025
+
+EMPLOYEE
+
+_________________________________  
+Jonathan M. Reyes  
+Date: March 15, 2025
+
+---
+
+CERTIFICATION
+
+I, Jonathan M. Reyes, hereby acknowledge that I have received, read, and understood the terms of this Employment Agreement and agree to be bound by its provisions.
+
+_________________________________  
+Jonathan M. Reyes  
+Date: March 15, 2025

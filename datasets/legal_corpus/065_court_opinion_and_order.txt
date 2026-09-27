@@ -1,0 +1,135 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE SUPERIOR COURT OF THE STATE OF WASHINGTON  
+FOR KING COUNTY  
+
+-----------------------------------------------------------------  
+MIRASOL TECHNOLOGIES, INC.,  
+Plaintiff,  
+
+v.                                             No. 25-2-01456-7 KNT  
+
+NOVA DATA SYSTEMS, LLC,  
+Defendant.  
+
+-----------------------------------------------------------------  
+
+OPINION AND ORDER GRANTING IN PART AND DENYING IN PART PLAINTIFF’S MOTION FOR PRELIMINARY INJUNCTION  
+
+Date of Hearing: March 12, 2027  
+Date of Order: March 26, 2027  
+
+Judge: Honorable Mary E. Hendersen  
+
+-----------------------------------------------------------------  
+
+I. INTRODUCTION  
+
+This matter comes before the Court on the Motion for Preliminary Injunction filed by Plaintiff Mirasol Technologies, Inc. (“Plaintiff” or “Mirasol”) against Defendant Nova Data Systems, LLC (“Defendant” or “Nova”). Mirasol seeks to enjoin Nova from using proprietary software code alleged to be misappropriated trade secrets and to compel Nova’s destruction of infringing materials pending the resolution of this action. The Court heard oral argument on March 12, 2027, and has reviewed the motion, briefs, declarations, and applicable law.  
+
+Having considered the parties’ submissions and the arguments presented, and for the reasons set forth below, the Court GRANTS in part and DENIES in part Plaintiff’s motion.  
+
+II. FACTUAL AND PROCEDURAL BACKGROUND  
+
+1. Mirasol Technologies, Inc. is a Washington corporation headquartered in Seattle, specializing in software development for cybersecurity applications. Nova Data Systems, LLC, also based in King County, operates as a competitor in the data analytics sector.  
+
+2. Mirasol alleges that Nova unlawfully acquired and incorporated certain proprietary source code modules developed by Mirasol into Nova’s flagship product, “DataSight Pro,” in violation of the Washington Uniform Trade Secrets Act (RCW 19.108).  
+
+3. On January 15, 2027, Mirasol filed this action seeking damages, injunctive relief, and enforcement of contractual non-disclosure agreements entered into by former Mirasol employees who now work for Nova.  
+
+4. Concurrent with filing the complaint, Mirasol moved for a preliminary injunction to prevent Nova from continuing to use or disseminate the allegedly misappropriated trade secrets while the case is pending.  
+
+5. Nova denies any wrongdoing, asserts that the code in question is independently developed, and argues that the portions identified by Mirasol are either not protectable or in the public domain.  
+
+6. The Court notes that a related interlocutory appeal is currently pending before the Washington Court of Appeals (Docket No. 82051-1-II). The appeal challenges the trial court’s December 2026 order granting discovery on certain trade secret materials but does not stay this Court’s jurisdiction or proceedings in this matter.  
+
+III. LEGAL STANDARD  
+
+7. Under Washington law, a preliminary injunction is an extraordinary remedy that plaintiff must demonstrate:  
+
+   a. a likelihood of success on the merits;  
+   b. a threat of irreparable harm in the absence of injunctive relief;  
+   c. that the balance of equities favors the plaintiff; and  
+   d. that the injunction is in the public interest.  
+
+See RCW 7.40.020; Bank of Am., N.A. v. Malkasian, 200 Wn. App. 315, 332 P.3d 865 (2014).  
+
+IV. DISCUSSION  
+
+A. Likelihood of Success on the Merits  
+
+8. Mirasol has submitted detailed expert declarations from Dr. Helen Y. Park, a computer science professor specializing in software forensics, who identifies several code modules at issue as substantially identical to Mirasol’s proprietary code.  
+
+9. Defendant challenges these findings but has not submitted contrary expert evidence sufficient to create a genuine dispute on this preliminary record.  
+
+10. Further, the non-disclosure agreements signed by former Mirasol employees who joined Nova support Mirasol’s claim of protected trade secrets under RCW 19.108.  
+
+11. Accordingly, the Court finds that Mirasol has demonstrated a likelihood of success on the merits as to its claim of misappropriation of trade secrets.  
+
+B. Irreparable Harm  
+
+12. Mirasol argues that continued use of its proprietary code by Nova will cause irreparable harm through loss of competitive advantage, reputation, and goodwill, not fully compensated by money damages.  
+
+13. Defendant disputes the irreparable harm claim, asserting monetary damages would be sufficient; however, Washington courts recognize that trade secret misappropriation often causes harm difficult to quantify.  
+
+14. Given the nature of the software industry and the alleged conduct, the Court finds that Mirasol has shown a threat of irreparable harm absent injunctive relief.  
+
+C. Balance of Equities  
+
+15. Nova argues that an injunction would unfairly disrupt its commercial operations and harm third-party customers relying on “DataSight Pro.”  
+
+16. The Court acknowledges this concern but notes that the injunction sought is narrowly tailored to prevent use and distribution of the specific code modules found to be trade secrets.  
+
+17. Moreover, Mirasol’s interest in protecting its business and intellectual property rights outweighs the potential economic inconvenience to Nova, especially as damages remain available.  
+
+D. Public Interest  
+
+18. The public interest favors enforcement of trade secret protections to promote innovation and fair competition.  
+
+19. Enjoining unlawful use of proprietary technology aligns with state policy and benefits the broader market and consumers.  
+
+E. Scope of Injunction  
+
+20. The record supports a limited injunction prohibiting Nova from using, distributing, or further disclosing the identified proprietary code.  
+
+21. However, Mirasol’s request to compel immediate destruction of all allegedly infringing code without further factual development is denied at this stage.  
+
+22. The Court also notes that the pending interlocutory appeal does not bar entry of this preliminary injunction.  
+
+V. ORDER  
+
+Based on the foregoing, IT IS HEREBY ORDERED that:  
+
+1. Plaintiff Mirasol Technologies, Inc.’s Motion for Preliminary Injunction is GRANTED IN PART and DENIED IN PART.  
+
+2. Defendant Nova Data Systems, LLC, and its officers, agents, employees, and attorneys, and all persons acting in active concert with them, are PRELIMINARILY ENJOINED from:  
+
+   a. Using, duplicating, distributing, or disclosing the specific source code modules identified as proprietary to Mirasol in the Declarations of Dr. Helen Y. Park dated February 10, 2027, and subsequent supplementations;  
+
+   b. Incorporating any such proprietary code into any current or future products, including but not limited to “DataSight Pro.”  
+
+3. Defendant is ORDERED to provide a written certification to Plaintiff and this Court by April 9, 2027 confirming compliance with paragraphs 2(a) and 2(b).  
+
+4. Plaintiff’s request for an order compelling immediate destruction of all infringing code is DENIED WITHOUT PREJUDICE. This issue may be revisited following further factual development at trial or by stipulation of the parties.  
+
+5. This Order is entered without prejudice to Defendant’s rights to contest the allegations on the merits at trial and without affecting the pending appeal in the Washington Court of Appeals, Case No. 82051-1-II.  
+
+6. The Parties are ORDERED to appear before this Court on April 15, 2027, at 9:00 a.m. for a status conference to discuss scheduling, discovery, and potential resolution.  
+
+VI. NOTICE OF APPEAL RIGHTS  
+
+7. Any party aggrieved by this Order may seek interlocutory review pursuant to RAP 2.3. The Court of Appeals case currently pending concerns discrete discovery issues and does not constitute a stay or bar further proceedings in this Court.  
+
+Dated this 26th day of March, 2027.  
+
+_____________________________________  
+Honorable Mary E. Hendersen  
+King County Superior Court Judge  
+
+CERTIFICATE OF SERVICE  
+
+I certify under penalty of perjury under the laws of the State of Washington that on March 26, 2027, I caused a true and correct copy of this Opinion and Order to be served electronically on counsel of record for all parties via the King County Superior Court e-filing system.  
+
+_____________________________________  
+Megan L. Torres, Deputy Clerk  
+King County Superior Court

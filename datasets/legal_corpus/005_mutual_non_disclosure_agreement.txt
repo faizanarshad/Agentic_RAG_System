@@ -1,0 +1,99 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is entered into as of February 14, 2025 (“Effective Date”), by and between ValoraTech Systems, Inc., a Delaware corporation with principal offices at 3427 Blue Willow Drive, Wilmington, Delaware 19801 (“ValoraTech”), and KinetiCore Solutions LLC, a Delaware limited liability company with principal offices at 1899 Maple Grove Lane, Newark, Delaware 19711 (“KinetiCore”). ValoraTech and KinetiCore are each a “Party” and collectively the “Parties.”
+
+WHEREAS, the Parties desire to explore a potential business relationship concerning development and integration of advanced artificial intelligence technology (“Purpose”); and
+
+WHEREAS, in connection with such Purpose, each Party may disclose to the other certain confidential and proprietary information;
+
+NOW, THEREFORE, in consideration of the premises and mutual covenants herein contained, the Parties agree as follows:
+
+1. Definitions  
+1.1 “Confidential Information” means any information or materials, in any form or medium, disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”) that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, but is not limited to, business plans, financial data, strategies, trade secrets, technical data, research, computer programs, source code, inventions, know-how, software documentation, designs, specifications, marketing information, and any materials derived therefrom.
+
+1.2 Confidential Information does not include information that:  
+(a) is or becomes generally known to the public without breach of this Agreement by the Receiving Party;  
+(b) was rightfully known to the Receiving Party prior to receipt from the Disclosing Party;  
+(c) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information; or  
+(d) is rightfully received from a third party without restriction and without breach of any obligation of confidentiality.
+
+2. Confidentiality Obligations  
+2.1 The Receiving Party shall:  
+(a) use the Confidential Information solely for the Purpose;  
+(b) limit disclosure of Confidential Information to its directors, officers, employees, agents, contractors, and advisors (“Representatives”) who have a strict need to know for the Purpose and who are bound by confidentiality obligations at least as restrictive as those herein; and  
+(c) not disclose Confidential Information to any third party without prior written consent of the Disclosing Party.
+
+2.2 The Receiving Party agrees to protect the Confidential Information with at least the same degree of care it uses to protect its own confidential information but in no event less than reasonable care.
+
+3. Term and Duration  
+3.1 This Agreement shall commence on the Effective Date and shall continue for a period of two (2) years, unless earlier terminated by either Party by thirty (30) days’ prior written notice.
+
+3.2 The obligations of confidentiality with respect to any Confidential Information disclosed during the term shall survive termination or expiration of this Agreement and remain in effect for a period of five (5) years thereafter.
+
+4. No License or Ownership Rights  
+Nothing in this Agreement grants the Receiving Party any license, ownership, or other rights in or to the Confidential Information except as expressly set forth herein.
+
+5. Return or Destruction  
+Upon termination or expiration of this Agreement, or upon written request by the Disclosing Party, the Receiving Party shall, within thirty (30) days, return or destroy all documents and materials containing Confidential Information (including all copies and summaries), and certify in writing to the Disclosing Party that such return or destruction has been completed. The Receiving Party may retain one archival copy solely for legal compliance purposes.
+
+6. Remedies  
+6.1 The Parties acknowledge that any breach of this Agreement may cause irreparable harm for which monetary damages may be insufficient. Accordingly, the Disclosing Party shall be entitled to seek injunctive relief to prevent or curtail any such breach without the necessity of posting bond or proving actual damages.
+
+6.2 This remedy is cumulative and not exclusive of any other remedies available at law or equity.
+
+7. No Warranty  
+All Confidential Information is provided “AS IS” without any warranty, express or implied, as to accuracy or completeness.
+
+8. Governing Law and Jurisdiction  
+This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware without regard to its conflict of law principles. The Parties consent to the exclusive jurisdiction and venue of the Delaware Court of Chancery for any disputes arising out of or relating to this Agreement.
+
+9. Miscellaneous  
+9.1 Entire Agreement. This Agreement constitutes the entire agreement between the Parties regarding the subject matter herein and supersedes all prior or contemporaneous agreements, understandings, and communications, whether written or oral.
+
+9.2 Amendments. Any amendments or modifications must be in writing and signed by authorized representatives of both Parties.
+
+9.3 Assignment. Neither Party may assign or delegate its rights or obligations under this Agreement without the prior written consent of the other Party, except to an affiliate or successor entity by merger or acquisition.
+
+9.4 No Waiver. Failure to enforce any right or provision shall not constitute a waiver thereof.
+
+9.5 Severability. If any provision is held invalid or unenforceable, the remainder shall remain in effect.
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+
+VALORATECH SYSTEMS, INC.                 KINETICORE SOLUTIONS LLC
+
+By: ____________________________        By: ______________________________  
+Name: Martin L. Greene                    Name: Alicia M. Renshaw  
+Title: Chief Legal Officer                Title: Managing Member  
+Date: February 14, 2025                   Date: February 14, 2025
+
+---
+
+CERTIFICATION
+
+I, the undersigned, certify that I am duly authorized to execute this Agreement on behalf of the Party I represent and that all statements herein are accurate and binding.
+
+For ValoraTech Systems, Inc.:  
+Signature: ___________________________  
+Name: Martin L. Greene  
+Date: February 14, 2025
+
+For KinetiCore Solutions LLC:  
+Signature: ___________________________  
+Name: Alicia M. Renshaw  
+Date: February 14, 2025
+
+---
+
+Case Reference: DV-2025-00438-CN  
+Filed with Delaware Court of Chancery on February 15, 2025
+
+---
+
+[End of Agreement]
+
+---
+
+Note: This Agreement does **not** contain a clause addressing data protection or data privacy obligations related to personal data, and the Parties agree they separately shall comply with applicable data protection laws if and as relevant.

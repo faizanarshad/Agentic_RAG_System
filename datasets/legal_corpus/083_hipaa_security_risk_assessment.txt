@@ -1,0 +1,117 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+HIPAA Security Risk Assessment and Compliance Record  
+Confidential and Proprietary  
+Prepared for: Meridian Health Partners, LLC  
+Prepared by: Sterling Compliance Consulting, LLC  
+Date of Report: January 15, 2025  
+Jurisdiction: State of Delaware  
+
+1. Introduction  
+1.1 Purpose  
+This HIPAA Security Risk Assessment (the “Assessment”) has been conducted for Meridian Health Partners, LLC (“Meridian” or the “Covered Entity”) to evaluate compliance with the Health Insurance Portability and Accountability Act of 1996 as amended (“HIPAA”) Security Rule, 45 CFR Part 164, Subpart C, within its electronic protected health information (“ePHI”) systems and business operations. The scope of this Assessment includes Meridian’s primary healthcare data systems, employee practices, physical security controls, and vendor relationships as of the date of this report.  
+
+1.2 Governing Law and Jurisdiction  
+The Assessment is performed in accordance with applicable State of Delaware statutes and regulations, and the federal HIPAA Security Rule. Any disputes or enforcement actions related to this Assessment shall be governed by Delaware law and subject to the exclusive jurisdiction of the Delaware Court of Chancery.  
+
+1.3 Definitions  
+“ePHI” means electronic protected health information as defined by HIPAA.  
+“Risk” means the potential for unauthorized disclosure, alteration, destruction, or loss of ePHI.  
+“Remediation” means the corrective actions taken to reduce or eliminate identified risks.  
+
+2. Methodology  
+2.1 Data Collection  
+Interviews were conducted with Meridian’s Chief Information Security Officer, IT personnel, and compliance officers. Systems were examined for vulnerabilities including administrative, physical, and technical safeguards. Review included: access control mechanisms, audit logs, encryption protocols, vendor contracts, disaster recovery plans, and employee training records.  
+
+2.2 Risk Analysis  
+Likelihood and impact of identified vulnerabilities were assessed using a qualitative risk matrix to prioritize remediation efforts. Findings are categorized as Critical, High, Medium, or Low risk based on potential impact to confidentiality, integrity, and availability of ePHI.  
+
+3. Summary of Findings  
+Three Critical Findings have been identified that pose significant risk to Meridian’s HIPAA Security Rule compliance. Each includes a detailed description, risk rating, and recommended remediation actions with firm deadlines.  
+
+4. Critical Findings  
+
+4.1 Finding 1: Inadequate Access Controls on Remote VPN Connections  
+Description:  
+Meridian’s remote access VPN solution allows users to connect with ePHI systems without multi-factor authentication (MFA). Current access controls rely solely on username and password credentials, many of which do not meet the recommended complexity requirements. There is also no session timeout configured for idle connections.  
+
+Risk Rating: Critical  
+The absence of MFA and weak password policies increase the likelihood of unauthorized access, particularly in remote work scenarios, potentially leading to ePHI breaches.  
+
+Remediation Actions:  
+- Implement multi-factor authentication on all VPN access points.  
+- Enforce strong password policies aligning with NIST Special Publication 800-63B guidelines.  
+- Configure session timeouts to disconnect inactive VPN sessions after 10 minutes.  
+
+Deadline for Completion: June 15, 2025  
+
+4.2 Finding 2: Lack of Encryption for Data at Rest on Primary Servers  
+Description:  
+While Meridian encrypts ePHI data in transit using TLS 1.2 protocols, primary database servers housing ePHI are not fully encrypted at rest. Backup drives are stored in offsite locations but lack end-to-end encryption, increasing risk of exposure if devices are lost or stolen.  
+
+Risk Rating: Critical  
+Unencrypted data at rest presents a significant confidentiality risk and non-compliance with HIPAA Security Rule 164.312(a)(2)(iv) concerning encryption and decryption mechanisms.  
+
+Remediation Actions:  
+- Immediately deploy full disk encryption for all primary and backup servers containing ePHI.  
+- Audit and verify encryption status quarterly with documented reports to compliance officers.  
+
+Deadline for Completion: September 1, 2025  
+
+4.3 Finding 3: Incomplete Vendor Risk Management Program  
+Description:  
+Meridian currently maintains third-party agreements with over 20 vendors who have access to ePHI. However, only 40% of these vendors have executed Business Associate Agreements (BAAs). Furthermore, there is no formal ongoing monitoring program to assess vendor compliance with HIPAA standards.  
+
+Risk Rating: Critical  
+Lack of BAAs and monitoring significantly increases risk of non-compliance and exposure to breaches through third parties, contravening HIPAA Security Rule requirements.  
+
+Remediation Actions:  
+- Execute BAAs with all vendors who access ePHI within 90 days.  
+- Establish and implement a vendor risk management program including annual compliance assessments.  
+- Maintain documentation of all vendor interactions and risk assessments.  
+
+Deadline for Completion: April 30, 2025  
+
+5. Additional Observations (Non-Critical)  
+Several medium and low risk issues were also documented, including the need for annual security awareness training updates and physical access control enhancements at the primary data center. These are outside the critical findings but should be addressed in regular compliance improvement cycles.  
+
+6. Compliance Obligations and Monitoring  
+6.1 Reporting and Documentation  
+Meridian is required to document all remediation actions taken in response to this Assessment. Quarterly progress reports must be submitted to Sterling Compliance Consulting, LLC, and retained internally as part of HIPAA-required security documentation.  
+
+6.2 Enforcement Notice  
+Failure to meet remediation deadlines may be reported to the Delaware Department of Health and Social Services and could result in civil monetary penalties pursuant to Delaware Code Title 16, Chapter 11, and applicable federal HIPAA enforcement provisions.  
+
+7. Certification of Assessment  
+
+I, the undersigned, certify that this HIPAA Security Risk Assessment was conducted in accordance with generally accepted risk assessment methodologies and applicable HIPAA regulations, to the best of my professional knowledge and belief. The findings and recommendations set forth herein are accurate as of the date of this report.  
+
+_____________________________  
+James P. Sterling, CISSP  
+Principal Consultant  
+Sterling Compliance Consulting, LLC  
+Date: January 15, 2025  
+
+8. Meridian Health Partners, LLC Acknowledgment  
+
+The undersigned acknowledge receipt of this Assessment, understand the identified risks, and commit to completion of remediation actions by the deadlines specified herein.  
+
+_____________________________  
+Karen M. Ellis  
+Chief Information Security Officer  
+Meridian Health Partners, LLC  
+Date: January 20, 2025  
+
+_____________________________  
+Mark T. Duvall  
+Chief Executive Officer  
+Meridian Health Partners, LLC  
+Date: January 20, 2025  
+
+9. Appendix  
+9.1 Risk Matrix Summary  
+9.2 Vendor List and BAA Status  
+9.3 Network Diagram and Access Control Configurations  
+9.4 Password Complexity Policy Draft  
+
+End of Report

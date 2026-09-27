@@ -7,6 +7,13 @@ from core.config import settings
 from utils.logger import logger
 
 
+def _is_pinecone_metadata_value(value: Any) -> bool:
+    """Return True if the value is a type Pinecone accepts as metadata."""
+    if isinstance(value, (str, int, float, bool)):
+        return True
+    return isinstance(value, list) and all(isinstance(item, str) for item in value)
+
+
 class VectorDBService:
     """Service for managing vector database operations with Pinecone."""
     
@@ -56,12 +63,13 @@ class VectorDBService:
             logger.error(f"Error initializing Pinecone index: {str(e)}")
             raise Exception(f"Failed to initialize vector database: {str(e)}")
     
-    def upsert_documents(self, documents: List[Dict[str, Any]]) -> None:
+    def upsert_documents(self, documents: List[Dict[str, Any]], namespace: Optional[str] = None) -> None:
         """
         Insert or update documents in the vector database.
         
         Args:
             documents: List of document dictionaries with id, text, embedding, and metadata
+            namespace: Optional Pinecone namespace (default namespace if omitted)
             
         Raises:
             Exception: If upsert operation fails
@@ -72,34 +80,50 @@ class VectorDBService:
             # Prepare vectors for upsert
             vectors = []
             for doc in documents:
+                metadata = {
+                    "text": doc["text"],
+                    "file_id": doc["metadata"].get("file_id"),
+                    "chunk_index": doc["metadata"].get("chunk_index"),
+                    "total_chunks": doc["metadata"].get("total_chunks"),
+                    "source": doc["metadata"].get("source", "pdf")
+                }
+                # Carry through any extra filterable metadata (e.g. domain, doc_type)
+                for key, value in doc["metadata"].items():
+                    if key not in metadata and _is_pinecone_metadata_value(value):
+                        metadata[key] = value
                 vector = {
                     "id": doc["id"],
                     "values": doc["embedding"],
-                    "metadata": {
-                        "text": doc["text"],
-                        "file_id": doc["metadata"].get("file_id"),
-                        "chunk_index": doc["metadata"].get("chunk_index"),
-                        "total_chunks": doc["metadata"].get("total_chunks"),
-                        "source": doc["metadata"].get("source", "pdf")
-                    }
+                    "metadata": metadata
                 }
                 vectors.append(vector)
             
             # Upsert to Pinecone
-            self.index.upsert(vectors=vectors)
+            if namespace:
+                self.index.upsert(vectors=vectors, namespace=namespace)
+            else:
+                self.index.upsert(vectors=vectors)
             logger.info(f"Successfully upserted {len(vectors)} vectors")
             
         except Exception as e:
             logger.error(f"Error upserting documents: {str(e)}")
             raise Exception(f"Failed to upsert documents: {str(e)}")
     
-    def search_similar(self, query_embedding: List[float], top_k: int = None) -> List[Dict[str, Any]]:
+    def search_similar(
+        self,
+        query_embedding: List[float],
+        top_k: int = None,
+        metadata_filter: Optional[Dict[str, Any]] = None,
+        namespace: Optional[str] = None
+    ) -> List[Dict[str, Any]]:
         """
         Search for similar documents using vector similarity.
         
         Args:
             query_embedding: Query vector embedding
             top_k: Number of top results to return
+            metadata_filter: Optional Pinecone metadata filter
+            namespace: Optional Pinecone namespace (default namespace if omitted)
             
         Returns:
             List of similar documents with metadata and scores
@@ -111,25 +135,27 @@ class VectorDBService:
             logger.info(f"Searching for similar documents with top_k={top_k}")
             
             # Search in Pinecone
-            results = self.index.query(
-                vector=query_embedding,
-                top_k=top_k,
-                include_metadata=True
-            )
+            query_kwargs = {
+                "vector": query_embedding,
+                "top_k": top_k,
+                "include_metadata": True
+            }
+            if metadata_filter:
+                query_kwargs["filter"] = metadata_filter
+            if namespace:
+                query_kwargs["namespace"] = namespace
+            results = self.index.query(**query_kwargs)
             
             # Format results
             similar_docs = []
             for match in results.matches:
+                metadata = {key: value for key, value in match.metadata.items() if key != "text"}
+                metadata.setdefault("source", "pdf")
                 doc = {
                     "id": match.id,
                     "text": match.metadata.get("text", ""),
                     "score": match.score,
-                    "metadata": {
-                        "file_id": match.metadata.get("file_id"),
-                        "chunk_index": match.metadata.get("chunk_index"),
-                        "total_chunks": match.metadata.get("total_chunks"),
-                        "source": match.metadata.get("source", "pdf")
-                    }
+                    "metadata": metadata
                 }
                 similar_docs.append(doc)
             

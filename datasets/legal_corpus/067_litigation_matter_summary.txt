@@ -1,0 +1,106 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+CASE FILE: Litigation Matter Summary  
+Matter Title: Branton Technologies, Inc. v. SynerGen Solutions LLC  
+Jurisdiction: State of Delaware, Superior Court of Delaware  
+Case Number: C.A. No. 25C-03-174 JRS  
+Date Opened: March 12, 2025  
+Status: Pending Appeal before the Delaware Supreme Court (Docket No. 2026-0457)  
+
+1. Parties  
+1.1 Plaintiff: Branton Technologies, Inc. ("Branton")  
+A Delaware corporation specializing in software development for the healthcare industry. Principal place of business is Wilmington, Delaware.  
+CEO: David L. Whitman  
+General Counsel: Marianne S. Foley  
+
+1.2 Defendant: SynerGen Solutions LLC ("SynerGen")  
+A Delaware limited liability company providing cloud-based data analytics services. Principal place of business is Newark, Delaware.  
+Managing Member: Paul R. Donnelly  
+Legal Representative: Mark H. Quinlan, Esq., Quinlan & Marks LLP  
+
+2. Background and Facts  
+2.1 On January 15, 2023, Branton and SynerGen entered into a Master Services Agreement ("MSA") under which SynerGen agreed to develop a proprietary data analytics platform tailored for Branton's flagship healthcare software. The initial contract value was $3.75 million, with milestone payments scheduled through December 2024.  
+
+2.2 Per the MSA, SynerGen was obligated to deliver a fully functional beta version of the platform by October 31, 2023, and a final version by March 31, 2024. In addition, Section 7(a) of the MSA included a confidentiality clause and a non-solicitation provision applicable for two years after termination.  
+
+2.3 Branton alleges that SynerGen failed to meet the beta delivery deadline and that the software delivered was substantially deficient in performance and contained numerous security vulnerabilities. SynerGen denies these allegations and contends that Branton’s internal delays and failure to provide necessary data inputs contributed to any delays and defects.  
+
+3. Procedural History  
+3.1 Branton filed a Complaint on March 12, 2025, in the Delaware Superior Court alleging:  
+- Breach of contract (failure to deliver as specified)  
+- Breach of the implied covenant of good faith and fair dealing  
+- Misappropriation of trade secrets under Delaware Uniform Trade Secrets Act (6 Del. C. §2001 et seq.)  
+- Injunctive relief to prevent SynerGen from further use of proprietary information  
+
+3.2 SynerGen Answered and Counterclaimed on April 10, 2025, asserting:  
+- Breach of contract by Branton for failure to timely provide data inputs, causing delays  
+- Declaratory judgment that SynerGen did not violate confidentiality or non-solicitation provisions  
+- Claims for unpaid invoices totaling $650,000 for additional services requested by Branton  
+
+3.3 The parties engaged in extensive discovery throughout 2025, including depositions of key personnel: David L. Whitman (Branton), Paul R. Donnelly (SynerGen), and several project managers and engineers. Expert witnesses were retained by both sides to analyze software performance and security issues.  
+
+3.4 On January 15, 2026, the Superior Court issued an order granting partial summary judgment in favor of Branton on liability for breach of contract, finding that SynerGen failed to deliver the beta software by the contractual deadline and that the delivered software did not meet agreed specifications. The Court denied summary judgment on damages and trade secret claims.  
+
+3.5 The matter proceeded to a bench trial in July 2026 focused on damages and unresolved claims. On September 30, 2026, the Court awarded Branton $2.1 million in compensatory damages for delayed delivery and remediation costs, but denied the request for injunctive relief and dismissed trade secret claims for insufficient evidence. Further, the Court awarded SynerGen $400,000 on its counterclaim for unpaid invoices. The net judgment was in favor of Branton for $1.7 million.  
+
+4. Appeal  
+4.1 SynerGen timely filed a Notice of Appeal on October 15, 2026, appealing both the liability finding and damages award. In particular, SynerGen challenges the Superior Court’s interpretation of the delivery requirements and disputes the quantum of damages awarded.  
+
+4.2 Branton filed its Appellee brief on February 20, 2027. SynerGen’s Reply brief is due April 10, 2027. Oral argument is scheduled for June 15, 2027, before the Delaware Supreme Court.  
+
+5. Current Status  
+5.1 The trial court entered a Stay Order on November 1, 2026, pending resolution of the appeal, thereby freezing enforcement of the judgment.  
+
+5.2 Both parties have agreed to a confidentiality protective order during the appeal process, restricting disclosure of proprietary information exchanged during discovery.  
+
+5.3 Settlement discussions have occurred intermittently, but no resolution has been reached as of April 2027.  
+
+6. Key Issues on Appeal  
+6.1 Did the Superior Court err in finding SynerGen liable for breach of contract based on the interpretation of the delivery deadlines and performance specifications?  
+
+6.2 Whether the damages awarded—specifically the $2.1 million in compensatory damages—were supported by sufficient evidence and proper calculation methods?  
+
+6.3 The propriety of denying injunctive relief and dismissing trade secret claims without a full trial on those issues.  
+
+6.4 Whether SynerGen’s counterclaim for unpaid invoices was properly assessed and offset against Branton’s damages.  
+
+7. Obligations and Deadlines  
+7.1 SynerGen must file its Opening Brief in the Delaware Supreme Court by March 31, 2027 (completed).  
+7.2 Branton’s Appellee Brief was filed February 20, 2027 (completed).  
+7.3 SynerGen’s Reply Brief due April 10, 2027.  
+7.4 Oral argument scheduled for June 15, 2027.  
+7.5 Post-appeal, parties may be required to return to Superior Court for proceedings consistent with the Supreme Court’s ruling.  
+
+8. Financial Summary  
+- Contract Value: $3,750,000  
+- Branton’s Awarded Damages: $2,100,000  
+- SynerGen’s Counterclaim Award: $400,000  
+- Net Judgment: $1,700,000 (pending appeal)  
+- Estimated Litigation Costs to Date: $850,000 (shared by both parties)  
+
+9. Counsel Contact Information  
+Plaintiff’s Counsel:  
+Marianne S. Foley, Esq.  
+Branton Technologies, Inc.  
+500 Market Street, Suite 1200  
+Wilmington, DE 19801  
+Phone: (302) 555-1945  
+Email: mfoley@brantontech.com  
+
+Defendant’s Counsel:  
+Mark H. Quinlan, Esq.  
+Quinlan & Marks LLP  
+200 Broad Street, Suite 900  
+Newark, DE 19711  
+Phone: (302) 555-2098  
+Email: mquinlan@qmlaw.com  
+
+10. Certification  
+I hereby certify that the information provided herein is accurate to the best of my knowledge and reflects the current status of the litigation matter as of April 5, 2027.  
+
+______________________________  
+Marianne S. Foley, Esq.  
+General Counsel, Branton Technologies, Inc.  
+Date: April 5, 2027  
+
+End of Matter Summary

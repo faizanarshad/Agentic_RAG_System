@@ -1,0 +1,153 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOX Internal Controls Review  
+Compliance Record No. CIR-IL-2025-07-14
+
+Date: July 14, 2025  
+Prepared For: Grosvenor Technologies, Inc.  
+Address: 4124 West Ashland Avenue, Chicago, Illinois 60639
+
+Prepared By: Sentinel Compliance Services, LLC  
+Address: 2101 North Clark Street, Suite 1200, Chicago, Illinois 60614
+
+---
+
+1. Introduction
+
+1.1 Purpose  
+This document constitutes the official SOX Internal Controls Review (the “Review”) for Grosvenor Technologies, Inc. (“Grosvenor” or the “Company”) in accordance with the requirements of the Sarbanes-Oxley Act of 2002 (SOX), as implemented under the laws of the State of Illinois. This Review assesses the effectiveness of the Company’s internal controls over financial reporting (“ICFR”) for the fiscal year ended December 31, 2024, with particular focus on compliance with Sections 302 and 404 of SOX.
+
+1.2 Scope  
+The scope of this Review encompasses all material financial processes, internal control environments, information technology general controls (ITGC), and control design and operation within Grosvenor’s accounting and reporting systems. This includes income statement accounts, balance sheet accounts, and disclosure controls related to the Company’s primary revenue generating units and corporate headquarters located in Chicago, Illinois.
+
+1.3 Definitions  
+- “Internal Controls” – Procedures and policies implemented to provide reasonable assurance regarding the reliability of financial reporting and compliance with applicable laws.  
+- “Control Deficiency” – A weakness in internal controls that could adversely affect the Company’s ability to initiate, authorize, record, process, or report financial data reliably.  
+- “Material Weakness” – A significant deficiency or combination of deficiencies that create a reasonable possibility that a material misstatement of the financial statements will not be prevented or detected on a timely basis.
+
+---
+
+2. Executive Summary
+
+2.1 Overall Assessment  
+Upon a comprehensive evaluation of internal control design and operational effectiveness, Grosvenor Technologies, Inc. maintains satisfactory compliance with SOX requirements, demonstrating effective internal controls over financial reporting as of December 31, 2024.
+
+2.2 Key Findings  
+- No Material Weaknesses identified.  
+- Two Significant Deficiencies reported relating to IT access controls and segregation of duties in payroll processing.  
+- The Company remains at risk of a potential regulatory fine estimated at $225,000 should remediation not be completed by March 31, 2026, as per Illinois Department of Financial and Professional Regulation (IDFPR) guidance.
+
+---
+
+3. Methodology
+
+3.1 Document Review  
+Analysis of existing policies, procedure manuals, risk assessment documentation, prior SOX compliance reports, and IT system access logs was conducted.
+
+3.2 Testing Procedures  
+Control testing using both design and operating effectiveness methods was performed on key controls. Walkthroughs and sampling of transactional data spanning January 2024 through December 2024 were completed.
+
+3.3 Interviews  
+Structured interviews were conducted with key personnel including the Chief Financial Officer (Mr. Leland Crane), Controller (Ms. Frances D’Angelo), and IT Security Manager (Mr. Derek Munroe).
+
+---
+
+4. Detailed Findings
+
+4.1 IT Access Controls
+
+4.1.1 Background  
+Inadequate IT access controls may lead to unauthorized transactions or data manipulation impacting financial reporting reliability.
+
+4.1.2 Observation  
+Audit tests revealed that 4 out of 25 sampled user accounts in the financial reporting system possessed inappropriate elevated privileges not aligned with their job responsibilities. There is also a lack of formal periodic review of user access.
+
+4.1.3 Risk Assessment  
+This deficiency could allow unauthorized changes to financial data and violates requirements under Section 404(b) of SOX regarding ITGC.
+
+4.1.4 Recommended Remediation  
+- Immediate revocation of excessive privileges by September 30, 2025.  
+- Implementation of a formal quarterly access review process by December 31, 2025.
+
+4.1.5 Compliance Deadline  
+In line with IDFPR directives, remediation must be completed no later than March 31, 2026, to avoid sanctions.
+
+4.2 Segregation of Duties in Payroll Processing
+
+4.2.1 Background  
+Effective segregation of duties is essential to prevent fraudulent payroll disbursements.
+
+4.2.2 Observation  
+Payroll clerk duties currently overlap with vendor maintenance functions due to staffing shortages. This represents a control deficiency.
+
+4.2.3 Risk Assessment  
+Such overlap increases the risk of fraudulent payroll payments or unauthorized changes to employee data, potentially affecting expense account accuracy.
+
+4.2.4 Recommended Remediation  
+- Reassignment of vendor maintenance duties away from payroll clerks by October 31, 2025.  
+- Cross-training other finance staff to provide proper segregation.
+
+4.3 Other Observations
+
+- Timeliness of financial close process improved from 12 days in 2023 to 9 days in 2024.  
+- Documentation of control activities is comprehensive but would benefit from digital archiving for ease of review.
+
+---
+
+5. Risk of Regulatory Fine
+
+5.1 Regulatory Context  
+Under Illinois Administrative Code Section 140.920, the IDFPR may impose fines for non-compliance with internal control requirements integral to financial reporting transparency.
+
+5.2 Potential Fine  
+Based on current findings and ongoing monitoring, Grosvenor faces a potential fine of $225,000 should the identified deficiencies remain unremedied beyond the March 31, 2026 deadline.
+
+5.3 Mitigating Factors  
+Management has demonstrated commitment to addressing findings, evidenced by current remediation plans and resource allocation.
+
+---
+
+6. Management Obligations and Deadlines
+
+6.1 Action Plan Submission  
+Grosvenor management must submit a detailed remediation action plan to Sentinel Compliance Services and IDFPR by August 31, 2025 outlining specific steps, responsible parties, and timelines.
+
+6.2 Interim Reporting  
+Quarterly status update reports shall be provided on November 30, 2025, February 28, 2026, and March 30, 2026.
+
+6.3 Certification of Remediation  
+Upon completion of remediation measures, management must certify the effectiveness of internal control improvements by April 15, 2026.
+
+---
+
+7. Conclusion
+
+The 2024 SOX Internal Controls Review concludes that with targeted remediation of identified control deficiencies, Grosvenor Technologies, Inc. will maintain compliance with SOX Section 404 requirements under Illinois law. The potential regulatory fine underscores the importance of timely and effective corrective action.
+
+---
+
+8. Certification
+
+We hereby certify that the information contained herein has been prepared in good faith and accurately reflects the findings of our SOX Internal Controls Review as of July 14, 2025.
+
+Sentinel Compliance Services, LLC  
+_____________________________  
+Alexa Merrick  
+Lead Compliance Auditor  
+Date: July 14, 2025
+
+Grosvenor Technologies, Inc.  
+_____________________________  
+Leland Crane  
+Chief Financial Officer  
+Date: July 14, 2025
+
+---
+
+Appendix A: Summary of Tested Controls  
+Appendix B: Remediation Plan Template  
+Appendix C: Relevant SOX and Illinois Administrative Code References
+
+---
+
+End of Document

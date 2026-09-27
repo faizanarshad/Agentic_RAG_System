@@ -1,0 +1,103 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AND NON-COMPETE AGREEMENT
+
+This Mutual Non-Disclosure and Non-Compete Agreement (“Agreement”) is entered into as of February 15, 2025 (“Effective Date”), by and between:
+
+1. Titanex Solutions, Inc., a Delaware corporation with principal offices located at 1450 Broadview Parkway, Albany, New York 12203 (“Titanex”); and
+
+2. Newshore Technologies LLC, a New York limited liability company with its principal place of business at 87 West End Avenue, New York, New York 10023 (“Newshore”).
+
+Titanex and Newshore may each be referred to herein as a “Party” and collectively as the “Parties.”
+
+RECITALS
+
+WHEREAS, the Parties wish to explore and engage in discussions related to a potential strategic partnership and technology collaboration concerning innovative supply chain management software solutions (“Purpose”);
+
+WHEREAS, in connection with such discussions, each Party may disclose or make available certain confidential and proprietary information to the other;
+
+WHEREAS, the Parties desire to protect such confidential information on a mutual basis and to restrict certain competitive activities following the termination of any business relationship arising from their discussions; 
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises herein contained and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. Definitions
+
+1.1 “Confidential Information” means any and all technical, business, financial, or other information disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”), whether in oral, written, graphic, electronic, or other tangible form, including but not limited to business plans, strategies, forecasts, technical data, prototypes, designs, software, trade secrets, customer lists, and pricing information, that is either (a) designated at the time of disclosure as confidential or proprietary; or (b) should reasonably be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information shall not include information that (i) is or becomes publicly available without breach of this Agreement; (ii) was known by the Receiving Party prior to disclosure as documented by written records; (iii) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information; or (iv) is rightfully obtained from a third party without restriction on use or disclosure.
+
+1.2 “Competitive Business” means the development, marketing, distribution, or sale of software products or services relating to supply chain management, logistics optimization, inventory tracking, or any other software or technology applications intended to compete with products or solutions developed or offered by either Party as of the Effective Date or during the term of this Agreement.
+
+2. Confidentiality Obligations
+
+2.1 Non-Disclosure. Each Receiving Party agrees to hold all Confidential Information of the Disclosing Party in strict confidence and to use such Confidential Information solely for the Purpose. The Receiving Party shall restrict disclosure of the Confidential Information to its employees, officers, directors, advisors, and agents (“Representatives”) who have a need to know such Confidential Information for the Purpose and who are bound by confidentiality obligations at least as protective as those herein.
+
+2.2 Protection Measures. The Receiving Party shall take all reasonable measures, at least those measures it uses to protect its own confidential information of similar importance, to prevent unauthorized disclosure, duplication, or use of the Disclosing Party’s Confidential Information.
+
+2.3 Mandatory Disclosures. If the Receiving Party is required by law, regulation, or valid court order to disclose any Confidential Information, it shall provide the Disclosing Party with prompt written notice to enable the Disclosing Party to seek protective or other appropriate remedies and shall only disclose the minimum Confidential Information legally required.
+
+2.4 Return or Destruction. Upon termination of this Agreement or upon written request by the Disclosing Party, the Receiving Party shall promptly return or destroy all Confidential Information and any derivatives thereof in its possession, including all copies, notes, or summaries.
+
+3. Non-Compete Covenant
+
+3.1 Non-Compete Period. Each Party agrees that for a period of three (3) years following the termination or expiration of this Agreement for any reason (“Non-Compete Period”), it shall not, directly or indirectly, own, manage, operate, join, control, be employed by, consult for, advise, or otherwise participate in any Competitive Business within the geographic territory of the United States of America.
+
+3.2 Exceptions. The restrictions in Section 3.1 shall not prohibit a Party from owning, as a passive investment, securities of any publicly traded company engaged in Competitive Business so long as such ownership does not exceed one percent (1%) of the outstanding securities of such company.
+
+3.3 Acknowledgment. The Parties acknowledge and agree that the scope, duration, and geographic limitations of the non-compete provisions are reasonable and necessary to protect the legitimate business interests of the Parties, and that any breach of this Section 3 will cause substantial and irreparable harm for which monetary damages alone would be inadequate.
+
+4. Term and Termination
+
+4.1 Term. This Agreement shall commence on the Effective Date and continue for a period of two (2) years, unless earlier terminated by mutual written consent of the Parties.
+
+4.2 Termination for Convenience. Either Party may terminate this Agreement for any reason upon thirty (30) days’ prior written notice to the other Party.
+
+4.3 Effect of Termination. The Parties’ obligations regarding Confidential Information shall survive termination or expiration of this Agreement for a period of five (5) years. The non-compete obligations set forth in Section 3 shall survive termination or expiration for the duration of the Non-Compete Period.
+
+5. Remedies
+
+5.1 Injunctive Relief. Each Party acknowledges that any breach or threatened breach of this Agreement may cause irreparable harm to the other Party for which monetary damages may be inadequate. Accordingly, each Party agrees that the other Party shall be entitled to seek injunctive relief, specific performance, or other equitable remedies in any court of competent jurisdiction in New York without requirement to post bond or prove actual damages, in addition to any other remedies available at law or equity.
+
+6. No License or Ownership
+
+6.1 Except as expressly set forth herein, no license or other rights, by implication, estoppel, or otherwise, are granted under any patent, trademark, copyright, trade secret, or other intellectual property right of the Disclosing Party.
+
+7. Miscellaneous
+
+7.1 Governing Law. This Agreement shall be governed by and construed in accordance with the laws of the State of New York without regard to its conflict of laws principles.
+
+7.2 Jurisdiction and Venue. The Parties agree that any legal action or proceeding arising out of or relating to this Agreement shall be brought exclusively in the state or federal courts located in Albany County, New York. Each Party irrevocably consents to the jurisdiction and venue of such courts.
+
+7.3 Entire Agreement. This Agreement constitutes the entire understanding between the Parties with respect to the subject matter hereof and supersedes all prior or contemporaneous oral or written agreements, understandings, or representations.
+
+7.4 Amendment and Waiver. This Agreement may be amended or modified only by a written instrument signed by authorized representatives of both Parties. No waiver of any breach or default shall be deemed a waiver of any subsequent breach or default.
+
+7.5 Severability. If any provision of this Agreement is held invalid or unenforceable by a court of competent jurisdiction, the remaining provisions shall remain in full force and effect.
+
+7.6 Assignment. Neither Party may assign or transfer its rights or obligations under this Agreement without the prior written consent of the other Party, except to a successor in interest in connection with a merger, acquisition, or sale of all or substantially all assets.
+
+7.7 Notices. All notices required or permitted under this Agreement shall be in writing and delivered by hand, overnight courier, certified mail (return receipt requested), or email (confirmed by hard copy), to the addresses set forth above or such other address as either Party may designate in writing.
+
+IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure and Non-Compete Agreement as of the Effective Date.
+
+TITANEX SOLUTIONS, INC.
+
+By: ______________________________  
+Name: Meredith Clarke  
+Title: Chief Legal Officer  
+Date: February 15, 2025
+
+NEWSHORE TECHNOLOGIES LLC
+
+By: ______________________________  
+Name: Julian Ramirez  
+Title: Managing Member  
+Date: February 15, 2025
+
+CERTIFICATION OF COUNTERPARTS
+
+This Agreement may be executed in counterparts, each of which shall be deemed an original, and all of which together shall constitute one and the same instrument.
+
+Case Reference: In the event of dispute, case number NYS/ALB/2027/04892 shall apply.
+
+---
+
+END OF AGREEMENT

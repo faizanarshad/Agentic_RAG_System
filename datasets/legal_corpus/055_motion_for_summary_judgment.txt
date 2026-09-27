@@ -1,0 +1,136 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SUPREME COURT OF THE STATE OF NEW YORK  
+COUNTY OF NEW YORK  
+  
+------------------------------------------------------------------ x  
+JACOBSEN TECHNOLOGIES, INC.,  
+Plaintiff,  
+  
+-against-                                      Index No. 556784/2026  
+  
+BRYANT CAPITAL PARTNERS, LLC, and  
+GREGORY M. BRYANT,  
+  
+Defendants.  
+------------------------------------------------------------------ x  
+  
+PLAINTIFF’S NOTICE OF MOTION AND MOTION FOR SUMMARY JUDGMENT  
+  
+TO THE HONORABLE JUSTICE OF THE SUPREME COURT, NEW YORK COUNTY:  
+  
+PLEASE TAKE NOTICE that upon the annexed Affirmation of Sarah L. Donovan, Esq., dated March 15, 2027, the exhibits attached thereto, the pleadings and prior proceedings herein, and all other matters properly before the Court, Plaintiff Jacobsen Technologies, Inc. (“Plaintiff” or “Jacobsen”), by its undersigned counsel, will move this Court at the courthouse located at 60 Centre Street, New York, New York 10007, on April 20, 2027 at 9:30 a.m., or as soon thereafter as counsel may be heard, for an order pursuant to CPLR 3212 granting summary judgment in favor of Plaintiff against Defendants Bryant Capital Partners, LLC (“Bryant Capital”) and Gregory M. Bryant (“Bryant,” and together with Bryant Capital, “Defendants”) on Plaintiff’s claims for fraud and breach of fiduciary duty, and awarding damages in the amount of $2,750,000, together with interest, costs, and attorneys’ fees, and such other relief as the Court deems just and proper.  
+  
+Dated: New York, New York  
+       March 15, 2027  
+  
+Respectfully submitted,  
+  
+LAW OFFICES OF DONOVAN & CLARK  
+Attorneys for Plaintiff  
+  
+By:  /s/ Sarah L. Donovan  
+      SARAH L. DONOVAN, ESQ.  
+      245 Park Avenue, 39th Floor  
+      New York, New York 10167  
+      (212) 555-0940  
+      sldonovan@donovanclarklaw.com  
+  
+  
+  
+  
+MEMORANDUM OF LAW IN SUPPORT OF PLAINTIFF’S MOTION FOR SUMMARY JUDGMENT  
+  
+PRELIMINARY STATEMENT  
+  
+1.  Plaintiff Jacobsen Technologies, Inc. submits this motion seeking summary judgment on its causes of action for fraud and breach of fiduciary duty against Defendants Bryant Capital Partners, LLC and Gregory M. Bryant. Plaintiff’s claims arise from Defendants’ fraudulent inducement and gross misconduct in their capacity as fiduciaries in a joint venture agreement executed on July 10, 2025.  
+  
+2.  As set forth below and in the accompanying Affirmation and exhibits, there is no genuine issue of material fact with respect to Defendants’ knowing misrepresentations of financial statements and their failure to act in the best interests of the joint venture, resulting in damages to Plaintiff in excess of $2.7 million. Defendants’ liability is clear as a matter of law.  
+  
+3.  Accordingly, summary judgment should be granted to Plaintiff as to all claims, with damages awarded accordingly.  
+  
+STATEMENT OF FACTS  
+  
+4.  Plaintiff Jacobsen Technologies, Inc. (“Jacobsen”) is a New York corporation engaged in developing advanced energy management software solutions. Defendant Bryant Capital Partners, LLC (“Bryant Capital”) is a Delaware limited liability company with its principal place of business in New York, and Gregory M. Bryant is its sole managing member.  
+  
+5.  In or about June 2025, Jacobsen and Bryant Capital entered into negotiations for a joint venture to co-develop and market a new software platform called “EnergiMax.” The parties executed a Joint Venture Agreement (“JVA”) on July 10, 2025. Pursuant to the JVA, Bryant Capital agreed to contribute $3 million in capital by August 5, 2025, with Jacobsen contributing proprietary software and expertise. The profits were to be shared equally.  
+  
+6.  Prior to execution, Defendants provided Plaintiff with purported financial statements for Bryant Capital’s prior projects, which represented consistent profitability and cash reserves exceeding $5 million. These representations were a material inducement for Jacobsen’s agreement to proceed.  
+  
+7.  Plaintiff’s due diligence, relying on Defendants’ representations, did not independently verify Bryant Capital’s financial condition.  
+  
+8.  On August 1, 2025, Bryant Capital contributed only $250,000 of the required $3 million capital, citing “unexpected delays.” No further funds were ever provided.  
+  
+9.  Investigations later revealed Bryant Capital was insolvent as of June 2025, with actual cash reserves under $500,000, and had knowingly concealed this information. Defendants used incoming funds for personal expenses unrelated to the joint venture.  
+  
+10.  Furthermore, Defendants failed to provide promised financial reports and refused to account for how the partial capital was spent, violating their fiduciary duties under the JVA and New York law.  
+  
+11.  Plaintiff suffered damages of $2,750,000 in lost profits, expenditures, and harm to business reputation.  
+  
+ARGUMENT  
+  
+I. THE COURT SHOULD GRANT SUMMARY JUDGMENT ON PLAINTIFF’S FRAUD CLAIM  
+  
+12. Under New York law, the elements of fraud are: (1) a material misrepresentation of fact, (2) made by the defendant with knowledge of its falsity, (3) intent to defraud, (4) reasonable reliance by the plaintiff, and (5) resulting damages. See Lama Holding Co. v. Smith Barney Inc., 88 N.Y.2d 413, 421 (1996).  
+  
+13. Here, Defendants represented, both orally and in writing, that Bryant Capital’s financial condition was sound, including false financial statements dated June 2025.  
+  
+14. Defendants knew these statements were false at the time, as internal accounting records (Exhibit C) show Bryant Capital’s cash reserves were less than $500,000.  
+  
+15. These representations were made to induce Jacobsen to enter the JVA and proceed with the joint venture.  
+  
+16. Plaintiff reasonably relied upon these representations, as full disclosure was expressly provided by Defendants, and had no reason to doubt those statements.  
+  
+17. Plaintiff was damaged in excess of $2.7 million as a direct result of the fraudulent inducement.  
+  
+18. No genuine issue exists as to these facts, and summary judgment is appropriate.  
+  
+II. THE COURT SHOULD ALSO GRANT SUMMARY JUDGMENT ON PLAINTIFF’S BREACH OF FIDUCIARY DUTY CLAIM  
+  
+19. Under New York law, a fiduciary duty arises when one party reposes confidence in another, and the latter accepts such confidence to act primarily for the former’s benefit. See Credit Lyonnais Securities (USA), Inc. v. Alcantara, 183 F.3d 151, 155 (2d Cir. 1999).  
+  
+20. The JVA explicitly designated Defendants as managing members responsible for capital investment and financial management of the joint venture.  
+  
+21. Defendants breached their fiduciary duties by:  
+  
+    (a) failing to provide the agreed-upon capital contribution;  
+  
+    (b) misappropriating funds for personal use;  
+  
+    (c) withholding financial information and reports; and  
+  
+    (d) failing to act loyally and in good faith toward Plaintiff.  
+  
+22. These breaches caused Plaintiff to suffer substantial damages including lost profits and business opportunities.  
+  
+23. Defendants have failed to provide any legitimate explanation or documentation to dispute these facts.  
+  
+24. Summary judgment is proper.  
+  
+III. DAMAGES  
+  
+25. Plaintiff seeks $2,750,000 in compensatory damages, representing:  
+  
+    (a) $2,500,000 in lost profit and opportunity costs, as supported by expert financial analysis (Exhibit F); and  
+  
+    (b) $250,000 in out-of-pocket expenditures incurred in reliance on the JVA.  
+  
+26. Plaintiff also seeks pre-judgment interest from August 6, 2025, as well as costs and reasonable attorneys’ fees pursuant to the JVA’s fee-shifting provision (Section 12.5).  
+  
+CONCLUSION  
+  
+For the foregoing reasons, Plaintiff respectfully requests the Court grant summary judgment against Defendants on all claims, award damages in the amount of $2,750,000 plus interest, costs, and attorneys’ fees, and grant such other and further relief as the Court deems just and proper.  
+  
+Dated: New York, New York  
+       March 15, 2027  
+  
+Respectfully submitted,  
+  
+LAW OFFICES OF DONOVAN & CLARK  
+  
+By:  /s/ Sarah L. Donovan  
+      SARAH L. DONOVAN, ESQ.  
+      Attorneys for Plaintiff  
+      245 Park Avenue, 39th Floor  
+      New York, New York 10167  
+      (212) 555-0940

@@ -1,0 +1,143 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE SUPERIOR COURT OF WASHINGTON  
+KING COUNTY  
+
+Case No.: 25-2-01432-7 SEA  
+
+JASON REYNOLDS,  
+Plaintiff,  
+
+v.  
+
+NORTHWEST SOLAR SOLUTIONS, LLC,  
+Defendant.  
+
+COMPLAINT FOR BREACH OF CONTRACT  
+
+Plaintiff Jason Reynolds (“Plaintiff”), by and through his undersigned counsel, alleges as follows:  
+
+PARTIES, JURISDICTION, AND VENUE  
+
+1. Plaintiff Jason Reynolds is an individual residing in Seattle, King County, State of Washington.  
+
+2. Defendant Northwest Solar Solutions, LLC (“Defendant”) is a Washington limited liability company with its principal place of business in Tacoma, Pierce County, Washington.  
+
+3. This Court has jurisdiction over the subject matter of this action pursuant to RCW 2.08.010 because the contract at issue was formed and to be performed in King County, Washington, and the Defendant transacts business in this county.  
+
+4. Venue is proper in King County Superior Court under RCW 4.12.025 because the contract was to be performed in King County and the Defendant resides or conducts business in this jurisdiction.  
+
+5. The parties have agreed that the laws of the State of Washington shall govern all disputes relating to the Contract described herein.  
+
+GENERAL ALLEGATIONS  
+
+6. On or about January 15, 2025, Plaintiff and Defendant entered into a written contract (the “Contract”) whereby Defendant agreed to design, supply, and install a solar power system at Plaintiff's residence located at 1234 Maple Avenue, Seattle, WA.  
+
+7. Under the Contract, Defendant agreed to deliver and install the solar system no later than July 15, 2025.  
+
+8. The Contract expressly required Defendant to:  
+   a. Use materials meeting State of Washington building code standards;  
+   b. Obtain all necessary permits and inspections;  
+   c. Complete the installation by July 15, 2025;  
+   d. Provide Plaintiff with a full warranty on all workmanship and materials for a period of five years from the installation date.  
+
+9. Plaintiff paid Defendant a total of $28,500.00 in three installments:  
+   a. An initial deposit of $8,500.00 on January 20, 2025;  
+   b. A progress payment of $10,000.00 on May 1, 2025;  
+   c. A final payment of $10,000.00 on August 1, 2025, following partial completion of the installation.  
+
+10. Plaintiff performed all obligations required under the Contract, including timely payments and providing access to the property for the installation.  
+
+11. Defendant commenced work but failed to complete the installation by the contractual deadline of July 15, 2025. Despite assurances that the installation would be completed by August 30, 2025, Defendant did not complete work until November 15, 2025, more than four months late.  
+
+12. More significantly, the installed system was defective in multiple respects including:  
+   a. Use of non-certified solar panels that failed to meet industry standards;  
+   b. Faulty wiring causing intermittent power outages;  
+   c. Failure to obtain or pass final inspection from the Seattle Department of Construction and Inspections, rendering the system non-operational.  
+
+13. Plaintiff notified Defendant in writing on December 1, 2025, of the defects and demanded immediate repair or replacement.  
+
+14. Defendant failed and refused to adequately repair the defects or bring the installation into compliance with the Contract.  
+
+15. Due to Defendant’s breach, Plaintiff has suffered damages including, but not limited to, additional costs of $12,400.00 incurred to hire a third-party contractor to repair and complete the installation as well as loss of anticipated utility cost savings and diminution in property value estimated at $7,500.00.  
+
+FIRST CAUSE OF ACTION  
+(BREACH OF CONTRACT)  
+
+16. Plaintiff repeats and realleges paragraphs 1 through 15 as if fully set forth herein.  
+
+17. The Contract between Plaintiff and Defendant constituted a valid and enforceable agreement.  
+
+18. Plaintiff performed all conditions, covenants, and promises required under the Contract.  
+
+19. Defendant materially breached the Contract by:  
+    a. Failing to timely complete the installation;  
+    b. Delivering and installing defective and non-compliant equipment;  
+    c. Failing to obtain necessary permits and inspections;  
+    d. Failing to repair the defects after notice.  
+
+20. As a direct and proximate result of Defendant’s breach, Plaintiff has suffered and continues to suffer damages in the amount of $19,900.00, consisting of out-of-pocket expenses and consequential losses.  
+
+21. Plaintiff is entitled to judgment against Defendant for damages, interest, costs of suit, and such other relief as the Court deems just and proper.  
+
+SECOND CAUSE OF ACTION  
+(DECLARATORY RELIEF – CONTRACT RIGHTS AND OBLIGATIONS)  
+
+22. Plaintiff repeats and realleges paragraphs 1 through 21 as if fully set forth herein.  
+
+23. An actual controversy has arisen regarding the rights and obligations of the parties under the Contract, including whether Defendant breached the Contract and the amounts owed for damages.  
+
+24. Plaintiff seeks a judicial declaration that Defendant breached the Contract and is liable for damages as alleged herein.  
+
+DEFENSES  
+(Statute of Limitations Defense)  
+
+25. Plaintiff acknowledges that under RCW 4.16.040(1), an action upon a contract must be commenced within six years.  
+
+26. All Defendant conduct relevant to this claim occurred between January 2025 and November 2025, and this action is filed within the six-year statutory period.  
+
+27. Defendant may assert, incorrectly, that some claims are barred by statute of limitations due to alleged delays in discovery or claims accrued at later dates.  
+
+28. Plaintiff contends that the breach and damages were reasonably discovered by December 1, 2025, when Plaintiff provided written notice of defects to Defendant.  
+
+29. Therefore, any statute of limitations defense is without merit and does not bar Plaintiff’s claims.  
+
+PRAYER FOR RELIEF  
+
+WHEREFORE, Plaintiff prays for judgment against Defendant as follows:  
+
+A. For damages in the amount of $19,900.00 and for all other damages proved at trial;  
+
+B. For costs of suit incurred herein, including reasonable attorneys’ fees;  
+
+C. For pre- and post-judgment interest as allowed by law;  
+
+D. For a declaration that Defendant breached the Contract as alleged;  
+
+E. For such other and further relief as the Court deems just and proper.  
+
+DATED this 15th day of February, 2027.  
+
+Respectfully submitted,  
+
+/s/ Emily S. Porter  
+Emily S. Porter, WSBA #45672  
+PORTER & ASSOCIATES, PLLC  
+Attorney for Plaintiff  
+1201 Fourth Avenue, Suite 2500  
+Seattle, WA 98161  
+Phone: (206) 555-0198  
+Email: eporter@porterassociates.com  
+
+CERTIFICATE OF SERVICE  
+
+I hereby certify that on February 15, 2027, I caused a true and correct copy of the foregoing Complaint for Breach of Contract to be served via first-class mail, postage prepaid, and via email to:  
+
+Northwest Solar Solutions, LLC  
+c/o Registered Agent: Mark Davison  
+4567 Industrial Way  
+Tacoma, WA 98409  
+Email: mark.davison@nwsoldirect.com  
+
+/s/ Emily S. Porter  
+Emily S. Porter

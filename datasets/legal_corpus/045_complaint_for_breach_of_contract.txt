@@ -1,0 +1,128 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE COURT OF CHANCERY OF THE STATE OF DELAWARE  
+C.A. No. 2027-0315-MTZ
+
+______________________________________________________
+
+AQUILON SYSTEMS, INC.,  
+Plaintiff,  
+
+v.  
+
+NEXA TECHNOLOGIES, LLC,  
+Defendant.  
+
+______________________________________________________
+
+COMPLAINT FOR BREACH OF CONTRACT  
+______________________________________________________
+
+Plaintiff Aquilon Systems, Inc. (“Plaintiff” or “Aquilon”), by and through its undersigned counsel, brings this Complaint for Breach of Contract against Defendant Nexa Technologies, LLC (“Defendant” or “Nexa”), and alleges as follows:
+
+NATURE OF THE ACTION  
+
+1. This is an action for breach of contract arising from Defendant Nexa’s failure to fulfill its contractual obligations to Plaintiff pursuant to a Software Development and Licensing Agreement dated February 14, 2025 (the “Agreement”), wherein Nexa agreed to provide customized software solutions and deliver licensed software modules to Aquilon in exchange for payment totaling $2,400,000.  
+
+2. Despite repeated demands, Nexa failed to deliver critical software modules by the agreed deadline of December 31, 2026, and thereafter repudiated the Agreement. As a result, Aquilon has suffered damages in excess of $1,750,000.  
+
+3. Nexa additionally asserts a statute of limitations defense improperly and without merit, as Plaintiff timely brought this action within the applicable limitations period under Delaware law.  
+
+JURISDICTION AND VENUE  
+
+4. This Court has jurisdiction over this matter pursuant to 10 Del. C. § 341(1) because the Agreement was entered into and to be performed wholly or partly within the State of Delaware, and the Defendant is registered to do business in Delaware.  
+
+5. Venue is proper in this Court pursuant to 10 Del. C. § 3104 because the obligations under the Agreement were to be performed in Delaware and Defendant maintains a principal office in Wilmington, Delaware.  
+
+PARTIES  
+
+6. Plaintiff Aquilon Systems, Inc. is a Delaware corporation with its principal place of business located at 800 Commerce Parkway, Wilmington, Delaware 19801.  
+
+7. Defendant Nexa Technologies, LLC is a Delaware limited liability company with its principal place of business located at 410 Innovation Drive, Wilmington, Delaware 19802.  
+
+FACTUAL ALLEGATIONS  
+
+The Agreement  
+
+8. On February 14, 2025, Aquilon and Nexa entered into the Software Development and Licensing Agreement (the “Agreement”), whereby Nexa agreed to develop and deliver a proprietary software suite tailored for Aquilon’s logistics platform (the “Software”).  
+
+9. The Agreement required Defendant to deliver completed software modules in three phases, with Phase 1 due by June 30, 2025, Phase 2 due by December 31, 2025, and Phase 3 due by December 31, 2026.  
+
+10. The total contract price agreed upon was $2,400,000, payable in installments upon completion and acceptance of each phase: $600,000 for Phase 1, $800,000 for Phase 2, and $1,000,000 for Phase 3.  
+
+11. The Agreement further provided that Defendant’s failure to deliver any phase within 30 days after the applicable deadline would constitute a material breach, entitling Plaintiff to terminate the Agreement and seek damages.  
+
+Nexa’s Breach  
+
+12. Defendant successfully delivered Phase 1 on June 25, 2025, and Aquilon paid the $600,000 installment promptly on July 1, 2025.  
+
+13. Defendant also delivered Phase 2 on January 15, 2026, fifteen days late, but Aquilon accepted the delayed delivery and paid the $800,000 installment on February 1, 2026, under protest.  
+
+14. Defendant failed to deliver Phase 3 by the December 31, 2026 deadline, and despite repeated written demands and opportunities to cure, Nexa has not delivered the final software modules as required.  
+
+15. On March 5, 2027, Aquilon formally notified Nexa of its intent to terminate the Agreement due to Nexa’s material breach and demanded payment of damages for the incomplete delivery.  
+
+16. Nexa refused to perform or refund any amounts, claiming that Aquilon’s claims are barred by the applicable statute of limitations.  
+
+Damages  
+
+17. As a direct and proximate result of Defendant’s breach, Plaintiff has suffered damages including, but not limited to:  
+
+    a. Loss of anticipated benefits under the Agreement in the amount of $1,000,000 corresponding to Phase 3;  
+    b. Additional costs incurred to engage alternative software developers amounting to $750,000;  
+    c. Lost business opportunities and reputational harm resulting in additional economic loss.  
+
+Plaintiff reserves the right to quantify specific consequential damages at trial.  
+
+COUNT I – BREACH OF CONTRACT  
+
+18. Plaintiff repeats and realleges each and every allegation contained in paragraphs 1 through 17 as if fully set forth herein.  
+
+19. The Agreement constitutes a valid and enforceable contract between Aquilon and Nexa.  
+
+20. Plaintiff performed all material obligations under the Agreement by timely paying for and accepting Phases 1 and 2.  
+
+21. Defendant breached the Agreement by failing to deliver Phase 3 by the December 31, 2026 deadline and failing to cure such breach after notice.  
+
+22. Defendant’s breach has caused Plaintiff to suffer damages in an amount to be proven at trial, in excess of $1,750,000.  
+
+23. Plaintiff has fully performed all contractual conditions precedent or such conditions have been waived or excused.  
+
+DEFENSE OF STATUTE OF LIMITATIONS  
+
+24. Defendant Nexa has raised a statute of limitations defense, arguing that Plaintiff’s claims are barred under 10 Del. C. § 8106, which sets a three-year limit for actions based on contracts.  
+
+25. Plaintiff timely filed this action on April 12, 2027, which is within three years of the last date of Defendant’s material breach (December 31, 2026).  
+
+26. Thus, Plaintiff’s claims are timely and not barred by the statute of limitations as a matter of law.  
+
+PRAYER FOR RELIEF  
+
+WHEREFORE, Plaintiff Aquilon Systems, Inc. respectfully requests that this Court enter judgment against Defendant Nexa Technologies, LLC and award the following relief:  
+
+A. Compensatory damages in an amount to be proven at trial, but no less than $1,750,000;  
+
+B. Pre-judgment and post-judgment interest as permitted by law;  
+
+C. Costs of suit and attorneys’ fees as allowed by the Agreement and Delaware law;  
+
+D. Such other and further relief as the Court deems just and proper.  
+
+DEMAND FOR JURY TRIAL  
+
+Plaintiff demands a trial by jury on all issues so triable.  
+
+Dated: April 12, 2027  
+
+Respectfully submitted,  
+
+HALSTEAD & COLE LLP  
+
+/s/ Rebecca M. Halstead  
+Rebecca M. Halstead (DE Bar No. 5124)  
+202 Baynard Blvd., Suite 400  
+Wilmington, Delaware 19801  
+Phone: (302) 555-8910  
+Email: rhalstead@halsteadcole.com  
+
+Counsel for Plaintiff Aquilon Systems, Inc.

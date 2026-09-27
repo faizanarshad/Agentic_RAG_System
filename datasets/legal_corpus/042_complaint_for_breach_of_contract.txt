@@ -1,0 +1,113 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE SUPERIOR COURT OF THE STATE OF WASHINGTON  
+FOR KING COUNTY  
+
+Case No. 23-2-04567-8 KNT  
+
+JOHNSON & COVERT CONSTRUCTION, LLC,   
+Plaintiff,  
+
+v.  
+
+OCEANIC TECHNOLOGIES, INC.,  
+Defendant.  
+
+COMPLAINT FOR BREACH OF CONTRACT  
+
+Plaintiff Johnson & Covert Construction, LLC ("Plaintiff" or "Johnson & Covert"), by and through its undersigned counsel, alleges as follows:  
+
+PARTIES, JURISDICTION, AND VENUE  
+
+1. Plaintiff Johnson & Covert Construction, LLC is a Washington limited liability company with its principal place of business located at 1124 Elliott Avenue, Seattle, Washington 98101.  
+
+2. Defendant Oceanic Technologies, Inc. ("Defendant" or "Oceanic Technologies") is a Washington corporation with its principal place of business located at 5255 148th Avenue NE, Redmond, Washington 98052.  
+
+3. This Court has jurisdiction over this matter pursuant to RCW 4.28.030 because the events giving rise to this action occurred in King County, Washington, and the Defendant conducts substantial business within King County.  
+
+4. Venue is proper in King County Superior Court pursuant to RCW 4.12.025 because the contract at issue was performed in King County and the Defendant’s principal place of business is in King County.  
+
+FACTUAL ALLEGATIONS  
+
+5. On or about January 15, 2026, Johnson & Covert and Oceanic Technologies entered into a written contract entitled "Construction Services Agreement" ("Agreement"), a true and correct copy of which is attached hereto as Exhibit A and incorporated by reference.  
+
+6. The Agreement contemplated that Johnson & Covert would provide construction services related to the build-out of Oceanic Technologies’ new data center facility located at 10800 160th Avenue NE, Redmond, Washington ("Project Site").  
+
+7. Under the terms of the Agreement, Johnson & Covert agreed to perform all construction work, including but not limited to structural framing, electrical wiring, HVAC installation, and interior finishing.  
+
+8. The total contract price was $3,750,000.00, payable in installments tied to completion of specified milestones, with the final payment due upon substantial completion of the Project.  
+
+9. The Agreement required Johnson & Covert to substantially complete the Project no later than October 31, 2026 ("Completion Deadline"), subject to certain permitted extensions for Force Majeure events or changes in the scope of work approved in writing by Oceanic Technologies.  
+
+10. Defendant acknowledged and agreed that timely completion was of the essence, as Oceanic Technologies had secured contractual obligations to commission the data center by November 30, 2026.  
+
+11. Johnson & Covert performed all obligations required of it under the Agreement in a timely and workmanlike manner until April 2026, when Defendant began refusing to approve payment requisitions despite Plaintiff’s demonstrated progress.  
+
+12. On May 15, 2026, Johnson & Covert submitted Payment Request No. 4 for $1,125,000, representing work completed and inspected through April 30, 2026.  
+
+13. Oceanic Technologies improperly withheld payment without providing any reasonable justification or invoking any contractual right to withhold payment.  
+
+14. Additionally, in June 2026, Oceanic Technologies issued multiple unilateral change orders that significantly altered the Project scope without providing corresponding adjustments to time or compensation, in direct violation of the Agreement’s change order provisions.  
+
+15. These unauthorized change orders caused delays and increased costs, which Plaintiff communicated to Defendant in writing on July 10, 2026, requesting a meeting to discuss equitable adjustments, but Defendant failed or refused to engage in good faith negotiations.  
+
+16. Due to Defendant’s failure to pay undisputed amounts and refusal to cooperate on valid change orders, Plaintiff was forced to suspend work at the Project Site on August 1, 2026.  
+
+17. Oceanic Technologies’ breach of its payment obligations caused Plaintiff to incur significant financial damages, including but not limited to delayed schedules, increased overhead costs, and payments to subcontractors and suppliers who filed mechanic’s liens as a result.  
+
+18. Despite Plaintiff’s repeated demands for payment and resumption of work, Defendant has failed and refused to cure its breaches or to compensate Plaintiff for the additional costs incurred by Defendant’s wrongful actions.  
+
+19. As of the date of filing this Complaint, Oceanic Technologies owes Plaintiff $1,650,000.00 for unpaid work, plus at least $425,000.00 in additional damages related to delay costs, overhead, and interest, totaling $2,075,000.00, exclusive of attorney fees and costs.  
+
+CAUSE OF ACTION  
+
+Breach of Contract  
+
+20. Plaintiff realleges and incorporates by reference paragraphs 1 through 19 as if fully set forth herein.  
+
+21. The Agreement is a valid and enforceable contract between Plaintiff and Defendant.  
+
+22. Johnson & Covert fully performed all conditions, covenants, and promises required under the Agreement, except for those obligations excused by Defendant’s material breach.  
+
+23. Oceanic Technologies materially breached the Agreement by failing to make timely payments in accordance with the contract terms and by improperly issuing unilateral change orders without compensation or time adjustments.  
+
+24. Defendant’s breaches have caused Plaintiff substantial damages including nonpayment for completed work, increased costs associated with delayed performance, and financial harm due to loss of business reputation and project interference.  
+
+25. Plaintiff has made all reasonable efforts to mitigate damages and to resolve the disputes informally, but Defendant’s refusals have rendered such efforts futile.  
+
+26. Plaintiff is entitled to recover damages in the amount of at least $2,075,000.00, prejudgment interest as provided by law, attorney fees, costs of this action, and any further relief this Court deems just and proper.  
+
+PRAYER FOR RELIEF  
+
+WHEREFORE, Plaintiff respectfully requests that this Court:  
+
+A. Enter judgment in favor of Plaintiff and against Defendant for damages in the amount of $2,075,000.00, or such other amount as proven at trial;  
+
+B. Award prejudgment and postjudgment interest as allowed by law;  
+
+C. Award Plaintiff its reasonable attorney fees and costs incurred in this action pursuant to the Agreement and applicable law;  
+
+D. Award Plaintiff such other and further relief as the Court deems just and equitable.  
+
+DEMAND FOR JURY TRIAL  
+
+Plaintiff hereby demands a trial by jury on all issues so triable.  
+
+DATED this 27th day of March, 2027.  
+
+Respectfully submitted,  
+
+LAW OFFICES OF GRANT E. MARTIN, PLLC  
+
+By:  
+/s/ Grant E. Martin  
+Grant E. Martin, WSBA #32718  
+Attorney for Plaintiff  
+1121 Fourth Avenue, Suite 2100  
+Seattle, WA 98101  
+Phone: (206) 555-0923  
+Email: gmartin@martinlawwa.com  
+
+---
+
+NOTICE TO DEFENDANT: You are hereby required to file a written response to this Complaint within sixty (60) days of service hereof pursuant to Washington State Superior Court Rules or risk default judgment being entered against you.

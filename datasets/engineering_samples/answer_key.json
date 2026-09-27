@@ -1,0 +1,19 @@
+{
+  "bracket_EP-1001_revA.pdf": [
+    "Material missing from title block",
+    "Overall length dimensioned 120 (front view) and 125 (top view)",
+    "Position tolerance references datum C, which is not defined (only A and B)",
+    "Note 3 uses inches (R0.12 in) on a millimetre drawing",
+    "Checked by / approved by empty"
+  ],
+  "bracket_EP-1001_revB.pdf vs revA": [
+    "Hole diameter changed \u00d88.5 -> \u00d89.0 (not recorded in revision table)",
+    "Thickness changed 10 -> 12 (not recorded in revision table)",
+    "Material added AL 6061-T6 (recorded)",
+    "Revision A -> B, date changed"
+  ],
+  "flange_FL-2040.dxf": [
+    "Bore dimension text overridden to \u00d850 but geometry measures \u00d848",
+    "Title block units INCHES but DXF units are millimetres"
+  ]
+}

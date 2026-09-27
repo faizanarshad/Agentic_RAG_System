@@ -1,0 +1,139 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE DISTRICT COURT OF TRAVIS COUNTY, TEXAS  
+400th JUDICIAL DISTRICT  
+
+Case No. D-1-GN-25-01234  
+
+EQUINOX SOLAR, INC.,  
+Plaintiff,  
+
+v.  
+
+SUNDANCE ENERGY SERVICES, LLC,  
+Defendant.  
+
+---------------------------------------------  
+
+PLAINTIFF EQUINOX SOLAR, INC.’S MOTION FOR SUMMARY JUDGMENT AND REQUEST FOR INJUNCTIVE RELIEF  
+
+TO THE HONORABLE JUDGE OF SAID COURT:  
+
+Plaintiff Equinox Solar, Inc. (“Plaintiff” or “Equinox”) hereby submits this Motion for Summary Judgment under Texas Rule of Civil Procedure 166a, and respectfully requests that this Court grant summary judgment in favor of Equinox on all claims against Defendant Sundance Energy Services, LLC (“Defendant” or “Sundance”). In addition to summary judgment, Equinox requests the Court issue a temporary and permanent injunction enjoining Sundance from further breaching the parties’ Contract and engaging in the unauthorized use and disclosure of Equinox’s proprietary information. In support thereof, Equinox shows the Court as follows:  
+
+I. INTRODUCTION  
+
+1. This is a suit for breach of contract, misappropriation of trade secrets, and tortious interference arising from Defendant’s unlawful termination of a 2025 Exclusive Supply Agreement (the “Contract”) and unauthorized use of confidential materials.  
+
+2. Equinox Solar, Inc. is a Texas corporation engaged in the design and manufacture of advanced photovoltaic solar panels and related components. Sundance Energy Services, LLC is a Houston-based energy service provider that contracted with Equinox for exclusive supply of solar panels for utility-scale projects in Texas.  
+
+3. Equinox filed its Original Petition on January 15, 2027, alleging Sundance breached the Contract by failing to purchase the minimum agreed upon volumes, terminating the Contract before expiration, and unlawfully using confidential pricing and design information to procure panels from a competitor.  
+
+4. Sundance has no valid defense to Equinox’s claims, and no genuine issue of material fact exists. Equinox is entitled to judgment as a matter of law and injunctive relief to prevent further harm to its business.  
+
+II. STATEMENT OF UNDISPUTED MATERIAL FACTS  
+
+5. On February 1, 2025, Equinox and Sundance entered into a written Contract titled “Exclusive Supply Agreement” (the “Contract”). (Exhibit A).  
+
+6. The Contract required Sundance to purchase a minimum of 50,000 solar panels per calendar year at $250 per panel, with annual price escalation capped at 3%, for a term of three years ending January 31, 2028. Contract §3.1.  
+
+7. The Contract expressly granted Equinox ownership of all proprietary designs, specifications, and pricing information disclosed during negotiations and performance (the “Confidential Information”). Contract §§7.2, 7.3.  
+
+8. The Contract prohibited Sundance from using or disclosing Confidential Information for any purpose other than purchasing from Equinox or performing its obligations under the Contract. Contract §7.4.  
+
+9. Sundance agreed to maintain confidentiality and return or destroy Confidential Information upon termination or expiration of the Contract. Contract §7.5.  
+
+10. Sundance materially breached the Contract by failing to purchase the minimum volume in calendar year 2026, purchasing only 20,000 panels instead of 50,000, and by terminating the Contract effective March 1, 2027, well before the January 31, 2028 expiry date, without cause or notice as required by Contract §10.1.  
+
+11. After terminating the Contract, Sundance used Equinox’s proprietary pricing and design information to enter into a supply arrangement with SolarEdge Components, Inc., a direct competitor of Equinox. Sundance admitted this in a January 10, 2027 email obtained during discovery. (Exhibit B).  
+
+12. As a result of Sundance’s unauthorized termination and misuse of Confidential Information, Equinox has suffered and continues to suffer irreparable harm including lost profits, damage to reputation, and competitive disadvantage.  
+
+III. ARGUMENT AND AUTHORITIES  
+
+A. Summary Judgment Standard  
+
+13. Under Texas Rule of Civil Procedure 166a(c), summary judgment shall be rendered when the pleadings, depositions, admissions, and affidavits show there is no genuine issue as to any material fact and the movant is entitled to judgment as a matter of law. City of Houston v. Clear Creek Basin Auth., 589 S.W.2d 671, 678 (Tex. 1979).  
+
+14. The undisputed evidence demonstrates: (i) the existence of a valid Contract; (ii) Sundance’s material breaches of the Contract; (iii) Equinox’s damages as a result; and (iv) Sundance’s unlawful use of Equinox’s Confidential Information, all entitling Equinox to summary judgment on breach of contract and misappropriation of trade secrets claims.  
+
+B. Equinox Is Entitled to Summary Judgment on Breach of Contract  
+
+15. The Contract is valid and enforceable under Texas law. Contract §9.1 provides Texas as the venue and choice of law.  
+
+16. Sundance breached the Contract by purchasing less than the minimum quantity required in 2026 and terminating early without proper notice or cause. Contract §§3.1, 10.1.  
+
+17. Equinox provided Sundance with written notice of default on February 20, 2027, demanding cure and compliance with the Contract. Sundance failed to cure. (Exhibit C).  
+
+18. Equinox sustained damages including lost profits of $7,500,000 projected for 2027, calculated based on the Contract price and volume shortfall, and consequential damages related to lost market share. Declaration of John R. Matthews, CEO of Equinox Solar, ¶15 (Exhibit D).  
+
+19. There is no genuine dispute of material fact regarding breach, damages, or causation; thus summary judgment is proper.  
+
+C. Equinox Is Entitled to Summary Judgment on Misappropriation of Trade Secrets  
+
+20. Under the Texas Uniform Trade Secrets Act (“TUTSA”), Tex. Civ. Prac. & Rem. Code §§134A.001 et. seq., a plaintiff must prove: (i) a trade secret exists; (ii) the trade secret was misappropriated; and (iii) the plaintiff suffered damages.  
+
+21. The Contract identifies Confidential Information as trade secrets. Equinox’s design specifications, pricing models, and customer lists qualify as trade secrets because they derive independent economic value and are subject to reasonable efforts to maintain secrecy. Declaration of Dr. Susan Meyers, CTO, ¶10 (Exhibit E).  
+
+22. Sundance misappropriated these trade secrets by disclosing and using them to negotiate with SolarEdge Components, which competes directly with Equinox. See Exhibit B email admission.  
+
+23. Equinox suffered damages and irreparable harm in loss of competitive advantage and business goodwill.  
+
+24. Therefore, summary judgment is warranted on the trade secret misappropriation claim.  
+
+D. Injunctive Relief Is Warranted and Should Be Granted  
+
+25. Equinox additionally requests injunctive relief under TUTSA §134A.006 and Contract §11.3 to prevent ongoing and future misuse of trade secrets and to enforce the confidentiality provisions.  
+
+26. Irreparable harm is demonstrated by the loss of market position and damage not fully compensable by monetary damages alone. See Declaration of John R. Matthews, ¶20.  
+
+27. Equinox requests the Court issue a temporary restraining order and permanent injunction requiring Sundance to:  
+
+a. Cease all use, disclosure, and exploitation of Equinox’s Confidential Information immediately;  
+
+b. Return or destroy all copies of Equinox’s Confidential Information in its possession within 10 days of the order;  
+
+c. Refrain from contracting or negotiating with any third parties using Equinox’s trade secrets; and  
+
+d. Submit to periodic compliance audits by Equinox or a neutral third party.  
+
+28. The balancing of equities favors Equinox because Sundance has no lawful right to use confidential information or breach the Contract, and this injunction protects legitimate business interests.  
+
+29. The public interest is served by upholding contractual obligations and protecting trade secrets.  
+
+IV. PRAYER  
+
+WHEREFORE, PREMISES CONSIDERED, Plaintiff Equinox Solar, Inc. respectfully requests that the Court:  
+
+a. Grant this Motion for Summary Judgment in favor of Equinox and against Sundance on all claims;  
+
+b. Award damages to Equinox in the amount of $7,500,000, plus pre- and post-judgment interest;  
+
+c. Issue a temporary restraining order and permanent injunction—consistent with paragraph 27 above—enjoining Sundance from further breaches and misuse of trade secrets;  
+
+d. Award Equinox its reasonable attorneys’ fees and costs of court; and  
+
+e. Grant such other and further relief as the Court deems just and proper.  
+
+Respectfully submitted,  
+
+LAWSON & BARRERA, PLLC  
+
+/s/ María T. Barrera  
+María T. Barrera  
+State Bar No. 24091234  
+mbarrera@lawsonbarrera.com  
+4500 Capital Tower  
+500 West 22nd Street  
+Austin, Texas 78705  
+Telephone: (512) 555-1234  
+Facsimile: (512) 555-5678  
+
+ATTORNEYS FOR PLAINTIFF EQUINOX SOLAR, INC.  
+
+CERTIFICATE OF SERVICE  
+
+I hereby certify that a true and correct copy of the foregoing document was served on counsel for Defendant Sundance Energy Services, LLC in accordance with the Texas Rules of Civil Procedure on this 15th day of March, 2027.  
+
+/s/ María T. Barrera  
+María T. Barrera

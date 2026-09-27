@@ -1,0 +1,128 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+COURT OF JUSTICE OF ONTARIO  
+SUPERIOR COURT OF JUSTICE  
+B E T W E E N:  
+
+ALDERIDGE MORTGAGE CORPORATION  
+Plaintiff  
+
+- and -  
+
+NORTHBRIDGE DEVELOPMENTS INC.  
+Defendant  
+
+Court File No.: 1234-5678 (Toronto)  
+
+MOTION FOR SUMMARY JUDGMENT  
+(Motion for Injunctive Relief)  
+
+Date of Hearing: April 15, 2027  
+
+TO THE HONOURABLE JUSTICE WILKINSON:  
+
+The Plaintiff, Alderidge Mortgage Corporation (“Plaintiff” or “Alderidge”), by its counsel, moves this Honourable Court for summary judgment pursuant to Rule 20 of the Rules of Civil Procedure, R.R.O. 1990, Reg. 194, on the grounds that there is no genuine issue requiring trial, and for an interlocutory injunction restraining the Defendant, Northbridge Developments Inc. (“Defendant” or “Northbridge”), from disposing of or encumbering certain real property pending the determination of this action.  
+
+PART I – INTRODUCTION  
+
+1. This is an action arising out of a mortgage loan agreement entered into on February 1, 2025, pursuant to which Alderidge loaned the Defendant $5,000,000 (Five Million Dollars) secured by a mortgage on the Defendant’s development property located at 1347 Kingston Road, Toronto, Ontario (the “Property”).  
+
+2. The Defendant has defaulted in its payment obligations under the loan agreement and mortgage, failing to pay the monthly installments due since September 1, 2026, resulting in an outstanding principal and interest balance of $5,250,000 as at March 1, 2027.  
+
+3. The Defendant has, without the Plaintiff’s consent, placed a secondary charge on the Property with a third party lender on February 15, 2027, undermining Alderidge’s security position and exposing the Plaintiff to irreparable harm.  
+
+4. The Plaintiff therefore seeks summary judgment for the recovery of the outstanding debt and, pending the determination of this action, an interim injunction restraining the Defendant from selling, transferring, mortgaging, or otherwise encumbering the Property without the Plaintiff’s prior written consent.  
+
+PART II – FACTUAL BACKGROUND  
+
+5. On February 1, 2025, Alderidge and Northbridge entered into a loan agreement (the “Loan Agreement”) whereby Alderidge agreed to advance $5,000,000 to Northbridge. The loan was secured by a first charge mortgage (the “Mortgage”) registered against the Property on February 3, 2025 (Mortgage Instrument No. 987654321).  
+
+6. Pursuant to the Loan Agreement, Northbridge undertook to pay monthly installments of principal and interest of $110,000 commencing March 1, 2025, with the entire loan payable by January 31, 2027.  
+
+7. Northbridge made timely payments until August 1, 2026. Since that date, it has failed to make any payments, resulting in arrears of $660,000 in monthly installments plus accrued interest.  
+
+8. On February 15, 2027, without informing Alderidge or obtaining its consent, Northbridge registered a second mortgage on the Property in favour of Chippewa Capital Inc. (“Chippewa”) for $3,000,000 (Instrument No. 123456789).  
+
+9. Alderidge first became aware of the second mortgage on March 5, 2027, after conducting a title search prompted by the Defendant’s failure to pay and subsequent requests for payment.  
+
+10. Northbridge has indicated its intention to further encumber or sell the Property to service other debts, further threatening Alderidge’s security.  
+
+PART III – ISSUES  
+
+11. The Plaintiff submits that:  
+
+(a) There is no genuine issue requiring trial as to the Defendant’s default and the outstanding indebtedness;  
+(b) The Plaintiff is entitled to summary judgment for the outstanding amount under the Loan Agreement and Mortgage; and  
+(c) An interlocutory injunction is necessary to preserve the status quo and prevent irreparable harm pending the final determination of this action.  
+
+PART IV – LAW AND ANALYSIS  
+
+A. Summary Judgment Test  
+
+12. Under Rule 20 of the Rules of Civil Procedure, summary judgment shall be granted where the pleadings and evidence show that there is no genuine issue requiring a trial.  
+
+13. The Defendant has admitted the existence of the loan and mortgage but alleges financial difficulty, which is not a triable issue relevant to summary judgment on default.  
+
+14. The Plaintiff’s affidavits establish the outstanding balance owing and the registration of a junior mortgage without consent, demonstrating clear entitlement to summary judgment.  
+
+B. Entitlement to Injunctive Relief  
+
+15. The law in Ontario supports interlocutory injunctions where the moving party establishes:  
+
+(a) a serious issue to be tried;  
+(b) irreparable harm if the injunction is not granted; and  
+(c) that the balance of convenience favours granting the injunction.  
+
+16. The Plaintiff submits that it has a serious issue to be tried in the recovery of its loan and enforcement of its mortgage, including the priority of charges against the Property.  
+
+17. The Defendant’s unauthorized encumbrance of the Property puts Alderidge’s first charge position at serious risk and exposure to irreparable loss, including loss of security and potential diminution of the Property’s value.  
+
+18. The balance of convenience favours the Plaintiff, as the Defendant suffered no prejudice by maintaining the status quo. The Defendant’s financial difficulties do not justify allowing further encumbrances that jeopardize the Plaintiff’s security.  
+
+PART V – RELIEF SOUGHT  
+
+19. The Plaintiff therefore requests that this Honourable Court grant:  
+
+(a) Summary judgment in favour of Alderidge against Northbridge in the amount of $5,250,000, plus interest accruing at 7% per annum from March 1, 2027, until payment in full;  
+
+(b) An interlocutory injunction restraining the Defendant, Northbridge Developments Inc., its officers, directors, agents, and assigns from selling, transferring, mortgaging, charging, or otherwise encumbering the Property, or any part thereof, without the prior written consent of Alderidge Mortgage Corporation until the conclusion of this action;  
+
+(c) Costs of this motion on a substantial indemnity basis; and  
+
+(d) Such further and other relief as this Honourable Court deems just.  
+
+PART VI – AFFIDAVITS AND EVIDENCE  
+
+20. This motion is supported by the Affidavit of Mark Donovan sworn March 10, 2027, Vice President of Alderidge Mortgage Corporation;  
+
+21. The Affidavit of Sarah Lee sworn March 15, 2027, a Title Searcher at Ontario Land Registry Office; and  
+
+22. The Affidavit of James Prescott sworn March 20, 2027, a Chartered Accountant retaining the Defendant’s financial statements and confirming default.  
+
+ALL OF WHICH IS RESPECTFULLY SUBMITTED this 22nd day of March, 2027.  
+
+_____________________________  
+Eleanor R. Chambers (LSO #789654)  
+Counsel for the Plaintiff  
+Alderidge Mortgage Corporation  
+25 Bayview Avenue  
+Toronto, ON M4W 2R5  
+Tel: (416) 555-1234  
+Fax: (416) 555-5678  
+Email: echambers@alderidgelaw.ca  
+
+TO:  
+Counsel for the Defendant  
+Northbridge Developments Inc.  
+c/o John M. Thorne, Esq.  
+Thorne Legal Services  
+100 Wellington Street West, Suite 320  
+Toronto, ON M5K 1J4  
+
+COPIES TO:  
+Chippewa Capital Inc.  
+Attn: Legal Department  
+55 Front Street East  
+Toronto, ON M5E 1B4  
+
+DATED at Toronto, Ontario this 22nd day of March, 2027.

@@ -1,0 +1,136 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+EMPLOYMENT AGREEMENT
+
+THIS EMPLOYMENT AGREEMENT ("Agreement") is made and entered into on this 15th day of January 2025
+
+BY AND BETWEEN
+
+1. Silverbridge Technologies Limited, a company incorporated and registered in England and Wales with company number 11223344 whose registered office is at 22 Kingsway Crescent, London, WC2B 6LH ("the Employer");
+
+AND
+
+2. Ms. Eleanor Grace Hastings, of 45 Parkview Road, Manchester, M14 2XY ("the Employee").
+
+WHEREAS
+
+The Employer wishes to employ the Employee and the Employee agrees to be employed by the Employer under the terms and conditions set forth herein.
+
+NOW IT IS HEREBY AGREED as follows:
+
+1. DEFINITIONS AND INTERPRETATION
+
+1.1 In this Agreement, unless the context otherwise requires, the following expressions shall have the following meanings:
+
+"Business Day" means any day other than a Saturday, Sunday or public holiday in England and Wales.
+
+"Commencement Date" means 1st February 2025.
+
+"Confidential Information" means any information of a confidential nature (whether oral or recorded in any form) relating to the business or affairs of the Employer or any of its clients or customers.
+
+"Gross Salary" means the total remuneration before deductions, calculated annually.
+
+2. COMMENCEMENT AND TERM OF EMPLOYMENT
+
+2.1 The Employer agrees to employ the Employee and the Employee agrees to serve the Employer as a Senior Software Engineer commencing on the Commencement Date.
+
+2.2 The employment shall continue unless and until terminated in accordance with the provisions of this Agreement.
+
+3. DUTIES AND PLACE OF WORK
+
+3.1 The Employee shall devote their full working time, attention and ability to the business of the Employer and shall perform such duties and exercise such powers consistent with the role of Senior Software Engineer as may be reasonably assigned by the Employer from time to time.
+
+3.2 The Employee’s primary place of work shall be the Employer’s office at 22 Kingsway Crescent, London, WC2B 6LH. The Employer may require the Employee to work at such other locations as it may reasonably request.
+
+4. HOURS OF WORK
+
+4.1 The Employee's normal working hours shall be from 9:00 am to 5:30 pm on Mondays to Fridays inclusive, with a one-hour unpaid lunch break each day.
+
+4.2 The Employee agrees that reasonably necessary additional hours may be required to fulfil the duties of the role without additional pay.
+
+5. SALARY AND BENEFITS
+
+5.1 The Employer shall pay the Employee a Gross Salary of £58,000 (fifty-eight thousand pounds) per annum, payable monthly in arrears on or before the last working day of each calendar month directly into a bank account nominated by the Employee.
+
+5.2 The Employer will review the Employee’s salary annually, but any increase shall be at the sole discretion of the Employer and subject to business performance.
+
+5.3 The Employee shall be entitled to 25 days paid holiday per calendar year in addition to the usual public holidays observed in England and Wales. Holidays must be taken at times convenient to the Employer and with prior written approval.
+
+6. PROBATION PERIOD
+
+6.1 The first six months of employment shall be a probationary period during which either party may terminate the Agreement with one week’s written notice.
+
+6.2 Following successful completion of the probation period, notice periods shall be as set out in clause 9.
+
+7. EMPLOYEE OBLIGATIONS
+
+7.1 The Employee shall comply with all lawful and reasonable policies, rules and regulations of the Employer as may be introduced or amended from time to time, including but not limited to health and safety requirements and codes of conduct.
+
+7.2 The Employee shall maintain high standards of integrity and confidentiality and shall not engage in any activity that conflicts with the interests of the Employer.
+
+8. INTELLECTUAL PROPERTY
+
+8.1 The Employee acknowledges and agrees that all intellectual property created, developed or conceived by the Employee in the course of employment shall be the sole property of the Employer.
+
+8.2 The Employee shall, at the Employer’s request and expense, execute all documents necessary to assign such rights to the Employer.
+
+9. TERMINATION
+
+9.1 After successful completion of probation, either party may terminate this Agreement by providing written notice as follows:
+
+- By the Employee: one month’s notice.
+
+- By the Employer: one month’s notice.
+
+9.2 The Employer may terminate this Agreement without notice or payment in lieu in cases of gross misconduct or other fundamental breach.
+
+9.3 Upon termination, the Employee shall immediately return all property belonging to the Employer including documents, equipment, and confidential information.
+
+10. CONFIDENTIALITY
+
+10.1 The Employee shall keep strictly confidential all Confidential Information both during and after the termination of employment and shall not disclose such information to any third party without prior written consent of the Employer.
+
+10.2 This clause shall survive termination of this Agreement.
+
+11. GOVERNING LAW AND JURISDICTION
+
+11.1 This Agreement and any dispute arising out of or in connection with it (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of England and Wales.
+
+11.2 The parties submit to the exclusive jurisdiction of the courts of England and Wales for any proceedings arising out of or in connection with this Agreement.
+
+12. ENTIRE AGREEMENT
+
+12.1 This Agreement constitutes the entire understanding between the parties relating to the subject matter herein and supersedes all prior agreements, representations, or understandings, whether oral or written.
+
+13. VARIATION
+
+13.1 No variation of this Agreement shall be effective unless in writing and signed by or on behalf of both parties.
+
+14. NOTICES
+
+14.1 Any notice to be given under this Agreement shall be in writing and sent by recorded delivery or registered post to the address of the relevant party as stated above or to such other address as the party may notify in writing.
+
+15. MISCELLANEOUS
+
+15.1 The Employee acknowledges that despite the absence of an express data protection clause, the Employer undertakes all reasonable measures to comply with applicable data protection laws.
+
+15.2 Should any provision of this Agreement be found to be invalid, illegal or unenforceable, it shall be deemed severed and the remaining provisions shall remain in full force and effect.
+
+IN WITNESS WHEREOF the parties have executed this Employment Agreement on the day and year first above written.
+
+SIGNED for and on behalf of SILVERBRIDGE TECHNOLOGIES LIMITED
+
+.................................  
+Name: David Mortimer  
+Position: Managing Director  
+Date: 15 January 2025
+
+SIGNED by the Employee
+
+.................................  
+Eleanor Grace Hastings  
+Date: 15 January 2025
+
+---
+
+Explanatory Note: This Agreement lacks a specific clause addressing data protection obligations despite the Employer’s acknowledgment of compliance efforts (see clause 15.1). Parties are advised to seek appropriate guidance to address this omission if necessary.

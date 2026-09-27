@@ -1,0 +1,146 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+Court File No.: CV-2025-01234567-00CP
+
+ONTARIO  
+SUPERIOR COURT OF JUSTICE
+
+BETWEEN:
+
+AURORA TECHNOLOGIES INC.  
+Plaintiff
+
+– and –
+
+NOVA SOLAR SOLUTIONS LTD.  
+Defendant
+
+______________________________________________________________________________
+
+DEFENDANT’S ANSWER AND AFFIRMATIVE DEFENCES  
+______________________________________________________________________________
+
+TO THE HONOURABLE JUSTICE OF THE SUPERIOR COURT OF JUSTICE:
+
+The Defendant, Nova Solar Solutions Ltd. (“Nova Solar”), by its counsel, answers the Statement of Claim filed by the Plaintiff, Aurora Technologies Inc. (“Aurora”), as follows:
+
+1. THE PARTIES
+
+1.1 Nova Solar admits that it is a corporation organized and existing under the laws of the Province of Ontario with its principal place of business located at 1450 Greenfield Road, Toronto, Ontario.
+
+1.2 Nova Solar denies knowledge or information sufficient to form a belief as to the truth of the allegations contained in paragraph 1 of the Statement of Claim regarding the precise nature and business of Aurora Technologies Inc.
+
+2. JURISDICTION AND VENUE
+
+2.1 Nova Solar admits that, for the purposes of this action only, this Honourable Court has jurisdiction over the subject matter and the parties.
+
+3. THE CONTRACT
+
+3.1 Nova Solar admits it entered into a written agreement dated March 15, 2026 (the “Contract”) with Aurora, for the supply and installation of solar panel arrays at Aurora’s manufacturing facility located at 210 Industrial Parkway, Ottawa, Ontario.
+
+3.2 Nova Solar admits that the Contract contemplated delivery and installation of solar panels for an agreed contract price of $7,200,000 plus applicable taxes.
+
+3.3 Nova Solar admits that the Contract included a delivery deadline of August 31, 2026, and an installation completion deadline of October 15, 2026.
+
+4. PERFORMANCE AND BREACH ALLEGATIONS
+
+4.1 Nova Solar denies that it was in breach of the Contract by failing to deliver and install the solar panel arrays by the agreed deadlines.
+
+4.2 Nova Solar admits that delays occurred between July and November 2026 but asserts that said delays were caused by circumstances beyond its control, including but not limited to:
+
+(a) Unforeseen supply chain disruptions caused by geopolitical instability in Southeast Asia, which delayed shipment of key photovoltaic components from suppliers.
+
+(b) Substantial and unexpected labour shortages following a provincial strike of electricians in Ontario from September 1 to September 21, 2026.
+
+4.3 Nova Solar denies that it acted negligently or in bad faith at any time.
+
+5. DAMAGES
+
+5.1 Nova Solar denies that Aurora is entitled to damages of over $5,000,000 as claimed.
+
+5.2 Nova Solar specifically denies that any alleged delay caused Aurora to sustain damages or losses of such magnitude.
+
+5.3 Nova Solar denies all allegations of causation, quantification, and mitigation of damages as pled by Aurora.
+
+6. ADDITIONAL FACTUAL RESPONSES
+
+6.1 Nova Solar states that Aurora failed to provide timely access to the premises and to supply necessary site engineering documents by the date of April 15, 2026, in breach of its contractual obligations, causing further delay.
+
+6.2 Nova Solar states that Aurora requested multiple change orders altering the specifications and quantity of installed equipment, which resulted in additional work and costs not initially accounted for in the Contract price or schedule.
+
+6.3 Nova Solar states that Aurora failed to pay undisputed invoices totaling $1,200,000, despite repeated requests, further straining project cash flow and contributing to delays.
+
+7. AFFIRMATIVE DEFENCES
+
+FIRST AFFIRMATIVE DEFENCE: FORCE MAJEURE
+
+7.1 Nova Solar pleads that the delays and any alleged breaches were caused by force majeure events beyond its reasonable control, including but not limited to:
+
+(a) Global supply chain interruptions;
+
+(b) Labour strikes in the electrical sector;
+
+(c) Adverse weather conditions affecting the construction site between September and October 2026.
+
+7.2 Nova Solar asserts that it timely notified Aurora of these force majeure events pursuant to Section 14.3 of the Contract and exercised reasonable diligence to mitigate all delays.
+
+SECOND AFFIRMATIVE DEFENCE: FAILURE TO MITIGATE DAMAGES
+
+8.1 Nova Solar pleads that Aurora failed to take reasonable steps to mitigate alleged losses and damages.
+
+8.2 Aurora’s failure to provide site access and engineering changes without contractually agreed amendments exacerbated the project delays and increased costs.
+
+8.3 Had Aurora cooperated as required under the Contract, damages would have been substantially reduced or averted.
+
+THIRD AFFIRMATIVE DEFENCE: CONTRIBUTORY NEGLIGENCE
+
+9.1 Nova Solar pleads that any losses suffered by Aurora were caused in whole or in part by Aurora’s own breach of contract, negligence, or failure to fulfill its contractual obligations.
+
+9.2 Nova Solar asserts that Aurora’s unilateral modifications, delayed approvals, and failure to remit payments contributed materially to the delay and alleged damages.
+
+NOVA SOLAR’S COUNTERCLAIM
+
+10.1 Nova Solar hereby counterclaims against Aurora for unpaid invoices in the amount of $1,200,000 plus accrued interest pursuant to the Contract.
+
+GENERAL DENIAL
+
+11.1 Save as expressly admitted herein, Nova Solar denies each and every allegation contained in the Statement of Claim.
+
+RELIEF SOUGHT
+
+WHEREFORE, Nova Solar respectfully requests the following relief:
+
+(a) That the Statement of Claim be dismissed with costs;
+
+(b) That judgment be entered in favour of Nova Solar and against Aurora in the amount of $1,200,000 plus applicable interest and costs;
+
+(c) Such further and other relief as to this Honourable Court may seem just.
+
+DATED at Toronto, Ontario, this 12th day of February, 2027.
+
+____________________________________  
+Counsel for the Defendant  
+NOVA SOLAR SOLUTIONS LTD.  
+McAllister & Greene LLP  
+340 King Street West, Suite 500  
+Toronto, Ontario M5V 1J2  
+Tel: (416) 555-0123  
+Fax: (416) 555-0456  
+Email: dgreene@mcallistergreene.ca
+
+TO:  
+Aurora Technologies Inc.  
+c/o Bennett & Chow Law Offices  
+120 Adelaide Street East, Suite 210  
+Toronto, Ontario M5C 1K9
+
+______________________________________________________________________________
+
+CERTIFICATE OF SERVICE
+
+I hereby certify that on February 12, 2027, I served a true copy of this Defendant’s Answer and Affirmative Defences upon counsel for the Plaintiff, Bennett & Chow Law Offices, by electronic mail and courier.
+
+__________________________________  
+Daniel Greene, Counsel for Defendant
+
+**End of Document**

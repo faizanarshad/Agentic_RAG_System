@@ -1,0 +1,131 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE CIRCUIT COURT OF COOK COUNTY, ILLINOIS  
+COUNTY DEPARTMENT, CHANCERY DIVISION  
+
+Case No. 2025-CH-004872  
+
+JULIET RAMIREZ,  
+Plaintiff,  
+
+v.  
+
+STRATUS TECH SOLUTIONS, INC., and  
+GREGORY M. HARTFORD,  
+Defendants.  
+
+__________________________________________/  
+
+DEFENDANTS’ MOTION TO DISMISS PLAINTIFF’S COMPLAINT  
+
+NOW COME the Defendants, STRATUS TECH SOLUTIONS, INC. (“Stratus Tech”) and GREGORY M. HARTFORD (“Hartford”), by and through their attorneys, BRYSON & WHITE LLP, and pursuant to Illinois Supreme Court Rules 103(b) and 2-615, hereby move this Honorable Court to dismiss the Plaintiff’s Complaint in its entirety for failure to state a claim upon which relief can be granted, and in support thereof state as follows:
+
+INTRODUCTION  
+
+1. Plaintiff, JULIET RAMIREZ (“Plaintiff”), filed her Complaint on January 15, 2027, alleging claims against Stratus Tech and Hartford for fraud and breach of fiduciary duty related to alleged investment and employment dealings occurring between March 2025 and November 2026.  
+
+2. As set forth below, Plaintiff’s Complaint fails to state actionable claims for fraud and breach of fiduciary duty because the allegations are conclusory, insufficiently pled with specificity as required by Illinois law, and, in key respects, contradicted by Plaintiff’s own documents and prior admissions.  
+
+3. Therefore, this Court should dismiss Plaintiff’s Complaint in its entirety pursuant to Section 2-615 of the Illinois Code of Civil Procedure.   
+
+STATEMENT OF FACTS (ALLEGED)  
+
+4. Plaintiff alleges that from March 2025 through November 2026, she was simultaneously an investor and a part-time consultant for Stratus Tech, a software development startup headquartered in Chicago, Illinois, specializing in cloud-based financial platforms.  
+
+5. She further alleges that Defendant Hartford, the company’s CEO and a member of its Board of Directors, owed her fiduciary duties arising from the investor relationship and her consulting agreement.  
+
+6. Plaintiff contends that Hartford and Stratus Tech made fraudulent statements regarding the company’s financial status in July and September 2026 that induced her to invest an additional $250,000 on September 15, 2026.  
+
+7. Plaintiff claims that Hartford breached fiduciary duties by failing to disclose ongoing contractual negotiations with a competitor and by self-dealing related to a side agreement dated October 2026, purportedly executed without Plaintiff’s consent.  
+
+8. Plaintiff’s Complaint includes counts for Fraud (Count I) and Breach of Fiduciary Duty (Count II).  
+
+ARGUMENT  
+
+I. LEGAL STANDARD FOR MOTION TO DISMISS  
+
+9. Under Illinois law, a motion to dismiss brought pursuant to Section 2-615 challenges the legal sufficiency of the complaint. The court must accept all well-pleaded facts as true and draw reasonable inferences in favor of the non-moving party. However, conclusory allegations and legal conclusions unsupported by factual allegations are insufficient to survive dismissal. HPI Health Care Services, Inc. v. Mt. Vernon Hosp., Inc., 131 Ill.2d 145, 152-53 (1989).  
+
+10. Fraud claims must be pled with particularity under Illinois Supreme Court Rule 137 and applicable case law, which requires specific allegations as to the time, place, content of the false statements, and the identity of the parties involved. Connick v. Suzuki Motor Co., 174 Ill.2d 482, 496 (1996).  
+
+II. PLAINTIFF’S FRAUD CLAIM FAILS BECAUSE IT IS INSUFFICIENTLY PLED  
+
+11. To state a claim for fraud under Illinois law, Plaintiff must allege with specificity: (a) a false statement of material fact; (b) known or believed by the defendant to be false; (c) intent to induce the plaintiff to act; (d) plaintiff’s action in reliance; and (e) damages resulting therefrom. Connick, 174 Ill.2d at 496.  
+
+12. Plaintiff alleges only that Defendants made “fraudulent statements” in July and September 2026 regarding the company’s financial health, but the Complaint does not specify what the statements were, who made them, or how they were false. For example, Plaintiff vaguely references a “company financial update” in July 2026 without attaching the document or identifying any specific representation.  
+
+13. Further, Plaintiff fails to allege facts showing that Defendants knew the statements were false at the time made or intended to deceive Plaintiff. Instead, Plaintiff relies on conclusory assertions that Hartford “intended to mislead,” which courts have held insufficient. Feltmeier v. Feltmeier, 207 Ill.2d 263, 277 (2003).  
+
+14. Plaintiff also cannot demonstrate justifiable reliance because she admits in Paragraph 32 of the Complaint that she conducted independent due diligence by reviewing audited quarterly financial statements and consulting with her own financial advisors prior to making the $250,000 investment on September 15, 2026.  
+
+15. Finally, Plaintiff’s purported damages are speculative and not causally connected to any alleged misstatements. The Complaint concedes that Stratus Tech experienced a downturn in October 2026 due to market conditions unrelated to management conduct, and Plaintiff admits her losses stem from market volatility generally.  
+
+16. Accordingly, Plaintiff’s fraud claim should be dismissed for failure to plead fraud with the requisite particularity and failure to state a viable cause of action.  
+
+III. PLAINTIFF FAILS TO PLEAD A BREACH OF FIDUCIARY DUTY CLAIM  
+
+17. Under Illinois law, a fiduciary duty arises only in limited circumstances, such as partners, trustees, or corporate directors vis-à-vis shareholders in certain contexts. Van Dbben v. Peoples National Bank, 24 Ill.App.3d 380, 383 (1974).  
+
+18. Plaintiff alleges that Hartford owed her fiduciary duties by virtue of her investor and consulting relationships but fails to identify any specific contractual or statutory basis creating such duties. The consulting agreement attached as Exhibit A to the Complaint shows an at-will, limited engagement with no fiduciary obligations mentioned.  
+
+19. Further, there is no allegation that Plaintiff was a controlling shareholder or partner in Stratus Tech; she held minority investor status and a non-exclusive consulting role, which Illinois courts have repeatedly held insufficient to impose fiduciary duties. See In re Marriage of Toth, 395 Ill.App.3d 742, 750 (2010).  
+
+20. Plaintiff’s breach claim relies on the contention that Hartford failed to disclose “ongoing contractual negotiations with a competitor” and that Hartford engaged in “self-dealing” through an October 2026 “side agreement.”  
+
+21. However, Plaintiff does not allege that Hartford owed her a duty to disclose these negotiations or agreements, especially as a minority investor with no board representation or voting rights. The Complaint does not allege that Plaintiff ever requested disclosure or that such disclosure was required under the Investment Agreement (also attached as Exhibit B).  
+
+22. The so-called “side agreement” referenced is neither attached nor described with sufficient particularity to assess whether it was improper or involved Hartford personally. The absence of particular facts leaves the Court unable to determine whether any duty was breached.  
+
+23. Moreover, Plaintiff’s admission in Paragraph 44 that she never raised any objection before filing suit until November 2026 demonstrates a failure to mitigate or timely address any purported breaches, distancing Hartford’s conduct from actionable wrongdoing.  
+
+24. As such, Plaintiff has not stated a plausible claim for breach of fiduciary duty.  
+
+IV. ALTERNATIVELY, CERTAIN CLAIMS MAY BE SUBJECT TO STATUTE OF LIMITATIONS  
+
+25. Plaintiff’s allegations include events purportedly occurring as early as March 2025. The Complaint was filed in January 2027, more than eighteen months later.  
+
+26. Under Illinois law, fraud claims must be brought within five years from the date of the alleged fraud, but the clock begins to run when the plaintiff discovered or should have discovered the fraud by exercising reasonable diligence. 735 ILCS 5/13-205.  
+
+27. Given Plaintiff’s admitted review of quarterly financials and consultation with advisors in September 2026, the discovery rule cuts against any claims related to earlier alleged misstatements.  
+
+28. Breach of fiduciary duty claims in Illinois are subject to a five-year statute of limitations, but equitable tolling is unavailable given the Plaintiff’s failure to plead fraudulent concealment or due diligence. See Thompson v. Gordon, 241 Ill.2d 428, 438 (2011).  
+
+29. Therefore, any claims based on conduct occurring before July 2025 should be dismissed as time-barred.  
+
+CONCLUSION  
+
+WHEREFORE, for the foregoing reasons, Defendants STRATUS TECH SOLUTIONS, INC. and GREGORY M. HARTFORD respectfully request that this Court enter an Order:  
+
+a. Dismissing Plaintiff’s Complaint in its entirety with prejudice;  
+
+b. Awarding Defendants their costs and reasonable attorneys’ fees incurred herein; and  
+
+c. Granting such other and further relief as this Court deems just and proper.  
+
+Respectfully submitted,  
+
+BRYSON & WHITE LLP  
+
+/s/ Amanda J. Bryson  
+Amanda J. Bryson, Esq.  
+Attorney for Defendants  
+BRYSON & WHITE LLP  
+120 South LaSalle Street, Suite 3500  
+Chicago, Illinois 60603  
+Phone: (312) 555-9800  
+Email: abryson@bwlawgroup.com  
+
+Dated: February 28, 2027  
+
+CERTIFICATE OF SERVICE  
+
+I, Amanda J. Bryson, an attorney, certify that on February 28, 2027, I caused a true and correct copy of the foregoing Defendants’ Motion to Dismiss Plaintiff’s Complaint to be served upon all counsel of record via the Court’s electronic filing system and by email to:  
+
+John R. Marshall, Esq.  
+Carter, Feldman & Associates  
+55 West Monroe Street, Suite 3800  
+Chicago, Illinois 60603  
+Email: jmarshall@cfalaw.com  
+
+/s/ Amanda J. Bryson  
+Amanda J. Bryson

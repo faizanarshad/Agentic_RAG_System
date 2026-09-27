@@ -1,0 +1,131 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOX INTERNAL CONTROLS REVIEW  
+Compliance Record No. CR-2025-0187  
+Province of Ontario  
+
+Date: March 15, 2026  
+
+Prepared by:  
+Harrison & Wilcox LLP  
+Chartered Accountants and Compliance Consultants  
+45 Wellington Street West, Suite 2100  
+Toronto, Ontario M5V 1E3  
+
+Review Period: Fiscal Year Ending December 31, 2025  
+Client: Veridian Dynamics Inc.  
+Registered Office: 1200 Bayview Avenue, Toronto, Ontario M4G 3E2  
+Client Contact: Ms. Elaine Foster, Chief Financial Officer  
+
+1. BACKGROUND AND PURPOSE  
+
+1.1 Veridian Dynamics Inc. (“Veridian” or the “Company”) is a publicly traded entity incorporated under the Ontario Business Corporations Act, with securities listed on the Maple Securities Exchange.  
+
+1.2 Pursuant to Section 404 of the Sarbanes-Oxley Act (SOX), as adopted and regulated under applicable Ontario securities law and pursuant to National Instrument 52-109 – Certification of Disclosure in Issuers’ Annual and Interim Filings, Veridian is required to maintain effective internal controls over financial reporting (“ICFR”).  
+
+1.3 Harrison & Wilcox LLP (“H&W”) was engaged to perform an independent internal controls review covering Veridian’s fiscal year ending December 31, 2025, focussing on the design and operating effectiveness of controls relevant to financial reporting.  
+
+1.4 The purpose of this Compliance Record is to document the findings, observations, and recommendations arising from the SOX Internal Controls Review conducted in accordance with applicable auditing standards and SOX compliance requirements.  
+
+2. SCOPE AND METHODOLOGY  
+
+2.1 The review included:  
+  (a) Evaluation of Veridian’s documented control framework and risk assessment processes;  
+  (b) Testing of key controls in major financial reporting cycles including revenue recognition, procurement and payables, payroll, and financial close operations;  
+  (c) Interviews with management and key control owners; and  
+  (d) Review of remediation of prior year’s control deficiencies.  
+
+2.2 The control framework adopted by Veridian aligns with the Committee of Sponsoring Organizations of the Treadway Commission (COSO) 2013 framework on Internal Control – Integrated Framework.  
+
+2.3 Fieldwork was conducted from January 15 to February 28, 2026.  
+
+3. DEFINITIONS  
+
+For purposes of this report, the following terms have these meanings:  
+
+“Control Deficiency” means a failure in the design or operation of a control that does not allow management or employees to prevent or detect misstatements in a timely manner;  
+
+“Material Weakness” means a deficiency, or combination of deficiencies, in ICFR such that there is a reasonable possibility that a material misstatement of the annual or interim financial statements will not be prevented or detected;  
+
+“Significant Deficiency” means a deficiency less severe than a material weakness but important enough to merit attention by those responsible for oversight of the Company’s financial reporting.  
+
+4. EXECUTIVE SUMMARY  
+
+4.1 Based on the procedures performed and evidence obtained, we conclude that, as of December 31, 2025, Veridian maintained effective internal controls over financial reporting, and no material weaknesses were identified.  
+
+4.2 Minor control observations were noted and are summarized in Section 7 below. These observations do not impact the overall effectiveness of internal controls but represent opportunities for improvement in control documentation and timeliness of reconciliations.  
+
+4.3 Management’s commitment to ongoing enhancement of the internal control environment was evidenced through timely remediation of prior year issues and proactive refinement of control processes.  
+
+5. DETAILED FINDINGS  
+
+5.1 Control Environment  
+Management has established a strong control environment with clear organisational structures, segregation of duties, and a defined tone at the top promoting compliance and ethical behavior. The Audit Committee of the Board met regularly and demonstrated active oversight of financial reporting and control matters.  
+
+5.2 Risk Assessment Procedures  
+Veridian’s risk assessment process is comprehensive and updated quarterly. The finance and internal audit teams collaborate to identify emerging financial reporting risks and adjust control activities accordingly.  
+
+5.3 Control Activities  
+5.3.1 Revenue Cycle: Controls over order entry, billing, and revenue recognition were appropriately designed and operated as intended. Sample testing of 45 transactions across various revenue streams showed no exceptions.  
+
+5.3.2 Procurement and Payables: Purchase orders and invoice approvals require appropriate authorization levels, with consistent application of policy. Testing of 30 transactions found no unauthorized payments.  
+
+5.3.3 Payroll Controls: Automated timekeeping integration and payroll system controls functioned effectively. No discrepancies were identified in the tested payroll samples.  
+
+5.3.4 Financial Close and Reporting: Monthly reconciliations and journal entries reviewed showed adequate supervisory review. Minor delays in bank reconciliations for two accounts were noted but did not result in misstatements.  
+
+5.4 Information and Communication  
+Veridian utilizes an enterprise resource planning (ERP) system that supports control documentation and audit trails. Relevant policies are communicated periodically, and training is provided to finance staff.  
+
+5.5 Monitoring Activities  
+Internal audit function performs ongoing testing of controls. Quarterly reporting to the Audit Committee on control status and remediation progress was observed.  
+
+6. PRIOR YEAR REMEDIATION  
+
+6.1 The previous year’s compliance record (CR-2024-0173) identified a significant deficiency relating to timely completion of bank reconciliations. Management implemented additional review checkpoints and enhanced monitoring tools. The current year testing confirmed that the issue has been largely addressed, with only minor timing exceptions noted as referenced in 5.3.4.  
+
+7. MINOR OBSERVATIONS AND RECOMMENDATIONS  
+
+7.1 Documentation of Certain Control Procedures  
+Observation: Certain control procedures, particularly related to IT general controls around user access provisioning, lacked formal documented descriptions.  
+Recommendation: Management should develop and maintain written narratives or flowcharts for all key control activities to support ongoing training and compliance. Target completion date: June 30, 2026.  
+
+7.2 Bank Reconciliation Timeliness  
+Observation: Two out of 12 monthly bank reconciliations were completed beyond the established 10-day standard after month-end.  
+Recommendation: Implement automated reminders and escalate delays to senior finance personnel. Target completion date: April 30, 2026.  
+
+7.3 Vendor Master Data Review  
+Observation: The vendor master data review process is performed annually but lacks a documented risk assessment for selecting high-risk vendors.  
+Recommendation: Enhance the vendor review procedure to include risk-based prioritization and more frequent reviews of vendors with higher transaction volumes or balances. Target completion date: September 30, 2026.  
+
+8. CONCLUSION  
+
+8.1 In our professional judgement, the internal controls over financial reporting at Veridian Dynamics Inc. as at December 31, 2025, were suitably designed, implemented, and operating effectively to provide reasonable assurance regarding the reliability of financial reporting and prevention of material misstatement.  
+
+8.2 The minor observations noted do not constitute material weaknesses and are consistent with a clean audit opinion.  
+
+8.3 We acknowledge the cooperation and professionalism exhibited by Veridian’s finance and internal audit teams throughout this engagement.  
+
+9. MANAGEMENT ACKNOWLEDGEMENT  
+
+We, the undersigned, acknowledge receipt of this SOX Internal Controls Review Compliance Record and commit to addressing the observations as set forth herein in accordance with the stated deadlines.  
+
+______________________________  
+Elaine Foster  
+Chief Financial Officer  
+Veridian Dynamics Inc.  
+Date: March 20, 2026  
+
+______________________________  
+Jonathan Reed, CPA, CA  
+Partner  
+Harrison & Wilcox LLP  
+Date: March 15, 2026  
+
+10. DISTRIBUTION  
+- Board of Directors, Veridian Dynamics Inc.  
+- Audit Committee, Veridian Dynamics Inc.  
+- Internal Audit Department, Veridian Dynamics Inc.  
+- Harrison & Wilcox LLP (Retained auditors)  
+
+End of Compliance Record CR-2025-0187

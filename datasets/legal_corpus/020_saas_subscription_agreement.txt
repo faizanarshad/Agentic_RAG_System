@@ -1,0 +1,155 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+SOFTWARE AS A SERVICE (SaaS) SUBSCRIPTION AGREEMENT
+
+This Software as a Service Subscription Agreement ("Agreement") is entered into as of March 15, 2025 ("Effective Date"), by and between Nexora Solutions, Inc., a Delaware corporation with its principal place of business at 4500 Gateway Blvd, Suite 120, Austin, Texas 78758 ("Provider"), and Global DataWorks LLC, a Texas limited liability company with its principal place of business at 2100 Preston Rd, Suite 300, Plano, Texas 75093 ("Subscriber").
+
+RECITALS
+
+WHEREAS, Provider has developed and operates the "NexoManage" cloud-based software platform for enterprise resource management; and
+
+WHEREAS, Subscriber desires to obtain a subscription license to access and use NexoManage pursuant to the terms and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises contained herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 "Authorized Users" means employees, contractors, and agents of Subscriber who are authorized to use the NexoManage service under this Agreement and have unique login credentials.
+
+1.2 "Documentation" means the user manuals, help guides, and other written materials provided by Provider regarding the use of NexoManage.
+
+1.3 "Subscription Term" means the period commencing on the Effective Date and continuing for twelve (12) months thereafter, unless terminated earlier in accordance with this Agreement.
+
+1.4 "Subscription Fees" means the fees payable by Subscriber to Provider for access to NexoManage as set forth in Section 4.
+
+2. GRANT OF LICENSE
+
+2.1 License. Provider hereby grants Subscriber a non-exclusive, non-transferable, limited right to access and use NexoManage and its Documentation during the Subscription Term solely for Subscriber’s internal business purposes and subject to the terms and conditions of this Agreement.
+
+2.2 Restrictions. Subscriber shall not (a) copy, modify, distribute, sell, or lease any part of NexoManage or Documentation; (b) reverse engineer, decompile, or attempt to extract the source code of NexoManage, except as expressly permitted by applicable law; (c) sublicense, assign, or transfer any rights granted herein without prior written consent of Provider; or (d) use NexoManage to provide services to third parties.
+
+3. SUBSCRIPTION TERM AND TERMINATION
+
+3.1 Term. This Agreement shall commence on the Effective Date and shall continue for the initial Subscription Term unless earlier terminated pursuant to this Section 3.
+
+3.2 Renewal. Unless either party provides written notice of non-renewal at least sixty (60) days prior to the expiration of the then-current Subscription Term, the Agreement shall automatically renew for successive twelve (12) month periods on the same terms and conditions.
+
+3.3 Termination for Cause. Either party may terminate this Agreement immediately upon written notice if the other party materially breaches any provision hereof and fails to cure such breach within thirty (30) days after receiving written notice thereof.
+
+3.4 Effect of Termination. Upon termination or expiration of this Agreement, Subscriber shall immediately cease all use of NexoManage and destroy or return all copies of Documentation in its possession. Termination shall not relieve Subscriber of its obligation to pay any fees accrued prior to termination.
+
+4. FEES AND PAYMENT TERMS
+
+4.1 Subscription Fees. Subscriber agrees to pay Provider the following subscription fees:
+
+a) Base fee of $15,000 per month for up to 100 Authorized Users.
+
+b) Additional users beyond 100 shall be charged at $100 per user per month.
+
+4.2 Invoicing and Payment. Provider shall invoice Subscriber monthly in advance. All payments are due within thirty (30) days of invoice date. Any late payments shall accrue interest at 1.5% per month or the highest rate permitted by law, whichever is lower.
+
+4.3 Taxes. All fees are exclusive of taxes. Subscriber shall be responsible for all applicable sales, use, VAT, or other taxes, except taxes based on Provider's net income.
+
+5. PROVIDER OBLIGATIONS
+
+5.1 Service Availability. Provider shall use commercially reasonable efforts to make NexoManage available 99.5% of the time during each calendar month, excluding scheduled maintenance notified at least forty-eight (48) hours in advance.
+
+5.2 Support. Provider shall provide Subscriber with standard technical support via email and telephone from 8:00 AM to 6:00 PM Central Time, Monday through Friday, excluding holidays.
+
+5.3 Data Security. Provider shall implement and maintain reasonable administrative, physical, and technical safeguards to protect Subscriber Data against unauthorized access or disclosure.
+
+6. SUBSCRIBER OBLIGATIONS
+
+6.1 Authorized Use. Subscriber shall (a) be responsible for all use of NexoManage by its Authorized Users; and (b) ensure Authorized Users comply with this Agreement.
+
+6.2 Compliance. Subscriber agrees to use NexoManage only in accordance with all applicable laws and regulations.
+
+6.3 Data Backup. Subscriber is solely responsible for maintaining backup copies of its data and information entered into NexoManage.
+
+7. INTELLECTUAL PROPERTY RIGHTS
+
+7.1 Ownership. Provider retains all rights, title, and interest in and to NexoManage, including all software, technology, trade secrets, patents, copyrights, trademarks, and other intellectual property rights associated therewith.
+
+7.2 Feedback. Subscriber may provide suggestions or feedback regarding NexoManage. Provider shall have a royalty-free, worldwide, perpetual, irrevocable license to use any such feedback.
+
+8. CONFIDENTIALITY
+
+8.1 Definition. "Confidential Information" means non-public information disclosed by one party to the other, whether in oral, written, electronic, or other form, that is designated as confidential or that reasonably should be understood to be confidential.
+
+8.2 Obligations. Each party agrees to maintain the confidentiality of the other party’s Confidential Information and not disclose it to any third party except to employees, contractors, or advisors on a need-to-know basis who are bound by confidentiality obligations.
+
+8.3 Exceptions. Confidential Information does not include information that (a) was already known to the receiving party; (b) is or becomes publicly available; (c) is lawfully received from a third party without restriction; or (d) is independently developed without use of the other party’s Confidential Information.
+
+9. BROAD NON-COMPETE COVENANT
+
+9.1 Non-Compete. Subscriber agrees that during the Subscription Term and for a period of three (3) years thereafter, neither Subscriber nor any of its affiliates, principals, directors, officers, employees, or agents shall, directly or indirectly, engage in, own, manage, operate, control, participate in, consult with, render services for, or be connected in any manner with any business or entity that develops, markets, licenses, or otherwise provides software solutions substantially similar to or competitive with NexoManage in the United States.
+
+9.2 Scope and Reasonableness. Subscriber acknowledges and agrees that the restrictions set forth in this Section 9 are reasonable, necessary to protect Provider’s legitimate business interests, and shall survive termination or expiration of this Agreement.
+
+9.3 Remedy. Subscriber agrees that breach of this Section 9 will cause irreparable harm to Provider for which monetary damages alone may be inadequate and that Provider shall be entitled to injunctive relief in addition to any other remedies available at law or equity.
+
+10. WARRANTIES AND DISCLAIMERS
+
+10.1 Mutual Warranties. Each party represents and warrants that it has the full power and authority to enter into this Agreement.
+
+10.2 Provider Warranty. Provider warrants that NexoManage will perform materially in accordance with the Documentation under normal use for the Subscription Term.
+
+10.3 Disclaimer. EXCEPT AS EXPRESSLY PROVIDED IN THIS AGREEMENT, NEITHER PARTY MAKES ANY WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+11. LIMITATION OF LIABILITY
+
+11.1 EXCLUSION OF INCIDENTAL DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY LAW, NEITHER PARTY SHALL BE LIABLE TO THE OTHER FOR INCIDENTAL, CONSEQUENTIAL, PUNITIVE, OR SPECIAL DAMAGES ARISING OUT OF OR RELATING TO THIS AGREEMENT.
+
+11.2 LIABILITY CAP. PROVIDER’S AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNTS ACTUALLY PAID BY SUBSCRIBER TO PROVIDER IN THE SIX (6) MONTHS PRECEDING THE CLAIM.
+
+12. INDEMNIFICATION
+
+12.1 By Provider. Provider shall indemnify, defend, and hold harmless Subscriber from any claims, damages, liabilities, costs, and expenses arising from any third-party claim alleging that NexoManage infringes any United States intellectual property right, provided Subscriber notifies Provider promptly and cooperates fully.
+
+12.2 By Subscriber. Subscriber shall indemnify and hold harmless Provider from claims arising out of Subscriber’s use of NexoManage in violation of this Agreement or law.
+
+13. MISCELLANEOUS
+
+13.1 Governing Law and Jurisdiction. This Agreement shall be governed by and construed in accordance with the laws of the State of Texas without regard to conflict of law principles. The parties agree that the state and federal courts located in Travis County, Texas shall have exclusive jurisdiction over any disputes arising hereunder.
+
+13.2 Entire Agreement. This Agreement constitutes the entire agreement between the parties and supersedes all prior agreements or understandings, whether written or oral.
+
+13.3 Amendments. No amendment or modification shall be effective unless in writing and signed by authorized representatives of both parties.
+
+13.4 Severability. If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall continue in full force and effect.
+
+13.5 Assignment. Neither party may assign or transfer this Agreement without the other party’s prior written consent, except to a successor entity in connection with a merger or sale of substantially all assets.
+
+13.6 Notices. All notices under this Agreement shall be in writing and sent via certified mail or recognized overnight delivery service to the parties’ addresses set forth above.
+
+13.7 Force Majeure. Neither party shall be liable for failure or delay in performance due to causes beyond its reasonable control, including acts of God, war, terrorism, strikes, or governmental orders.
+
+IN WITNESS WHEREOF, the parties hereto have executed this Software as a Service Subscription Agreement as of the Effective Date.
+
+NEXORA SOLUTIONS, INC.                      GLOBAL DATAWORKS LLC
+
+By: _______________________________        By: _______________________________
+
+Name: Victoria L. Emerson                   Name: Marcus T. Reynolds
+
+Title: Chief Operating Officer              Title: Managing Member
+
+Date: March 15, 2025                        Date: March 15, 2025
+
+CERTIFICATION
+
+I, Victoria L. Emerson, certify that I am the duly authorized Chief Operating Officer of Nexora Solutions, Inc., and that this Agreement has been executed on behalf of Provider in accordance with corporate authority.
+
+By: _______________________________
+
+Name: Victoria L. Emerson
+
+Date: March 15, 2025
+
+I, Marcus T. Reynolds, certify that I am the duly authorized Managing Member of Global DataWorks LLC, and that this Agreement has been executed on behalf of Subscriber in accordance with limited liability company authority.
+
+By: _______________________________
+
+Name: Marcus T. Reynolds
+
+Date: March 15, 2025

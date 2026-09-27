@@ -1,9 +1,10 @@
 """API routes for chat functionality."""
 
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, Request
 from pydantic import BaseModel
 from typing import Dict, Any
 
+from api.deps import owner_scope
 from services.rag_service import RAGService
 from utils.logger import logger
 
@@ -33,7 +34,7 @@ class ChatResponse(BaseModel):
 
 
 @router.post("/", response_model=ChatResponse)
-async def chat(request: ChatRequest) -> ChatResponse:
+async def chat(request: ChatRequest, http_request: Request) -> ChatResponse:
     """
     Process a chat query and return a response.
     
@@ -58,7 +59,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
         
         # Process query through RAG pipeline
         rag_service = get_rag_service()
-        result = rag_service.process_query(request.query)
+        result = rag_service.process_query(request.query, owner_id=owner_scope(http_request))
         
         # Prepare response
         response = ChatResponse(

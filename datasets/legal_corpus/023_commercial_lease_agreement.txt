@@ -1,0 +1,145 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+COMMERCIAL LEASE AGREEMENT
+
+This Commercial Lease Agreement (“Lease”) is made and entered into as of January 15, 2025 (“Effective Date”), by and between Falcon Ridge Properties, LLC, a Delaware limited liability company with its principal place of business at 4800 Bayberry Lane, Wilmington, Delaware 19801 (“Landlord”), and Crimson Cove Technologies, Inc., a Delaware corporation with its principal place of business at 1324 Riverview Drive, Newark, Delaware 19711 (“Tenant”).
+
+RECITALS
+
+WHEREAS, Landlord is the owner of certain commercial real property located at 900 Market Street, Suite 400, Wilmington, Delaware 19801 (“Premises”); and
+
+WHEREAS, Tenant desires to lease the Premises from Landlord and Landlord agrees to lease the Premises to Tenant on the terms and conditions set forth herein.
+
+NOW, THEREFORE, in consideration of the mutual covenants contained herein and other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Base Rent” means the monthly rent payable by Tenant to Landlord as specified in Section 3.
+
+1.2 “Common Areas” means all portions of the building and property at 900 Market Street other than the Premises, including but not limited to entrances, hallways, elevators, stairwells, restrooms, parking areas, and landscaping.
+
+1.3 “Premises” means approximately 4,500 square feet of office space located in Suite 400 of 900 Market Street, Wilmington, Delaware 19801.
+
+2. LEASE TERM
+
+2.1 Initial Term. The Lease shall commence on March 1, 2025 (“Commencement Date”) and shall continue for a period of thirty-six (36) consecutive months, expiring on February 28, 2028 (“Expiration Date”), unless earlier terminated as provided herein.
+
+2.2 Renewal Option. Tenant shall have the option to renew the Lease for one (1) additional term of twelve (12) months on the same terms and conditions by providing written notice to Landlord no later than ninety (90) days prior to the Expiration Date.
+
+3. RENT AND PAYMENTS
+
+3.1 Base Rent. Tenant shall pay to Landlord monthly Base Rent of Six Thousand Five Hundred Dollars ($6,500.00), payable in advance on or before the first (1st) day of each calendar month during the Lease Term.
+
+3.2 Late Payment Penalty. If any installment of Base Rent is not received by Landlord within five (5) calendar days after the due date, Tenant shall pay to Landlord a late payment penalty equal to two percent (2%) of the overdue amount per month, calculated from the due date until payment is received. This late payment penalty is in addition to and not in lieu of Base Rent.
+
+3.3 Payment Location. All payments shall be made to Landlord at 4800 Bayberry Lane, Wilmington, Delaware 19801, or at such other place as Landlord may designate in writing.
+
+4. SECURITY DEPOSIT
+
+Upon execution of this Lease, Tenant shall deposit with Landlord the sum of Thirteen Thousand Dollars ($13,000.00) as security for Tenant’s performance of its obligations under this Lease (“Security Deposit”). Landlord may use the Security Deposit to cure Tenant’s defaults. Any unused portion of the Security Deposit shall be returned to Tenant within sixty (60) days after the Expiration Date, less any deductions for damages or unpaid rent.
+
+5. USE OF PREMISES
+
+5.1 Permitted Use. Tenant shall use and occupy the Premises solely for general office purposes related to software development and corporate administration and for no other purpose without Landlord’s prior written consent.
+
+5.2 Compliance with Laws. Tenant shall comply with all applicable federal, state, and local laws, ordinances, regulations, and codes in Tenant’s use and occupancy of the Premises.
+
+6. MAINTENANCE AND REPAIRS
+
+6.1 Landlord’s Obligations. Landlord shall maintain and repair the structural elements of the Premises, including roof, exterior walls, and foundation, and maintain Common Areas in good and safe condition.
+
+6.2 Tenant’s Obligations. Tenant shall keep the Premises clean and in good order and repair all damage caused by Tenant’s negligence or misuse, including maintenance of interior non-structural components such as partitions, doors, windows, and fixtures.
+
+7. UTILITIES AND SERVICES
+
+Tenant shall be responsible for payment of all utilities and services for the Premises, including water, sewer, electricity, gas, telephone, internet, janitorial services, and trash removal.
+
+8. ALTERATIONS AND IMPROVEMENTS
+
+Tenant shall not make any alterations, additions or improvements to the Premises without prior written consent of Landlord, which consent shall not be unreasonably withheld. Any permitted alterations made by Tenant shall become the property of Landlord upon expiration or termination of the Lease unless Landlord requires removal.
+
+9. INSURANCE
+
+9.1 Tenant Insurance. Tenant shall, at its sole cost and expense, maintain commercial general liability insurance with a minimum limit of $1,000,000 per occurrence and property insurance covering Tenant’s personal property and leasehold improvements.
+
+9.2 Landlord Insurance. Landlord shall maintain insurance covering the building structure and common areas.
+
+10. ASSIGNMENT AND SUBLETTING
+
+Tenant shall not assign this Lease or sublet the Premises or any part thereof without the prior written consent of Landlord, which consent shall not be unreasonably withheld.
+
+11. DEFAULT AND REMEDIES
+
+11.1 Events of Default. Each of the following shall constitute a default by Tenant: (a) failure to pay Base Rent or other sums due within ten (10) days after written notice of non-payment; (b) failure to perform any other covenant or condition of this Lease within thirty (30) days after written notice specifying the breach; (c) vacancy of the Premises for a period of sixty (60) consecutive days.
+
+11.2 Remedies. Upon Tenant’s default, Landlord may pursue any remedies available at law or equity, including termination of this Lease, recovery of damages, and possession of the Premises.
+
+12. INDEMNIFICATION
+
+Tenant shall indemnify, defend and hold Landlord harmless from and against any claims, damages, liabilities, or expenses (including reasonable attorneys’ fees) arising out of Tenant’s use or occupancy of the Premises, except to the extent caused by Landlord’s gross negligence or willful misconduct.
+
+13. GOVERNING LAW AND JURISDICTION
+
+This Lease shall be governed by and construed in accordance with the laws of the State of Delaware without regard to its conflict of laws principles. Any legal action arising under this Lease shall be brought in the Delaware Superior Court, New Castle County, and the parties consent to personal jurisdiction therein.
+
+14. NOTICES
+
+All notices under this Lease shall be in writing and deemed delivered when personally served, sent by certified mail return receipt requested, or by nationally recognized overnight courier service to the parties at their addresses set forth above or such other address as either party may designate by written notice.
+
+15. MISCELLANEOUS
+
+15.1 Entire Agreement. This Lease constitutes the entire agreement between the parties and supersedes all prior oral or written negotiations.
+
+15.2 Amendments. No modification or amendment shall be effective unless in writing and signed by both parties.
+
+15.3 Waiver. No waiver of any breach shall constitute a waiver of any other breach.
+
+15.4 Severability. If any provision is held invalid, the remainder shall remain in full force and effect.
+
+15.5 Binding Effect. This Lease shall bind and benefit the parties and their respective successors and assigns.
+
+IN WITNESS WHEREOF, the parties have executed this Commercial Lease Agreement as of the Effective Date first above written.
+
+LANDLORD:
+
+Falcon Ridge Properties, LLC
+
+By: _______________________________
+
+Name: Jonathan M. Spence
+
+Title: Managing Member
+
+Date: January 15, 2025
+
+
+TENANT:
+
+Crimson Cove Technologies, Inc.
+
+By: _______________________________
+
+Name: Alicia K. Moreno
+
+Title: Chief Executive Officer
+
+Date: January 15, 2025
+
+
+STATE OF DELAWARE  
+COUNTY OF NEW CASTLE
+
+On this 15th day of January, 2025, before me, a Notary Public in and for said State, personally appeared Jonathan M. Spence and Alicia K. Moreno, known to me or satisfactorily proven to be the persons whose names are subscribed to the within instrument and acknowledged that they executed the same for the purposes therein contained.
+
+IN WITNESS WHEREOF, I hereunto set my hand and official seal.
+
+_________________________________  
+Notary Public
+
+My commission expires: December 31, 2028
+
+--------------------------------
+
+Case Reference No.: DN-2025-CV-00487
+
+(For record keeping and identification purposes only)

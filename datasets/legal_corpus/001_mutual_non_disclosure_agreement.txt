@@ -1,0 +1,107 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (“Agreement”) is entered into as of January 15, 2025 (“Effective Date”), by and between Argentum Dynamics LLC, a Delaware limited liability company with principal offices at 715 Elm Street, Chicago, Illinois 60607 (“Argentum”), and Helix Innovate Corp., a Delaware corporation with principal offices at 1324 Maple Avenue, Naperville, Illinois 60540 (“Helix”). Argentum and Helix are hereinafter individually referred to as a “Party” and collectively as the “Parties.”
+
+WHEREAS, the Parties desire to explore a potential business relationship concerning the joint development of advanced energy storage systems (the “Purpose”);
+
+WHEREAS, in connection with such discussions and evaluation, each Party may disclose to the other certain confidential and proprietary information;
+
+NOW, THEREFORE, in consideration of the mutual covenants and promises herein contained, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 “Confidential Information” means all information disclosed by one Party (“Disclosing Party”) to the other Party (“Receiving Party”) whether orally, visually, or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, without limitation, technical data, trade secrets, know-how, inventions (whether patentable or not), processes, designs, drawings, engineering data, software, business plans, financial information, customer information, prototypes, and strategic plans.
+
+1.2 Confidential Information does not include information that: (a) is or becomes publicly known through no wrongful act of the Receiving Party; (b) is already known to the Receiving Party prior to disclosure as evidenced by written records; (c) is lawfully received from a third party without restriction on disclosure; or (d) is independently developed by the Receiving Party without use of or reference to the Disclosing Party’s Confidential Information.
+
+2. OBLIGATIONS OF THE PARTIES
+
+2.1 Each Party agrees to: (a) use the other Party’s Confidential Information solely for the Purpose; (b) restrict disclosure of the Confidential Information to employees, contractors, or agents on a strictly “need to know” basis who are bound by confidentiality obligations at least as protective as those set forth herein; and (c) exercise at least the same degree of care in protecting the Confidential Information as it uses to protect its own confidential information, but in no event less than reasonable care.
+
+2.2 The Receiving Party shall not copy, reproduce, reverse engineer, or otherwise exploit the Confidential Information except as expressly authorized in writing by the Disclosing Party.
+
+3. TERM AND NO TERMINATION FOR CONVENIENCE
+
+3.1 This Agreement shall commence on the Effective Date and shall continue in effect for a period of two (2) years, ending January 14, 2027 (“Initial Term”), unless earlier terminated as provided in Section 3.2.
+
+3.2 Notwithstanding any other provision herein, this Agreement contains no right of either Party to terminate for convenience prior to the expiration of the Initial Term. The Agreement may only be terminated by mutual written consent of the Parties or for material breach as set forth herein.
+
+3.3 Obligations with respect to protection of Confidential Information shall survive termination or expiration of this Agreement for a period of five (5) years.
+
+4. RETURN OR DESTRUCTION OF MATERIALS
+
+Within thirty (30) calendar days after termination or expiration of this Agreement, the Receiving Party shall, at the Disclosing Party’s option, either (a) return all tangible materials containing Confidential Information to the Disclosing Party or (b) destroy such materials and certify in writing to the Disclosing Party that such destruction has been completed. Notwithstanding the foregoing, the Receiving Party may retain one copy of Confidential Information solely for archival purposes subject to continued compliance with the terms of this Agreement.
+
+5. NO LICENSE OR WARRANTY
+
+5.1 Nothing in this Agreement grants any license or right under any patent, copyright, trademark, or other intellectual property right of either Party.
+
+5.2 All Confidential Information is provided “AS IS” without any warranty, express or implied, including as to accuracy or completeness.
+
+6. REMEDIES
+
+The Parties acknowledge that any unauthorized disclosure or use of Confidential Information may cause irreparable harm for which damages may be an inadequate remedy. Accordingly, the Disclosing Party shall be entitled to seek injunctive relief and specific performance in addition to any other remedies available at law or in equity.
+
+7. GOVERNING LAW AND JURISDICTION
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of Illinois without regard to its conflicts of law principles. The Parties agree that any disputes arising out of or relating to this Agreement shall be subject to the exclusive jurisdiction and venue of the courts located in Cook County, Illinois.
+
+8. NO ASSIGNMENT
+
+Neither Party may assign or transfer its rights or obligations under this Agreement without the prior written consent of the other Party, except to a successor in interest in connection with a merger, acquisition, or sale of substantially all assets.
+
+9. ENTIRE AGREEMENT; AMENDMENTS
+
+This Agreement constitutes the entire understanding between the Parties with respect to the subject matter hereof and supersedes all prior discussions, agreements and understandings. No amendment or modification shall be valid unless in writing and signed by authorized representatives of both Parties.
+
+10. SEVERABILITY
+
+If any provision of this Agreement is held to be illegal, invalid or unenforceable in any respect, the validity and enforceability of the remaining provisions shall not be affected or impaired.
+
+11. NOTICES
+
+All notices required or permitted under this Agreement shall be in writing and shall be deemed delivered upon (i) personal delivery, (ii) three (3) business days after mailing by registered or certified mail, return receipt requested, or (iii) one (1) business day after delivery to a recognized overnight courier service, addressed to the Parties at their respective addresses set forth above or such other address as either Party may specify by notice.
+
+12. REPRESENTATIONS AND WARRANTIES
+
+Each Party represents and warrants that it has full power and authority to enter into this Agreement and perform its obligations hereunder.
+
+IN WITNESS WHEREOF, the Parties hereto have executed this Mutual Non-Disclosure Agreement as of the date first written above.
+
+ARGENTUM DYNAMICS LLC
+
+By: ______________________________________  
+Name: Marissa Klein  
+Title: Chief Executive Officer  
+Date: January 15, 2025  
+
+HELIX INNOVATE CORP.
+
+By: ______________________________________  
+Name: Daniel M. Prescott  
+Title: Vice President, Legal Affairs  
+Date: January 15, 2025  
+
+CERTIFICATION OF RECEIPT AND ACKNOWLEDGMENT
+
+The undersigned acknowledges receipt of a copy of the Mutual Non-Disclosure Agreement dated January 15, 2025, between Argentum Dynamics LLC and Helix Innovate Corp., and certifies that he/she has read, understands, and agrees to be bound by its terms regarding Confidential Information.
+
+For Argentum Dynamics LLC:  
+______________________________________  
+Name: Linh Tran  
+Title: Director, Research & Development  
+Date: January 16, 2025  
+
+For Helix Innovate Corp.:  
+______________________________________  
+Name: Rebecca Shaw  
+Title: Director, Product Management  
+Date: January 16, 2025  
+
+---
+
+Case Reference (for internal use):  
+Circuit Court of Cook County, Illinois  
+Case No. 25-MD-11127-ND (Mutual NDA Enforcement)

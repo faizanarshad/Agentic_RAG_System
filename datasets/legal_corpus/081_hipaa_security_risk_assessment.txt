@@ -1,0 +1,142 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+HIPAA Security Risk Assessment Report  
+Compliance Record No. CRA-2025-07-14  
+Prepared for: Meridian Health Systems, Inc.  
+Date of Assessment: July 14, 2025  
+Prepared by: CalWest Compliance Consulting, LLC  
+
+---
+
+1. Introduction and Purpose  
+This HIPAA Security Risk Assessment (“Assessment”) has been conducted in accordance with the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”) Security Rule requirements at 45 CFR Part 164, Subpart C, applicable to Meridian Health Systems, Inc. (“Meridian” or “Covered Entity”), a California-based healthcare provider. The purpose of this Assessment is to identify potential security risks and vulnerabilities to the confidentiality, integrity, and availability of electronic Protected Health Information (“ePHI”) maintained by Meridian, and to evaluate the effectiveness of administrative, physical, and technical safeguards in place as of the date of this report.  
+
+This Assessment specifically addresses vendor-related risks, including third-party service provider security gaps, which have been identified as a critical area for remediation.
+
+---
+
+2. Scope of the Assessment  
+The scope of this Assessment includes all electronic systems, network environments, physical locations, personnel, policies, and business associates involved in the creation, transmission, storage, or processing of ePHI at Meridian’s main campus located at 4524 Silver Creek Drive, Sacramento, California, and Meridian’s cloud environments hosting patient records.  
+
+Vendor relationships evaluated include Meridian’s contracted Electronic Health Records (“EHR”) system provider, CareBridge Solutions LLC (“CareBridge”), and its cloud services subcontractor, NexaCloud Technologies (“NexaCloud”).
+
+---
+
+3. Applicable Law and Jurisdiction  
+This Assessment has been conducted under the governing laws of the State of California and in alignment with HIPAA Security Rule mandates. Should any disputes arise relating to this Assessment or Meridian’s compliance, such disputes shall be submitted to the Superior Court of California, County of Sacramento, under case number SC-2025-18427.  
+
+---
+
+4. Assessment Methodology  
+CalWest Compliance Consulting utilized the National Institute of Standards and Technology (“NIST”) Special Publication 800-66 Revision 1 as the primary framework for this Assessment. The process involved:  
+
+4.1 Documentation Review – Policies, procedures, contracts, and prior audits related to information security and privacy.  
+4.2 Interviews – With Meridian’s Compliance Officer, IT Security Manager, and Vendor Oversight Administrator.  
+4.3 Technical Testing – Vulnerability scanning, penetration tests, and configuration audits on Meridian’s systems and vendor interfaces.  
+4.4 Risk Analysis – Identification and evaluation of threats and vulnerabilities impacting confidentiality, integrity, and availability of ePHI.  
+
+---
+
+5. Definitions  
+“ePHI” means electronic Protected Health Information as defined under HIPAA.  
+“Vendor-Risk Gap” refers to identified deficiencies in managing security risks introduced by third-party vendors or subcontractors.  
+“Business Associate” has the meaning ascribed under HIPAA and refers to entities, such as CareBridge and NexaCloud, that perform services involving ePHI on behalf of Meridian.  
+
+---
+
+6. Summary of Findings  
+
+6.1 Administrative Safeguards  
+Meridian maintains a comprehensive Information Security Policy last updated January 15, 2025. Staff training on HIPAA security takes place biannually with documented attendance. Access controls to ePHI systems include role-based permissions and unique user IDs. However, contract review processes for vendors require improvement to ensure consistent security requirements are enforced.  
+
+6.2 Physical Safeguards  
+Physical access controls at Meridian’s Sacramento facility include badge access and surveillance cameras operating 24/7. Backup media are stored securely in locked safes with environmental controls.  
+
+6.3 Technical Safeguards  
+Encryption of ePHI is enforced both in transit and at rest using AES-256 standards. Multi-factor authentication (MFA) is enabled for all remote system access. Regular vulnerability scans are performed quarterly.  
+
+6.4 Vendor Risk Assessment and Gap  
+The primary vendor-risk gap identified involves Meridian’s subcontractor, NexaCloud, which hosts Meridian’s cloud-based EHR data. Due to the layered subcontracting structure initiated by CareBridge, Meridian lacks direct contractual agreements with NexaCloud and relies solely on CareBridge’s assurances.  
+
+Critical gaps identified include:  
+
+- Absence of a direct Business Associate Agreement (“BAA”) between Meridian and NexaCloud.  
+- Lack of documented oversight or audit rights over NexaCloud’s information security controls.  
+- Limited visibility into NexaCloud’s incident response procedures and risk management framework.  
+
+This vendor-risk gap presents a significant compliance exposure under HIPAA, which requires Covered Entities to ensure that all Business Associates implement appropriate safeguards.  
+
+---
+
+7. Risk Assessment Results and Risk Levels  
+
+7.1 Risk: Vendor-Risk Gap with NexaCloud  
+Likelihood: High  
+Impact: High  
+Risk Level: Critical  
+
+The inability to directly manage or verify NexaCloud’s compliance with HIPAA security obligations creates a substantial risk of unauthorized access, data breaches, or service disruptions impacting ePHI.  
+
+7.2 Other Risks Identified  
+- Outdated system patches on five Meridian workstations (Medium Risk) – mitigated immediately during assessment.  
+- Inadequate logging retention periods in some legacy systems (Low Risk).  
+
+---
+
+8. Recommendations and Action Plan  
+
+8.1 Immediate Actions (Due by September 1, 2025)  
+- Meridian must require CareBridge to facilitate a tri-party agreement involving a direct BAA between Meridian and NexaCloud or ensure that CareBridge obtains equivalent assurances and audit rights over NexaCloud, enforceable by Meridian.  
+- Meridian’s Vendor Oversight Administrator to implement a quarterly vendor security review schedule for CareBridge and its subcontractors.  
+- Patch remediation on all workstations to be completed by August 1, 2025 (completed during assessment).  
+
+8.2 Medium-Term Measures (Due by December 31, 2025)  
+- Conduct a formal security audit of CareBridge and NexaCloud’s controls focusing on ePHI confidentiality and integrity.  
+- Update Meridian’s Vendor Management Policy to require direct audit rights for all cloud service providers handling ePHI.  
+- Enhance incident response coordination protocols between Meridian, CareBridge, and NexaCloud.  
+
+8.3 Long-Term Strategic Improvements (Due by June 30, 2026)  
+- Invest in a vendor risk management software platform to automate ongoing compliance monitoring.  
+- Provide additional staff training specifically addressing vendor-related risks and contractual compliance.  
+
+---
+
+9. Certification by Meridian Health Systems  
+
+I, Dr. Evelyn Parker, Chief Compliance Officer of Meridian Health Systems, Inc., certify that I have reviewed this HIPAA Security Risk Assessment Report dated July 14, 2025, and that Meridian acknowledges the identified risks and commits to implementing the recommended corrective actions within the timelines specified herein.  
+
+Signed:  
+Evelyn Parker  
+Chief Compliance Officer  
+Meridian Health Systems, Inc.  
+Date: July 20, 2025  
+
+---
+
+10. Prepared By:  
+
+CalWest Compliance Consulting, LLC  
+Authorized Representative: James R. Miller, CISSP, CISA  
+Lead Compliance Auditor  
+
+Signature: ______________________________  
+Date: July 14, 2025  
+
+Contact Information:  
+CalWest Compliance Consulting, LLC  
+1234 Market Street, Suite 600  
+San Francisco, California 94103  
+Phone: (415) 555-9812  
+Email: james.miller@calwestcompliance.com  
+
+---
+
+11. Document Control and Retention  
+This Assessment Report is the property of Meridian Health Systems, Inc. and CalWest Compliance Consulting, LLC. A copy will be retained for a minimum of six (6) years in accordance with HIPAA record retention requirements. Any revisions to this document shall be documented below.  
+
+Revision History:  
+None as of July 14, 2025.  
+
+---
+
+End of HIPAA Security Risk Assessment Report.

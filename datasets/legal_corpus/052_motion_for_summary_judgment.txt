@@ -1,0 +1,117 @@
+SYNTHETIC DOCUMENT - fictional content generated for testing. Not a real legal document.
+
+IN THE HIGH COURT OF JUSTICE  
+QUEEN’S BENCH DIVISION  
+CLAIM NO. QB-2027-0421  
+
+BETWEEN:  
+
+VELDARA TECHNOLOGIES LIMITED  
+Claimant  
+
+-and-  
+
+SINCLAIR CONSULTING PARTNERS LLP  
+Defendant  
+
+__________________________________________  
+
+MOTION FOR SUMMARY JUDGMENT  
+__________________________________________  
+
+A. INTRODUCTION  
+
+1. This is a Motion for Summary Judgment pursuant to CPR Part 24 brought by the Claimant, Veldara Technologies Limited (“Veldara”), against the Defendant, Sinclair Consulting Partners LLP (“Sinclair”). Veldara seeks judgment in respect of:
+
+   (a) its claim for fraud against Sinclair in relation to deliberate misrepresentations made during contract negotiations in 2025; and  
+   (b) its claim for breach of fiduciary duty arising from Sinclair’s failure to act in the best interests of Veldara as its trusted advisor and consultant between January 2025 and August 2026.  
+
+2. Veldara submits that there is no real prospect of the Defendant successfully defending the claims. The evidence disclosed to date, including expert reports and witness statements, demonstrates that Sinclair knowingly fabricated financial projections and concealed crucial conflicts of interest, resulting in Veldara suffering losses totalling £3,750,000.
+
+3. For the reasons set out below, the Claimant respectfully requests the Court to grant summary judgment in its favour, dismissing Sinclair’s defence and awarding damages as claimed.
+
+B. PARTIES  
+
+4. The Claimant, Veldara Technologies Limited, is a company incorporated and registered in England and Wales (Company No. 09384725) with principal offices at 12 Regent Street, London SW1Y 4QL. Veldara specialises in developing renewable energy software solutions.
+
+5. The Defendant, Sinclair Consulting Partners LLP, is a limited liability partnership registered in England and Wales (LLP No. OC408377) with offices at 87 Fleet Street, London EC4Y 1AE. Sinclair provides strategic consulting services to technology companies.
+
+C. RELEVANT FACTUAL BACKGROUND  
+
+6. On or about 15 January 2025, Veldara engaged Sinclair under a Consultancy Agreement (“Agreement”) dated 10 January 2025, whereby Sinclair agreed to provide financial and strategic consulting services to assist Veldara in preparing for a Series B investment round.  
+
+7. Clause 3.2 of the Agreement mandated Sinclair to “act with utmost good faith and fidelity towards Veldara and disclose any actual or potential conflicts of interest immediately upon becoming aware.”
+
+8. Sinclair prepared a detailed financial model dated 30 March 2025 (“Financial Model”), which Veldara relied on to secure funding from investors. Sinclair represented that the Financial Model was based on robust, independently verified data.
+
+9. Unbeknownst to Veldara, Sinclair had a secret arrangement with VentureBridge Capital, a competitor’s investment fund, to steer Veldara into a less advantageous funding structure, to Sinclair’s profit. Sinclair deliberately inflated revenue projections in the Financial Model and omitted material costs to induce Veldara to accept unfavourable terms.
+
+10. Sinclair’s fiduciary duty required full disclosure of this arrangement and avoidance of any conflicts. Sinclair failed to disclose the arrangement or the conflicts, thereby breaching its obligations.
+
+11. On 15 April 2025, relying on Sinclair’s representations, Veldara accepted a funding offer valued at £4,500,000. Subsequent audits revealed the Financial Model was materially inaccurate, causing Veldara to suffer direct losses estimated at £3,750,000.
+
+D. GROUNDS FOR SUMMARY JUDGMENT  
+
+12. Pursuant to CPR 24.2, summary judgment may be granted where the defendant has no real prospect of success in defending the claim and there is no other compelling reason for a trial.
+
+13. Veldara contends that Sinclair’s defence fails on both claims (fraud and breach of fiduciary duty) for reasons set out below.
+
+1. Fraud Claim  
+
+14. The elements of the tort of fraud are established: a false representation made knowingly, with intent to deceive, on which the claimant reasonably relied, resulting in loss (Derry v Peek [1889] 14 App Cas 337).  
+
+15. Sinclair admits preparing the Financial Model but denies intentional misrepresentation. However, the contemporaneous email exchanges (disclosed document SC-45), expert valuation reports (Expert Report of Dr. Helena Markson, 12 January 2027), and Sinclair partner testimony (Witness Statement of Marcus Leigh, 5 February 2027) establish Sinclair knew the projections were false, yet misrepresented them deliberately.
+
+16. The defendant’s internal communications reveal an undisclosed profit-sharing agreement with VentureBridge Capital, confirming intentional deception.  
+
+17. Veldara’s reliance was reasonable given Sinclair’s contractual obligations and professional standing.  
+
+2. Breach of Fiduciary Duty  
+
+18. Sinclair owed fiduciary duties under the Agreement and at common law due to the nature of the consulting relationship and the level of trust.
+
+19. Sinclair breached these duties by failing to disclose conflicts of interest and by acting in Sinclair’s own interest to the detriment of Veldara.  
+
+20. The facts establish that Sinclair prioritized personal gain over Veldara’s interests, and the breaches directly caused Veldara’s losses.
+
+E. LEGAL SUBMISSIONS  
+
+21. The undisputed evidence discloses no real prospect of a defence, as Sinclair’s denials are contradicted by contemporaneous documents and witness evidence.
+
+22. Sinclair’s breach of fiduciary duty and fraudulent misrepresentations are clear and established by the standard of proof on the balance of probabilities.
+
+23. Veldara has complied with all contractual obligations, including payment of sums due under the Agreement before discovery of Sinclair’s breaches.
+
+24. The losses of £3,750,000 claimed are quantified and supported by expert valuation.
+
+F. RELIEF SOUGHT  
+
+25. Accordingly, Veldara respectfully requests the Court to:  
+
+   (a) Grant summary judgment in favour of the Claimant on all claims;  
+   (b) Order damages payable by Sinclair to Veldara in the sum of £3,750,000;  
+   (c) Order interest pursuant to the Judgments Act 1838 at the rate of 8% per annum from 16 April 2025 to the date of judgment;  
+   (d) Order Sinclair to pay Veldara’s costs of the claim on an indemnity basis; and  
+   (e) Grant such further or other relief as the Court deems just.  
+
+G. CERTIFICATION  
+
+26. Pursuant to CPR 24.5, the Claimant certifies that this motion is made in good faith and on the grounds set out in the accompanying witness statements and exhibits.
+
+Dated this 15th day of March 2027.  
+
+Signed:  
+_________________________  
+Emily Cartwright QC  
+Counsel for the Claimant  
+Veldara Technologies Limited  
+12 Regent Street  
+London SW1Y 4QL  
+
+Solicitors: Wexford & Byrne LLP  
+23 Lincoln’s Inn Fields  
+London WC2A 3EA  
+Tel: 020 7946 0215  
+Ref: EC/VT/03/27  
+
+--- End of Motion for Summary Judgment ---
