@@ -5,7 +5,7 @@ import io
 import os
 from typing import Any, Dict, List, Optional
 
-import fitz  # PyMuPDF
+import pymupdf as fitz  # PyMuPDF
 from PIL import Image
 
 from core.config import settings

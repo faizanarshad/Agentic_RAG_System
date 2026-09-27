@@ -3,9 +3,10 @@ const isDev = process.env.NODE_ENV !== 'production';
 const apiOrigin = new URL(process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000').origin;
 const siteIsHttps = (process.env.NEXT_PUBLIC_SITE_URL || '').startsWith('https://');
 
-// Content-Security-Policy: scripts, styles and fonts from this site only; data calls and images may also
-// come from the API. 'unsafe-inline' is needed for Next.js's inline bootstrap scripts on statically
-// rendered pages (nonces would force every page to render dynamically); 'unsafe-eval' only in development.
+// Content-Security-Policy for the public, statically rendered site: scripts, styles and fonts from this site
+// only; data calls and images may also come from the API. 'unsafe-inline' is needed for Next.js's inline
+// bootstrap scripts on static pages (nonces require per-request rendering); 'unsafe-eval' only in development.
+// Sign-in, password reset, workspace and admin pages get a stricter per-request nonce policy from proxy.js.
 const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
@@ -19,8 +20,9 @@ const csp = [
   "object-src 'none'",
 ].join('; ');
 
+const NONCE_PAGES = 'login|forgot-password|reset-password|workspace|admin';
+
 const securityHeaders = [
-  { key: 'Content-Security-Policy', value: csp },
   { key: 'X-Content-Type-Options', value: 'nosniff' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
   { key: 'X-Frame-Options', value: 'DENY' },
@@ -40,7 +42,10 @@ const nextConfig = {
   },
   async headers() {
     // Next.js already serves /_next/static with immutable, year-long caching in production
-    return [{ source: '/:path*', headers: securityHeaders }];
+    return [
+      { source: '/:path*', headers: securityHeaders },
+      { source: `/((?!${NONCE_PAGES}).*)`, headers: [{ key: 'Content-Security-Policy', value: csp }] },
+    ];
   },
 };
 

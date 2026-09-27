@@ -1,6 +1,6 @@
 """Main RAG service that orchestrates the complete RAG pipeline."""
 
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 from typing_extensions import TypedDict
@@ -13,12 +13,20 @@ from .llm_service import LLMService
 from utils.logger import logger
 
 
+def tag_owner(processed_docs: List[Dict[str, Any]], owner_id: Optional[str]) -> None:
+    """Record the uploading user on every vector so retrieval can be limited to their own files."""
+    if owner_id:
+        for doc in processed_docs:
+            doc["metadata"]["owner_id"] = owner_id
+
+
 class RAGState(TypedDict):
     """State for the RAG graph."""
     messages: List[BaseMessage]
     query: str
     context_documents: List[Dict[str, Any]]
     answer: str
+    owner_id: Optional[str]
 
 
 class RAGService:
@@ -45,7 +53,9 @@ class RAGService:
                 query_embedding = self.embeddings.generate_embedding(query)
                 
                 # Search for similar documents
-                context_documents = self.vectordb.search_similar(query_embedding)
+                # Members only retrieve from files they uploaded; administrators search everything
+                metadata_filter = {"owner_id": {"$eq": state["owner_id"]}} if state.get("owner_id") else None
+                context_documents = self.vectordb.search_similar(query_embedding, metadata_filter=metadata_filter)
                 
                 state["context_documents"] = context_documents
                 logger.info(f"Retrieved {len(context_documents)} relevant documents")
@@ -93,7 +103,7 @@ class RAGService:
         
         return workflow.compile()
     
-    def process_query(self, query: str) -> Dict[str, Any]:
+    def process_query(self, query: str, owner_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Process a user query through the complete RAG pipeline.
         
@@ -111,7 +121,8 @@ class RAGService:
                 "messages": [HumanMessage(content=query)],
                 "query": query,
                 "context_documents": [],
-                "answer": ""
+                "answer": "",
+                "owner_id": owner_id,
             }
             
             # Run the graph
@@ -138,7 +149,7 @@ class RAGService:
                 "error": str(e)
             }
     
-    def add_document(self, pdf_file_path: str) -> Dict[str, Any]:
+    def add_document(self, pdf_file_path: str, owner_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Add a new document to the RAG system.
         
@@ -158,6 +169,7 @@ class RAGService:
             
             # Generate embeddings
             processed_docs = self.embeddings.process_documents(documents)
+            tag_owner(processed_docs, owner_id)
             
             # Store in vector database
             self.vectordb.upsert_documents(processed_docs)
@@ -202,7 +214,7 @@ class RAGService:
             logger.error(f"Error deleting document: {str(e)}")
             raise Exception(f"Failed to delete document: {str(e)}")
     
-    def update_document(self, file_id: str, pdf_file_path: str) -> Dict[str, Any]:
+    def update_document(self, file_id: str, pdf_file_path: str, owner_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Update an existing document in the RAG system.
         
@@ -234,6 +246,7 @@ class RAGService:
             for i, doc in enumerate(processed_docs):
                 doc["id"] = f"{file_id}_{i}"
                 doc["metadata"]["file_id"] = file_id
+            tag_owner(processed_docs, owner_id)
             
             # Store in vector database
             self.vectordb.upsert_documents(processed_docs)

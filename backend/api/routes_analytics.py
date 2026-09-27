@@ -5,11 +5,8 @@ import json
 import os
 import re
 import secrets
-import threading
-import time
-from collections import defaultdict, deque
 from datetime import datetime, timezone
-from typing import Deque, Dict
+from typing import Dict
 from urllib.parse import urlparse
 
 from fastapi import APIRouter, Request
@@ -26,8 +23,6 @@ PATH_PATTERN = re.compile(r"^/[A-Za-z0-9\-._~/]{0,200}$")
 EXCLUDED_PREFIXES = ("/workspace", "/admin", "/login", "/_next", "/api")
 RATE_LIMIT, RATE_WINDOW = 120, 3600
 
-_recent: Dict[str, Deque[float]] = defaultdict(deque)
-_lock = threading.Lock()
 _secret_path = os.path.join(settings.PLATFORM_DATA_DIR, "analytics_secret")
 
 
@@ -55,18 +50,6 @@ def _device(user_agent: str) -> str:
     return "desktop"
 
 
-def _rate_limited(ip: str) -> bool:
-    now = time.monotonic()
-    with _lock:
-        q = _recent[ip]
-        while q and now - q[0] > RATE_WINDOW:
-            q.popleft()
-        if len(q) >= RATE_LIMIT:
-            return True
-        q.append(now)
-        return False
-
-
 @router.post("/pageview", status_code=204)
 async def pageview(request: Request) -> Response:
     """Accepts a text/plain JSON beacon: {"path": "/about", "referrer": "https://…"}. Always returns 204."""
@@ -76,7 +59,7 @@ async def pageview(request: Request) -> Response:
         return empty
     user_agent = request.headers.get("user-agent", "")
     ip = client_ip(request)
-    if not user_agent or BOT_PATTERN.search(user_agent) or _rate_limited(ip):
+    if not user_agent or BOT_PATTERN.search(user_agent) or get_platform_store().rate_limited("pageview", ip, RATE_LIMIT, RATE_WINDOW):
         return empty
     try:
         body = json.loads((await request.body())[:2000] or b"{}")

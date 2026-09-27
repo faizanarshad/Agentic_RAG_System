@@ -3,10 +3,11 @@
 import threading
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, File, Form, HTTPException, UploadFile
+from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, PlainTextResponse, Response
 from pydantic import BaseModel, Field
 
+from api.deps import can_access, current_owner_id, owner_scope
 from services.engineering_agent_service import EngineeringAgentService, normalize_template
 from services.engineering_prompts import STANDARDS
 from utils.logger import logger
@@ -86,6 +87,22 @@ def _service_error(action: str, error: Exception) -> HTTPException:
     return HTTPException(status_code=500, detail=f"Failed to {action}: {str(error)}")
 
 
+def _owned(request: Request, kind: str, record_id: str) -> Dict[str, Any]:
+    """Fetch a drawing, comparison or document the caller may see; anyone else's is reported as not found."""
+    store = get_engineering_service().store
+    getter = {"drawing": store.get_drawing, "comparison": store.get_comparison, "document": store.get_document}[kind]
+    record = getter(record_id)
+    if not can_access(record, owner_scope(request)):
+        raise HTTPException(status_code=404, detail=f"{kind.capitalize()} not found")
+    return record
+
+
+def _can_edit_template(request: Request, template: Dict[str, Any]) -> bool:
+    """Templates are shared for use; only their creator or an administrator may change or delete them."""
+    scope = owner_scope(request)
+    return not template["builtin"] and (scope is None or template.get("owner_id") == scope)
+
+
 # ----- drawings -----
 
 @router.get("/standards")
@@ -95,11 +112,13 @@ def list_standards() -> Dict[str, Any]:
 
 
 @router.post("/drawings")
-def upload_drawing(file: UploadFile = File(...), standard: str = Form("ISO")) -> Dict[str, Any]:
+def upload_drawing(request: Request, file: UploadFile = File(...), standard: str = Form("ISO")) -> Dict[str, Any]:
     """Upload a drawing (PDF, PNG/JPG/TIFF or DXF) and run the full review."""
     _validate_standard(standard)
     try:
-        return get_engineering_service().review_upload(file.filename or "drawing", file.file.read(), standard)
+        return get_engineering_service().review_upload(
+            file.filename or "drawing", file.file.read(), standard, owner_id=current_owner_id(request)
+        )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
@@ -107,12 +126,13 @@ def upload_drawing(file: UploadFile = File(...), standard: str = Form("ISO")) ->
 
 
 @router.get("/drawings")
-def list_drawings() -> Dict[str, Any]:
-    return {"drawings": get_engineering_service().store.list_drawings()}
+def list_drawings(request: Request) -> Dict[str, Any]:
+    return {"drawings": get_engineering_service().store.list_drawings(owner_scope(request))}
 
 
 @router.get("/drawings/{drawing_id}")
-def get_drawing(drawing_id: str) -> Dict[str, Any]:
+def get_drawing(request: Request, drawing_id: str) -> Dict[str, Any]:
+    _owned(request, "drawing", drawing_id)
     drawing = get_engineering_service().get_drawing(drawing_id)
     if drawing is None:
         raise HTTPException(status_code=404, detail="Drawing not found")
@@ -120,8 +140,9 @@ def get_drawing(drawing_id: str) -> Dict[str, Any]:
 
 
 @router.get("/drawings/{drawing_id}/pages/{page_number}")
-def get_page_image(drawing_id: str, page_number: int) -> FileResponse:
+def get_page_image(request: Request, drawing_id: str, page_number: int) -> FileResponse:
     """Rendered PNG of one sheet."""
+    _owned(request, "drawing", drawing_id)
     path = get_engineering_service().page_image_path(drawing_id, page_number)
     if path is None:
         raise HTTPException(status_code=404, detail="Page not found")
@@ -129,11 +150,12 @@ def get_page_image(drawing_id: str, page_number: int) -> FileResponse:
 
 
 @router.post("/drawings/{drawing_id}/review")
-def rerun_review(drawing_id: str, request: ReviewRequest) -> Dict[str, Any]:
+def rerun_review(drawing_id: str, body: ReviewRequest, request: Request) -> Dict[str, Any]:
     """Re-run the review, e.g. against a different standard."""
-    _validate_standard(request.standard)
+    _validate_standard(body.standard)
+    _owned(request, "drawing", drawing_id)
     try:
-        return get_engineering_service().run_review(drawing_id, request.standard)
+        return get_engineering_service().run_review(drawing_id, body.standard)
     except KeyError:
         raise HTTPException(status_code=404, detail="Drawing not found")
     except Exception as e:
@@ -141,11 +163,12 @@ def rerun_review(drawing_id: str, request: ReviewRequest) -> Dict[str, Any]:
 
 
 @router.post("/drawings/{drawing_id}/ask")
-def ask_drawing(drawing_id: str, request: AskRequest) -> Dict[str, Any]:
-    if not request.question.strip():
+def ask_drawing(drawing_id: str, body: AskRequest, request: Request) -> Dict[str, Any]:
+    if not body.question.strip():
         raise HTTPException(status_code=400, detail="Question cannot be empty")
+    _owned(request, "drawing", drawing_id)
     try:
-        return get_engineering_service().ask(drawing_id, request.question.strip(), request.history)
+        return get_engineering_service().ask(drawing_id, body.question.strip(), body.history)
     except KeyError:
         raise HTTPException(status_code=404, detail="Drawing not found or not processed")
     except Exception as e:
@@ -153,7 +176,8 @@ def ask_drawing(drawing_id: str, request: AskRequest) -> Dict[str, Any]:
 
 
 @router.delete("/drawings/{drawing_id}")
-def delete_drawing(drawing_id: str) -> Dict[str, Any]:
+def delete_drawing(request: Request, drawing_id: str) -> Dict[str, Any]:
+    _owned(request, "drawing", drawing_id)
     if not get_engineering_service().delete_drawing(drawing_id):
         raise HTTPException(status_code=404, detail="Drawing not found")
     return {"id": drawing_id, "message": "Drawing deleted"}
@@ -162,12 +186,14 @@ def delete_drawing(drawing_id: str) -> Dict[str, Any]:
 # ----- comparisons -----
 
 @router.post("/compare")
-def compare(request: CompareRequest) -> Dict[str, Any]:
+def compare(body: CompareRequest, request: Request) -> Dict[str, Any]:
     """Compare two reviewed drawings/documents (A = baseline, B = new)."""
-    if request.a_id == request.b_id:
+    if body.a_id == body.b_id:
         raise HTTPException(status_code=400, detail="Choose two different drawings")
+    _owned(request, "drawing", body.a_id)
+    _owned(request, "drawing", body.b_id)
     try:
-        return get_engineering_service().compare(request.a_id, request.b_id)
+        return get_engineering_service().compare(body.a_id, body.b_id, owner_id=current_owner_id(request))
     except KeyError:
         raise HTTPException(status_code=404, detail="Drawing not found")
     except ValueError as e:
@@ -177,8 +203,8 @@ def compare(request: CompareRequest) -> Dict[str, Any]:
 
 
 @router.get("/comparisons")
-def list_comparisons() -> Dict[str, Any]:
-    return {"comparisons": get_engineering_service().store.list_comparisons()}
+def list_comparisons(request: Request) -> Dict[str, Any]:
+    return {"comparisons": get_engineering_service().store.list_comparisons(owner_scope(request))}
 
 
 # ----- templates -----
@@ -189,21 +215,23 @@ def list_templates() -> Dict[str, Any]:
 
 
 @router.post("/templates")
-def create_template(template: TemplateModel) -> Dict[str, Any]:
+def create_template(template: TemplateModel, request: Request) -> Dict[str, Any]:
     service = get_engineering_service()
     try:
-        template_id = service.store.create_template(normalize_template(template.dict()))
+        template_id = service.store.create_template(normalize_template(template.dict()), current_owner_id(request))
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     return service.store.get_template(template_id)
 
 
 @router.post("/templates/import")
-def import_template(file: UploadFile = File(...)) -> Dict[str, Any]:
+def import_template(request: Request, file: UploadFile = File(...)) -> Dict[str, Any]:
     """Create a template from an existing DOCX, PDF, TXT or MD document."""
     service = get_engineering_service()
     try:
-        template_id = service.import_template(file.filename or "template", file.file.read())
+        template_id = service.import_template(
+            file.filename or "template", file.file.read(), owner_id=current_owner_id(request)
+        )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
@@ -212,8 +240,8 @@ def import_template(file: UploadFile = File(...)) -> Dict[str, Any]:
 
 
 @router.put("/templates/{template_id}")
-def update_template(template_id: str, template: TemplateModel) -> Dict[str, Any]:
-    """Save edits to a template. Built-in templates are copied instead of modified."""
+def update_template(template_id: str, template: TemplateModel, request: Request) -> Dict[str, Any]:
+    """Save edits to a template. Built-in and other people's templates are copied instead of modified."""
     service = get_engineering_service()
     existing = service.store.get_template(template_id)
     if existing is None:
@@ -222,10 +250,10 @@ def update_template(template_id: str, template: TemplateModel) -> Dict[str, Any]
         normalized = normalize_template(template.dict())
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    if existing["builtin"]:
+    if not _can_edit_template(request, existing):
         if normalized["name"] == existing["name"]:
             normalized["name"] = f"{existing['name']} (custom)"
-        template_id = service.store.create_template(normalized)
+        template_id = service.store.create_template(normalized, current_owner_id(request))
     else:
         service.store.update_template(template_id, normalized)
     return service.store.get_template(template_id)
@@ -243,13 +271,15 @@ def review_template(template_id: str) -> Dict[str, Any]:
 
 
 @router.delete("/templates/{template_id}")
-def delete_template(template_id: str) -> Dict[str, Any]:
+def delete_template(request: Request, template_id: str) -> Dict[str, Any]:
     service = get_engineering_service()
     template = service.store.get_template(template_id)
     if template is None:
         raise HTTPException(status_code=404, detail="Template not found")
     if template["builtin"]:
         raise HTTPException(status_code=400, detail="Built-in templates cannot be deleted")
+    if not _can_edit_template(request, template):
+        raise HTTPException(status_code=403, detail="Only the template's creator or an administrator can delete it")
     service.store.delete_template(template_id)
     return {"id": template_id, "message": "Template deleted"}
 
@@ -257,11 +287,16 @@ def delete_template(template_id: str) -> Dict[str, Any]:
 # ----- generated documents -----
 
 @router.post("/documents/generate")
-def generate_document(request: GenerateRequest) -> Dict[str, Any]:
+def generate_document(body: GenerateRequest, request: Request) -> Dict[str, Any]:
     """Fill a template from reviewed drawings and comparisons."""
+    for drawing_id in body.drawing_ids:
+        _owned(request, "drawing", drawing_id)
+    for comparison_id in body.comparison_ids:
+        _owned(request, "comparison", comparison_id)
     try:
         return get_engineering_service().generate_document(
-            request.template_id, request.drawing_ids, request.comparison_ids, request.instructions
+            body.template_id, body.drawing_ids, body.comparison_ids, body.instructions,
+            owner_id=current_owner_id(request),
         )
     except KeyError:
         raise HTTPException(status_code=404, detail="Template not found")
@@ -272,23 +307,19 @@ def generate_document(request: GenerateRequest) -> Dict[str, Any]:
 
 
 @router.get("/documents")
-def list_documents() -> Dict[str, Any]:
-    return {"documents": get_engineering_service().store.list_documents()}
+def list_documents(request: Request) -> Dict[str, Any]:
+    return {"documents": get_engineering_service().store.list_documents(owner_scope(request))}
 
 
 @router.get("/documents/{document_id}")
-def get_document(document_id: str) -> Dict[str, Any]:
-    document = get_engineering_service().store.get_document(document_id)
-    if document is None:
-        raise HTTPException(status_code=404, detail="Document not found")
-    return document
+def get_document(request: Request, document_id: str) -> Dict[str, Any]:
+    return _owned(request, "document", document_id)
 
 
 @router.put("/documents/{document_id}")
-def update_document(document_id: str, update: DocumentUpdate) -> Dict[str, Any]:
+def update_document(document_id: str, update: DocumentUpdate, request: Request) -> Dict[str, Any]:
     service = get_engineering_service()
-    if service.store.get_document(document_id) is None:
-        raise HTTPException(status_code=404, detail="Document not found")
+    _owned(request, "document", document_id)
     fields = {k: v for k, v in update.dict().items() if v is not None}
     if fields:
         service.store.update_document(document_id, **fields)
@@ -296,21 +327,18 @@ def update_document(document_id: str, update: DocumentUpdate) -> Dict[str, Any]:
 
 
 @router.delete("/documents/{document_id}")
-def delete_document(document_id: str) -> Dict[str, Any]:
+def delete_document(request: Request, document_id: str) -> Dict[str, Any]:
     service = get_engineering_service()
-    if service.store.get_document(document_id) is None:
-        raise HTTPException(status_code=404, detail="Document not found")
+    _owned(request, "document", document_id)
     service.store.delete_document(document_id)
     return {"id": document_id, "message": "Document deleted"}
 
 
 @router.get("/documents/{document_id}/export")
-def export_document(document_id: str, format: str = "docx") -> Response:
+def export_document(request: Request, document_id: str, format: str = "docx") -> Response:
     """Download a generated document as DOCX or Markdown."""
     service = get_engineering_service()
-    document = service.store.get_document(document_id)
-    if document is None:
-        raise HTTPException(status_code=404, detail="Document not found")
+    document = _owned(request, "document", document_id)
     safe_name = "".join(c if c.isalnum() or c in "-_ " else "_" for c in document["title"]).strip() or "document"
     if format == "md":
         return PlainTextResponse(

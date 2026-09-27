@@ -12,6 +12,7 @@ from pydantic import BaseModel
 
 from core.config import settings
 from services.platform_store import get_platform_store, iso, utcnow
+from services.account_links import issue_link
 from services.security import hash_password, temporary_password
 from . import routes_contact
 from .deps import client_ip, require_admin
@@ -345,12 +346,13 @@ def create_user(payload: CreateUserRequest, request: Request) -> Dict[str, Any]:
         raise HTTPException(status_code=422, detail=f"Role must be one of {list(ROLES)}.")
     if store.get_user_by_email(email):
         raise HTTPException(status_code=409, detail="A user with this email already exists.")
-    password = temporary_password()
-    user = store.create_user(email, payload.name, hash_password(password), payload.role, must_change_password=True)
-    store.log_event("admin.user_created", request.state.user["id"], "admin", {"email": email, "role": payload.role},
-                    client_ip(request))
-    # The temporary password is returned once and never stored in plain text
-    return {"user": {k: user[k] for k in ("id", "email", "name", "role", "status")}, "temporary_password": password}
+    # The account starts with a random password nobody knows; the user chooses their own through the invitation
+    user = store.create_user(email, payload.name.strip(), hash_password(temporary_password()), payload.role,
+                             must_change_password=False)
+    invite = issue_link(user, "invite")
+    store.log_event("admin.user_created", request.state.user["id"], "admin",
+                    {"email": email, "role": payload.role, "email_sent": invite["email_sent"]}, client_ip(request))
+    return {"user": {k: user[k] for k in ("id", "email", "name", "role", "status")}, **_link_response(invite)}
 
 
 @router.patch("/users/{user_id}")
@@ -381,12 +383,20 @@ def reset_password(user_id: str, request: Request) -> Dict[str, Any]:
     target = store.get_user(user_id)
     if target is None:
         raise HTTPException(status_code=404, detail="User not found.")
-    password = temporary_password()
-    store.update_user(user_id, password_hash=hash_password(password), must_change_password=1)
+    # The old password stops working immediately (in case it is compromised) and every session is signed out
+    store.update_user(user_id, password_hash=hash_password(temporary_password()), must_change_password=0)
     store.delete_user_sessions(user_id)
-    store.log_event("admin.password_reset", request.state.user["id"], "admin", {"user": target["email"]},
-                    client_ip(request))
-    return {"temporary_password": password}
+    reset = issue_link(target, "reset")
+    store.log_event("admin.password_reset", request.state.user["id"], "admin",
+                    {"user": target["email"], "email_sent": reset["email_sent"]}, client_ip(request))
+    return _link_response(reset)
+
+
+def _link_response(result: Dict[str, Any]) -> Dict[str, Any]:
+    """The link is shown to the administrator only when it could not be emailed."""
+    if result["email_sent"]:
+        return {"email_sent": True}
+    return {"email_sent": False, "link": result["link"]}
 
 
 @router.post("/users/{user_id}/reset-2fa")

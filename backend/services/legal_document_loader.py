@@ -4,7 +4,7 @@ import base64
 import os
 from typing import Any, Dict, List
 
-import fitz  # PyMuPDF
+import pymupdf as fitz  # PyMuPDF
 from openai import OpenAI
 
 from core.config import settings
@@ -31,7 +31,7 @@ class LegalDocumentLoader:
 
     def __init__(self):
         """Initialize the loader."""
-        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, max_retries=5, timeout=180)
+        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, base_url=settings.OPENAI_BASE_URL or None, max_retries=5, timeout=180)
         self.model = settings.LEGAL_MODEL
 
     def load(self, file_path: str, filename: str) -> Dict[str, Any]:

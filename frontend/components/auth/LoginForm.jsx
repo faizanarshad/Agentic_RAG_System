@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { CircleAlert, Eye, EyeOff, KeyRound, Loader2, LogIn, ShieldCheck } from 'lucide-react';
+import { CircleAlert, CircleCheck, Eye, EyeOff, KeyRound, Loader2, LogIn, ShieldCheck } from 'lucide-react';
 import { fetchBackend, jsonRequest } from '@/lib/api';
 
 // Only allow redirects to paths inside this site (prevents open redirects)
@@ -12,7 +13,9 @@ function safeNext(value) {
 
 export default function LoginForm() {
   const router = useRouter();
-  const next = safeNext(useSearchParams().get('next'));
+  const params = useSearchParams();
+  const next = safeNext(params.get('next'));
+  const justReset = params.get('reset') === '1';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -99,13 +102,21 @@ export default function LoginForm() {
 
   return (
     <form className="auth-form" onSubmit={submit} noValidate>
+      {justReset && (
+        <p className="form-status form-status--success" role="status">
+          <CircleCheck size={18} aria-hidden="true" />Password saved. Sign in with your new password.
+        </p>
+      )}
       <div className="field">
         <label htmlFor="login-email">Email</label>
         <input id="login-email" type="email" autoComplete="username" inputMode="email" value={email}
           onChange={(e) => setEmail(e.target.value)} required autoFocus />
       </div>
       <div className="field">
-        <label htmlFor="login-password">Password</label>
+        <div className="field-label-row">
+          <label htmlFor="login-password">Password</label>
+          <Link className="text-link small-link" href="/forgot-password">Forgot password?</Link>
+        </div>
         <div className="password-field">
           <input id="login-password" type={showPassword ? 'text' : 'password'} autoComplete="current-password"
             value={password} onChange={(e) => setPassword(e.target.value)} required />

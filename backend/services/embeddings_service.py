@@ -2,7 +2,7 @@
 
 from typing import List, Dict, Any
 from openai import OpenAI
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 from core.config import settings
 from utils.logger import logger
@@ -14,7 +14,7 @@ class EmbeddingsService:
     
     def __init__(self):
         """Initialize the embeddings service."""
-        self.client = OpenAI(api_key=settings.OPENAI_API_KEY)
+        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, base_url=settings.OPENAI_BASE_URL or None)
         self.model = settings.OPENAI_EMBEDDING_MODEL
     
     def generate_embedding(self, text: str) -> List[float]:

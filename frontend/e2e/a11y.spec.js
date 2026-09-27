@@ -3,7 +3,7 @@ const AxeBuilder = require('@axe-core/playwright').default;
 const { PUBLIC_PAGES } = require('./pages');
 
 // WCAG 2.1 A/AA automated checks. Serious and critical violations fail the run.
-for (const path of [...PUBLIC_PAGES, '/login']) {
+for (const path of [...PUBLIC_PAGES, '/login', '/forgot-password', '/reset-password']) {
   test(`accessibility: ${path}`, async ({ page }) => {
     await page.goto(path, { waitUntil: 'networkidle' });
     const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();

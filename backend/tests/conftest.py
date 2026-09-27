@@ -21,6 +21,8 @@ os.environ.update({
     "FRONTEND_ORIGINS": "http://localhost:3001",
     "REVALIDATE_SECRET": "",           # no outbound revalidation calls in tests
     "LOGIN_MAX_ATTEMPTS": "5",
+    "BACKUP_DIR": os.path.join(_DATA, "backups"),
+    "BACKUP_INTERVAL_HOURS": "0",      # no background backup thread in tests
 })
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -41,8 +43,7 @@ PASSWORD = "Correct-Horse-Battery-9"
 
 @pytest.fixture(autouse=True)
 def _reset_rate_limits():
-    routes_contact._recent.clear()
-    routes_analytics._recent.clear()
+    get_platform_store().clear_rate_limits()
     yield
 
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, KeyRound, Loader2, Trash2, UserPlus } from 'lucide-react';
+import { Copy, Link2, Loader2, MailCheck, Trash2, UserPlus } from 'lucide-react';
 import { useAuth } from '@/components/auth/AuthProvider';
 import { fetchBackend, jsonRequest } from '@/lib/api';
 import { AdminState, useAdminData } from './AdminFrame';
@@ -10,7 +10,8 @@ export default function UsersPage() {
   const { user: me } = useAuth();
   const { data, loading, error, reload } = useAdminData('/admin/users');
   const [form, setForm] = useState({ name: '', email: '', role: 'member' });
-  const [secret, setSecret] = useState(null);
+  // {email, kind: 'invite' | 'reset', link?} – a link is only returned when it could not be emailed
+  const [issued, setIssued] = useState(null);
   const [message, setMessage] = useState(null);
   const [busy, setBusy] = useState(false);
 
@@ -33,15 +34,15 @@ export default function UsersPage() {
     const result = await act(() => fetchBackend('/admin/users', jsonRequest('POST', form)));
     setBusy(false);
     if (result) {
-      setSecret({ email: result.user.email, password: result.temporary_password });
+      setIssued({ email: result.user.email, kind: 'invite', link: result.link });
       setForm({ name: '', email: '', role: 'member' });
     }
   };
 
   const resetPassword = async (u) => {
-    if (!window.confirm(`Generate a new temporary password for ${u.email}? Their sessions will be signed out.`)) return;
+    if (!window.confirm(`Send ${u.email} a password reset link? Their current password stops working and their sessions are signed out.`)) return;
     const result = await act(() => fetchBackend(`/admin/users/${u.id}/reset-password`, jsonRequest('POST', {})));
-    if (result) setSecret({ email: u.email, password: result.temporary_password });
+    if (result) setIssued({ email: u.email, kind: 'reset', link: result.link });
   };
 
   const patch = (u, body, text) => act(() => fetchBackend(`/admin/users/${u.id}`, jsonRequest('PATCH', body)), text);
@@ -66,21 +67,32 @@ export default function UsersPage() {
             </select>
           </label>
           <button className="upload-button" type="submit" disabled={busy}>
-            {busy ? <Loader2 size={16} className="spin" /> : <UserPlus size={16} />} Create user
+            {busy ? <Loader2 size={16} className="spin" /> : <UserPlus size={16} />} Send invitation
           </button>
         </form>
-        <p className="admin-note">A temporary password is generated and shown once. The user must change it at first sign-in.</p>
-        {secret && (
+        <p className="admin-note">
+          The user receives a single-use link to choose their own password (valid 72 hours). Nobody else ever sees it.
+        </p>
+        {issued && (issued.link ? (
           <div className="secret-box" role="status">
-            <KeyRound size={16} aria-hidden="true" />
-            <span>Temporary password for <strong>{secret.email}</strong>:</span>
-            <code>{secret.password}</code>
-            <button className="action-button update" onClick={() => navigator.clipboard.writeText(secret.password)}>
+            <Link2 size={16} aria-hidden="true" />
+            <span>
+              Email is not configured, so send this {issued.kind === 'invite' ? 'invitation' : 'reset'} link
+              to <strong>{issued.email}</strong> yourself. It works once.
+            </span>
+            <code className="secret-link">{issued.link}</code>
+            <button className="action-button update" onClick={() => navigator.clipboard.writeText(issued.link)}>
               <Copy size={14} /> Copy
             </button>
-            <button className="legal-link" onClick={() => setSecret(null)}>Done</button>
+            <button className="legal-link" onClick={() => setIssued(null)}>Done</button>
           </div>
-        )}
+        ) : (
+          <div className="secret-box" role="status">
+            <MailCheck size={16} aria-hidden="true" />
+            <span>{issued.kind === 'invite' ? 'Invitation' : 'Reset link'} emailed to <strong>{issued.email}</strong>.</span>
+            <button className="legal-link" onClick={() => setIssued(null)}>Done</button>
+          </div>
+        ))}
         {message && <p className={`form-msg ${message.ok ? 'ok' : 'err'}`} role="status">{message.text}</p>}
       </section>
 

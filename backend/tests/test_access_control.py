@@ -48,7 +48,9 @@ def test_cors_allows_only_configured_origin(anon):
 
 def test_user_management_and_safeguards(admin_client, store):
     created = admin_client.post("/admin/users", json={"email": "invitee@example.com", "name": "Invitee"}, headers=ORIGIN)
-    assert created.status_code == 200 and len(created.json()["temporary_password"]) >= 15
+    body = created.json()
+    assert created.status_code == 200 and "temporary_password" not in body
+    assert body["email_sent"] is False and "/reset-password#token=" in body["link"]  # SMTP is not configured in tests
     assert admin_client.post("/admin/users", json={"email": "invitee@example.com", "name": "Again"}, headers=ORIGIN).status_code == 409
     me = admin_client.get("/auth/me").json()["user"]
     assert admin_client.delete(f"/admin/users/{me['id']}", headers=ORIGIN).status_code == 400

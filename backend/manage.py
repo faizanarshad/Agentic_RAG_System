@@ -3,6 +3,9 @@
 Usage:
     python manage.py create-admin --email you@example.com --name "Your Name"
     python manage.py reset-password --email you@example.com
+    python manage.py backup                  # write a backup now (also runs automatically every day)
+    python manage.py list-backups
+    python manage.py restore <archive>       # stop the API first; current data is kept for rollback
 
 Passwords are generated and printed once; users are asked to change them after signing in.
 """
@@ -22,7 +25,25 @@ def main() -> None:
     create.add_argument("--name", required=True)
     reset = sub.add_parser("reset-password", help="Generate a new temporary password for a user")
     reset.add_argument("--email", required=True)
+    sub.add_parser("backup", help="Back up every database and uploaded file now")
+    sub.add_parser("list-backups", help="List backups, newest first")
+    restore = sub.add_parser("restore", help="Restore a backup (stop the API first)")
+    restore.add_argument("archive")
     args = parser.parse_args()
+
+    if args.command in ("backup", "list-backups", "restore"):
+        from services import backup
+        if args.command == "backup":
+            print(f"Backup written: {backup.create_backup()}")
+        elif args.command == "list-backups":
+            print("\n".join(backup.list_backups()) or "No backups yet.")
+        else:
+            try:
+                moved = backup.restore_backup(args.archive)
+            except ValueError as e:
+                sys.exit(str(e))
+            print("Restored. Previous data kept at:\n" + "\n".join(f"  {p}" for p in moved.values()))
+        return
 
     store = get_platform_store()
     password = temporary_password()

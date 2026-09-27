@@ -18,7 +18,7 @@ export default function LoginPage() {
           <Brand />
         </Link>
         <h1 className="h3">Sign in to your workspace</h1>
-        <p className="muted">Use the email and password provided by your administrator.</p>
+        <p className="muted">Use your account email and password.</p>
         <Suspense fallback={<div className="auth-form-placeholder" />}>
           <LoginForm />
         </Suspense>

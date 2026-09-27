@@ -20,28 +20,56 @@ from core.config import settings
 from utils.logger import logger
 
 
+def assign_legacy_records() -> None:
+    """Records created before per-user ownership existed are given to the first administrator,
+    so members never see them and nothing is left without an owner."""
+    from services.platform_store import get_platform_store
+    admins = get_platform_store().query("SELECT id FROM users WHERE role = 'admin' ORDER BY created_at LIMIT 1")
+    if not admins:
+        return
+    from services.engineering_store import EngineeringStore
+    from services.legal_store import LegalStore
+    count = LegalStore().assign_unowned(admins[0]["id"])
+    EngineeringStore().assign_unowned(admins[0]["id"])
+    if count:
+        logger.info(f"Assigned {count} legacy legal document(s) to the first administrator")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan manager for startup and shutdown events."""
     # Startup
-    logger.info("Starting Agentic RAG System...")
+    logger.info("Starting AIDocumentAgent API...")
+    if settings.ENVIRONMENT == "production":
+        problems = settings.production_problems()
+        if problems:
+            for problem in problems:
+                logger.error(f"Unsafe production setting: {problem}")
+            raise RuntimeError("Refusing to start in production with unsafe settings (see errors above)")
+    from services.platform_store import get_platform_store
+    migrated = get_platform_store().encrypt_legacy_secrets()
+    if migrated:
+        logger.info(f"Encrypted 2FA secrets at rest for {migrated} user(s)")
+    assign_legacy_records()
+    from services.backup import start_scheduler
+    start_scheduler()
     
     try:
         # Validate configuration
         settings.validate()
         logger.info("Configuration validated successfully")
         
-        logger.info("Agentic RAG System started successfully")
+        logger.info("AIDocumentAgent API started")
         logger.info("Note: Services will be initialized on first use")
         
     except Exception as e:
-        logger.error(f"Failed to start Agentic RAG System: {str(e)}")
+        logger.error(f"Configuration problem: {str(e)}")
         logger.warning("System will start but services may not work without proper API keys")
     
     yield
     
     # Shutdown
-    logger.info("Shutting down Agentic RAG System...")
+    logger.info("Shutting down AIDocumentAgent API...")
 
 
 # Create FastAPI application

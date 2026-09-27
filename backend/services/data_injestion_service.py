@@ -2,11 +2,12 @@
 
 import uuid
 from typing import List, Dict, Any
-import PyPDF2
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
+from pypdf import PdfReader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 
 from core.config import settings
+from services.phi_redaction import redact
 from utils.logger import logger
 
 
@@ -39,7 +40,7 @@ class DataIngestionService:
             logger.info(f"Extracting text from PDF: {pdf_file_path}")
             
             with open(pdf_file_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
+                pdf_reader = PdfReader(file)
                 text = ""
                 
                 for page_num in range(len(pdf_reader.pages)):
@@ -104,6 +105,10 @@ class DataIngestionService:
             
             if not text.strip():
                 raise Exception("PDF file appears to be empty or text extraction failed")
+            if settings.MEDICAL_REDACT_PHI:
+                text, redacted = redact(text)
+                if redacted:
+                    logger.info(f"Redacted {redacted} personal identifiers from PDF text")
             
             # Create text chunks
             documents = self.chunk_text(text, file_id)
@@ -133,7 +138,7 @@ class DataIngestionService:
         """
         try:
             with open(file_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
+                pdf_reader = PdfReader(file)
                 # Try to access the first page to validate
                 if len(pdf_reader.pages) > 0:
                     return True

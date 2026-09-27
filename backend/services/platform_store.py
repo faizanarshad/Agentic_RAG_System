@@ -97,6 +97,26 @@ class PlatformStore:
                     created_at TEXT NOT NULL
                 );
                 CREATE INDEX IF NOT EXISTS idx_llm_usage_created ON llm_usage(created_at);
+                CREATE TABLE IF NOT EXISTS rate_events (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    bucket TEXT NOT NULL,
+                    key TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                );
+                CREATE INDEX IF NOT EXISTS idx_rate_events ON rate_events(bucket, key, created_at);
+                CREATE TABLE IF NOT EXISTS auth_tokens (
+                    token_hash TEXT PRIMARY KEY,
+                    user_id TEXT NOT NULL,
+                    purpose TEXT NOT NULL,
+                    expires_at TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS medical_files (
+                    file_id TEXT PRIMARY KEY,
+                    owner_id TEXT NOT NULL,
+                    filename TEXT,
+                    created_at TEXT NOT NULL
+                );
                 CREATE TABLE IF NOT EXISTS mfa_challenges (
                     token_hash TEXT PRIMARY KEY,
                     user_id TEXT NOT NULL,
@@ -164,6 +184,11 @@ class PlatformStore:
     def update_user(self, user_id: str, **fields: Any) -> None:
         if not fields:
             return
+        # 2FA secrets are encrypted at rest
+        from .crypto import encrypt
+        for secret_field in ("totp_secret", "totp_pending_secret"):
+            if fields.get(secret_field):
+                fields[secret_field] = encrypt(fields[secret_field])
         assignments = ", ".join(f"{k} = ?" for k in fields)
         with self._lock, self._connect() as c:
             c.execute(f"UPDATE users SET {assignments} WHERE id = ?", (*fields.values(), user_id))
@@ -171,6 +196,7 @@ class PlatformStore:
     def delete_user(self, user_id: str) -> None:
         with self._lock, self._connect() as c:
             c.execute("DELETE FROM sessions WHERE user_id = ?", (user_id,))
+            c.execute("DELETE FROM auth_tokens WHERE user_id = ?", (user_id,))
             c.execute("DELETE FROM users WHERE id = ?", (user_id,))
 
     # ------------------------------------------------------------------ sessions
@@ -226,6 +252,91 @@ class PlatformStore:
     def purge_expired_sessions(self) -> None:
         with self._lock, self._connect() as c:
             c.execute("DELETE FROM sessions WHERE expires_at < ?", (iso(utcnow()),))
+
+    # ------------------------------------------------------------------ rate limiting (shared, persistent)
+
+    def rate_limited(self, bucket: str, key: str, limit: int, window_seconds: int) -> bool:
+        """Record a hit and return True if `key` exceeded `limit` hits in the window. Stored in the database,
+        so limits survive restarts and are shared by every API instance using this database."""
+        now = utcnow()
+        since = iso(now - timedelta(seconds=window_seconds))
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM rate_events WHERE created_at < ?", (iso(now - timedelta(days=1)),))
+            count = c.execute(
+                "SELECT COUNT(*) FROM rate_events WHERE bucket = ? AND key = ? AND created_at >= ?", (bucket, key, since)
+            ).fetchone()[0]
+            if count >= limit:
+                return True
+            c.execute("INSERT INTO rate_events (bucket, key, created_at) VALUES (?, ?, ?)", (bucket, key, iso(now)))
+        return False
+
+    # ------------------------------------------------------------------ medical file ownership
+
+    def record_medical_file(self, file_id: str, owner_id: str, filename: str) -> None:
+        with self._lock, self._connect() as c:
+            c.execute(
+                "INSERT OR REPLACE INTO medical_files (file_id, owner_id, filename, created_at) VALUES (?, ?, ?, ?)",
+                (file_id, owner_id, filename, iso(utcnow())),
+            )
+
+    def get_medical_file(self, file_id: str) -> Optional[Dict[str, Any]]:
+        with self._connect() as c:
+            row = c.execute("SELECT * FROM medical_files WHERE file_id = ?", (file_id,)).fetchone()
+        return dict(row) if row else None
+
+    def delete_medical_file(self, file_id: str) -> None:
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM medical_files WHERE file_id = ?", (file_id,))
+
+    # ------------------------------------------------------------------ single-use tokens (reset, invite)
+
+    def create_auth_token(self, token_hash: str, user_id: str, purpose: str, minutes: int) -> None:
+        """Store a single-use token digest; any earlier token of the same purpose for the user is revoked."""
+        now = utcnow()
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM auth_tokens WHERE user_id = ? AND purpose = ?", (user_id, purpose))
+            c.execute("DELETE FROM auth_tokens WHERE expires_at < ?", (iso(now),))
+            c.execute(
+                "INSERT INTO auth_tokens (token_hash, user_id, purpose, expires_at, created_at) VALUES (?, ?, ?, ?, ?)",
+                (token_hash, user_id, purpose, iso(now + timedelta(minutes=minutes)), iso(now)),
+            )
+
+    def consume_auth_token(self, token_hash: str) -> Optional[Dict[str, Any]]:
+        """Atomically delete a token and return it if it was valid; a token can only ever be used once."""
+        with self._lock, self._connect() as c:
+            row = c.execute("SELECT * FROM auth_tokens WHERE token_hash = ?", (token_hash,)).fetchone()
+            if row is None:
+                return None
+            c.execute("DELETE FROM auth_tokens WHERE token_hash = ?", (token_hash,))
+        token = dict(row)
+        return token if token["expires_at"] >= iso(utcnow()) else None
+
+    def peek_auth_token(self, token_hash: str) -> Optional[Dict[str, Any]]:
+        with self._connect() as c:
+            row = c.execute("SELECT * FROM auth_tokens WHERE token_hash = ?", (token_hash,)).fetchone()
+        return dict(row) if row and row["expires_at"] >= iso(utcnow()) else None
+
+    def revoke_auth_tokens(self, user_id: str) -> None:
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM auth_tokens WHERE user_id = ?", (user_id,))
+
+    def clear_rate_limits(self) -> None:
+        with self._lock, self._connect() as c:
+            c.execute("DELETE FROM rate_events")
+
+    def encrypt_legacy_secrets(self) -> int:
+        """One-off migration: encrypt 2FA secrets stored before encryption at rest existed."""
+        from .crypto import PREFIX, encrypt
+        count = 0
+        with self._lock, self._connect() as c:
+            for row in c.execute("SELECT id, totp_secret, totp_pending_secret FROM users").fetchall():
+                updates = {k: encrypt(row[k]) for k in ("totp_secret", "totp_pending_secret")
+                           if row[k] and not row[k].startswith(PREFIX)}
+                if updates:
+                    c.execute(f"UPDATE users SET {', '.join(f'{k} = ?' for k in updates)} WHERE id = ?",
+                              (*updates.values(), row["id"]))
+                    count += 1
+        return count
 
     # ------------------------------------------------------------------ two-factor challenges
 

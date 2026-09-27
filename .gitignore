@@ -66,8 +66,14 @@ frontend/node_modules/
 
 # Uploaded legal documents and analyses (may contain confidential data)
 backend/data/
+backend/backups/
 
 # Test and QA artefacts
 frontend/playwright-report/
 frontend/test-results/
 .pytest_cache/
+
+# Python virtual environments
+backend/venv/
+backend/.venv/
+venv/

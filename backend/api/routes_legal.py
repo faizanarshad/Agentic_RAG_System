@@ -3,9 +3,10 @@
 import threading
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, File, HTTPException, Query, UploadFile
+from fastapi import APIRouter, File, HTTPException, Query, Request, UploadFile
 from pydantic import BaseModel, Field
 
+from api.deps import can_access, current_owner_id, owner_scope
 from core.config import settings
 from services.legal_agent_service import LegalAgentService
 from services.legal_prompts import DOC_TYPES
@@ -58,13 +59,21 @@ def _validate_filters(doc_type: Optional[str], overall_risk: Optional[str]) -> N
         raise HTTPException(status_code=400, detail=f"overall_risk must be one of {list(RISK_LEVELS)}")
 
 
+def _owned_document(request: Request, doc_id: str) -> Dict[str, Any]:
+    """Return the document if the caller may see it; someone else's document is reported as not found."""
+    document = get_legal_service().store.get_document(doc_id)
+    if not can_access(document, owner_scope(request)):
+        raise HTTPException(status_code=404, detail="Document not found")
+    return document
+
+
 def _service_error(action: str, error: Exception) -> HTTPException:
     logger.error(f"Error during legal {action}: {str(error)}")
     return HTTPException(status_code=500, detail=f"Failed to {action}: {str(error)}")
 
 
 @router.post("/batches")
-def create_batch(files: List[UploadFile] = File(...)) -> Dict[str, Any]:
+def create_batch(request: Request, files: List[UploadFile] = File(...)) -> Dict[str, Any]:
     """Upload up to LEGAL_MAX_BATCH_DOCS documents and queue them for background analysis."""
     if len(files) > settings.LEGAL_MAX_BATCH_DOCS:
         raise HTTPException(
@@ -73,7 +82,7 @@ def create_batch(files: List[UploadFile] = File(...)) -> Dict[str, Any]:
         )
     try:
         payload = [(file.filename or "document", file.file.read()) for file in files]
-        result = get_legal_service().ingest_files(payload)
+        result = get_legal_service().ingest_files(payload, owner_id=current_owner_id(request))
     except Exception as e:
         raise _service_error("queue documents", e)
     if result["batch"] is None:
@@ -82,24 +91,25 @@ def create_batch(files: List[UploadFile] = File(...)) -> Dict[str, Any]:
 
 
 @router.get("/batches/latest")
-def latest_batch() -> Dict[str, Any]:
-    """Return progress for the most recent batch, if any."""
+def latest_batch(request: Request) -> Dict[str, Any]:
+    """Return progress for the caller's most recent batch, if any."""
     service = get_legal_service()
-    batch_id = service.store.latest_batch_id()
+    batch_id = service.store.latest_batch_id(owner_scope(request))
     return {"batch": service.store.get_batch(batch_id) if batch_id else None}
 
 
 @router.get("/batches/{batch_id}")
-def get_batch(batch_id: str) -> Dict[str, Any]:
+def get_batch(request: Request, batch_id: str) -> Dict[str, Any]:
     """Return progress for a batch."""
     batch = get_legal_service().store.get_batch(batch_id)
-    if batch is None:
+    if not can_access(batch, owner_scope(request)):
         raise HTTPException(status_code=404, detail="Batch not found")
     return batch
 
 
 @router.get("/documents")
 def list_documents(
+    request: Request,
     doc_type: Optional[str] = None,
     overall_risk: Optional[str] = None,
     status: Optional[str] = None,
@@ -109,29 +119,30 @@ def list_documents(
 ) -> Dict[str, Any]:
     """List analyzed documents with filters and pagination."""
     _validate_filters(doc_type, overall_risk)
-    return get_legal_service().store.list_documents(doc_type, overall_risk, status, search, limit, offset)
+    return get_legal_service().store.list_documents(
+        doc_type, overall_risk, status, search, limit, offset, owner_id=owner_scope(request)
+    )
 
 
 @router.get("/documents/{doc_id}")
-def get_document(doc_id: str) -> Dict[str, Any]:
+def get_document(request: Request, doc_id: str) -> Dict[str, Any]:
     """Return a document's full analysis: classification, extraction, risks and summary."""
-    document = get_legal_service().store.get_document(doc_id)
-    if document is None:
-        raise HTTPException(status_code=404, detail="Document not found")
-    return document
+    return _owned_document(request, doc_id)
 
 
 @router.post("/documents/{doc_id}/retry")
-def retry_document(doc_id: str) -> Dict[str, Any]:
+def retry_document(request: Request, doc_id: str) -> Dict[str, Any]:
     """Re-run the analysis pipeline for a document (e.g. after a failure)."""
+    _owned_document(request, doc_id)
     if not get_legal_service().retry_document(doc_id):
         raise HTTPException(status_code=404, detail="Document not found")
     return {"file_id": doc_id, "message": "Document queued for re-analysis"}
 
 
 @router.delete("/documents/{doc_id}")
-def delete_document(doc_id: str) -> Dict[str, Any]:
+def delete_document(request: Request, doc_id: str) -> Dict[str, Any]:
     """Delete a document, its analysis and its vectors."""
+    _owned_document(request, doc_id)
     try:
         deleted = get_legal_service().delete_document(doc_id)
     except Exception as e:
@@ -142,49 +153,55 @@ def delete_document(doc_id: str) -> Dict[str, Any]:
 
 
 @router.get("/corpus/stats")
-def corpus_stats() -> Dict[str, Any]:
-    """Aggregate statistics across every analyzed document."""
+def corpus_stats(request: Request) -> Dict[str, Any]:
+    """Aggregate statistics across every analyzed document the caller can see."""
+    scope = owner_scope(request)
     try:
-        return get_legal_service().corpus_stats()
+        return get_legal_service().corpus_stats(scope)
     except Exception as e:
         raise _service_error("compute corpus statistics", e)
 
 
 @router.post("/ask")
-def ask(request: AskRequest) -> Dict[str, Any]:
+def ask(body: AskRequest, request: Request) -> Dict[str, Any]:
     """Answer a question about one document (file_id) or the whole corpus, with citations."""
-    if not request.question.strip():
+    if not body.question.strip():
         raise HTTPException(status_code=400, detail="Question cannot be empty")
+    scope = owner_scope(request)
+    if body.file_id:
+        _owned_document(request, body.file_id)
     try:
-        return get_legal_service().ask(request.question.strip(), request.file_id)
+        return get_legal_service().ask(body.question.strip(), body.file_id, owner_id=scope)
     except Exception as e:
         raise _service_error("answer question", e)
 
 
 @router.post("/search")
-def search(request: SearchRequest) -> Dict[str, Any]:
+def search(body: SearchRequest, request: Request) -> Dict[str, Any]:
     """Semantic search over passages of analyzed legal documents."""
-    if not request.query.strip():
+    if not body.query.strip():
         raise HTTPException(status_code=400, detail="Query cannot be empty")
-    _validate_filters(request.doc_type, request.overall_risk)
+    _validate_filters(body.doc_type, body.overall_risk)
+    scope = owner_scope(request)
     try:
         results = get_legal_service().search(
-            request.query.strip(), request.doc_type, request.overall_risk, request.top_k
+            body.query.strip(), body.doc_type, body.overall_risk, body.top_k, owner_id=scope
         )
     except Exception as e:
         raise _service_error("search", e)
-    return {"query": request.query, "results": results}
+    return {"query": body.query, "results": results}
 
 
 @router.post("/synthesize")
-def synthesize(request: SynthesizeRequest) -> Dict[str, Any]:
+def synthesize(body: SynthesizeRequest, request: Request) -> Dict[str, Any]:
     """Run the plan -> retrieve -> map -> reduce agent to synthesize insights across documents."""
-    if not request.question.strip():
+    if not body.question.strip():
         raise HTTPException(status_code=400, detail="Question cannot be empty")
-    _validate_filters(request.doc_type, request.overall_risk)
+    _validate_filters(body.doc_type, body.overall_risk)
+    scope = owner_scope(request)
     try:
         return get_legal_service().synthesize(
-            request.question.strip(), request.doc_type, request.overall_risk, request.max_documents
+            body.question.strip(), body.doc_type, body.overall_risk, body.max_documents, owner_id=scope
         )
     except Exception as e:
         raise _service_error("synthesize", e)

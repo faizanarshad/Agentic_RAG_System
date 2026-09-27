@@ -89,6 +89,22 @@ class EngineeringStore:
                 );
                 """
             )
+            # Migration: per-user ownership (members only see what they created; templates stay shared)
+            for table in ("drawings", "comparisons", "templates", "documents"):
+                columns = {row[1] for row in connection.execute(f"PRAGMA table_info({table})")}
+                if "owner_id" not in columns:
+                    connection.execute(f"ALTER TABLE {table} ADD COLUMN owner_id TEXT")
+
+    def assign_unowned(self, owner_id: str) -> None:
+        """Give records created before ownership existed to an owner (the first administrator)."""
+        with self._write_lock, self._connect() as connection:
+            for table in ("drawings", "comparisons", "documents"):
+                connection.execute(f"UPDATE {table} SET owner_id = ? WHERE owner_id IS NULL", (owner_id,))
+            connection.execute("UPDATE templates SET owner_id = ? WHERE owner_id IS NULL AND builtin = 0", (owner_id,))
+
+    @staticmethod
+    def _owner_clause(owner_id: Optional[str]):
+        return ("WHERE owner_id = ? ", (owner_id,)) if owner_id else ("", ())
 
     def _seed_templates(self) -> None:
         now = _now()
@@ -139,10 +155,11 @@ class EngineeringStore:
 
     # ----- drawings -----
 
-    def create_drawing(self, drawing_id: str, filename: str, file_path: str, standard: str) -> None:
+    def create_drawing(self, drawing_id: str, filename: str, file_path: str, standard: str,
+                       owner_id: Optional[str] = None) -> None:
         now = _now()
         self._insert("drawings", {
-            "id": drawing_id, "filename": filename, "file_path": file_path, "standard": standard,
+            "id": drawing_id, "filename": filename, "file_path": file_path, "standard": standard, "owner_id": owner_id,
             "status": "processing", "created_at": now, "updated_at": now,
         })
 
@@ -152,11 +169,13 @@ class EngineeringStore:
     def get_drawing(self, drawing_id: str) -> Optional[Dict[str, Any]]:
         return self._get("drawings", drawing_id)
 
-    def list_drawings(self) -> List[Dict[str, Any]]:
+    def list_drawings(self, owner_id: Optional[str] = None) -> List[Dict[str, Any]]:
+        where, params = self._owner_clause(owner_id)
         with self._connect() as connection:
             rows = connection.execute(
-                "SELECT id, filename, source_type, page_count, standard, status, error, review, extraction, created_at "
-                "FROM drawings ORDER BY created_at DESC"
+                "SELECT id, filename, source_type, page_count, standard, status, error, review, extraction, "
+                f"owner_id, created_at FROM drawings {where}ORDER BY created_at DESC",
+                params,
             ).fetchall()
         drawings = []
         for row in rows:
@@ -182,19 +201,20 @@ class EngineeringStore:
 
     # ----- comparisons -----
 
-    def create_comparison(self, a_id: str, b_id: str, result: Dict[str, Any]) -> str:
+    def create_comparison(self, a_id: str, b_id: str, result: Dict[str, Any], owner_id: Optional[str] = None) -> str:
         comparison_id = str(uuid.uuid4())
         self._insert("comparisons", {
-            "id": comparison_id, "a_id": a_id, "b_id": b_id, "result": result, "created_at": _now(),
+            "id": comparison_id, "a_id": a_id, "b_id": b_id, "result": result, "owner_id": owner_id, "created_at": _now(),
         })
         return comparison_id
 
     def get_comparison(self, comparison_id: str) -> Optional[Dict[str, Any]]:
         return self._get("comparisons", comparison_id)
 
-    def list_comparisons(self) -> List[Dict[str, Any]]:
+    def list_comparisons(self, owner_id: Optional[str] = None) -> List[Dict[str, Any]]:
+        where, params = self._owner_clause(owner_id)
         with self._connect() as connection:
-            rows = connection.execute("SELECT * FROM comparisons ORDER BY created_at DESC").fetchall()
+            rows = connection.execute(f"SELECT * FROM comparisons {where}ORDER BY created_at DESC", params).fetchall()
         return [self._decode(row) for row in rows]
 
     # ----- templates -----
@@ -207,7 +227,7 @@ class EngineeringStore:
     def get_template(self, template_id: str) -> Optional[Dict[str, Any]]:
         return self._get("templates", template_id)
 
-    def create_template(self, template: Dict[str, Any]) -> str:
+    def create_template(self, template: Dict[str, Any], owner_id: Optional[str] = None) -> str:
         template_id = str(uuid.uuid4())
         now = _now()
         self._insert("templates", {
@@ -217,6 +237,7 @@ class EngineeringStore:
             "category": template.get("category", "custom"),
             "sections": template["sections"],
             "builtin": 0,
+            "owner_id": owner_id,
             "created_at": now,
             "updated_at": now,
         })
@@ -235,10 +256,10 @@ class EngineeringStore:
 
     # ----- generated documents -----
 
-    def create_document(self, document: Dict[str, Any]) -> str:
+    def create_document(self, document: Dict[str, Any], owner_id: Optional[str] = None) -> str:
         document_id = str(uuid.uuid4())
         now = _now()
-        self._insert("documents", {"id": document_id, **document, "created_at": now, "updated_at": now})
+        self._insert("documents", {"id": document_id, **document, "owner_id": owner_id, "created_at": now, "updated_at": now})
         return document_id
 
     def update_document(self, document_id: str, **fields: Any) -> None:
@@ -247,11 +268,13 @@ class EngineeringStore:
     def get_document(self, document_id: str) -> Optional[Dict[str, Any]]:
         return self._get("documents", document_id)
 
-    def list_documents(self) -> List[Dict[str, Any]]:
+    def list_documents(self, owner_id: Optional[str] = None) -> List[Dict[str, Any]]:
+        where, params = self._owner_clause(owner_id)
         with self._connect() as connection:
             rows = connection.execute(
-                "SELECT id, template_id, template_name, title, created_at, updated_at FROM documents "
-                "ORDER BY updated_at DESC"
+                "SELECT id, template_id, template_name, title, owner_id, created_at, updated_at FROM documents "
+                f"{where}ORDER BY updated_at DESC",
+                params,
             ).fetchall()
         return [dict(row) for row in rows]
 

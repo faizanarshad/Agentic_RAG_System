@@ -8,8 +8,8 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from typing import Any, Dict, List, Optional, Tuple
 
-from langchain.schema import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langgraph.graph import END, StateGraph
 from openai import OpenAI
 from typing_extensions import TypedDict
@@ -23,6 +23,8 @@ from .legal_prompts import (
     REDUCE_SYSTEM, RISK_SYSTEM, SUMMARY_SYSTEM,
 )
 from .legal_store import LegalStore
+from .prompt_guard import UNTRUSTED_NOTICE, detect_injection, fence, injection_risk
+from .file_safety import UnsafeFileError, validate_upload
 from .usage_tracker import record_usage
 from .vectordb_service import VectorDBService
 
@@ -45,12 +47,14 @@ class DocumentState(TypedDict):
     risks: Dict[str, Any]
     summary: Dict[str, Any]
     chunks_indexed: int
+    owner_id: Optional[str]
 
 
 class QAState(TypedDict):
     """State for the question-answering graph."""
     question: str
     file_id: Optional[str]
+    owner_id: Optional[str]
     strategy: str
     sources: List[Dict[str, Any]]
     answer: Dict[str, Any]
@@ -62,6 +66,7 @@ class SynthesisState(TypedDict):
     doc_type: Optional[str]
     overall_risk: Optional[str]
     max_documents: int
+    owner_id: Optional[str]
     plan: Dict[str, Any]
     candidates: List[Dict[str, Any]]
     findings: List[Dict[str, Any]]
@@ -74,7 +79,7 @@ class LegalAgentService:
     def __init__(self):
         """Initialize services, compile the agent graphs and resume unfinished work."""
         # Short timeout so a stalled connection is retried quickly instead of hanging for the 10-minute default
-        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, max_retries=5, timeout=90)
+        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, base_url=settings.OPENAI_BASE_URL or None, max_retries=5, timeout=90)
         self.model = settings.LEGAL_MODEL
         self.loader = LegalDocumentLoader()
         self.store = LegalStore()
@@ -104,7 +109,7 @@ class LegalAgentService:
         """Call the LLM in JSON mode and parse the result."""
         response = self.client.chat.completions.create(
             model=self.model,
-            messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+            messages=[{"role": "system", "content": system + UNTRUSTED_NOTICE}, {"role": "user", "content": user}],
             response_format={"type": "json_object"},
             temperature=0.1,
             max_tokens=max_tokens,
@@ -114,12 +119,13 @@ class LegalAgentService:
 
     # ------------------------------------------------------------------ ingestion
 
-    def ingest_files(self, files: List[Tuple[str, bytes]]) -> Dict[str, Any]:
+    def ingest_files(self, files: List[Tuple[str, bytes]], owner_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Save uploaded files and queue them for background analysis as one batch.
 
         Args:
             files: (filename, content) pairs
+            owner_id: ID of the uploading user; members only ever see their own documents
 
         Returns:
             The batch record plus any files that were rejected
@@ -135,20 +141,25 @@ class LegalAgentService:
             elif len(content) > max_bytes:
                 rejected.append({"filename": filename, "reason": f"Larger than {settings.LEGAL_MAX_FILE_MB} MB"})
             else:
+                try:
+                    validate_upload(filename, content, SUPPORTED_EXTENSIONS)
+                except UnsafeFileError as e:
+                    rejected.append({"filename": filename, "reason": str(e)})
+                    continue
                 accepted.append((filename, extension, content))
 
         if not accepted:
             return {"batch": None, "rejected": rejected}
 
         batch_id = str(uuid.uuid4())
-        self.store.create_batch(batch_id, len(accepted))
+        self.store.create_batch(batch_id, len(accepted), owner_id)
         for filename, extension, content in accepted:
             doc_id = str(uuid.uuid4())
             # Stored under a generated name so user-supplied filenames never touch the filesystem path
             file_path = os.path.join(self.upload_dir, f"{doc_id}{extension}")
             with open(file_path, "wb") as f:
                 f.write(content)
-            self.store.create_document(doc_id, os.path.basename(filename), file_path, batch_id)
+            self.store.create_document(doc_id, os.path.basename(filename), file_path, batch_id, owner_id)
             self.executor.submit(self.process_document, doc_id)
 
         logger.info(f"Queued legal batch {batch_id} with {len(accepted)} documents")
@@ -173,6 +184,7 @@ class LegalAgentService:
                 "risks": {},
                 "summary": {},
                 "chunks_indexed": 0,
+                "owner_id": record.get("owner_id"),
             })
             self.store.update_document(doc_id, status="completed")
             logger.info(f"Completed legal analysis for {record['filename']}")
@@ -224,7 +236,7 @@ class LegalAgentService:
         def classify(state: DocumentState) -> DocumentState:
             result = self._chat_json(
                 CLASSIFY_SYSTEM,
-                f"Filename: {state['filename']}\n\nDocument (beginning):\n{state['text'][:12000]}",
+                f"Filename: {state['filename']}\n\nDocument (beginning):\n{fence(state['text'][:12000])}",
                 max_tokens=400,
             )
             if result.get("doc_type") not in DOC_TYPES:
@@ -248,7 +260,7 @@ class LegalAgentService:
                 EXTRACT_SYSTEM,
                 f"Document type: {doc_type} ({state['classification'].get('subtype')})\n"
                 f"Fields to extract into \"fields\": {FIELD_GUIDE.get(doc_type, FIELD_GUIDE['other_legal'])}\n\n"
-                f"Document:\n{state['text'][:MAX_ANALYSIS_CHARS]}",
+                f"Document:\n{fence(state['text'][:MAX_ANALYSIS_CHARS])}",
                 max_tokens=4000,
             )
             state["extraction"] = result
@@ -263,13 +275,21 @@ class LegalAgentService:
                 RISK_SYSTEM,
                 f"Document type: {state['classification'].get('subtype') or state['classification']['doc_type']}\n"
                 f"Extracted data:\n{json.dumps(state['extraction'])[:20000]}\n\n"
-                f"Document:\n{state['text'][:MAX_ANALYSIS_CHARS]}",
+                f"Document:\n{fence(state['text'][:MAX_ANALYSIS_CHARS])}",
                 max_tokens=3000,
             )
             # Derive the level from the score so the two can never disagree
             risk_score = max(0, min(100, int(result.get("risk_score") or 0)))
             result["risk_score"] = risk_score
             result["overall_risk"] = "low" if risk_score < 35 else "medium" if risk_score < 65 else "high"
+            # Text trying to steer the AI is itself a red flag: surface it and never let the document look low-risk
+            excerpts = detect_injection(state["text"])
+            if excerpts:
+                result["risks"] = [injection_risk(excerpts)] + [r for r in result.get("risks") or [] if isinstance(r, dict)]
+                result["injection_warnings"] = excerpts
+                if result["overall_risk"] == "low":
+                    result["risk_score"] = risk_score = max(risk_score, 35)
+                    result["overall_risk"] = "medium"
             state["risks"] = result
             self.store.update_document(
                 state["doc_id"],
@@ -282,7 +302,7 @@ class LegalAgentService:
         def summarize(state: DocumentState) -> DocumentState:
             result = self._chat_json(
                 SUMMARY_SYSTEM,
-                f"Document:\n{state['text'][:MAX_ANALYSIS_CHARS]}",
+                f"Document:\n{fence(state['text'][:MAX_ANALYSIS_CHARS])}",
                 max_tokens=800,
             )
             state["summary"] = result
@@ -305,6 +325,8 @@ class LegalAgentService:
                 "title": title,
                 "overall_risk": state["risks"].get("overall_risk"),
             }
+            if state.get("owner_id"):
+                metadata["owner_id"] = state["owner_id"]
             chunks = self.splitter.split_text(state["text"])
             documents = [
                 Document(
@@ -367,7 +389,7 @@ class LegalAgentService:
             return state
 
         def retrieve(state: QAState) -> QAState:
-            metadata_filter: Dict[str, Any] = {"domain": {"$eq": LEGAL_DOMAIN}}
+            metadata_filter = self._corpus_filter(None, None, state["owner_id"])
             if state["file_id"]:
                 metadata_filter["file_id"] = {"$eq": state["file_id"]}
             matches = self.vectordb.search_similar(
@@ -403,7 +425,7 @@ class LegalAgentService:
                 for source in state["sources"]
             )
             state["answer"] = self._chat_json(
-                QA_SYSTEM, f"Sources:\n{sources_text}\n\nQuestion: {state['question']}", max_tokens=1500
+                QA_SYSTEM, f"Sources:\n{fence(sources_text, 'SOURCES')}\n\nQuestion: {state['question']}", max_tokens=1500
             )
             return state
 
@@ -417,10 +439,11 @@ class LegalAgentService:
         workflow.add_edge("generate_answer", END)
         return workflow.compile()
 
-    def ask(self, question: str, file_id: Optional[str] = None) -> Dict[str, Any]:
-        """Answer a question about one document or the whole legal corpus, with citations."""
+    def ask(self, question: str, file_id: Optional[str] = None, owner_id: Optional[str] = None) -> Dict[str, Any]:
+        """Answer a question about one document or the corpus (owner_id limits it to one user's documents)."""
         result = self.qa_graph.invoke({
-            "question": question, "file_id": file_id, "strategy": "", "sources": [], "answer": {}
+            "question": question, "file_id": file_id, "owner_id": owner_id,
+            "strategy": "", "sources": [], "answer": {},
         })
         return {
             "question": question,
@@ -435,13 +458,14 @@ class LegalAgentService:
         }
 
     def search(
-        self, query: str, doc_type: Optional[str] = None, overall_risk: Optional[str] = None, top_k: int = 10
+        self, query: str, doc_type: Optional[str] = None, overall_risk: Optional[str] = None, top_k: int = 10,
+        owner_id: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """Semantic search over legal document passages."""
         matches = self.vectordb.search_similar(
             self.embeddings.generate_embedding(query),
             top_k=top_k,
-            metadata_filter=self._corpus_filter(doc_type, overall_risk),
+            metadata_filter=self._corpus_filter(doc_type, overall_risk, owner_id),
             namespace=LEGAL_NAMESPACE,
         )
         return [
@@ -457,8 +481,12 @@ class LegalAgentService:
         ]
 
     @staticmethod
-    def _corpus_filter(doc_type: Optional[str], overall_risk: Optional[str]) -> Dict[str, Any]:
+    def _corpus_filter(
+        doc_type: Optional[str], overall_risk: Optional[str], owner_id: Optional[str] = None
+    ) -> Dict[str, Any]:
         metadata_filter: Dict[str, Any] = {"domain": {"$eq": LEGAL_DOMAIN}}
+        if owner_id:
+            metadata_filter["owner_id"] = {"$eq": owner_id}
         if doc_type:
             metadata_filter["doc_type"] = {"$eq": doc_type}
         if overall_risk:
@@ -478,7 +506,7 @@ class LegalAgentService:
             return state
 
         def retrieve(state: SynthesisState) -> SynthesisState:
-            metadata_filter = self._corpus_filter(state["doc_type"], state["overall_risk"])
+            metadata_filter = self._corpus_filter(state["doc_type"], state["overall_risk"], state["owner_id"])
             by_document: Dict[str, Dict[str, Any]] = {}
             for query in state["plan"]["search_queries"]:
                 matches = self.vectordb.search_similar(
@@ -528,7 +556,7 @@ class LegalAgentService:
                         f"Research question: {state['question']}\n"
                         f"Analysis focus: {state['plan'].get('analysis_focus', '')}\n\n"
                         f"Document profile:\n{json.dumps(context)}\n\n"
-                        "Passages:\n" + "\n---\n".join(candidate["passages"]),
+                        "Passages:\n" + fence("\n---\n".join(candidate["passages"]), "PASSAGES"),
                         max_tokens=900,
                     )
                 except Exception as e:
@@ -602,6 +630,7 @@ class LegalAgentService:
         doc_type: Optional[str] = None,
         overall_risk: Optional[str] = None,
         max_documents: int = 15,
+        owner_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         """Answer a research question by synthesizing findings across many documents."""
         result = self.synthesis_graph.invoke({
@@ -609,6 +638,7 @@ class LegalAgentService:
             "doc_type": doc_type,
             "overall_risk": overall_risk,
             "max_documents": max_documents,
+            "owner_id": owner_id,
             "plan": {},
             "candidates": [],
             "findings": [],
@@ -627,9 +657,9 @@ class LegalAgentService:
 
     # ------------------------------------------------------------------ corpus statistics
 
-    def corpus_stats(self) -> Dict[str, Any]:
-        """Aggregate the structured analyses of every completed document."""
-        documents = self.store.all_analyzed()
+    def corpus_stats(self, owner_id: Optional[str] = None) -> Dict[str, Any]:
+        """Aggregate the structured analyses of every completed document (optionally one user's)."""
+        documents = self.store.all_analyzed(owner_id)
         by_type = Counter(d["doc_type"] or "unknown" for d in documents)
         by_risk = Counter(d["overall_risk"] for d in documents if d["overall_risk"])
         governing_law = Counter(
@@ -668,7 +698,7 @@ class LegalAgentService:
             key=lambda d: d.get("risk_score") or 0,
             reverse=True,
         )
-        status_counts = self.store.status_counts()
+        status_counts = self.store.status_counts(owner_id)
         return {
             "total": sum(status_counts.values()),
             "completed": status_counts.get("completed", 0),

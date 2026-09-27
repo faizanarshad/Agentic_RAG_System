@@ -77,18 +77,32 @@ class LegalStore:
                 );
                 """
             )
+            # Migration: per-user ownership (data isolation between members)
+            for table in ("documents", "batches"):
+                columns = {row[1] for row in connection.execute(f"PRAGMA table_info({table})")}
+                if "owner_id" not in columns:
+                    connection.execute(f"ALTER TABLE {table} ADD COLUMN owner_id TEXT")
+            connection.execute("CREATE INDEX IF NOT EXISTS idx_documents_owner ON documents(owner_id)")
 
     # ----- documents -----
 
-    def create_document(self, doc_id: str, filename: str, file_path: str, batch_id: Optional[str]) -> None:
+    def create_document(self, doc_id: str, filename: str, file_path: str, batch_id: Optional[str],
+                        owner_id: Optional[str] = None) -> None:
         """Insert a newly uploaded document in the 'queued' state."""
         now = _now()
         with self._write_lock, self._connect() as connection:
             connection.execute(
-                "INSERT INTO documents (id, filename, file_path, batch_id, status, created_at, updated_at) "
-                "VALUES (?, ?, ?, ?, 'queued', ?, ?)",
-                (doc_id, filename, file_path, batch_id, now, now),
+                "INSERT INTO documents (id, filename, file_path, batch_id, status, owner_id, created_at, updated_at) "
+                "VALUES (?, ?, ?, ?, 'queued', ?, ?, ?)",
+                (doc_id, filename, file_path, batch_id, owner_id, now, now),
             )
+
+    def assign_unowned(self, owner_id: str) -> int:
+        """Give documents created before ownership existed to an owner (the first administrator)."""
+        with self._write_lock, self._connect() as connection:
+            count = connection.execute("UPDATE documents SET owner_id = ? WHERE owner_id IS NULL", (owner_id,)).rowcount
+            connection.execute("UPDATE batches SET owner_id = ? WHERE owner_id IS NULL", (owner_id,))
+        return count
 
     def update_document(self, doc_id: str, **fields: Any) -> None:
         """Update columns of a document; dict/list values are stored as JSON."""
@@ -161,9 +175,13 @@ class LegalStore:
         search: Optional[str] = None,
         limit: int = 100,
         offset: int = 0,
+        owner_id: Optional[str] = None,
     ) -> Dict[str, Any]:
-        """List documents (without text) with optional filters and pagination."""
+        """List documents (without text) with optional filters and pagination; owner_id limits to one user."""
         conditions, params = [], []
+        if owner_id:
+            conditions.append("owner_id = ?")
+            params.append(owner_id)
         if doc_type:
             conditions.append("doc_type = ?")
             params.append(doc_type)
@@ -187,18 +205,22 @@ class LegalStore:
             ).fetchall()
         return {"total": total, "documents": [dict(row) for row in rows]}
 
-    def all_analyzed(self) -> List[Dict[str, Any]]:
+    def all_analyzed(self, owner_id: Optional[str] = None) -> List[Dict[str, Any]]:
         """Return every completed document's structured analysis (no text) for corpus statistics."""
+        query = ("SELECT id, filename, title, doc_type, subtype, overall_risk, risk_score, governing_law, "
+                 "page_count, ocr_pages, extraction, risks FROM documents WHERE status = 'completed'")
+        params: tuple = ()
+        if owner_id:
+            query += " AND owner_id = ?"
+            params = (owner_id,)
         with self._connect() as connection:
-            rows = connection.execute(
-                "SELECT id, filename, title, doc_type, subtype, overall_risk, risk_score, governing_law, "
-                "page_count, ocr_pages, extraction, risks FROM documents WHERE status = 'completed'"
-            ).fetchall()
+            rows = connection.execute(query, params).fetchall()
         return [self._decode(row) for row in rows]
 
-    def status_counts(self) -> Dict[str, int]:
+    def status_counts(self, owner_id: Optional[str] = None) -> Dict[str, int]:
+        where, params = ("WHERE owner_id = ?", (owner_id,)) if owner_id else ("", ())
         with self._connect() as connection:
-            rows = connection.execute("SELECT status, COUNT(*) AS n FROM documents GROUP BY status").fetchall()
+            rows = connection.execute(f"SELECT status, COUNT(*) AS n FROM documents {where} GROUP BY status", params).fetchall()
         return {row["status"]: row["n"] for row in rows}
 
     def count_documents(self) -> int:
@@ -211,10 +233,11 @@ class LegalStore:
 
     # ----- batches -----
 
-    def create_batch(self, batch_id: str, total: int) -> None:
+    def create_batch(self, batch_id: str, total: int, owner_id: Optional[str] = None) -> None:
         with self._write_lock, self._connect() as connection:
             connection.execute(
-                "INSERT INTO batches (id, total, created_at) VALUES (?, ?, ?)", (batch_id, total, _now())
+                "INSERT INTO batches (id, total, owner_id, created_at) VALUES (?, ?, ?, ?)",
+                (batch_id, total, owner_id, _now()),
             )
 
     def get_batch(self, batch_id: str) -> Optional[Dict[str, Any]]:
@@ -230,6 +253,7 @@ class LegalStore:
         done = counts.get("completed", 0) + counts.get("failed", 0)
         return {
             "id": batch["id"],
+            "owner_id": batch["owner_id"],
             "total": batch["total"],
             "created_at": batch["created_at"],
             "counts": counts,
@@ -237,9 +261,10 @@ class LegalStore:
             "finished": done >= batch["total"],
         }
 
-    def latest_batch_id(self) -> Optional[str]:
+    def latest_batch_id(self, owner_id: Optional[str] = None) -> Optional[str]:
+        where, params = ("WHERE owner_id = ?", (owner_id,)) if owner_id else ("", ())
         with self._connect() as connection:
-            row = connection.execute("SELECT id FROM batches ORDER BY created_at DESC LIMIT 1").fetchone()
+            row = connection.execute(f"SELECT id FROM batches {where} ORDER BY created_at DESC LIMIT 1", params).fetchone()
         return row["id"] if row else None
 
     @staticmethod

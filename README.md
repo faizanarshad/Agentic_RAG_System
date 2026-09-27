@@ -144,7 +144,9 @@ See **[Admin panel](#admin-panel)** for every admin screen and a how-to guide.
 - **Roles**: `admin` and `member`.
   - Every workspace API requires sign-in; admin APIs require the admin role.
   - At least one active admin is always kept.
-- **Invite-only**: admins create users, who receive a temporary password (shown once) and must change it at first sign-in.
+- **Invite-only**: admins invite users by email; each person chooses their own password through a single-use link (valid 72 hours). Admins never see or set passwords.
+- **Forgot password**: self-service reset by emailed single-use link (60 minutes). The response is identical whether or not the account exists.
+- **Private workspaces**: members see only the documents, drawings and reports they uploaded or created; admins see everything. Templates are shared.
 - **Protection**:
   - failed sign-ins are throttled per email and per IP address;
   - errors are generic, and verification runs in constant time;
@@ -214,12 +216,14 @@ The admin panel is where administrators run the product: analytics, content, use
    cd backend
    venv/bin/python manage.py create-admin --email you@example.com --name "Your Name"
    ```
-   A temporary password is printed **once**.
+   A temporary password is printed **once** (this bootstrap step is the only time a password is generated).
 2. **Sign in** at http://localhost:3001/login.
 3. **Choose a new password.** You're asked to replace the temporary one before anything else.
 4. Open **Admin** from the workspace navigation, or go to `/admin` directly.
 
-Forgotten password: `venv/bin/python manage.py reset-password --email you@example.com` prints a new temporary password and signs out that account's sessions.
+Forgotten password: use **Forgot password?** on the sign-in page. Without email configured, the server command
+`venv/bin/python manage.py reset-password --email you@example.com` prints a new temporary password and signs out that
+account's sessions.
 
 | First sign-in: forced password change | Account page: password and active sessions |
 |---|---|
@@ -277,15 +281,15 @@ Forgotten password: `venv/bin/python manage.py reset-password --email you@exampl
 <summary><strong>Invite a teammate</strong></summary>
 
 1. **Admin → Users → Invite a user**: enter name and email, choose **Member** (workspaces only) or **Admin**.
-2. Click **Create user** and copy the temporary password that appears. It is shown **only once**.
-3. Send the password to the person securely. They must change it at first sign-in.
+2. Click **Send invitation**. The person receives an email with a single-use link to choose their password.
+3. Without SMTP configured, the link is shown to you instead. Pass it on securely; it works once and expires in 72 hours.
 </details>
 
 <details>
 <summary><strong>Remove or lock out a user</strong></summary>
 
 - **Disable** keeps the account and its history but signs the user out everywhere and blocks sign-in; **Enable** restores it.
-- **Reset password** issues a new temporary password and signs out all their sessions.
+- **Reset password** stops their current password working, signs out all their sessions and emails them a reset link (or shows it to you if email isn't configured).
 - **Delete** removes the account permanently. You cannot delete yourself, and the last active admin cannot be demoted, disabled or deleted.
 </details>
 
@@ -343,7 +347,8 @@ Exports neutralise spreadsheet formula injection.
 
 | Capability | Member | Admin |
 |---|:---:|:---:|
-| Engineering, Legal and Medical workspaces | ✅ | ✅ |
+| Engineering, Legal and Medical workspaces (own documents) | ✅ | ✅ |
+| See every user's documents | – | ✅ |
 | Own account: change password, manage sessions | ✅ | ✅ |
 | Admin panel (analytics, posts, users, messages, activity, settings, system) | – | ✅ |
 
@@ -513,7 +518,7 @@ Agentic_RAG_System/
 
 ### Prerequisites
 
-- Python 3.9+ (3.11+ recommended)
+- Python 3.12 (3.10+ required by the pinned dependencies)
 - Node.js 20.9+
 - An OpenAI API key with access to `gpt-4.1`, `gpt-4.1-mini`, `gpt-3.5-turbo` and `text-embedding-ada-002`
 - A Pinecone account (serverless index, 1536 dimensions, cosine). The index is created automatically if missing.
@@ -522,7 +527,7 @@ Agentic_RAG_System/
 
 ```bash
 cd backend
-python3 -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
@@ -595,6 +600,15 @@ npm run build && npm start # http://localhost:3001
 | `SITE_REVALIDATE_URL` | `http://localhost:3001/api/revalidate` | Website endpoint called after posts or settings change |
 | `REVALIDATE_SECRET` | – | Shared secret for on-demand revalidation (same value in `frontend/.env.local`) |
 | `UPLOAD_MAX_MB` | `8` | Maximum image upload size |
+| `OPENAI_BASE_URL` | – | Any OpenAI-compatible endpoint: Azure OpenAI or a self-hosted model, so documents stay in your infrastructure |
+| `ENVIRONMENT` | `development` | `production` refuses to start with unsafe settings and lists what to fix |
+| `TRUSTED_PROXIES` | – | Reverse-proxy IPs whose `X-Forwarded-For` is trusted |
+| `DATA_ENCRYPTION_KEY` | auto key file | 32-byte base64 key for encrypting 2FA secrets at rest |
+| `PUBLIC_SITE_URL` | `http://localhost:3001` | Website address used in emailed links |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASSWORD` / `SMTP_FROM` | – / `587` | Email for invitations and password resets (STARTTLS, or TLS on 465) |
+| `MEDICAL_REDACT_PHI` | `True` | Redact identifiers in medical text before embedding or sending to the model |
+| `MAX_PDF_PAGES` / `VIRUS_SCAN` | `1000` / `auto` | Upload limits; ClamAV scanning (`required` rejects uploads when no scanner is available) |
+| `BACKUP_DIR` / `BACKUP_KEEP` / `BACKUP_INTERVAL_HOURS` | `backend/backups` / `14` / `24` | Automatic backups |
 | `API_HOST` / `API_PORT` | `0.0.0.0` / `8000` | Server binding |
 
 ### Front end (`frontend/.env.local`)
@@ -654,6 +668,8 @@ All workspace endpoints (chat, files, legal, engineering) require a signed-in se
 | `POST` | `/auth/login/mfa` | Second sign-in step (`mfa_token` from `/auth/login`, authenticator or recovery `code`) |
 | `POST` | `/auth/2fa/setup` · `/auth/2fa/enable` | Start 2FA enrolment (secret, `otpauth://` URI, QR SVG) / confirm with a code (returns recovery codes once) |
 | `POST` | `/auth/2fa/disable` · `/auth/2fa/recovery-codes` | Turn off 2FA (password + code) / regenerate recovery codes (password) |
+| `POST` | `/auth/forgot-password` | Email a reset link (same response whether or not the account exists; rate limited) |
+| `POST` | `/auth/reset-password/check` · `/auth/reset-password` | Check a reset/invite link / set the password with it (single use; signs out all sessions) |
 
 </details>
 
@@ -666,9 +682,9 @@ All workspace endpoints (chat, files, legal, engineering) require a signed-in se
 | `GET` | `/admin/traffic?days=` | Page views, visitors, top pages, referrers, devices |
 | `GET` | `/admin/usage?days=` | Model calls, tokens and estimated cost by day, model, feature; actions per user |
 | `GET` | `/admin/system` | Vector DB namespaces, storage, models, security settings |
-| `GET` · `POST` | `/admin/users` | List / invite users (returns a one-time temporary password) |
+| `GET` · `POST` | `/admin/users` | List / invite users (emails a single-use link; returns it only if email is not configured) |
 | `PATCH` · `DELETE` | `/admin/users/{id}` | Change name, role or status / delete |
-| `POST` | `/admin/users/{id}/reset-password` | New temporary password, sessions revoked |
+| `POST` | `/admin/users/{id}/reset-password` | Old password disabled, sessions revoked, reset link emailed |
 | `POST` | `/admin/users/{id}/reset-2fa` | Turn off a user's 2FA (lost device), sessions revoked |
 | `GET` | `/admin/messages?status=` · `/admin/messages.csv` | Contact inbox / CSV export |
 | `PATCH` · `DELETE` | `/admin/messages/{id}` | Mark read or unread / delete |
@@ -807,6 +823,13 @@ Internal evaluations on **synthetic test data with planted errors and known answ
 | Legal: classification matching intended type | **96 / 100** (the 4 others: settlement agreements labelled as contracts) |
 | Legal: synthesis outliers matching planted "uncapped liability" contracts | **3 / 3** |
 
+Re-measure at any time (for example before changing a model or prompt). This reads stored results, or re-analyses the samples with `--run`, and exits non-zero below the threshold:
+
+```bash
+backend/venv/bin/python scripts/evaluate_agents.py --min-score 0.8
+# legal: classification 0.96 · governing law 0.99 · risk direction 0.94 — engineering: issue recall 1.0 (11/11)
+```
+
 Issues found during development, and the fixes now in place:
 - A vision model invented a datum that isn't on the drawing → zoomed re-verification step.
 - A model judged every change "recorded" → per-change revision audit.
@@ -817,14 +840,15 @@ Issues found during development, and the fixes now in place:
 
 ## Quality assurance
 
-Automated checks run locally and in CI (`.github/workflows/qa.yml`). The full results, fixed issues and open risks are in **[docs/QA_REPORT.md](docs/QA_REPORT.md)**.
+Automated checks run locally and in CI (`.github/workflows/qa.yml`). The full results, the risk register and residual risks are in **[docs/QA_REPORT.md](docs/QA_REPORT.md)**.
 
 | Suite | Tool | Result |
 |---|---|---|
-| Backend API tests: auth, 2FA, access control, CSRF/CORS, XSS sanitising, uploads, contact, analytics privacy, headers | pytest (`backend/tests`) | **76 passed** |
-| End-to-end: SEO and structured data on every page, broken links, sitemap/robots, mobile layout, console errors, security headers, access control | Playwright (`frontend/e2e`), desktop + mobile | **54 passed** |
+| Backend API tests: auth, 2FA, invitations and resets, per-user isolation, access control, CSRF/CORS, XSS sanitising, upload validation, encryption, prompt-injection detection, PHI redaction, backups | pytest (`backend/tests`) | **113 passed** |
+| End-to-end: SEO and structured data on every page, broken links, sitemap/robots, mobile layout, console errors, security headers, nonce CSP, reset flow, access control | Playwright (`frontend/e2e`), desktop + mobile | **60 passed** |
 | Accessibility (WCAG 2.1 A/AA) | axe-core | 0 serious or critical violations |
-| Dependency audit | `npm audit` · `pip-audit` | npm: 0 · Python: 67 advisories, all needing Python ≥ 3.10 ([R1](docs/QA_REPORT.md#high)) |
+| Dependency audit | `npm audit` · `pip-audit` | **0 · 0** |
+| Agent accuracy | `scripts/evaluate_agents.py` | Legal 96% / 99% / 94% · Engineering 11/11 |
 
 ```bash
 cd backend && venv/bin/python -m pytest          # API tests (isolated temp data, no model calls)
@@ -841,25 +865,26 @@ E2E_EMAIL=… E2E_PASSWORD=… npm run test:e2e        # include the signed-in j
   - Session tokens live in an HttpOnly, SameSite=Lax cookie and are stored only as SHA-256 digests.
   - Passwords use PBKDF2-HMAC-SHA256 with 600,000 iterations.
   - Failed sign-ins are throttled.
-  - Users are invite-only and must change the temporary password at first sign-in.
-  - Optional **TOTP two-factor authentication**, with hashed recovery codes and replay protection.
+  - Users are invite-only and set their own password by single-use emailed link; self-service reset works the same way.
+  - Optional **TOTP two-factor authentication**, with hashed recovery codes and replay protection. Secrets are encrypted at rest (AES-256-GCM).
+- **Data isolation**: every document, drawing, comparison, generated report and medical file has an owner. Members can only see or act on their own (other IDs return 404); vector searches are filtered by owner; admins see everything.
 - **Security headers**:
-  - Website: Content-Security-Policy (scripts from the site only, no framing, `object-src 'none'`), `nosniff`, `X-Frame-Options: DENY`, Referrer-Policy, Permissions-Policy, COOP, and HSTS when served over HTTPS.
+  - Website: Content-Security-Policy (scripts from the site only, no framing, `object-src 'none'`), `nosniff`, `X-Frame-Options: DENY`, Referrer-Policy, Permissions-Policy, COOP, and HSTS when served over HTTPS. Sign-in, workspace and admin pages use a strict **per-request nonce** policy with `'strict-dynamic'`.
   - API: `nosniff`, `DENY`, `no-referrer`, `no-store` on auth and admin responses; no server banner.
 - **CSRF and CORS**:
   - CORS allows only the configured `FRONTEND_ORIGINS` (credentials enabled);
   - an origin guard rejects state-changing requests from other origins;
   - CSV exports neutralise spreadsheet formula injection.
-- **Before deploying**:
-  - serve over HTTPS and set `COOKIE_SECURE=True`;
-  - set `FRONTEND_ORIGINS` to your site's origin;
-  - put the API behind a reverse proxy that forwards the client IP, so sign-in throttling and analytics see real addresses.
+- **Uploads**: content must match the file extension (magic bytes), zip and decompression bombs are rejected, PDFs are page-limited, and files are scanned with ClamAV when installed.
+- **Prompt injection**: agents treat document text as untrusted data inside fenced markers, and text that tries to instruct the AI is flagged as a risk or finding. The agents have no tools with side effects. This reduces the risk but cannot remove it entirely, so keep human review.
+- **Backups**: automatic daily backups with rotation; `manage.py backup | list-backups | restore` (restores are integrity-checked and keep the previous data).
+- **Before deploying**: set `ENVIRONMENT=production`. The API then refuses to start until HTTPS cookies, HTTPS origins, trusted proxies, the encryption key and a strong revalidation secret are configured. See the checklist in [docs/QA_REPORT.md](docs/QA_REPORT.md#production-checklist).
 - **Audit trail**: sign-ins (including failures), workspace actions and admin changes are recorded in the activity log.
 - **Analytics privacy**: no cookies, no stored IP addresses, daily-rotating anonymous visitor IDs, Do Not Track respected.
-- Documents are processed by your back end and sent to **OpenAI** for analysis. Passages are indexed in **your** Pinecone project. Review the providers' terms before using confidential or regulated data.
+- Documents are processed by your back end and sent to **OpenAI** for analysis, or to Azure OpenAI or a self-hosted model via `OPENAI_BASE_URL`. Passages are indexed in **your** Pinecone project. Review the providers' terms before using confidential or regulated data.
 - Uploaded files are stored under generated names; user-supplied filenames never form filesystem paths.
 - Runtime data (`backend/data/`) and secrets (`.env`, `.env.local`) are git-ignored.
-- Medical identifier removal is **column-name based** and is not a substitute for formal de-identification.
+- Medical uploads drop identifier columns and redact identifiers inside values (emails, phones, SSNs, MRNs, full dates and so on). Names in free text can't be found reliably by pattern, so this is not a substitute for formal de-identification.
 - AI output supports, and does not replace, qualified engineering, legal or clinical judgement.
 
 ---
@@ -909,18 +934,19 @@ Open http://localhost:8000/files/health and check that `vectordb` and `llm` are 
 ### Near term: production readiness
 
 - [x] **Authentication, roles and admin panel** with analytics, user management, contact inbox and audit log
-- [ ] **Per-user / per-team data scoping** (today all signed-in users share the workspaces' documents)
+- [x] **Per-user data isolation** (members see only their own documents; admins see all)
+- [ ] Team/organisation sharing on top of per-user isolation
 - [x] **Two-factor authentication** (TOTP with recovery codes)
 - [x] **Automated QA**: API tests, end-to-end, accessibility and CI workflow
-- [ ] **Python 3.12 upgrade** to clear 67 dependency advisories ([QA report R1](docs/QA_REPORT.md#high))
+- [x] **Python 3.12 upgrade**: 0 dependency advisories
 - [ ] Single sign-on (SAML/OIDC)
-- [ ] **Email delivery** for invitations and self-service password reset
+- [x] **Email delivery** for invitations and self-service password reset
+- [x] **Risk register closed**: encryption at rest, upload validation, nonce CSP, backups, prompt-injection guard, production config check ([QA report](docs/QA_REPORT.md#risk-register-resolution))
 - [ ] **Deployment**: Dockerfiles, `docker-compose`, and a guide for Vercel (front end) plus a container host (API)
 - [x] **CI**: lint, build, API and end-to-end tests on every push and pull request
-- [ ] **Agent evaluation harness** in CI, scoring agents against the synthetic answer keys
+- [x] **Agent evaluation harness** scoring agents against the synthetic answer keys (`scripts/evaluate_agents.py`)
 - [x] Contact-form admin inbox (read/unread, CSV export)
 - [ ] **Contact form notifications** (email/Slack)
-- [ ] Remove the committed `backend/venv/` from the repository; move to Python 3.11+
 - [ ] Choose and add a licence
 
 ### Engineering
@@ -949,7 +975,8 @@ Open http://localhost:8000/files/health and check that `vectordb` and `llm` are 
 
 - [ ] Streaming responses and progress for long-running agent steps
 - [ ] Usage and cost dashboard per workspace
-- [ ] Model provider abstraction (e.g. Claude, Azure OpenAI, local models)
+- [x] OpenAI-compatible provider switch (`OPENAI_BASE_URL`: Azure OpenAI, vLLM, Ollama)
+- [ ] Native support for other model APIs (e.g. Claude)
 - [x] Blog with admin editor, scheduling, SEO fields and on-demand revalidation
 - [ ] Rich-text (WYSIWYG) editing option and post revision history
 - [ ] Internationalisation (hreflang) on the website

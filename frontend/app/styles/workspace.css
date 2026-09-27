@@ -2745,6 +2745,12 @@ a.action-button {
   user-select: all;
 }
 
+.secret-box .secret-link {
+  flex-basis: 100%;
+  overflow-wrap: anywhere;
+  font-size: 0.82rem;
+}
+
 .kv {
   display: grid;
   grid-template-columns: minmax(140px, 40%) 1fr;

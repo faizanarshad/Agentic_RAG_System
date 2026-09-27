@@ -3,11 +3,8 @@
 import os
 import re
 import sqlite3
-import threading
-import time
-from collections import defaultdict, deque
 from datetime import datetime, timezone
-from typing import Deque, Dict
+from typing import Dict
 
 from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
@@ -23,8 +20,6 @@ TOPICS = {"engineering", "legal", "medical", "pilot", "integration", "other"}
 RATE_LIMIT = 5            # messages
 RATE_WINDOW_SECONDS = 3600  # per hour per client IP
 
-_recent: Dict[str, Deque[float]] = defaultdict(deque)
-_lock = threading.Lock()
 
 
 def _connect() -> sqlite3.Connection:
@@ -61,18 +56,6 @@ class ContactMessage(BaseModel):
     website: str = ""  # honeypot: real visitors never fill this in
 
 
-def _rate_limited(client_ip: str) -> bool:
-    now = time.monotonic()
-    with _lock:
-        timestamps = _recent[client_ip]
-        while timestamps and now - timestamps[0] > RATE_WINDOW_SECONDS:
-            timestamps.popleft()
-        if len(timestamps) >= RATE_LIMIT:
-            return True
-        timestamps.append(now)
-        return False
-
-
 @router.post("")
 def submit_contact(payload: ContactMessage, request: Request) -> Dict[str, bool]:
     """Validate and store a contact message."""
@@ -95,8 +78,10 @@ def submit_contact(payload: ContactMessage, request: Request) -> Dict[str, bool]
     if not payload.consent:
         raise HTTPException(status_code=422, detail="Consent is required so we can reply.")
 
-    client_ip = request.client.host if request.client else "unknown"
-    if _rate_limited(client_ip):
+    from api.deps import client_ip as resolve_ip
+    from services.platform_store import get_platform_store as _store
+    client_ip = resolve_ip(request)
+    if _store().rate_limited("contact", client_ip, RATE_LIMIT, RATE_WINDOW_SECONDS):
         raise HTTPException(status_code=429, detail="Too many messages. Please try again later.")
 
     with _connect() as connection:

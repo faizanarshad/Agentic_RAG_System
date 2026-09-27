@@ -162,6 +162,11 @@ def upload_image(request: Request, file: UploadFile = File(...)) -> Dict[str, An
     content = file.file.read(settings.UPLOAD_MAX_MB * 1024 * 1024 + 1)
     if len(content) > settings.UPLOAD_MAX_MB * 1024 * 1024:
         raise HTTPException(status_code=413, detail=f"Images must be under {settings.UPLOAD_MAX_MB} MB.")
+    from services.file_safety import UnsafeFileError, validate_upload
+    try:
+        validate_upload(file.filename or "image", content, {".png", ".jpg", ".jpeg", ".webp", ".gif"})
+    except UnsafeFileError as e:
+        raise HTTPException(status_code=422, detail=str(e))
     try:
         image = Image.open(io.BytesIO(content))
         image.verify()
@@ -170,7 +175,7 @@ def upload_image(request: Request, file: UploadFile = File(...)) -> Dict[str, An
             raise HTTPException(status_code=422, detail="Upload a PNG, JPEG, WebP or GIF image.")
         image = image.convert("RGBA" if image.mode in ("RGBA", "LA", "P") else "RGB")
         image.thumbnail((2000, 2000))
-    except (UnidentifiedImageError, OSError):
+    except (UnidentifiedImageError, OSError, Image.DecompressionBombWarning, Image.DecompressionBombError):
         raise HTTPException(status_code=422, detail="The file is not a valid image.")
     os.makedirs(UPLOAD_DIR, exist_ok=True)
     name = f"{uuid.uuid4()}.webp"

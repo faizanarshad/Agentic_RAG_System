@@ -23,7 +23,9 @@ from .engineering_prompts import (
     TEMPLATE_IMPORT_SYSTEM, TEMPLATE_REVIEW_SYSTEM,
 )
 from .engineering_rules import diff_extractions, run_rule_checks
+from .prompt_guard import UNTRUSTED_NOTICE, detect_injection, injection_finding
 from .engineering_store import EngineeringStore
+from .file_safety import validate_upload
 from .usage_tracker import record_usage
 
 
@@ -51,7 +53,7 @@ class EngineeringAgentService:
     def __init__(self):
         """Initialize the client, store and review graph."""
         # Vision calls with several high-detail images can take a while; still retry stalled connections
-        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, max_retries=4, timeout=180)
+        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, base_url=settings.OPENAI_BASE_URL or None, max_retries=4, timeout=180)
         self.model = settings.ENGINEERING_MODEL
         self.store = EngineeringStore()
         self.loader = EngineeringLoader()
@@ -67,7 +69,7 @@ class EngineeringAgentService:
         """Call the model in JSON mode; content is a string or a list of multimodal parts."""
         response = self.client.chat.completions.create(
             model=self.model,
-            messages=[{"role": "system", "content": system}, {"role": "user", "content": content}],
+            messages=[{"role": "system", "content": system + UNTRUSTED_NOTICE}, {"role": "user", "content": content}],
             response_format={"type": "json_object"},
             temperature=temperature,
             max_tokens=max_tokens,
@@ -90,13 +92,14 @@ class EngineeringAgentService:
 
     # ------------------------------------------------------------------ drawing review
 
-    def review_upload(self, filename: str, content: bytes, standard: str) -> Dict[str, Any]:
+    def review_upload(self, filename: str, content: bytes, standard: str, owner_id: Optional[str] = None) -> Dict[str, Any]:
         """Save an uploaded drawing and run the full review workflow on it."""
         extension = os.path.splitext(filename)[1].lower()
         if extension not in SUPPORTED_EXTENSIONS:
             raise ValueError(f"Unsupported file type '{extension}'. Supported: {', '.join(sorted(SUPPORTED_EXTENSIONS))}")
         if len(content) > settings.ENGINEERING_MAX_FILE_MB * 1024 * 1024:
             raise ValueError(f"File is larger than {settings.ENGINEERING_MAX_FILE_MB} MB")
+        validate_upload(filename, content, SUPPORTED_EXTENSIONS)  # raises UnsafeFileError (a ValueError)
 
         drawing_id = str(uuid.uuid4())
         directory = os.path.join(self.files_dir, drawing_id)
@@ -105,7 +108,7 @@ class EngineeringAgentService:
         file_path = os.path.join(directory, f"original{extension}")
         with open(file_path, "wb") as f:
             f.write(content)
-        self.store.create_drawing(drawing_id, os.path.basename(filename), file_path, standard)
+        self.store.create_drawing(drawing_id, os.path.basename(filename), file_path, standard, owner_id)
         return self.run_review(drawing_id, standard)
 
     def run_review(self, drawing_id: str, standard: str) -> Dict[str, Any]:
@@ -226,6 +229,14 @@ class EngineeringAgentService:
         def finalize(state: ReviewState) -> ReviewState:
             result = state["review"]
             findings = [f for f in result.get("findings") or [] if isinstance(f, dict)]
+            drawing_text = " ".join(
+                block.get("text", "") for page in state["loaded"].get("pages") or [] for block in page.get("text") or []
+                if isinstance(block, dict)
+            )
+            excerpts = detect_injection(drawing_text)
+            if excerpts:
+                findings.append(injection_finding(excerpts))
+                result["injection_warnings"] = excerpts
             for finding in findings:
                 if finding.get("severity") not in SEVERITY_ORDER:
                     finding["severity"] = "minor"
@@ -311,7 +322,7 @@ class EngineeringAgentService:
 
     # ------------------------------------------------------------------ comparison
 
-    def compare(self, a_id: str, b_id: str) -> Dict[str, Any]:
+    def compare(self, a_id: str, b_id: str, owner_id: Optional[str] = None) -> Dict[str, Any]:
         """Compare two reviewed drawings/documents and store the result."""
         a, b = self.store.get_drawing(a_id), self.store.get_drawing(b_id)
         if a is None or b is None:
@@ -340,7 +351,7 @@ class EngineeringAgentService:
         result["automated_differences"] = differences
         result["a"] = {"id": a_id, "filename": a["filename"]}
         result["b"] = {"id": b_id, "filename": b["filename"]}
-        result["id"] = self.store.create_comparison(a_id, b_id, result)
+        result["id"] = self.store.create_comparison(a_id, b_id, result, owner_id)
         return result
 
     def _audit_revision_control(
@@ -400,13 +411,16 @@ class EngineeringAgentService:
             result["revised_template"] = normalize_template(result["revised_template"])
         return result
 
-    def import_template(self, filename: str, content: bytes) -> str:
+    def import_template(self, filename: str, content: bytes, owner_id: Optional[str] = None) -> str:
         """Convert an uploaded DOCX/PDF/TXT/MD document into a template and store it."""
+        if len(content) > 20 * 1024 * 1024:
+            raise ValueError("Template files must be under 20 MB")
+        validate_upload(filename, content, {".docx", ".pdf", ".txt", ".md"})
         text = _document_text(filename, content)
         if not text.strip():
             raise ValueError("No text could be read from the template file")
         template = normalize_template(self._chat_json(TEMPLATE_IMPORT_SYSTEM, text[:30000], max_tokens=4000))
-        return self.store.create_template(template)
+        return self.store.create_template(template, owner_id)
 
     # ------------------------------------------------------------------ document generation
 
@@ -416,6 +430,7 @@ class EngineeringAgentService:
         drawing_ids: List[str],
         comparison_ids: List[str],
         instructions: str,
+        owner_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         """Fill a template from reviewed drawings and comparisons, flagging missing information."""
         template = self.store.get_template(template_id)
@@ -478,7 +493,7 @@ class EngineeringAgentService:
             "sections": sections,
             "missing_information": missing,
             "source_ids": {"drawings": drawing_ids, "comparisons": comparison_ids},
-        })
+        }, owner_id)
         return self.store.get_document(document_id)
 
     def export_markdown(self, document_id: str) -> str:
@@ -675,7 +690,7 @@ def _document_text(filename: str, content: bytes) -> str:
                 parts.append(" | ".join(cell.text.strip() for cell in row.cells))
         return "\n".join(parts)
     if extension == ".pdf":
-        import fitz
+        import pymupdf as fitz
 
         with fitz.open(stream=content, filetype="pdf") as pdf:
             return "\n".join(page.get_text() for page in pdf)

@@ -2,9 +2,10 @@
 
 from typing import List, Dict, Any
 from openai import OpenAI
-from langchain.schema import Document
+from langchain_core.documents import Document
 
 from core.config import settings
+from services.prompt_guard import UNTRUSTED_NOTICE, fence
 from utils.logger import logger
 from .usage_tracker import record_usage
 
@@ -14,7 +15,7 @@ class LLMService:
     
     def __init__(self):
         """Initialize the LLM service."""
-        self.client = OpenAI(api_key=settings.OPENAI_API_KEY)
+        self.client = OpenAI(api_key=settings.OPENAI_API_KEY, base_url=settings.OPENAI_BASE_URL or None)
         self.model = settings.OPENAI_MODEL
     
     def generate_response(
@@ -56,7 +57,7 @@ class LLMService:
                             "If the context doesn't contain enough information to answer the question, "
                             "say 'I don't have enough information in the provided context to answer this question.' "
                             "Be concise and accurate in your responses."
-                        )
+                        ) + UNTRUSTED_NOTICE
                     },
                     {
                         "role": "user",
@@ -110,7 +111,7 @@ class LLMService:
             Formatted prompt string
         """
         prompt = f"""Context:
-{context}
+{fence(context, "CONTEXT")}
 
 Question: {query}
 
@@ -118,22 +119,24 @@ Please answer the question based on the context provided above. If the context d
         
         return prompt
     
+    _health_cache = {"ok": None, "checked": 0.0}
+
     def health_check(self) -> bool:
         """
-        Check if the LLM service is healthy and accessible.
-        
-        Returns:
-            True if healthy, False otherwise
+        Check the model is reachable without spending tokens (models.retrieve is free), cached for 60 s
+        so an open status panel does not call the provider every 30 seconds.
         """
+        import time
+
+        cache = LLMService._health_cache
+        if cache["ok"] is not None and time.monotonic() - cache["checked"] < 60:
+            return cache["ok"]
         try:
-            # Test with a simple query
-            test_response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": "Hello"}],
-                max_tokens=10
-            )
+            self.client.models.retrieve(self.model)
+            ok = True
             logger.info("LLM service health check passed")
-            return True
         except Exception as e:
             logger.error(f"LLM service health check failed: {str(e)}")
-            return False
+            ok = False
+        cache.update(ok=ok, checked=time.monotonic())
+        return ok

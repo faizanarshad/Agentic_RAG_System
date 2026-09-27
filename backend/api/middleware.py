@@ -7,6 +7,7 @@ from fastapi.responses import JSONResponse
 
 from core.config import settings
 from services.platform_store import get_platform_store
+from .deps import client_ip
 from utils.logger import logger
 
 UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
@@ -69,7 +70,7 @@ async def activity_logger(request: Request, call_next):
                     try:
                         get_platform_store().log_event(
                             action, user["id"], workspace, {"path": request.url.path},
-                            request.client.host if request.client else None,
+                            client_ip(request),
                         )
                     except Exception as e:
                         logger.warning(f"Could not log activity: {str(e)}")
