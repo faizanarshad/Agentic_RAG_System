@@ -1,6 +1,8 @@
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { site } from '@/lib/site';
 import './globals.css';
+import './styles/motion.css';
+import './styles/carousel.css';
 
 // Self-hosted at build time by next/font: no external font requests, no layout shift
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });

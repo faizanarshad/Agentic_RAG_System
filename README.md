@@ -200,6 +200,17 @@ See **[Admin panel](#admin-panel)** for every admin screen and a how-to guide.
   - generated Open Graph images;
   - JSON-LD structured data and semantic HTML.
 - Contact form with client and server validation, a honeypot and per-IP rate limiting.
+- **Home page interactions**:
+  - hero product tour: a fading slider of the three workspaces with tabs, autoplay and a pause button;
+  - a **Start a task** picker that opens the chosen workspace tab directly (`/workspace/legal?view=synthesize`);
+  - a scrolling "Built with" marquee;
+  - a capabilities slider filtered by numbered workspace tabs, and a slider of real findings from the test runs.
+- **Motion**:
+  - scroll-driven reveals with no JavaScript;
+  - cursor spotlight on cards and 3D tilt on screenshots;
+  - count-up figures, a reading-progress bar and smooth FAQ expansion.
+
+  Only transform and opacity are animated, so there is no layout shift. Everything that moves stops for visitors who prefer reduced motion, and autoplay pauses on hover, on focus and off-screen.
 
 ---
 

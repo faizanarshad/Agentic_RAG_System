@@ -1,8 +1,12 @@
 import Link from 'next/link';
-import { ArrowRight, BadgeCheck, CircleCheck, FileSearch, Ruler, Scale, ShieldCheck, Stethoscope } from 'lucide-react';
+import { ArrowRight, FileSearch, FileStack, Quote, Ruler, ShieldCheck } from 'lucide-react';
+import CapabilitySlider from '@/components/site/CapabilitySlider';
+import TaskFinder from '@/components/site/TaskFinder';
+import Carousel from '@/components/site/Carousel';
+import Marquee from '@/components/site/Marquee';
 import ProductFrame from '@/components/site/ProductFrame';
 import JsonLd from '@/components/site/JsonLd';
-import { benchmarks, faqs, guardrails, images, solutionList, techStack, workflow } from '@/lib/content';
+import { benchmarks, faqs, findings, guardrails, images, solutionList, techStack, workflow } from '@/lib/content';
 import { site } from '@/lib/site';
 import { faqSchema, organizationSchema, softwareSchema, websiteSchema } from '@/lib/structured-data';
 
@@ -13,12 +17,55 @@ export const metadata = {
   alternates: { canonical: '/' },
 };
 
-const SOLUTION_ICONS = { engineering: Ruler, legal: Scale, medical: Stethoscope };
+// Every capability across the workspaces, numbered in order
+const capabilities = solutionList
+  .flatMap((s) => s.capabilities.map((c) => ({ ...c, slug: s.slug, workspace: s.name })))
+  .map((c, i) => ({ ...c, number: i + 1 }));
+const workspaces = solutionList.map((s) => ({ slug: s.slug, name: s.name }));
+
+const BENEFITS = [
+  { icon: ShieldCheck, text: 'Verified findings' },
+  { icon: Ruler, text: 'ISO & ASME drawing checks' },
+  { icon: FileStack, text: 'PDF, DXF, scans & Word' },
+  { icon: Quote, text: 'Cited answers' },
+];
+
+// Hero product tour: one annotated screenshot per workspace
+const showcase = [
+  {
+    name: 'Engineering',
+    image: images.engineeringReview,
+    label: 'workspace / engineering / review',
+    callouts: [
+      { position: 'b', tone: 'critical', tag: 'Critical', text: 'Overall length 120 vs 125 across views' },
+      { position: 'a', tone: 'verify', tag: 'Verified', text: 'Datum C: no symbol found on a zoomed re-check' },
+    ],
+  },
+  {
+    name: 'Legal',
+    image: images.legalSynthesis,
+    label: 'workspace / legal / corpus',
+    callouts: [
+      { position: 'b', tone: 'critical', tag: 'High risk', text: 'Uncapped liability in 3 of 100 documents' },
+      { position: 'a', tone: 'verify', tag: 'Cited', text: 'Every synthesis claim links to its source' },
+    ],
+  },
+  {
+    name: 'Medical',
+    image: images.medicalChat,
+    label: 'workspace / medical / chat',
+    callouts: [
+      { position: 'b', tone: 'verify', tag: 'Sourced', text: 'Answer grounded in 5 retrieved passages' },
+      { position: 'a', tone: 'verify', tag: 'Redacted', text: 'Phone numbers and IDs removed before indexing' },
+    ],
+  },
+];
 
 export default function HomePage() {
   return (
     <>
       <JsonLd data={[organizationSchema(), websiteSchema(), softwareSchema(), faqSchema(faqs)]} />
+      <div className="home">
 
       {/* Hero */}
       <section className="section--ink blueprint hero" aria-labelledby="hero-title">
@@ -40,59 +87,47 @@ export default function HomePage() {
                 Talk to us
               </Link>
             </div>
-            <div className="hero__meta">
-              <span><CircleCheck size={14} aria-hidden="true" /> ISO &amp; ASME drawing checks</span>
-              <span><CircleCheck size={14} aria-hidden="true" /> PDF, DXF, scans &amp; Word</span>
-              <span><CircleCheck size={14} aria-hidden="true" /> Cited answers</span>
-            </div>
+            <ul className="hero__benefits" role="list">
+              {BENEFITS.map(({ icon: Icon, text }) => (
+                <li key={text}><span className="hero__benefit-icon"><Icon size={15} aria-hidden="true" /></span>{text}</li>
+              ))}
+            </ul>
           </div>
-          <ProductFrame
-            image={images.engineeringReview}
-            label="workspace / engineering / review"
-            eager
-            callouts={[
-              { position: 'b', tone: 'critical', tag: 'Critical', text: 'Overall length 120 vs 125 across views' },
-              { position: 'a', tone: 'verify', tag: 'Verified', text: 'Datum C: no symbol found on a zoomed re-check' },
-            ]}
-          />
+          <Carousel
+            variant="fade"
+            label="Product tour"
+            tabs={showcase.map((s) => s.name)}
+            interval={6500}
+            tone="ink"
+            className="hero-showcase"
+          >
+            {showcase.map((s, i) => (
+              <ProductFrame key={s.name} image={s.image} label={s.label} eager={i === 0} scan callouts={s.callouts} />
+            ))}
+          </Carousel>
         </div>
       </section>
 
-      {/* Technology */}
-      <div className="stack-strip" role="note" aria-label="Built with">
-        <span className="stack-strip__label">Built with</span>
-        {techStack.map((t) => (
-          <span key={t} className="stack-strip__item">{t}</span>
-        ))}
+      {/* Start a task (overlaps the hero) */}
+      <div className="container task-finder-wrap">
+        <TaskFinder />
       </div>
+
+      {/* Technology */}
+      <Marquee label="Built with" items={techStack} />
 
       {/* Solutions */}
       <section className="section" aria-labelledby="solutions-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Three workspaces, one engine</p>
+            <p className="eyebrow">Three workspaces, {capabilities.length} capabilities</p>
             <h2 id="solutions-title" className="h2">Specialist agents for the documents that carry the most risk</h2>
             <p className="lede">
               Each workspace pairs domain-specific extraction with the same verification pipeline, so results are consistent
               whether you are releasing a drawing, reviewing a contract portfolio or checking a clinical guideline.
             </p>
           </div>
-          <div className="grid-3">
-            {solutionList.map((s) => {
-              const Icon = SOLUTION_ICONS[s.slug];
-              return (
-                <article key={s.slug} className="card card--link">
-                  <span className="card__icon"><Icon size={22} aria-hidden="true" /></span>
-                  <p className="card__kicker">{s.kicker}</p>
-                  <h3 className="h3">{s.name}</h3>
-                  <p>{s.lede}</p>
-                  <Link className="text-link card__link" href={`/solutions/${s.slug}`}>
-                    Explore {s.name.toLowerCase()} <ArrowRight size={16} aria-hidden="true" />
-                  </Link>
-                </article>
-              );
-            })}
-          </div>
+          <CapabilitySlider capabilities={capabilities} workspaces={workspaces} />
         </div>
       </section>
 
@@ -168,26 +203,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Engineering spotlight */}
-      <section className="section" aria-labelledby="spotlight-title">
-        <div className="container split split--reverse">
-          <div className="split__copy">
-            <p className="eyebrow">Change control</p>
-            <h2 id="spotlight-title" className="h2">Catch the changes nobody recorded</h2>
-            <p className="lede">
-              Compare two revisions and every substantive change is audited against the new revision-table entries. Changes
-              that were made but never recorded are called out, and an ECN can be drafted from the comparison in one step.
-            </p>
-            <ul className="check-list">
-              <li><BadgeCheck size={18} aria-hidden="true" />Form, fit and function impact for every change</li>
-              <li><BadgeCheck size={18} aria-hidden="true" />Revision increment checked automatically</li>
-              <li><BadgeCheck size={18} aria-hidden="true" />ECN, FAI and review records exported to Word</li>
-            </ul>
-            <Link className="text-link" href="/solutions/engineering">
-              See the engineering workspace <ArrowRight size={16} aria-hidden="true" />
-            </Link>
+      {/* Findings slider */}
+      <section className="section section--ink blueprint" aria-labelledby="findings-title">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">From our test runs</p>
+            <h2 id="findings-title" className="h2">What the agents actually find</h2>
+            <p className="lede">Real findings from runs on our synthetic test documents, with planted errors and known answers.</p>
           </div>
-          <ProductFrame image={images.engineeringCompare} label="workspace / engineering / compare" light />
+          <Carousel label="Example findings" interval={5500} tone="ink">
+            {findings.map((f) => (
+              <figure key={f.title} className="finding">
+                <div className="finding__top">
+                  <span className={`finding__tag finding__tag--${f.tone}`}>{f.tag}</span>
+                  <span className="finding__workspace">{f.workspace}</span>
+                </div>
+                <p className="finding__title">{f.title}</p>
+                <p className="finding__detail">{f.detail}</p>
+                <figcaption className="finding__source">{f.source}</figcaption>
+              </figure>
+            ))}
+          </Carousel>
         </div>
       </section>
 
@@ -225,6 +261,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }

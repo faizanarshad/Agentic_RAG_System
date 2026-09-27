@@ -21,6 +21,7 @@ import {
   X,
 } from 'lucide-react';
 import { fetchBackend } from '@/lib/api';
+import { initialView } from '@/lib/initial-view';
 // Constants
 const MAX_BATCH_DOCS = 100;
 const SUPPORTED_EXTENSIONS = ['.pdf', '.docx', '.txt', '.md', '.png', '.jpg', '.jpeg', '.tif', '.tiff'];
@@ -89,7 +90,7 @@ const DocChips = ({ labels, documents, onOpen }) => (
 );
 const LegalSynthesis = () => {
   // State management
-  const [view, setView] = useState('overview');
+  const [view, setView] = useState(() => initialView(['overview', 'documents', 'synthesize', 'ask'], 'overview'));
   const [stats, setStats] = useState(null);
   const [batch, setBatch] = useState(null);
   const [uploadMessage, setUploadMessage] = useState(null);

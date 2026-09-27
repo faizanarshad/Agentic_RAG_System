@@ -27,6 +27,7 @@ import {
   XCircle,
 } from 'lucide-react';
 import { API_BASE, fetchBackend } from '@/lib/api';
+import { initialView } from '@/lib/initial-view';
 // Constants
 const ACCEPTED = '.pdf,.png,.jpg,.jpeg,.tif,.tiff,.dxf';
 const SEVERITIES = ['critical', 'major', 'minor', 'info'];
@@ -88,7 +89,7 @@ const emptyTemplate = () => ({
 });
 const EngineeringWorkspace = () => {
   // State management
-  const [view, setView] = useState('review');
+  const [view, setView] = useState(() => initialView(['review', 'compare', 'templates', 'documents'], 'review'));
   const [error, setError] = useState(null);
   const [drawings, setDrawings] = useState([]);
   const [selected, setSelected] = useState(null);

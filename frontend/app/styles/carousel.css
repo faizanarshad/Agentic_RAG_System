@@ -1,0 +1,788 @@
+/* ==========================================================================
+   Sliders: carousel (fade + scroll-snap track) and marquee strip
+   ========================================================================== */
+
+/* ---------- Carousel: shared ---------- */
+.carousel {
+  position: relative;
+  min-width: 0;
+}
+
+.carousel__controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.carousel__buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel__btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.3s var(--ease-out);
+}
+
+.carousel__btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.carousel__btn:active {
+  transform: scale(0.94);
+}
+
+/* Dots: 24px touch targets with a small visual pill */
+.carousel__dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.carousel__dot {
+  display: grid;
+  place-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.carousel__dot::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--line-strong);
+  transition: width 0.4s var(--ease-out), background-color 0.25s ease;
+}
+
+.carousel__dot:hover::before {
+  background: var(--text-3);
+}
+
+.carousel__dot[aria-current]::before {
+  width: 28px;
+  background: var(--accent);
+}
+
+/* Autoplay progress: advancing is driven by this bar's animation end */
+.carousel__progress {
+  position: absolute;
+  inset: -16px 0 auto;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.carousel__progress > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #34d3bf);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  animation-name: carousel-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes carousel-progress {
+  to { transform: scaleX(1); }
+}
+
+/* Dark sections */
+.carousel--ink .carousel__btn {
+  border-color: rgba(230, 235, 245, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink-text);
+}
+
+.carousel--ink .carousel__btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.carousel--ink .carousel__dot::before {
+  background: rgba(230, 235, 245, 0.25);
+}
+
+.carousel--ink .carousel__dot:hover::before {
+  background: rgba(230, 235, 245, 0.55);
+}
+
+.carousel--ink .carousel__dot[aria-current]::before {
+  background: var(--accent-on-ink);
+}
+
+.carousel--ink .carousel__progress {
+  background: var(--ink-line);
+}
+
+/* ---------- Track (scroll-snap, swipeable) ---------- */
+.carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 20px) / 3);
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  /* Room for hover lift and shadows inside the scroll area */
+  padding-block: 8px 30px;
+  margin-block: -8px -30px;
+}
+
+.carousel__track:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: var(--radius-lg);
+}
+
+.carousel--ink .carousel__track:focus-visible {
+  outline-color: var(--accent-on-ink);
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .carousel__track {
+    grid-auto-columns: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .carousel__track {
+    grid-auto-columns: 86%;
+  }
+}
+
+.carousel__track > .carousel__slide {
+  display: flex;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.carousel__track > .carousel__slide > * {
+  flex: 1;
+}
+
+/* ---------- Fade stage ---------- */
+.carousel__stage {
+  display: grid;
+}
+
+.carousel--fade .carousel__slide {
+  grid-area: 1 / 1;
+  min-width: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.985);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.9s var(--ease-out),
+    visibility 0s linear 0.7s;
+}
+
+.carousel--fade .carousel__slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel--fade .carousel__slide {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Tabs (hero product tour) */
+.carousel__tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--ink-line);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.carousel__tab {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-text-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.carousel__tab:hover {
+  color: #fff;
+}
+
+.carousel__tab[aria-current] {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 18px -6px rgba(53, 82, 242, 0.8);
+}
+
+.hero-showcase .carousel__controls {
+  margin-top: 34px;
+}
+
+/* Restart the callout entrance each time a hero slide becomes active */
+.hero .carousel__slide:not(.is-active) .callout,
+.carousel__slide:not(.is-active) .frame__scan {
+  animation: none;
+}
+
+/* ---------- Marquee strip ---------- */
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 22px var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.marquee__label {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.marquee__viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee__group {
+  display: flex;
+  gap: 56px;
+  margin: 0;
+  padding: 0 56px 0 0;
+  list-style: none;
+}
+
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.marquee__item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--accent);
+  opacity: 0.55;
+  transform: rotate(45deg);
+}
+
+.marquee__item:hover {
+  color: var(--accent);
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .marquee__track {
+    animation: marquee 38s linear infinite;
+  }
+
+  .marquee:hover .marquee__track {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group[aria-hidden] {
+    display: none;
+  }
+
+  .marquee__track {
+    width: auto;
+  }
+
+  .marquee__group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 32px;
+    padding: 0;
+  }
+
+  .marquee__viewport {
+    mask-image: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee__label {
+    display: none;
+  }
+}
+
+/* Small screens: the tabs already switch slides, so keep one row with only the pause button */
+@media (max-width: 640px) {
+  .hero-showcase .carousel__controls {
+    flex-wrap: nowrap;
+  }
+
+  .hero-showcase .carousel__btn[aria-label$='slide'] {
+    display: none;
+  }
+}
+
+/* ---------- Hero benefit chips ---------- */
+.hero__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__benefits li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--ink-line);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-text);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.hero__benefits li:hover {
+  border-color: rgba(52, 211, 191, 0.5);
+  background: rgba(52, 211, 191, 0.06);
+}
+
+.hero__benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(52, 211, 191, 0.15);
+  color: #34d3bf;
+}
+
+/* ---------- Task finder (overlaps the bottom of the hero) ---------- */
+.home .hero {
+  padding-bottom: clamp(96px, 10vw, 136px);
+}
+
+.task-finder-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(-72px, -6vw, -56px);
+  margin-bottom: 8px;
+}
+
+.task-finder__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px 20px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 30px 60px -30px rgba(6, 10, 19, 0.45), 0 2px 6px rgba(11, 18, 32, 0.05);
+}
+
+.task-finder__field {
+  display: grid;
+  gap: 8px;
+}
+
+.task-finder__field--grow {
+  flex: 1 1 260px;
+}
+
+.task-finder__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.task-finder__segments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--radius);
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.task-finder__segment {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 7px;
+  background: none;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.task-finder__segment:hover {
+  color: var(--accent);
+}
+
+.task-finder__segment[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--accent-strong);
+  box-shadow: 0 1px 3px rgba(11, 18, 32, 0.12);
+}
+
+.task-finder__num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+}
+
+.task-finder__select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 40px 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235f6b80' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 14px center;
+  appearance: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-finder__select:hover {
+  border-color: var(--text-3);
+}
+
+.task-finder__select:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.task-finder__go {
+  min-height: 48px;
+  padding: 0 26px;
+}
+
+.task-finder__popular {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-top: 14px;
+  padding-inline: 4px;
+  font-size: 0.86rem;
+}
+
+.task-finder__popular span {
+  color: var(--text-3);
+}
+
+.task-finder__popular a {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text-2);
+  font-weight: 500;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.3s var(--ease-out);
+}
+
+.task-finder__popular a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .task-finder__segments,
+  .task-finder__field,
+  .task-finder__go {
+    width: 100%;
+  }
+
+  .task-finder__segment {
+    flex: 1;
+    justify-content: center;
+    padding: 0 8px;
+  }
+
+  .task-finder__num {
+    display: none;
+  }
+}
+
+/* The marquee sits below the task finder rather than against the hero */
+.home .marquee {
+  border-top: 0;
+  background: transparent;
+  border-bottom: 0;
+}
+
+/* ---------- Filter tabs (numbered) ---------- */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.filter-tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text-2);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease;
+}
+
+.filter-tabs__tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-tabs__tab[aria-pressed='true'] {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+
+.filter-tabs__num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-3);
+}
+
+.filter-tabs__tab[aria-pressed='true'] .filter-tabs__num {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.filter-tabs__count {
+  min-width: 22px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--text-3);
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+}
+
+.filter-tabs__tab[aria-pressed='true'] .filter-tabs__count {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+/* ---------- Capability cards ---------- */
+.carousel__track .card {
+  animation: none;
+}
+
+.capability {
+  gap: 12px;
+}
+
+.capability__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.capability__num {
+  font-family: var(--font-mono);
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1.2px var(--line-strong);
+  transition: color 0.35s ease, -webkit-text-stroke-color 0.35s ease;
+}
+
+.card--link:hover .capability__num {
+  color: var(--accent);
+  -webkit-text-stroke-color: var(--accent);
+}
+
+.capability__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- Finding cards (dark) ---------- */
+.finding {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 26px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ink-line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.4s var(--ease-out);
+}
+
+.finding:hover {
+  border-color: rgba(142, 160, 255, 0.5);
+  background-color: rgba(142, 160, 255, 0.05);
+}
+
+.finding__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.finding__tag {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.finding__tag--critical { background: rgba(200, 50, 43, 0.2); color: #ffa39e; }
+.finding__tag--major { background: rgba(178, 91, 11, 0.24); color: #ffc98a; }
+.finding__tag--verify { background: rgba(15, 159, 143, 0.22); color: #6ee5d5; }
+
+.finding__workspace {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-text-2);
+}
+
+.finding__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.finding__detail {
+  font-size: 0.94rem;
+  color: var(--ink-text-2);
+}
+
+.finding__source {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--ink-line);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-on-ink);
+}
+
+/* ---------- Numbered sections on the home page (01 —, 02 —, …) ---------- */
+.home {
+  counter-reset: home-section;
+}
+
+.home .section :is(.section-head, .split__copy) > .eyebrow {
+  counter-increment: home-section;
+}
+
+.home .section :is(.section-head, .split__copy) > .eyebrow::before {
+  content: counter(home-section, decimal-leading-zero) ' —';
+  width: auto;
+  height: auto;
+  background: none;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .finding:hover {
+    transform: translateY(-4px);
+  }
+
+  .task-finder__popular a:hover {
+    transform: translateY(-2px);
+  }
+}

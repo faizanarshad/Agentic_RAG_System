@@ -19,6 +19,7 @@ import {
   Stethoscope,
 } from 'lucide-react';
 import { fetchBackend } from '@/lib/api';
+import { initialView } from '@/lib/initial-view';
 
 const formatFileSize = (bytes) => {
   if (bytes === 0) return '0 Bytes';
@@ -48,7 +49,7 @@ const sampleQuestions = [
 ];
 export default function MedicalWorkspace() {
   // State management
-  const [medicalView, setMedicalView] = useState('chat');
+  const [medicalView, setMedicalView] = useState(() => initialView(['chat', 'upload'], 'chat'));
   const [messages, setMessages] = useState(() => {
     const saved = localStorage.getItem('chatHistory');
     if (saved) {
